@@ -19,6 +19,10 @@ header{
   text-align: center;
 }
 
+header img {
+  margin: 20px;
+}
+
 footer{
   position:relative;
   text-align: center;
