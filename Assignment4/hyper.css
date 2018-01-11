@@ -101,3 +101,14 @@ nav li:hover{
   background-color: white;
   border-radius: 2em;
 }
+div.bigSlideshow{
+}
+div.bigSlideshow div.imageContainer{
+  height: 50px;
+  width: 100px;
+  background-color: red;
+  overflow: hidden;
+}
+div.imageContainer:hover{
+  border: 2px solid black;
+}
