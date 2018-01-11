@@ -1,0 +1,71 @@
+/* PAGE PRESENTATION */
+
+html{
+  font-family: Verdana;
+}
+
+body{
+  margin:0px;
+}
+
+img{ /*responsive*/
+  max-width: 100%;
+  height:auto; /*scale conserve*/
+}
+
+/* LOG IN */
+
+#logIn{
+  position:absolute;
+  width: 220px;
+  right: 0%;
+  top: 0%;
+  text-align: center;
+  border: 1px solid black;
+  background-color: red;
+}
+
+#logInHeader{
+  box-sizing: content-box;
+  font-size: 1em;
+  padding: 10px 10px 10px 10px;
+}
+
+#logInContainer{
+  box-sizing: content-box;
+  display:none;
+  opacity: 0;
+  background-color: red;
+  margin:auto;
+  transition: opacity 1s, height 1s;
+}
+
+#logIn:hover #logInContainer {
+  display: block;
+  opacity: 1;
+}
+
+/* NAV BAR */
+
+#navBar{
+  position: sticky;
+  width: 100%;
+  background-color: grey;
+}
+
+/* SEARCH BAR */
+
+input{
+  font-size: 1em;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px 5px 5px 5px;
+}
+
+input.button{
+  cursor:pointer;
+}
+
+#searchForm{
+
+}
