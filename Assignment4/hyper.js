@@ -8,3 +8,4 @@ function connect(){
   var username = document.getElementById('username').value;
   document.getElementById('logInHeader').innerHTML = username;
 }
+//test
