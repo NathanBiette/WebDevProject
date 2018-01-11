@@ -2,17 +2,14 @@
 <html>
   <head>
     <link rel="stylesheet" href="hyper.css">
-    <script src="hyper.js"></script>
     <title>Hyper</title>
     <meta charset="UTF-8">
   </head>
 
   <body>
     <header>
-      <a href="hyper.html">
-        <picture style="width:400px;height:200px;">
-          <source scr="Images/bulleBD.png"></source>
-        </picture>
+      <a href="hyperHomePage.html">
+        <img src="images\arbre010.png" alt="Hyper">
       </a>
     </header>
 
@@ -26,9 +23,9 @@
     <aside id="logIn">
       <header id="logInHeader">Log in</header>
       <div id="logInContainer">
-        <input class="text" type="text" placeholder="username"><br>
+        <input class="text" type="text" id="username" placeholder="username"><br>
         <input class="text" type="password" placeholder="password"><br>
-        <input class="button" type="button" value="Connexion">
+        <input class="button" type="button" id="connexionButton" value="Connexion">
       </div>
     </aside>
 
@@ -37,8 +34,14 @@
       <input class="button" type="button" value="Search">
     </form>
 
+    <section style="height:1000px">
+      Test
+    </section>
+
     <footer>
       Designed by Hyper Team 2017-2018.
     </footer>
+
+    <script src="hyper.js"></script>
   </body>
 </html>
