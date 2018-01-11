@@ -6,6 +6,6 @@ initWebPage(); //init the page when the script is run
 
 function connect(){
   var username = document.getElementById('username').value;
-  document.getElementById('logInHeader').innerHTML = username;
+  if(username) document.getElementById('logInHeader').innerHTML = username;
 }
 //test
