@@ -11,7 +11,7 @@ body{
 
 img{ /*responsive*/
   max-width: 100%;
-  height:auto; /*scale conserve*/
+  height:10em; /*scale conserve*/
 }
 
 header{
@@ -79,7 +79,25 @@ input.button{
 /* NAV BAR */
 
 #navBar{
+  position: -webkit-sticky;
+  top: 0;
   position: sticky;
   width: 100%;
-  background-color: grey;
+  background-color: inherit;
+  text-align: center;
+  padding: 1em;
+}
+nav li{
+  font-size: 1.5em;
+  display: inline;
+  border: 2px solid black;
+  list-style: none;
+  padding:0.5em;
+  background-color: lightgrey;
+  transition: border-radius 0.5s 0.5s,background-color 0.1s;
+}
+nav li:hover{
+  cursor: pointer;
+  background-color: white;
+  border-radius: 2em;
 }
