@@ -86,6 +86,11 @@ input.button{
 #searchFormTop{
   text-align: right;
   padding:0.5em ;
+  float:right;
+}
+#searchTittleTop{
+  width:60%;
+  margin: auto;
 }
 
 /* NAV BAR */
@@ -100,7 +105,31 @@ input.button{
   padding: 1em 0px 1em 0px;
   box-shadow: 0px 5px 80px 0px white;
 }
+#navBarTop{
+  position: -webkit-sticky;
+  top: 0;
+  float:left;
+  position: sticky;
+  width:10%;
+  height:10%;
+  background-color: inherit;
+  text-align: center;
+  padding: 0.2em 0px 0.2em 0px;
+  box-shadow: 0px 5px 80px 0px white;
+  font-size : 80%;
+}
 nav li{
+  font-size: 1em;
+  display: inline;
+  box-shadow: 0px 0px 5px 0px grey;
+  list-style: none;
+  padding:0.5em;
+  background-color: #f2f2f2;
+  transition: border-radius 0.5s,background-color 0.5s;
+  margin:0.5em;
+}
+
+nav li.navButtonHP{
   font-size: 1.5em;
   display: inline;
   box-shadow: 0px 0px 5px 0px grey;
