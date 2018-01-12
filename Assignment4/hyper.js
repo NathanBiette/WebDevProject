@@ -2,7 +2,7 @@ var mediasInSlideshow = document.getElementsByClassName('slideshowMedia');
 var numberMediaSlideshow= mediasInSlideshow.length;//3 Images
 
 var mediaWidth = parseFloat(window.getComputedStyle( document.getElementsByClassName('slideshowMedia')[0]).getPropertyValue('width'));
-var totalMediasWidth = mediaWidth*numberMediaSlideshow
+var totalMediasWidth = mediaWidth*numberMediaSlideshow;
 function initWebPage() { //all global var declarations and eventListeners...
   document.getElementById('connexionButton').addEventListener('click',connect);
 }
@@ -24,6 +24,8 @@ for(var iter=0;iter<translateButtons.length;iter++){
 };
 
 function translateSlideshow(slideshow,direction) {
+  mediaWidth = parseFloat(window.getComputedStyle( document.getElementsByClassName('slideshowMedia')[0]).getPropertyValue('width'));
+  totalMediasWidth = mediaWidth*numberMediaSlideshow;
   var new_angle;
   var currentTranslation= (slideshow.style.transform.split('(')[1]);
   currentTranslation= parseFloat(currentTranslation.slice(0,currentTranslation.length-3))
