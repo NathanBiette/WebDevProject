@@ -1,5 +1,7 @@
 var mediasInSlideshow = document.getElementsByClassName('slideshowMedia');
 var numberMediaSlideshow= mediasInSlideshow.length;//3 Images
+var currentImage = 0;
+
 
 var mediaWidth = parseFloat(window.getComputedStyle( document.getElementsByClassName('slideshowMedia')[0]).getPropertyValue('width'));
 var totalMediasWidth = mediaWidth*numberMediaSlideshow;
@@ -29,10 +31,17 @@ function translateSlideshow(slideshow,direction) {
   var new_angle;
   var currentTranslation= (slideshow.style.transform.split('(')[1]);
   currentTranslation= parseFloat(currentTranslation.slice(0,currentTranslation.length-3))
-  if( (direction == 'left') && (currentTranslation<0)) {
-    new_angle = currentTranslation+mediaWidth;
+
+  if( (direction == 'left') && (currentImage>0)) {
+    //new_angle = currentTranslation+mediaWidth;
+    currentImage--;
+
   }
-  else if((direction == 'right')&&(currentTranslation-mediaWidth>-totalMediasWidth)) {new_angle = currentTranslation-mediaWidth;}
-  else new_angle= parseFloat(currentTranslation);
+  else if((direction == 'right')&&(currentImage+1<numberMediaSlideshow)) {
+    //new_angle = currentTranslation-mediaWidth;
+    currentImage++;
+  }
+  //else new_angle= parseFloat(currentTranslation);
+  new_angle = -currentImage*mediaWidth;
   slideshow.style.transform = 'translateX('+new_angle+'px)';
 };

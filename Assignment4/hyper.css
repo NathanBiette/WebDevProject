@@ -116,13 +116,16 @@ div.bigSlideshow{
 div.slideshowWindow{
   position: relative;
   overflow: hidden;
-  height: 300px;
-  width: 500px;
+  max-height: 300px;
+  height:auto;
+  max-width: 500px;
+  width:100%;
   margin:auto;
   border-radius: 30px;
 }
 div.bigSlideshow div.imagesContainer{
-  width: 1500px;
+  max-width: 1500px;
+  width: 300%;
   transition: transform 2s;
 }
 div.bigSlideshow div.imageContainer{
@@ -135,7 +138,7 @@ div.bigSlideshow div.imageContainer{
 
 }
 div.bigSlideshow div.imagesContainer img{
-  width: 500px;
+  width: 100%;
 }
 div.translate{
   text-align: center;
