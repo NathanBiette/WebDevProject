@@ -78,7 +78,6 @@ input.button{
 
 #searchForm{
   text-align: center;
-  padding: 30px;
 }
 
 /* NAV BAR */
@@ -127,6 +126,7 @@ div.bigSlideshow div.imageContainer{
   height: 300px;
   width: 33.333%;
   background-color: black;
+  border-radius: 10%;
 
 }
 div.bigSlideshow div.imagesContainer img{
