@@ -10,7 +10,7 @@ body{
   background-color: white;
 }
 
-img{ /*responsive*/
+header img{ /*responsive*/
   max-width: 100%;
   height:10em; /*scale conserve*/
 }
@@ -108,13 +108,36 @@ nav li:hover{
   border-radius: 2em;
 }
 div.bigSlideshow{
+  text-align: center;
+  width: 100%;
+}
+div.slideshowWindow{
+  float: left;
+  overflow: hidden;
+  height: 300px;
+  width: 500px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+div.bigSlideshow div.imagesContainer{
+  width: 1500px;
 }
 div.bigSlideshow div.imageContainer{
-  height: 50px;
-  width: 100px;
-  background-color: red;
-  overflow: hidden;
+  float: left;
+  height: 300px;
+  width: 33.333%;
+  background-color: black;
+
 }
-div.imageContainer:hover{
-  border: 2px solid black;
+div.bigSlideshow div.imagesContainer img{
+  width: 500px;
+}
+div.translate{
+  border: solid 2px black;
+  float: left;
+  width: 10%
+}
+section{
+  margin: auto;
+  height: 600px;
 }
