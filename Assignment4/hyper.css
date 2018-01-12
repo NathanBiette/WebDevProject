@@ -78,6 +78,7 @@ input.button{
 
 #searchForm{
   text-align: center;
+  padding: 30px;
 }
 
 /* NAV BAR */
@@ -109,6 +110,7 @@ nav li:hover{
 div.bigSlideshow{
   text-align: center;
   width: 100%;
+  height: 300px;
 }
 div.slideshowWindow{
   float: left;
@@ -117,16 +119,19 @@ div.slideshowWindow{
   width: 500px;
   margin-left: 10%;
   margin-right: 10%;
+  border-radius: 30px;
 }
 div.bigSlideshow div.imagesContainer{
   width: 1500px;
+  transition: transform 2s;
 }
 div.bigSlideshow div.imageContainer{
   float: left;
   height: 300px;
   width: 33.333%;
   background-color: black;
-  border-radius: 10%;
+  border-radius: 30px;
+  overflow: hidden;
 
 }
 div.bigSlideshow div.imagesContainer img{
@@ -135,7 +140,9 @@ div.bigSlideshow div.imagesContainer img{
 div.translate{
   border: solid 2px black;
   float: left;
-  width: 10%
+  display: inline;
+
+  margin: auto;
 }
 section{
   margin: auto;
