@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="profile.css">
   <title>Hyper</title>
   <meta charset="UTF-8">
+
 </head>
 
 <body>
@@ -41,6 +42,27 @@
     <aside id="profileLeftSide">
       <img src="images\myPhoto.jpg" alt="profile picture"></img>
     </aside>
+    <form onsubmit="infoPerso()" display:none>
+      <p> age : <input type="number" name="age" id="age"/></p>
+      <p> gender :</p>
+        <div>
+          <input type="radio" name="gender" value="male" id="male">
+          <label for="male">Male</label>
+          <input type="radio" id="female" value="female" name="gender">
+          <label for="female">Female</label>
+        </div>
 
+      <p> country : <input type="text" name="country" id="country"/></p>
+      <button type="button" onclick="infoPerso()">Submit</button>
+    </form>
+
+    <aside>
+      <h6>My personal information </h6>
+      <p> age : <output type="number" id="ageOutput"/></p>
+      <p> gender : <output type="text" id="genderOutput"/></p>
+      <p> country : <output type ="text" id="countryOutput"/></p>
+    </aside>
+
+    <script src="profile.js"></script>
 
 </body>
