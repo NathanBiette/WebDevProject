@@ -42,7 +42,7 @@
     <aside id="profileLeftSide">
       <img src="images\myPhoto.jpg" alt="profile picture"></img>
     </aside>
-    <form onsubmit="infoPerso()" display:none>
+    <form onsubmit="infoPerso()" id="infosPerso">
       <p> age : <input type="number" name="age" id="age"/></p>
       <p> gender :</p>
         <div>
@@ -58,6 +58,7 @@
 
     <aside>
       <h6>My personal information </h6>
+      <input type="button" onclick="showForm()" value="Modify my personal information" id="showHideInfosPerso"></input>
       <p> age : <output type="number" id="ageOutput"/></p>
       <p> gender : <output type="text" id="genderOutput"/></p>
       <p> country : <output type ="text" id="countryOutput"/></p>

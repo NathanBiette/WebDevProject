@@ -31,4 +31,19 @@ function infoPerso(){
   document.getElementById("countryOutput").value=document.getElementById("country").value;
     localStorage.countryOutput=document.getElementById("countryOutput").value;
   //localStorage.setItem("countryOutput", document.getElementById("countryOutput").value);
+  document.getElementById("infosPerso").style.display="none";
+  document.getElementById("showHideInfosPerso").value="Modify my personal information";
+}
+
+function showForm(){
+  if(document.getElementById("infosPerso").style.display=="none"){
+    document.getElementById("infosPerso").style.display="block";
+    document.getElementById("showHideInfosPerso").value="Hide";
+  }
+  else {
+    document.getElementById("infosPerso").style.display="none";
+    document.getElementById("showHideInfosPerso").value="Modify my personal information";
+  }
+
+
 }
