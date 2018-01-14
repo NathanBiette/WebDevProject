@@ -10,20 +10,23 @@ body{
   background-color: white;
 }
 
+header{
+  text-align: center;
+  margin: auto;
+  max-width: 500px;
+  height: auto;
+}
+
 header img{ /*responsive*/
-  max-width: 100%;
-  height:10em; /*scale conserve*/
+  box-sizing: content-box;
+  width: 100%;
+  margin-top:50px;
+  margin-bottom:50px;
+  height:auto; /*scale conserve*/
 }
 #headerProfile{
     max-width: 75%;
     height:2em;
-}
-header{
-  text-align: center;
-}
-
-header img {
-  margin: 20px;
 }
 
 footer{
@@ -118,6 +121,11 @@ input.button{
   box-shadow: 0px 5px 80px 0px white;
   font-size : 80%;
 }
+
+nav a{
+  text-decoration: none;
+  color: black;
+}
 nav li{
   font-size: 1em;
   display: inline;
@@ -143,19 +151,22 @@ nav li:hover{
   background-color: white;
   border-radius: 2em;
 }
+
+/* slideshow*/
+
+
 div.bigSlideshow{
   text-align: center;
-  width: 100%;
-  height: 300px;
-  max-height:300px;
+  max-width: 500px;
+  height: auto;
+  margin: auto;
 }
 div.slideshowWindow{
   position: relative;
   overflow: hidden;
-  max-height: 300px;
-  height:auto;
-  max-width: 500px;
+  box-sizing: content-box;
   width:100%;
+  height:auto;
   margin:auto;
   border-radius: 30px;
 }
@@ -166,8 +177,9 @@ div.bigSlideshow div.imagesContainer{
 }
 div.bigSlideshow div.imageContainer{
   float: left;
-  height: 300px;
-  width: 33.333%;
+  box-sizing:border-box;
+  height: auto;
+  width: 33.33333333%;
   background-color: black;
   border-radius: 30px;
   overflow: hidden;
