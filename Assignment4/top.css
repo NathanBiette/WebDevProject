@@ -1,3 +1,6 @@
+header{top:0; height : 60%;position:fixed;}
+
+
 #headerProfile{
     max-width: 75%;
     height:2em;
@@ -59,16 +62,6 @@
   height:auto;
 }
 
-#navBar{
-  position: -webkit-sticky;
-  top: 0;
-  position: sticky;
-  width: 100%;
-  background-color: inherit;
-  text-align: center;
-  padding: 1em 0px 1em 0px;
-  box-shadow: 0px 5px 80px 0px white;
-}
 
 nav a{
   text-decoration: none;

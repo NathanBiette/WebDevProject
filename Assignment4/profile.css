@@ -1,10 +1,11 @@
-header{top:0; height : 10%;position:fixed;}
+
 #showHideInfosPerso{width:90%;}
 #profileLeftSide{
   left:0;
   float:left;
   border-right: solid;
-  position:fixed;
+  top:10%;
+  position:absolute;
   width:20%;
 }
 #profilePicture{
@@ -30,9 +31,9 @@ h6{text-align: center;}
     /*border-bottom : 1px solid #9EA0A1;*/
     /*margin-left : 25%;*/
     left : 50%;
-    margin-top : 0;
-    width : 430px;
-    margin-left : -215px; /* la moitié de width */
+    margin-top : 2%;
+    width : 80%;
+    margin-left : -20%; /* la moitié de width */
 
 }
 
@@ -72,10 +73,17 @@ h6{text-align: center;}
         padding-bottom : 25px;
 }
 
+article{
+  left:20%;
+  top:15%;
+  position: absolute;
+}
 video{
   width:100%;
 }
 div.trailer{
   border:solid;
-  width:50%;
+  width:20%;
+  left:10%;
+  position:relative;
 }
