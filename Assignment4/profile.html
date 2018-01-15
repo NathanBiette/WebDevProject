@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="hyper.css">
+  <link rel="stylesheet" href="top.css">
   <link rel="stylesheet" href="profile.css">
   <title>Hyper</title>
   <meta charset="UTF-8">
@@ -9,80 +9,79 @@
 </head>
 
 <body>
-  <div id="searchTittleTop"
   <header>
-    <a href="hyperHomePage.html">
-      <img id="headerProfile" src="images\hyper.png" alt="Hyper">
-    </a>
+    <div id="searchTittleTop"
+      <a href="hyperHomePage.html">
+        <img id="headerProfile" src="images\hyper.png" alt="Hyper">
+      </a>
+      <form id="searchFormTop">
+        <input class="text" type="search" name="research" placeholder="Type here to search..." autofocus>
+        <input class="button" type="button" value="Search"><br>
+      </form>
 
-    <form id="searchFormTop">
-      <input class="text" type="search" name="research" placeholder="Type here to search..." autofocus>
-      <input class="button" type="button" value="Search"><br>
-    </form>
-  </div>
-    <nav id="navBarTop">
-      <li>Home</li>
-      <li>Movies</li>
-      <li>Series</li>
-      <li>VideoGames</li>
-    </nav>
-
-
+      <nav id="navBarTop">
+        <li>Home</li>
+        <li>Movies</li>
+        <li>Series</li>
+        <li>VideoGames</li>
+      </nav>
+    </div>
   </header>
 
-    <aside id="logIn">
-      <header id="logInHeader">Log in</header>
-      <div id="logInContainer">
-        <input class="text" type="text" id="username" placeholder="username"><br>
-        <input class="text" type="password" placeholder="password"><br>
-        <input class="button" type="button" id="connexionButton" value="Connexion">
-      </div>
-    </aside>
-
-    <aside id="profileLeftSide">
-      <img src="images\myPhoto.jpg" alt="profile picture" id="profilePicture"></img>
+  <aside id="logIn">
+    <header id="logInHeader">Log in</header>
+    <div id="logInContainer">
+      <input class="text" type="text" id="username" placeholder="username"><br>
+      <input class="text" type="password" placeholder="password"><br>
+      <input class="button" type="button" id="connexionButton" value="Connexion">
+    </div>
+  </aside>
+<!--
+  <aside id="profileLeftSide">
+    <img src="images\myPhoto.jpg" alt="profile picture" id="profilePicture"></img>
 
     <form onsubmit="infoPerso()" id="infosPerso">
       <p> age : <input type="number" name="age" id="age"/></p>
       <p> gender :</p>
-        <div>
-          <input type="radio" name="gender" value="male" id="male">
-          <label for="male">Male</label>
-          <input type="radio" id="female" value="female" name="gender">
-          <label for="female">Female</label>
-        </div>
+      <div>
+        <input type="radio" name="gender" value="male" id="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" value="female" name="gender">
+        <label for="female">Female</label>
+      </div>
 
       <p> country : <input type="text" name="country" id="country"/></p>
       <button type="button" onclick="infoPerso()">Submit</button>
     </form>
 
-      <div id="MyInfoPerso">
+    <div id="MyInfoPerso">
       <h6>My personal information </h6>
       <input type="button" onclick="showForm()" value="Modify my personal information" id="showHideInfosPerso"></input>
       <p> age : <output type="number" id="ageOutput"/></p>
       <p> gender : <output type="text" id="genderOutput"/></p>
       <p> country : <output type ="text" id="countryOutput"/></p>
     </div>
-    </aside>
+  </aside>
 
   <div id="menu">
-  <ul id="onglets">
-    <li class="active"><a href="MyContributions.html"> My Contributions </a></li>
-    <li><a href="Pages.html"> Pages followed and suggested </a></li>
-    <li><a href="News.html"> News </a></li>
-    <li><a href="Relations.html"> News from your relations </a></li>
-  </ul>
-</div>
-
-  <div class="trailer">
-    <video controls="controls">
-      <source src="videos/star-wars-the-last-jedi-trailer-official.mp4" type="video/mp4" />
-      <source src="videos/star-wars-the-last-jedi-trailer-official.webm" type="video/webm" />
-    </video>
-
+    <ul id="onglets">
+      <li class="active"><a href="MyContributions.html"> My Contributions </a></li>
+      <li><a href="Pages.html"> Pages followed and suggested </a></li>
+      <li><a href="News.html"> News </a></li>
+      <li><a href="Relations.html"> News from your relations </a></li>
+    </ul>
   </div>
+  <article>
+    <div class="trailer">
+      <h6>Trailer : Star Wars 8 official</h6>
+      <video controls="controls">
+        <source src="videos/star-wars-the-last-jedi-trailer-official.mp4" type="video/mp4" />
+        <source src="videos/star-wars-the-last-jedi-trailer-official.webm" type="video/webm" />
+      </video>
 
+    </div>
 
-    <script src="profile.js"></script>
+  </article>
+  <script src="profile.js"></script>
 
 </body>

@@ -76,5 +76,6 @@ video{
   width:100%;
 }
 div.trailer{
+  border:solid;
   width:50%;
 }
