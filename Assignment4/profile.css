@@ -73,17 +73,28 @@ h6{text-align: center;}
         padding-bottom : 25px;
 }
 
+.drop_hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8) inset;
+}
 article{
   left:20%;
   top:15%;
   position: absolute;
+
+}
+
+section{
+  width: 20%;
+  border:solid;
 }
 video{
   width:100%;
 }
 div.trailer{
-  border:solid;
-  width:20%;
+
   left:10%;
   position:relative;
+}
+div.post1{
+
 }
