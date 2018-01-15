@@ -1,8 +1,24 @@
+header{top:0; height : 10%;position:fixed;}
+#showHideInfosPerso{width:90%;}
 #profileLeftSide{
+  left:0;
+  float:left;
+  border-right: solid;
+  position:fixed;
+  width:20%;
+}
+#profilePicture{
+  border : solid;
+  width:90%;
 
 }
-#infosPerso{display: none;}
-
+#infosPerso{display: none;width:90%;}
+#MyInfoPerso{
+  width:90%;
+  border : solid;
+  text-align: center;
+}
+h6{text-align: center;}
 #onglets
 {
     position : absolute;
@@ -54,4 +70,11 @@
 {
         border-bottom : 1px solid #9EA0A1;
         padding-bottom : 25px;
+}
+
+video{
+  width:100%;
+}
+div.trailer{
+  width:50%;
 }
