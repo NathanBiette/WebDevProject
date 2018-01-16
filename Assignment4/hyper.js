@@ -6,15 +6,34 @@ var mediaWidth = parseFloat(window.getComputedStyle( document.getElementsByClass
 var totalMediasWidth = mediaWidth*numberMediaSlideshow;
 function initWebPage() { //all global var declarations and eventListeners...
   document.getElementById('connexionButton').addEventListener('click',connect);
+  document.getElementById('createAccountButton').addEventListener('click',createAccount);
 }
 
 initWebPage(); //init the page when the script is run
 
 function connect(){
   var username = document.getElementById('username').value;
-  if(username) document.getElementById('logInHeader').innerHTML = username;
+  var password = document.getElementById('password').value;
+  if (localStorage.username == username && localStorage.password == password) {
+    document.getElementById('logInHeader').innerHTML = username;
+  } else {
+    alert('Username or password is incorrect.')
+  }
 }
-//test
+
+function createAccount() {
+  var logInContainer = document.getElementById('logInContainer');
+  var createAccountContainer = document.getElementById('createAccountContainer');
+  if (localStorage.getItem("username") === undefined) localStorage.username = '';
+  if (localStorage.hasItem("password") === undefined) localStorage.passord = '';
+  logInContainer.style.display = 'none';
+  createAccountContainer.style.display = 'block';
+  document.getElementById('cancelCreationAccountButton').addEventListener('click', function() {
+    logInContainer.style.display = 'block';
+    createAccountContainer.style.display = 'none';
+  })
+}
+
 
 var translateButtons = document.getElementsByClassName('translate');
 for(var iter=0;iter<translateButtons.length;iter++){

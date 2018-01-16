@@ -13,7 +13,7 @@ document.getElementById("countryOutput").value=localStorage.countryOutput;//getI
 
 
 function infoPerso(){
-  document.getElementById("ageOutput").value=document.getElementById("age").value + " years old";
+  document.getElementById("ageOutput").value=document.getElementById("age").value;
   //alert(document.getElementById("ageOutput").value);
   //localStorage.setItem("ageOutput",document.getElementById("ageOutput").value );
   localStorage.ageOutput=document.getElementById("ageOutput").value;
