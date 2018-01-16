@@ -7,7 +7,7 @@
   left:0;
   float:left;
   border-right: solid;
-  top:10%;
+  top:15%;
   position:absolute;
   width:200px;
 }
@@ -40,9 +40,11 @@ h6{
     /*border-bottom : 1px solid #9EA0A1;*/
     /*margin-left : 25%;*/
     left : 50%;
-    margin-top : 2%;
+    margin-top : 0%;
     width : 80%;
     margin-left : -20%; /* la moitié de width */
+    /*border-bottom : 1px solid #9EA0A1;
+    padding-bottom : 25px;*/
 
 }
 
@@ -74,6 +76,7 @@ h6{
 }
 
 #menu{
+        position : relative;
         border-bottom : 1px solid #9EA0A1;
         padding-bottom : 25px;
 }
@@ -98,7 +101,7 @@ video{
 }
 div.trailer{
 
-  left:10%;
+  left:15%;
   position:relative;
 }
 div.post1{
