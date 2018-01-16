@@ -56,13 +56,14 @@ header nav li {
   padding: 10px 10px 10px 10px;
 }
 
-#logInContainer{
-  display: none;
+#logInAllContainer{
+  height:0px;
   box-sizing: content-box;
   margin:auto;
 }
 
-#logIn:hover #logInContainer{
+/*
+#logIn:hover #logInAllContainer{
   display: block;
 }
 
@@ -73,7 +74,7 @@ header nav li {
 #userActionsContainer{
   display: none;
 }
-
+*/
 
 
 
