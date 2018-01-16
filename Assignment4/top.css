@@ -55,15 +55,27 @@ header nav li {
 }
 
 #logInContainer{
+  display: none;
   box-sizing: content-box;
   margin:auto;
-  height:0px;
-  transition:none;
 }
 
-#logIn:hover #logInContainer {
-  height:auto;
+#logIn:hover #logInContainer{
+  display: block;
 }
+
+#createAccountContainer{
+  display: none;
+}
+
+#userActionsContainer{
+  display: none;
+}
+
+
+
+
+
 
 
 nav a{
