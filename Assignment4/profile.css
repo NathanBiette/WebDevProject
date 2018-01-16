@@ -1,25 +1,34 @@
 
-#showHideInfosPerso{width:90%;}
+#showHideInfosPerso{
+  width:90%;
+}
+
 #profileLeftSide{
   left:0;
   float:left;
   border-right: solid;
   top:10%;
   position:absolute;
-  width:20%;
+  width:200px;
 }
+
 #profilePicture{
   border : solid;
   width:90%;
 
 }
-#infosPerso{display: none;width:90%;}
+#infosPerso{
+  display: none;width:90%;
+}
 #MyInfoPerso{
   width:90%;
   border : solid;
   text-align: center;
 }
-h6{text-align: center;}
+h6{
+  text-align: center;
+}
+
 #onglets
 {
     position : absolute;
@@ -38,8 +47,7 @@ h6{text-align: center;}
 }
 
 
-#onglets li
-{
+#onglets li{
     float : left;
     height : 21px; /* à modifier suivant la taille de la police pour centrer le texte dans l'onglet */
     background-color: #F4F9FD;
@@ -48,14 +56,12 @@ h6{text-align: center;}
     border : 1px solid #9EA0A1;
 }
 
-#onglets li.active
-{
+#onglets li.active{
     border-bottom: 1px solid #fff;
     background-color: #fff;
 }
 
-#onglets a
-{
+#onglets a{
     display : block;
     color : #666;
     text-decoration : none;
@@ -63,12 +69,11 @@ h6{text-align: center;}
 
 }
 
-#onglets a:hover
-{
+#onglets a:hover{
     background : #fff;
 }
-#menu
-{
+
+#menu{
         border-bottom : 1px solid #9EA0A1;
         padding-bottom : 25px;
 }
@@ -76,6 +81,7 @@ h6{text-align: center;}
 .drop_hover {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.8) inset;
 }
+
 article{
   left:20%;
   top:15%;

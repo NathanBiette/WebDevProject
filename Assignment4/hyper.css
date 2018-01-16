@@ -109,7 +109,7 @@ nav a{
 }
 nav li{
   font-size: 1em;
-  display: inline;
+  display: block;
   box-shadow: 0px 0px 5px 0px grey;
   list-style: none;
   padding:0.5em;
@@ -120,7 +120,8 @@ nav li{
 
 nav li.navButtonHP{
   font-size: 1.5em;
-  display: inline;
+  display:;
+  max-width: 20%;
   box-shadow: 0px 0px 5px 0px grey;
   list-style: none;
   padding:0.5em;
@@ -132,6 +133,7 @@ nav li:hover{
   background-color: white;
   border-radius: 2em;
 }
+
 
 /* slideshow*/
 
@@ -172,14 +174,17 @@ div.bigSlideshow div.imagesContainer img{
 }
 div.translate{
   text-align: center;
+  vertical-align: middle;
   position: absolute;
   box-sizing: content-box;
   border-radius:10px;
   background-color: white;
   opacity: 0.5;
-  height: 100px;
-  width: 30px;
-  top: 100px;
+  min-width: 50px;
+  min-height: 50px;
+  height: auto;
+  width: auto;
+  top: 42%;
   cursor: pointer;
 }
 
