@@ -83,7 +83,7 @@ div.smallSlideshow .slideshowMedia{
   opacity: 0.4;
 }
 
-div.translate{
+.bigSlideshow div.translate{
   text-align: center;
   vertical-align: middle;
   position: absolute;
@@ -98,9 +98,46 @@ div.translate{
   top: 42%;
   cursor: pointer;
 }
+
+.smallSlideshow div.translate{
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  box-sizing: content-box;
+  border-radius:10px;
+  background-color: white;
+  opacity: 0.5;
+  min-width: 30px;
+  min-height: 30px;
+  height: auto;
+  width: auto;
+  top: 42%;
+  cursor: pointer;
+}
+
 div.right{
   right: 0px;
 }
 div.left{
   left: 0px;
+}
+
+.bigSlideshow .translate span{
+  font-size: 3em;
+  text-family: "bold";
+}
+
+.smallSlideshow .translate span{
+  font-size: 2em;
+  text-family: "bold";
+}
+
+.slideshowWindow .left{
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.slideshowWindow .right{
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
