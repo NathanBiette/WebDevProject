@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="../hyper.css">
-<<<<<<< HEAD
-    <link rel="stylesheet" href="../login.css">
-=======
+    <link rel="stylesheet" href="../top.css">
     <link rel="stylesheet" href="../carousel.css">
->>>>>>> fd0141414e183edbf60ed25271ee31b097904257
     <title>Hyper</title>
     <meta charset="UTF-8">
   </head>
 
-  <body>
-    <header class="HyperHeader">
-      <a href="HyperHomePage.html">
-        <img src="..\images\hyper.png" alt="Hyper">
-      </a>
-    </header>
 
-    <nav id="navBar">
-      <a href="HyperHomePage.html"><li class="navButtonHP">Home</li></a>
-      <li class="navButtonHP">Movies</li>
-      <li class="navButtonHP">Series</li>
-      <li class="navButtonHP">VideoGames</li>
-    </nav>
+  <body>
+    <header>
+      <nav id="navButtonsTop">
+        <li>Home</li>
+        <li>Movies</li>
+        <li>Series</li>
+        <li>VideoGames</li>
+      </nav>
+      <div id="searchTittleTop">
+        <a href="HyperHomePage.html">
+          <img id="HyperImage" src="..\images\hyper.png" alt="Hyper">
+        </a>
+        <form id="searchFormTop">
+          <input class="text" type="search" name="research" placeholder="Type here to search..." autofocus>
+          <input class="button" type="button" value="Search">
+        </form>
+      </div>
+    </header>
 
     <aside id="logIn">
       <header id="logInHeader">Log in</header>
-      <div class="logInAllContainer">
-        <div class="logInContainer" id="connexionContainer">
+      <div id="logInAllContainer">
+        <div class="logInContainer" id="logInContainer">
           <input class="text" type="text" id="username" placeholder="username"><br>
           <input class="text" type="password" id="password" placeholder="password"><br>
           <input class="button" type="button" id="connexionButton" value="Connexion">
@@ -53,7 +55,8 @@
       <input class="text" type="search" name="research" placeholder="Type here to search..." autofocus>
       <input class="button" type="button" value="Search"><br>
     </form>
-    <div class="slideshow bigSlideshow">
+
+    <div class="slideshow smallSlideshow">
       <div class="slideshowWindow">
         <div  id="mainMediaContainer" class="mediasContainer">
           <div class="mediaContainer">
@@ -74,6 +77,10 @@
       </div>
     </div>
 
+    </div>
+    <div style="height=1500">
+      div
+    </div>
     <footer>
       Designed by Hyper Team 2017-2018.
     </footer>
