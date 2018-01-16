@@ -1,3 +1,4 @@
+alert("ici");
 (function() {
 
     var dndHandler = {

@@ -121,6 +121,7 @@ for (var i = 0; i < droppersLen; i++) {
 }
 })();
 */
+alert("js file");
 (function() {
 
     var dndHandler = {
