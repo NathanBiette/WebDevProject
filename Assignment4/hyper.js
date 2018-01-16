@@ -14,7 +14,7 @@ initWebPage(); //init the page when the script is run
 
 var translateButtons = document.getElementsByClassName('translate');
 for(var iter=0;iter<translateButtons.length;iter++){
-  var slideshow = document.getElementById('mainImageContainer');
+  var slideshow = document.getElementById('mainMediaContainer');
   slideshow.style.transform='translateX(0px)';
   if(translateButtons[iter].className.split(' ')[1] == 'right') translateButtons[iter].addEventListener('click',function() {translateSlideshow(slideshow,'right')});
   else translateButtons[iter].addEventListener('click',function() {translateSlideshow(slideshow,'left')});

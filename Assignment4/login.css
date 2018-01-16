@@ -1,0 +1,42 @@
+/* LOG IN */
+
+#logIn{
+  position:fixed;
+  width: 220px;
+  right: 0%;
+  top: 0%;
+  text-align: center;
+  box-shadow: 0px 0px 5px 0px grey;
+  border-radius: 0px 0px 0px 10px;
+  background-color: #f2f2f2;
+  overflow: hidden;
+}
+
+#logInHeader{
+  box-sizing: content-box;
+  font-size: 1em;
+  padding: 10px 10px 10px 10px;
+}
+
+.logInAllContainer{
+  display: none;
+  box-sizing: content-box;
+  margin:auto;
+  overflow:hidden;
+}
+
+#logIn:hover .logInAllContainer{
+  display: block;
+}
+
+#connexionContainer{
+  display: block;
+}
+
+#createAccountContainer{
+  display: none;
+}
+
+#userActionsContainer{
+  display: none;
+}
