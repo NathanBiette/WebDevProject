@@ -59,28 +59,25 @@ footer{
 
 .logInAllContainer{
   display:none;
-}
-
-#logIn:hover + .logInAllContainer{
-  display:block;
-}
-/*
-#logInContainer{
-  display: none;
   box-sizing: content-box;
   margin:auto;
+  overflow:hidden;
 }
 
-#logIn:hover #logInContainer{
+#logIn:hover .logInAllContainer{
+  display:block;
+}
+
+#connexionContainer{
   display: block;
 }
 
 #createAccountContainer{
-  display: none;
+  display: block;
 }
 
 #userActionsContainer{
-  display: none;
+  display: block;
 }
 
 
