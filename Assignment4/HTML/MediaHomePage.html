@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="../hyper.css">
+    <link rel="stylesheet" href="../top.css">
+    <link rel="stylesheet" href="../carousel.css">
     <title>Hyper</title>
     <meta charset="UTF-8">
   </head>
 
+
   <body>
     <header>
-      <a href="HyperHomePage.html">
-        <img src="..\images\hyper.png" alt="Hyper">
-      </a>
+      <nav id="navButtonsTop">
+        <li>Home</li>
+        <li>Movies</li>
+        <li>Series</li>
+        <li>VideoGames</li>
+      </nav>
+      <div id="searchTittleTop">
+        <a href="HyperHomePage.html">
+          <img id="HyperImage" src="..\images\hyper.png" alt="Hyper">
+        </a>
+        <form id="searchFormTop">
+          <input class="text" type="search" name="research" placeholder="Type here to search..." autofocus>
+          <input class="button" type="button" value="Search">
+        </form>
+      </div>
     </header>
-
-    <nav id="navBar">
-      <a href="HyperHomePage.html"><li class="navButtonHP">Home</li></a>
-      <li class="navButtonHP">Movies</li>
-      <li class="navButtonHP">Series</li>
-      <li class="navButtonHP">VideoGames</li>
-    </nav>
 
     <aside id="logIn">
       <header id="logInHeader">Log in</header>
@@ -49,18 +56,18 @@
       <input class="button" type="button" value="Search"><br>
     </form>
 
-    <div class="slideshow bigSlideshow">
+    <div class="slideshow smallSlideshow">
       <div class="slideshowWindow">
-        <div  id="mainImageContainer" class="imagesContainer">
-          <div class="imageContainer">
+        <div  id="mainMediaContainer" class="mediasContainer">
+          <div class="mediaContainer">
             <p class="textOverContainer"> Lorem Ipsum STAR WARS</p>
             <img class="slideshowMedia" src="..\images\star-wars.jpg" alt="star-wars">
           </div>
-          <div class="imageContainer">
+          <div class="mediaContainer">
             <p class="textOverContainer"> Breaking news:<br> John Snows knows nothing!</p>
             <img class="slideshowMedia" src="..\images\gameofthrones.jpg" alt="gameofthrones">
           </div>
-          <div class="imageContainer">
+          <div class="mediaContainer">
             <p class="textOverContainer"> Lorem Ipsum mario-odyssey</p>
             <img class="slideshowMedia" src="..\images\mario-odyssey.jpg" alt="mario-odyssey">
           </div>
@@ -68,6 +75,7 @@
         <div class="translate left"><</div>
         <div class="translate right">></div>
       </div>
+    </div>
 
     </div>
     <div style="height=1500">

@@ -17,7 +17,7 @@ header{
   height: auto;
 }
 
-header img{ /*responsive*/
+header.HyperHeader img{ /*responsive*/
   box-sizing: content-box;
   width: 100%;
   margin-top:50px;
@@ -151,83 +151,6 @@ nav li:hover{
 /* slideshow*/
 
 
-div.bigSlideshow{
-  text-align: center;
-  max-width: 500px;
-  height: auto;
-  margin: auto;
-}
-div.slideshowWindow{
-  position: relative;
-  overflow: hidden;
-  box-sizing: content-box;
-  width:100%;
-  height:auto;
-  margin:auto;
-  border-radius: 30px;
-}
-div.bigSlideshow div.imagesContainer{
-  display: inline-flex;
-  overflow: hidden;
-  max-width: 1500px;
-  transition: transform 2s;
-}
-div.bigSlideshow div.imageContainer{
-  max-height:300px;
-  max-width: 500px;
-  background-color: black;
-  border-radius: 30px;
-  overflow: hidden;
-}
-
-.textOverContainer{
-  border-radius: 30px;
-  bottom: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  color: black;
-  border: 1px black solid;
-  background-color: white;
-  position: absolute;
-  transition: .5s ease;
-  text-align: center;
-  opacity: 0;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-.imageContainer:hover .textOverContainer {
-  opacity: 1;
-}
-.imageContainer:hover img{
-  opacity: 0.4;
-}
-div.bigSlideshow div.imageContainer img{
-  position: inherit;
-  display: block;
-  transition: .5s ease;
-}
-div.translate{
-  text-align: center;
-  vertical-align: middle;
-  position: absolute;
-  box-sizing: content-box;
-  border-radius:10px;
-  background-color: white;
-  opacity: 0.5;
-  min-width: 50px;
-  min-height: 50px;
-  height: auto;
-  width: auto;
-  top: 42%;
-  cursor: pointer;
-}
-
-div.right{
-  right: 0px;
-}
-div.left{
-  left: 0px;
-}
 
 section{
   margin: auto;
