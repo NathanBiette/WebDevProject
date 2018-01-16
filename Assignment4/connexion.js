@@ -1,12 +1,25 @@
-document.getElementById('connexionButton').addEventListener('click',connect);
-document.getElementById('createAccountButton').addEventListener('click',createAccount);
+var connexionButton = document.getElementById('connexionButton')
+connexionButton.addEventListener('click',connect);
 
-if (localStorage.connected == "true") {
-  var logInContainer = document.getElementById('logInContainer');
-  var userActionsContainer = document.getElementById('userActionsContainer');
+var createAccountButton = document.getElementById('createAccountButton');
+createAccountButton.addEventListener('click',createAccount);
+
+var disconnectButton = document.getElementById('disconnectButton');
+disconnectButton.addEventListener('click',disconnect);
+
+var logInContainer = document.getElementById('logInContainer');
+var userActionsContainer = document.getElementById('userActionsContainer');
+var logInHeader = document.getElementById('logInHeader')
+var createAccountContainer = document.getElementById('createAccountContainer');
+
+
+if (localStorage.connected == "true") { //if connected, display the rights content
   logInContainer.style.display = 'none';
+  createAccountContainer.style.display = 'none';
   userActionsContainer.style.display = 'block';
+  logInHeader.innerHTML = localStorage.username;
 }
+
 
 function connect(){
   if (localStorage.username && localStorage.password) {
@@ -17,28 +30,24 @@ function connect(){
     return;
   }
   if (localStorage.username == usernameValue && localStorage.password == passwordValue) {
-    document.getElementById('logInHeader').innerHTML = usernameValue;
+    logInHeader.innerHTML = usernameValue;
     localStorage.connected = "true";
     /* print access profile, disconnect*/
-    var logInContainer = document.getElementById('logInContainer');
-    var userActionsContainer = document.getElementById('userActionsContainer');
     logInContainer.style.display = 'none';
     userActionsContainer.style.display = 'block';
-    var disconnect = document.getElementById('disconnectButton');
-    disconnect.addEventListener('click', function() {
-      localStorage.connected = "false";
-      logInContainer.style.display = 'block';
-      userActionsContainer.style.display = 'none';
-      document.getElementById('logInHeader').innerHTML = 'Log in';
-    })
   } else {
     alert('Username or password is incorrect.');
   }
 }
 
+function disconnect() {
+  localStorage.connected = "false";
+  logInContainer.style.display = 'block';
+  userActionsContainer.style.display = 'none';
+  document.getElementById('logInHeader').innerHTML = 'Log in';
+}
+
 function createAccount() {
-  var logInContainer = document.getElementById('logInContainer');
-  var createAccountContainer = document.getElementById('createAccountContainer');
   logInContainer.style.display = 'none';
   createAccountContainer.style.display = 'block';
   document.getElementById('cancelCreationAccountButton').addEventListener('click', function() {

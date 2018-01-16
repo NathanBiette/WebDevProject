@@ -57,6 +57,14 @@ footer{
   padding: 10px 10px 10px 10px;
 }
 
+.logInAllContainer{
+  display:none;
+}
+
+#logIn:hover + .logInAllContainer{
+  display:block;
+}
+/*
 #logInContainer{
   display: none;
   box-sizing: content-box;
