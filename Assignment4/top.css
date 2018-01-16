@@ -1,37 +1,39 @@
 header{
   top:0px;
-  position: fixed;
-}
-
-
-#headerProfile{
-    max-width: 75%;
-    height:2em;
-}
-
-#searchFormTop{
-  text-align: right;
-  padding: 0.5em ;
-  float: right;
+  position: sticky;
+  display: inline;
+  height: 1em;
 }
 
 #searchTittleTop{
   display: inline;
-  width:60%;
-  margin: auto;
+  height: inherit;
 }
+
+#HyperImage{
+    display: inline;
+    max-width: 75%;
+    height: 2em;
+}
+
+#searchFormTop{
+  text-align: right;
+  display: inline;
+  margin-left: auto;
+}
+
+
 
 #navButtonsTop{
   display:inline;
   width:10%;
-  height:10%;
+  height:inherit;
   background-color: inherit;
   text-align: center;
   box-shadow: 0px 5px 80px 0px white;
   font-size : 80%;
 }
 header nav li {
-  float: left;
 }
 
 /* LOG IN */
