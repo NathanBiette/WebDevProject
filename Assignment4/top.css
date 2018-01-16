@@ -34,11 +34,14 @@ header{
   display: inline;
   height: inherit;
 }
-
+.HomePageLink{
+  text-decoration: none;
+}
 #HyperImage{
     display: inline;
     max-width: 75%;
     height: 2em;
+
 }
 
 #searchFormTop{
