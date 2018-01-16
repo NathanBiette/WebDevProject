@@ -1,4 +1,7 @@
-header{top:0; height : 60%;position:fixed;}
+header{
+  top:0px;
+  position: sticky;
+}
 
 
 #headerProfile{
@@ -8,27 +11,27 @@ header{top:0; height : 60%;position:fixed;}
 
 #searchFormTop{
   text-align: right;
-  padding:0.5em ;
-  float:right;
+  padding: 0.5em ;
+  float: right;
 }
 
 #searchTittleTop{
+  display: inline;
   width:60%;
   margin: auto;
 }
 
-#navBarTop{
-  position: -webkit-sticky;
-  top: 0;
-  float:left;
-  position: sticky;
+#navButtonsTop{
+  display:inline;
   width:10%;
   height:10%;
   background-color: inherit;
   text-align: center;
-  padding: 0.2em 0px 0.2em 0px;
   box-shadow: 0px 5px 80px 0px white;
   font-size : 80%;
+}
+header nav li {
+  float: left;
 }
 
 /* LOG IN */
