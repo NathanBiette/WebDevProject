@@ -7,7 +7,7 @@ createAccountButton.addEventListener('click',createAccount);
 var disconnectButton = document.getElementById('disconnectButton');
 disconnectButton.addEventListener('click',disconnect);
 
-var logInContainer = document.getElementById('logInContainer');
+var logInContainer = document.getElementById('connexionContainer');
 var userActionsContainer = document.getElementById('userActionsContainer');
 var logInHeader = document.getElementById('logInHeader')
 var createAccountContainer = document.getElementById('createAccountContainer');
