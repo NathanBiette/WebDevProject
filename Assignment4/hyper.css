@@ -71,6 +71,10 @@ footer{
   display: none;
 }
 
+#userActionsContainer{
+  display: none;
+}
+
 
 /* SEARCH BAR */
 
@@ -200,6 +204,8 @@ section{
   margin: auto;
   height: 600px;
 }
+
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   nav li.navButtonHP{
