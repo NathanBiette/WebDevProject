@@ -1,3 +1,28 @@
+/* PAGE PRESENTATION */
+
+html{
+  font-family: Verdana;
+}
+
+body{
+  margin:0px;
+  height:100%;
+  background-color: white;
+}
+
+footer{
+  position:relative;
+  text-align: center;
+  background-color: #f2f2f2;
+  margin-top: 20px;
+  bottom:0px;
+  width:100%;
+  box-shadow: 0px 0px 5px 0px grey;
+  padding: 20px 0px 20px 0px;
+}
+
+
+
 header{
   top:0px;
   position: sticky;
@@ -20,6 +45,17 @@ header{
   text-align: right;
   display: inline;
   margin-left: auto;
+}
+
+input{
+  font-size: 1em;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px 5px 5px 5px;
+}
+
+input.button{
+  cursor:pointer;
 }
 
 
@@ -56,14 +92,18 @@ header nav li {
   padding: 10px 10px 10px 10px;
 }
 
-#logInAllContainer{
-  height:0px;
+.logInAllContainer{
+  display: none;
   box-sizing: content-box;
   margin:auto;
+  overflow:hidden;
 }
 
-/*
-#logIn:hover #logInAllContainer{
+#logIn:hover .logInAllContainer{
+  display: block;
+}
+
+#connexionContainer{
   display: block;
 }
 
@@ -74,7 +114,6 @@ header nav li {
 #userActionsContainer{
   display: none;
 }
-*/
 
 
 
