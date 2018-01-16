@@ -34,9 +34,11 @@ function infoPerso(){
   document.getElementById("infosPerso").style.display="none";
   document.getElementById("showHideInfosPerso").value="Modify my personal information";
 }
-
+alert("file");
 function showForm(){
+  alert("start");
   if(document.getElementById("infosPerso").style.display=="none"){
+    alert("h");
     document.getElementById("infosPerso").style.display="block";
     document.getElementById("showHideInfosPerso").value="Hide";
   }
@@ -47,7 +49,7 @@ function showForm(){
 
 
 }
-
+/*
 //drag and drop
 var dndHandler = {
 
@@ -108,3 +110,4 @@ var droppers = document.querySelectorAll('.dropper'),
 for (var i = 0; i < droppersLen; i++) {
     dndHandler.applyDropEvents(droppers[i]); // Application des événements nécessaires aux zones de drop
 }
+*/
