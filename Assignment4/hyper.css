@@ -24,10 +24,7 @@ header img{ /*responsive*/
   margin-bottom:50px;
   height:auto; /*scale conserve*/
 }
-#headerProfile{
-    max-width: 75%;
-    height:2em;
-}
+
 
 footer{
   position:relative;
@@ -89,15 +86,8 @@ input.button{
   text-align: center;
   padding: 30px;
 }
-#searchFormTop{
-  text-align: right;
-  padding:0.5em ;
-  float:right;
-}
-#searchTittleTop{
-  width:60%;
-  margin: auto;
-}
+
+
 
 /* NAV BAR */
 
@@ -111,19 +101,7 @@ input.button{
   padding: 1em 0px 1em 0px;
   box-shadow: 0px 5px 80px 0px white;
 }
-#navBarTop{
-  position: -webkit-sticky;
-  top: 0;
-  float:left;
-  position: sticky;
-  width:10%;
-  height:10%;
-  background-color: inherit;
-  text-align: center;
-  padding: 0.2em 0px 0.2em 0px;
-  box-shadow: 0px 5px 80px 0px white;
-  font-size : 80%;
-}
+
 
 nav a{
   text-decoration: none;
