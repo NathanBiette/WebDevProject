@@ -58,14 +58,14 @@ footer{
 }
 
 .logInAllContainer{
-  display:none;
+  display: none;
   box-sizing: content-box;
   margin:auto;
   overflow:hidden;
 }
 
 #logIn:hover .logInAllContainer{
-  display:block;
+  display: block;
 }
 
 #connexionContainer{
@@ -73,11 +73,11 @@ footer{
 }
 
 #createAccountContainer{
-  display: block;
+  display: none;
 }
 
 #userActionsContainer{
-  display: block;
+  display: none;
 }
 
 
