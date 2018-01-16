@@ -67,7 +67,7 @@ footer{
   transition:none;
 }
 
-#logIn:hover #logInContainer {
+#logIn:hover #logInContainer{
   height:auto;
 }
 
