@@ -46,9 +46,17 @@
     </aside>
 
     <form id="searchForm">
-      <input class="text" type="search" name="research" placeholder="Type here to search..." autofocus>
+      <input class="text" type="search" name="research" placeholder="Type here to search..." autofocus list="dataListArticles">
       <input class="button" type="button" value="Search"><br>
+      <datalist id="dataListArticles">
+        <option value="Star Wars 8">
+        <option value="Game of Thrones">
+        <option value="Mario Odyssey">
+      </datalist>
     </form>
+
+
+
     <div class="slideshow bigSlideshow">
       <div class="slideshowWindow">
         <div  id="mainMediaContainer" class="mediasContainer">
