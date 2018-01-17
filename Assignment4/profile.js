@@ -1,4 +1,4 @@
-/*
+
 if(localStorage.ageOutput){
 //alert(localStorage.ageOutput);
 document.getElementById("ageOutput").value=localStorage.ageOutput + " years old";
@@ -34,11 +34,10 @@ function infoPerso(){
   document.getElementById("infosPerso").style.display="none";
   document.getElementById("showHideInfosPerso").value="Modify my personal information";
 }
-alert("file");
+
 function showForm(){
-  alert("start");
+
   if(document.getElementById("infosPerso").style.display=="none"){
-    alert("h");
     document.getElementById("infosPerso").style.display="block";
     document.getElementById("showHideInfosPerso").value="Hide";
   }
@@ -48,7 +47,7 @@ function showForm(){
   }
 
 
-}*/
+}
 /*
 //drag and drop
 (function() {
