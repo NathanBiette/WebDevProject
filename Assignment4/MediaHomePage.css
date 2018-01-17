@@ -1,10 +1,5 @@
-body{
-  text-align: center;
-}
 div.slideshowsContainer{
-  margin: auto;
   display: inline-block;
-  border: tomato solid 5px;
 }
 div.smallSlideshowsContainer{
   width: auto;
