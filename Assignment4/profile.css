@@ -81,29 +81,27 @@ h6{
 }
 
 
-#onglets li{
+#onglets button{
     float : left;
     height : 21px; /* à modifier suivant la taille de la police pour centrer le texte dans l'onglet */
     background-color: #F4F9FD;
     margin : 2px 2px 0 2px !important;  /* Pour les navigateurs autre que IE */
     margin : 1px 2px 0 2px;  /* Pour IE  */
     border : 1px solid #9EA0A1;
+    display : block;
+    color : #666;
+    text-decoration : none;
+    /*padding : 4px;*/
 }
 
-#onglets li.active{
+#onglets button.active{
     border-bottom: 1px solid #fff;
     background-color: #fff;
 }
 
-#onglets a{
-    display : block;
-    color : #666;
-    text-decoration : none;
-    padding : 4px;
 
-}
 
-#onglets a:hover{
+#onglets button:hover{
     background : #fff;
 }
 
