@@ -21,9 +21,13 @@ footer{
   padding: 20px 0px 20px 0px;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 83828607c541e9c97c194289ff8f877f9ef1b80b
 header{
   top:0px;
-  position: sticky;
+  position:relative;
   height: 5em;
   padding-bottom: 2em;
 }
@@ -39,17 +43,19 @@ header{
   height: 100%;
   max-width: 200px;
   overflow: hidden;
+  margin-right: 2em;
 }
 #HyperImage{
   display: block;
   width: 100%;
+
 }
 
 #searchFormTop{
   float: left;
   width: 33%;
   box-sizing: content-box;
-  margin-top: 2em;
+  margin-top: 2.5em;
   display: inline;
 }
 #navButtonsTop{

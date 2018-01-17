@@ -2,7 +2,8 @@
 <html>
   <head>
     <link rel="stylesheet" href="../top.css">
-    <link rel="stylesheet" href="../carousel.css">
+    <link rel="stylesheet" href="../caroussel.css">
+    <link rel="stylesheet" href="../MediaHomePage.css">
     <title>Hyper</title>
     <meta charset="UTF-8">
   </head>
@@ -50,10 +51,10 @@
         </div>
       </div>
     </aside>
-
-    <div class="slideshow smallSlideshow">
+    <div class = "slideshowsContainer">
+    <div class="slideshow bigSlideshow">
       <div class="slideshowWindow">
-        <div  id="mainMediaContainer" class="mediasContainer">
+        <div  id="mainMediaContainer1" class="mediasContainer">
           <div class="mediaContainer">
             <p class="textOverContainer"> Lorem Ipsum STAR WARS</p>
             <img class="slideshowMedia" src="..\images\star-wars.jpg" alt="star-wars">
@@ -71,17 +72,64 @@
         <div class="translate right"><span>&#8250;</span></div>
       </div>
     </div>
-
+    <div class="smallSlideshowsContainer">
+      <div class="slideshow smallSlideshow">
+        <div class="slideshowWindow">
+          <div  id="mainMediaContainer2" class="mediasContainer">
+            <div class="mediaContainer">
+              <p class="textOverContainer"> Hyper Rocks!</p>
+              <img class="slideshowMedia" src="..\images\hyper.png" alt="star-wars">
+            </div>
+            <div class="mediaContainer">
+              <p class="textOverContainer"> Small Lorem Ipsum mario-odyssey</p>
+              <img class="slideshowMedia" src="..\images\mario-odyssey.jpg" alt="mario-odyssey">
+            </div>
+          </div>
+          <div class="translate left"><span>&#8249;</span></div>
+          <div class="translate right"><span>&#8250;</span></div>
+        </div>
+      </div>
+      <div class="slideshow smallSlideshow">
+        <div class="slideshowWindow">
+          <div  id="mainMediaContainer2" class="mediasContainer">
+            <div class="mediaContainer">
+              <p class="textOverContainer"> Small Lorem Ipsum mario-odyssey</p>
+              <img class="slideshowMedia" src="..\images\mario-odyssey.jpg" alt="mario-odyssey">
+            </div>
+            <div class="mediaContainer">
+              <p class="textOverContainer"> Small  Lorem Ipsum STAR WARS</p>
+              <img class="slideshowMedia" src="..\images\star-wars.jpg" alt="star-wars">
+            </div>
+          </div>
+          <div class="translate left"><span>&#8249;</span></div>
+          <div class="translate right"><span>&#8250;</span></div>
+        </div>
+      </div>
     </div>
-    <div style="height=1500">
-      div
+    <div class="slideshow bigSlideshow">
+      <div class="slideshowWindow">
+        <div  id="mainMediaContainer1" class="mediasContainer">
+          <div class="mediaContainer">
+            <p class="textOverContainer"> Breaking news:<br> John Snows knows nothing!</p>
+            <img class="slideshowMedia" src="..\images\gameofthrones.jpg" alt="gameofthrones">
+          </div>
+          <div class="mediaContainer">
+            <p class="textOverContainer"> Lorem Ipsum STAR WARS</p>
+            <img class="slideshowMedia" src="..\images\star-wars.jpg" alt="star-wars">
+          </div>
+        </div>
+        <div class="translate left"><span>&#8249;</span></div>
+        <div class="translate right"><span>&#8250;</span></div>
+      </div>
+    </div>
+  </div>
     </div>
     <footer>
       Designed by Hyper Team 2017-2018.
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="../connexion.js"></script>
-    <script src="../hyper.js"></script>
-
+    <script src="../caroussel.js"></script>
   </body>
 </html>
