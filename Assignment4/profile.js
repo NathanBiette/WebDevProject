@@ -191,3 +191,35 @@ for (var i = 0; i < droppersLen; i++) {
     }
 
 })();
+
+
+
+/*onglets*/
+function changeOnglet(ongletChosen) {
+  if(ongletChosen==1){
+    document.getElementById("ong1").className="active";
+    document.getElementById("ong2").className-="active";
+    document.getElementById("ong3").className-="active";
+    document.getElementById("ong4").className-="active";
+
+  }
+  if(ongletChosen==2){
+    document.getElementById("ong2").className="active";
+    document.getElementById("ong1").className-="active";
+    document.getElementById("ong3").className-="active";
+    document.getElementById("ong4").className-="active";
+  }
+  if(ongletChosen==3){
+    document.getElementById("ong3").className="active";
+    document.getElementById("ong1").className-="active";
+    document.getElementById("ong2").className-="active";
+    document.getElementById("ong4").className-="active";
+
+  }
+  if(ongletChosen==4){
+    document.getElementById("ong4").className="active";
+    document.getElementById("ong1").className-="active";
+    document.getElementById("ong2").className-="active";
+    document.getElementById("ong3").className-="active";
+  }
+}

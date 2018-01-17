@@ -83,33 +83,37 @@
 
   <div id="menu">
     <ul id="onglets">
-      <button class="active"> My Contributions</button>
-      <button> Pages followed and suggested </button>
-      <button> News </button>
-      <button> News from your relations </button>
+      <button onclick="changeOnglet(1)" class="active" id="ong1"> My Contributions</button>
+      <button onclick="changeOnglet(2)" id="ong2"> Pages followed and suggested </button>
+      <button onclick="changeOnglet(3)" id="ong3"> News </button>
+      <button onclick="changeOnglet(4)" id="ong4"> News from your relations </button>
     </ul>
   </div>
 
   <article class="dropper">
-    <div class="trailer draggable">
-      <section>
-        <h6>Trailer : Star Wars 8 official</h6>
-        <video controls="controls">
-          <source src="../videos/star-wars-the-last-jedi-trailer-official.mp4" type="video/mp4" />
-          <source src="../videos/star-wars-the-last-jedi-trailer-official.webm" type="video/webm" />
-        </video>
+    <div class="firstOnglet">
+      <div class="trailer draggable">
+        <section>
+          <h6>Trailer : Star Wars 8 official</h6>
+          <video controls="controls">
+            <source src="../videos/star-wars-the-last-jedi-trailer-official.mp4" type="video/mp4" />
+            <source src="../videos/star-wars-the-last-jedi-trailer-official.webm" type="video/webm" />
+          </video>
 
-      </section>
+        </section>
+      </div>
     </div>
 
-    <div class="post1 draggable" >
-      <section>
-        <p> Hey, Have you seen that ? Cute isn't it ?! </p>
-        <video controls="controls">
-          <source src="../videos/star-wars-the-last-jedi-trailer-official.mp4#t=90,94&xywh=percent:0,0,50,50" type="video/mp4" />
-        </video>
-      </section>
+    <div class="secondOnglet">
+      <div class="post1 draggable" >
+        <section>
+          <p> Hey, Have you seen that ? Cute isn't it ?! </p>
+          <video controls="controls">
+            <source src="../videos/star-wars-the-last-jedi-trailer-official.mp4#t=90,94&xywh=percent:0,0,50,50" type="video/mp4" />
+          </video>
+        </section>
 
+      </div>
     </div>
 
 

@@ -109,6 +109,9 @@ h6{
         /*position : relative;*/
         border-bottom : 1px solid #9EA0A1;
         padding-bottom : 6%;
+        margin-left: 15%;
+        width:80%;
+
 }
 
 .drop_hover {
@@ -134,6 +137,6 @@ div.trailer{
   left:15%;
   position:relative;
 }
-div.post1{
-
+div.secondOnglet{
+  display:none;
 }
