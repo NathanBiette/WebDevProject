@@ -24,7 +24,7 @@ footer{
 
 header{
   top:0px;
-  position: sticky;
+  position:relative;
   height: 5em;
   padding-bottom: 2em;
 }

@@ -1,0 +1,17 @@
+body{
+  text-align: center;
+}
+div.slideshowsContainer{
+  display: inline-block;
+  margin: auto;
+  border: tomato solid 5px;
+}
+div.smallSlideshowsContainer{
+  border: solid black 2px;
+  width: auto;
+  box-sizing: inherit;
+}
+
+div.smallSlideshow{
+  float: left;
+}

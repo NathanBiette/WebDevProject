@@ -18,8 +18,9 @@ div.bigSlideshow{
 div.bigSlideshow div.mediasContainer{
   display: inline-flex;
   overflow: hidden;
-  max-width: 1500px;
+  max-width: 2000px;
   transition: transform 2s;
+  transform: translateX(0px);
 }
 div.bigSlideshow div.mediaContainer{
   max-height:300px;
@@ -46,6 +47,7 @@ div.smallSlideshow div.mediasContainer{
   overflow: hidden;
   max-width:2000px;
   transition: transform 2s;
+  transform: translateX(0px);
 }
 div.smallSlideshow div.mediaContainer{
   max-height: px;
