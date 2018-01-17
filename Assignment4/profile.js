@@ -202,12 +202,22 @@ function changeOnglet(ongletChosen) {
     document.getElementById("ong3").className-="active";
     document.getElementById("ong4").className-="active";
 
+    document.getElementByClassName("div.firstOnglet").style.display="inline";
+    document.getElementByClassName("div.secondOnglet").style.display="none";
+    document.getElementByClassName("thirdOnglet").style.display="none";
+    document.getElementByClassName("fourthOnglet").style.display="none";
   }
   if(ongletChosen==2){
     document.getElementById("ong2").className="active";
     document.getElementById("ong1").className-="active";
     document.getElementById("ong3").className-="active";
     document.getElementById("ong4").className-="active";
+
+    document.getElementByClassName("div.firstOnglet").style.display="none";
+    document.getElementByClassName("div.secondOnglet").style.display="inline";
+    document.getElementByClassName("thirdOnglet").style.display="none";
+    document.getElementByClassName("fourthOnglet").style.display="none";
+
   }
   if(ongletChosen==3){
     document.getElementById("ong3").className="active";
@@ -215,11 +225,21 @@ function changeOnglet(ongletChosen) {
     document.getElementById("ong2").className-="active";
     document.getElementById("ong4").className-="active";
 
+    document.getElementByClassName("firstOnglet").style.display="none";
+    document.getElementByClassName("secondOnglet").style.display="none";
+    document.getElementByClassName("thirdOnglet").style.display="inline";
+    document.getElementByClassName("fourthOnglet").style.display="none";
+
   }
   if(ongletChosen==4){
     document.getElementById("ong4").className="active";
     document.getElementById("ong1").className-="active";
     document.getElementById("ong2").className-="active";
     document.getElementById("ong3").className-="active";
+
+    document.getElementByClassName("firstOnglet").style.display="none";
+    document.getElementByClassName("secondOnglet").style.display="none";
+    document.getElementByClassName("thirdOnglet").style.display="none";
+    document.getElementByClassName("fourthOnglet").style.display="inline";
   }
 }
