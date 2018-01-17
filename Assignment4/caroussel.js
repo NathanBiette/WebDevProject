@@ -31,8 +31,11 @@ $(".translate").click(function(){
   }
 });
 
+$('video').click(function(){
+  this.paused ? this.play() : this.pause();
+});
 
-/*---------------JS only one version ----------------------*/
+/*---------------JS only version ----------------------*/
 
 
 /*var mediasInSlideshow = document.getElementsByClassName('slideshowMedia');

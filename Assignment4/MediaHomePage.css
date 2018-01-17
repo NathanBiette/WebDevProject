@@ -1,11 +1,12 @@
 div.slideshowsContainer{
   display: inline-block;
-}
-div.smallSlideshowsContainer{
-  width: auto;
-  box-sizing: inherit;
+  margin-left: 25%;
 }
 
 div.smallSlideshow{
-  float: left;
+  display: inline-block;
+}
+
+.slideshow{
+  padding: 1em;
 }
