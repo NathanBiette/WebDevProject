@@ -38,7 +38,7 @@
   left:0;
   float:left;
   border-right: solid;
-  top:15%;
+  top:20%;
   position:absolute;
   width:200px;
 }
@@ -71,7 +71,7 @@ h6{
     /*border-bottom : 1px solid #9EA0A1;*/
     /*margin-left : 25%;*/
     left : 50%;
-    margin-top : 0%;
+    margin-top : 4%;
     width : 80%;
     margin-left : -20%; /* la moitié de width */
     /*border-bottom : 1px solid #9EA0A1;
@@ -109,7 +109,7 @@ h6{
 #menu{
         position : relative;
         border-bottom : 1px solid #9EA0A1;
-        padding-bottom : 25px;
+        padding-bottom : 6%;
 }
 
 .drop_hover {
@@ -118,7 +118,7 @@ h6{
 
 article{
   left:20%;
-  top:15%;
+  top:20%;
   position: absolute;
 
 }
