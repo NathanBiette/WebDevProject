@@ -45,9 +45,10 @@
 
                 clonedElement = target.appendChild(clonedElement); // Ajout de l'élément cloné à la zone de drop actuelle
                 dndHandler.applyDragEvents(clonedElement); // Nouvelle application des événements qui ont été perdus lors du cloneNode()
-
+                alert("suppressed");
+                alert(draggedElement.parentNode);
                 draggedElement.parentNode.removeChild(draggedElement); // Suppression de l'élément d'origine
-
+                alert("p");
             });
 
         }
