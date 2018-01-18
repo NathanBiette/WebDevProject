@@ -134,7 +134,7 @@ div.profileRightSide{
 
   width: 70%;
   /*margin: 2em;*/
-  padding: 1%;
+  /*padding: 1%;*/
   border-radius: 20px;
   box-shadow: 0px 0px 5px 0px grey;
   left:25%;
@@ -207,8 +207,13 @@ div.profileRightSide{
 }
 
 article{
+<<<<<<< HEAD
   left:20%;
   top:20%;
+=======
+  top:23%;
+  position: relative;
+>>>>>>> 02a6e6153fb292f02491ef76608bc2bf92cda63c
 
 }
 
