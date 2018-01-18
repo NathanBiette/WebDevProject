@@ -53,6 +53,14 @@ function retrieveAllInfos() {
     $("#locationMap").css("display","none");
     $("#showMap").prop("checked",false);
   }
+  if(localStorage.profilePicSrc){
+    document.getElementById('profilePicture').src = localStorage.profilePicSrc;
+  }
+  else{
+    document.getElementById('profilePicture').src = '../images/avatar.jpg';
+  }
+  $('#profilePicture').css("display","block");
+  $('#niceButtonChangePic').css("display","block");
 }
 
 function validatePersoInfoModif() {
@@ -89,3 +97,24 @@ function initMap() {
     }
   });
 }
+
+function changeProfilePic(evt){
+  var file =evt.target.files[0];
+  var button = evt.target;
+  if(!file.type.match('image.*')){
+    return;
+  }
+  else{
+    var reader = new FileReader();
+    reader.onload = (function(theFile){
+      return function(e) {
+        var src = e.target.result;
+        localStorage.profilePicSrc = src;
+        document.getElementById('profilePicture').src = src;
+        }
+    })(file);
+    reader.readAsDataURL(file)
+  }
+}
+document.getElementById('modifyPic').addEventListener('change', changeProfilePic);
+$('.niceButtonChangePic').click(function() {document.getElementById('modifyPic').click()})
