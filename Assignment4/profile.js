@@ -206,10 +206,6 @@ $("#ong4").click(4, changeOnglet);
 
 /*onglets*/
 function changeOnglet(ongletChosen) {
-<<<<<<< HEAD
-=======
-  alert("");
->>>>>>> 02a6e6153fb292f02491ef76608bc2bf92cda63c
   if(ongletChosen==1){
     document.getElementById("ong1").className="active";
     document.getElementById("ong2").className-="active";
