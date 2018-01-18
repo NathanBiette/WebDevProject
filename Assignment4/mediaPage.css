@@ -25,7 +25,6 @@ article.mediaPageContent{
   height:auto;
   overflow:hidden;
 
-
 }
 
 
@@ -67,17 +66,9 @@ p{
   box-sizing: border-box;
 }
 
-
-
-
-
-
-
-
-
-
-
-
+#tweetBlock{
+  padding: 5px;
+}
 
 .asideBlockContainer{
   background-color: #f2f2f2;
