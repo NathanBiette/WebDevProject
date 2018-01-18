@@ -1,126 +1,150 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <!--<link rel="stylesheet" href="../test.css">-->
-  <link rel="stylesheet" href="../profile.css">
-  <link rel="stylesheet" href="../login.css">
-  <link rel="stylesheet" href="../top.css">
-  <title>Hyper</title>
-  <meta charset="UTF-8">
+  <head>
+    <!--<link rel="stylesheet" href="../test.css">-->
+    <link rel="stylesheet" href="../profile.css">
+    <link rel="stylesheet" href="../login.css">
+    <link rel="stylesheet" href="../top.css">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARtx_9S3svAqTrqF1Xk01TTAMgSzjZCas&callback=initMap"></script>
+    <title>Hyper</title>
+    <meta charset="UTF-8">
+  </head>
 
-</head>
+  <body >
 
-<body >
+    <header>
 
-  <header>
-
-    <nav id="navButtonsTop">
-      <a href="HyperHomePage.html" class="navButtonHP"><li >Home</li></a>
-      <a href="MediaHomePage.html" ><li>Movies</li></a>
-      <a href="MediaHomePage.html" ><li>Series</li></a>
-      <a href="MediaHomePage.html" ><li>VideoGames</li></a>
-    </nav>
-    <div class="HyperImageContainer">
-      <a href="HyperHomePage.html">
-        <img id="HyperImage" src="..\images\hyper.png" alt="Hyper">
-      </a>
-    </div>
-    <form id="searchFormTop">
-      <input class="text" type="search" name="research" placeholder="Type here to search..." autofocus>
-      <input class="button" type="button" value="Search">
-    </form>
-  </header>
-
-  <aside id="logIn">
-    <div id="logInHeader">Log in</div>
-    <div class="logInAllContainer">
-      <div class="logInContainer" id="connexionContainer">
-        <input class="text" type="text" id="username" placeholder="username"><br>
-        <input class="text" type="password" id="password" placeholder="password"><br>
-        <input class="button" type="button" id="connexionButton" value="Connexion">
-        <input class="button" type="button" id="createAccountButton" value="Create a new account">
+      <nav id="navButtonsTop">
+        <a href="HyperHomePage.html" class="navButtonHP"><li >Home</li></a>
+        <a href="MediaHomePage.html" ><li>Movies</li></a>
+        <a href="MediaHomePage.html" ><li>Series</li></a>
+        <a href="MediaHomePage.html" ><li>VideoGames</li></a>
+      </nav>
+      <div class="HyperImageContainer">
+        <a href="HyperHomePage.html">
+          <img id="HyperImage" src="..\images\hyper.png" alt="Hyper">
+        </a>
       </div>
-      <div class="logInContainer" id="createAccountContainer">
-        <input class="text" type="text" id="usernameToCreate" placeholder="username"><br>
-        <input class="text" type="password" id="password1" placeholder="password"><br>
-        <input class="text" type="password" id="password2" placeholder="password again"><br>
-        <input class="text" type="email" id="email" placeholder="email@example.com"><br>
-        <input class="button" type="button" id="validateAccountButton" value="Validate the account">
-        <input class="button" type="button" id="cancelCreationAccountButton" value="Cancel">
+      <form id="searchFormTop">
+        <input class="text" type="search" name="research" placeholder="Type here to search..." autofocus>
+        <input class="button" type="button" value="Search">
+      </form>
+    </header>
+
+    <aside id="logIn">
+      <div id="logInHeader">Log in</div>
+      <div class="logInAllContainer">
+        <div class="logInContainer" id="connexionContainer">
+          <input class="text" type="text" id="username" placeholder="username"><br>
+          <input class="text" type="password" id="password" placeholder="password"><br>
+          <input class="button" type="button" id="connexionButton" value="Connexion">
+          <input class="button" type="button" id="createAccountButton" value="Create a new account">
+        </div>
+        <div class="logInContainer" id="createAccountContainer">
+          <input class="text" type="text" id="usernameToCreate" placeholder="username"><br>
+          <input class="text" type="password" id="password1" placeholder="password"><br>
+          <input class="text" type="password" id="password2" placeholder="password again"><br>
+          <input class="text" type="email" id="email" placeholder="email@example.com"><br>
+          <input class="button" type="button" id="validateAccountButton" value="Validate the account">
+          <input class="button" type="button" id="cancelCreationAccountButton" value="Cancel">
+        </div>
+        <div class="logInContainer" id="userActionsContainer">
+          <a href="profile.html"><input class="button" type="button" id="accessProfile" value="Profile page"></a>
+          <input class="button" type="button" id="disconnectButton" value="Disconnect">
+        </div>
       </div>
-      <div class="logInContainer" id="userActionsContainer">
-        <a href="profile.html"><input class="button" type="button" id="accessProfile" value="Profile page"></a>
-        <input class="button" type="button" id="disconnectButton" value="Disconnect">
+    </aside>
+
+
+
+    <aside id="profileLeftSide">
+      <img  id="profilePicture" src="..\images\avatar.jpg" alt="Profile picture"></img>
+
+      <div id="persoInfos">
+        <h3>Personnal infos</h3>
+        <div class="persoInfosContent" id="persoInfosContent">
+          <p>Username : <output type="text" id="usernameOutput"/></p>
+          <p>Age : <output type="text" id="ageOutput"/></p>
+          <p>Gender : <span id="genderToShow"><output type="text" id="genderOutput"/></span></p>
+          <p>Location : <output type ="text" id="locationOutput"/></p>
+          <div id="locationMap">
+            Location map here.
+          </div>
+        </div>
+        <br>
+        <input type="button" value="Modify infos" id="modifyInfosButton">
       </div>
-    </div>
-  </aside>
 
-  <aside id="profileLeftSide">
-    <img src="..\images\avatar.jpg" alt="profile picture" id="profilePicture"></img>
+      <div id="persoInfosModif">
+        <h3>Modify personnal infos</h3>
+        <div class="persoInfosModifContent" id="persoInfosModifContent">
+          <input type="number" name="age" id="age" placeholder="Age"/>
+          <p>Gender :
+            <span>
+              <input type="radio" name="gender" value="male" id="male">
+              <label for="male">&#9794;</label>
+              <input type="radio" name="gender" value="female" id="female">
+              <label for="female">&#9792;</label>
+            </span>
+          </p>
+          <input type="text" name="location" id="location" placeholder="Location"/>
+          <br>
+          <input type="checkbox" value="showMap" id="showMap"><label for="showMap">Show map</label></input>
+          <br><br>
+          <input type="button" value="Validate" id="validatePersoInfoModif">
+          <input type="button" value="Cancel" id="cancelPersoInfoModif">
+        </div>
+      </div>
+    </aside>
 
-    <form onsubmit="infoPerso()" id="infosPerso" display="none">
-      <p> age : <input type="number" name="age" id="age"/></p>
-      <p> gender :</p>
-      <div>
-        <input type="radio" name="gender" value="male" id="male">
-        <label for="male">Male</label>
-        <input type="radio" id="female" value="female" name="gender">
-        <label for="female">Female</label>
+
+
+
+
+
+    <section class="profileRightSide">
+      <div id="menu">
+        <ul id="onglets">
+          <button onclick="changeOnglet(1)" class="active" id="ong1"> My Contributions</button>
+          <button onclick="changeOnglet(2)" id="ong2"> Pages followed and suggested </button>
+          <button onclick="changeOnglet(3)" id="ong3"> News </button>
+          <button onclick="changeOnglet(4)" id="ong4"> News from your relations </button>
+        </ul>
       </div>
 
-      <p> country : <input type="text" name="country" id="country"/></p>
-      <button type="button" onclick="infoPerso()">Submit</button>
-    </form>
+      <article class="dropper">
+        <div class="firstOnglet">
+          <div class="trailer draggable">
+            <section>
+              <h6>Trailer : Star Wars 8 official</h6>
+              <video controls="controls">
+                <source src="../videos/star-wars-the-last-jedi-trailer-official.mp4" type="video/mp4" />
+                <source src="../videos/star-wars-the-last-jedi-trailer-official.webm" type="video/webm" />
+              </video>
 
-    <div id="MyInfoPerso">
-      <h6>My personal information </h6>
-      <input type="button" onclick="showForm()" value="Modify my personal information" id="showHideInfosPerso"></input>
-      <p> age : <output type="number" id="ageOutput"/></p>
-      <p> gender : <output type="text" id="genderOutput"/></p>
-      <p> country : <output type ="text" id="countryOutput"/></p>
-    </div>
-  </aside>
+            </section>
+          </div>
+        </div>
 
-  <div id="menu">
-    <ul id="onglets">
-      <button onclick="changeOnglet(1)" class="active" id="ong1"> My Contributions</button>
-      <button onclick="changeOnglet(2)" id="ong2"> Pages followed and suggested </button>
-      <button onclick="changeOnglet(3)" id="ong3"> News </button>
-      <button onclick="changeOnglet(4)" id="ong4"> News from your relations </button>
-    </ul>
-  </div>
+        <div class="secondOnglet">
+          <div class="post1 draggable" >
+            <section>
+              <p> Hey, Have you seen that ? Cute isn't it ?! </p>
+              <video controls="controls">
+                <source src="../videos/star-wars-the-last-jedi-trailer-official.mp4#t=90,94&xywh=percent:0,0,50,50" type="video/mp4" />
+              </video>
+            </section>
 
-  <article class="dropper">
-    <div class="firstOnglet">
-      <div class="trailer draggable">
-        <section>
-          <h6>Trailer : Star Wars 8 official</h6>
-          <video controls="controls">
-            <source src="../videos/star-wars-the-last-jedi-trailer-official.mp4" type="video/mp4" />
-            <source src="../videos/star-wars-the-last-jedi-trailer-official.webm" type="video/webm" />
-          </video>
+          </div>
+        </div>
+      </article>
+    </section>
 
-        </section>
-      </div>
-    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../connexion.js"></script>
+    <script src="../profile.js"></script>
+    <script src="../persoInfosModif.js"></script>
 
-    <div class="secondOnglet">
-      <div class="post1 draggable" >
-        <section>
-          <p> Hey, Have you seen that ? Cute isn't it ?! </p>
-          <video controls="controls">
-            <source src="../videos/star-wars-the-last-jedi-trailer-official.mp4#t=90,94&xywh=percent:0,0,50,50" type="video/mp4" />
-          </video>
-        </section>
+  </body>
 
-      </div>
-    </div>
-
-
-  </article>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="../connexion.js"></script>
-  <script src="../profile.js"></script>
-
-
-</body>
+</html>
