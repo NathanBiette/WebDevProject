@@ -4,12 +4,12 @@ var marker;
 var coords;
 
 $(function() {
-  // Retrieve the values in the local storage
-  retrieveAllInfos();
-  // Event listeners in jQuery
-  $("#modifyInfosButton").click(showPersoInfosModif);
-  $("#cancelPersoInfoModif").click(hidePersoInfosModif);
-  $("#validatePersoInfoModif").click(validatePersoInfoModif);
+    // Retrieve the values in the local storage
+    retrieveAllInfos();
+    // Event listeners in jQuery
+    $("#modifyInfosButton").click(showPersoInfosModif);
+    $("#cancelPersoInfoModif").click(hidePersoInfosModif);
+    $("#validatePersoInfoModif").click(validatePersoInfoModif);
 });
 
 // Functions
@@ -62,7 +62,6 @@ function validatePersoInfoModif() {
   localStorage.showMap = $("#showMap").is(":checked");
 
   retrieveAllInfos();
-
   hidePersoInfosModif();
 }
 
@@ -74,12 +73,11 @@ function initMap() {
     });
   if (! geocoder) geocoder = new google.maps.Geocoder();
 
-  alert(localStorage.location)
   geocoder.geocode( { 'address': localStorage.location }, function(results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
       coords = results[0].geometry.location;
       if (marker) {
-        marker.setPosition({position:coords});
+        marker.setPosition({lat: coords.lat(), lng: coords.lng()});
       } else {
         marker = new google.maps.Marker({position:coords});
       }
