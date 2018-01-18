@@ -30,7 +30,6 @@ function translateSlideshow(){
     matrixString[matrixString.length-2] = ' '+translateX;
     mediasContainer.css("transform",matrixString.join(',')) ;
   }
-  intializeTimers();
 };
 
 $('video').click(function(){
@@ -39,8 +38,14 @@ $('video').click(function(){
 
 function intializeTimers(){
   var rightTranslate=$(".right");
+  var timers = [];
   for(var button=0;button<rightTranslate.length;button++){
-    var timer = setTimeout(fakeClick.bind(null,rightTranslate[button]),5000);
+    var element = rightTranslate[button];
+    timers.concat(setInterval(fakeClick.bind(null,element),5000));
+  }
+  for(var button=0;button<rightTranslate.length;button++){
+    var element = rightTranslate[button];
+    element.addEventListener('change',function(){clearInterval(timers[button])});
   }
 }
 
