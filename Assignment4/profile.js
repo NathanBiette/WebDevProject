@@ -199,11 +199,7 @@ for (var i = 0; i < droppersLen; i++) {
 })();
 
 
-$("#ong1").click(1, changeOnglet);
-$("#ong2").click(2, changeOnglet);
-$("#ong3").click(3, changeOnglet);
-$("#ong4").click(4, changeOnglet);
-
+alert("");
 /*onglets*/
 function changeOnglet(ongletChosen) {
   if(ongletChosen==1){
