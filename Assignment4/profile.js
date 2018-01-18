@@ -1,5 +1,51 @@
 
+if(localStorage.onglet){
+  if(localStorage.onglet==1){
 
+    document.getElementById("ong1").className="active";
+    document.getElementById("ong2").className-="active";
+    document.getElementById("ong3").className-="active";
+    document.getElementById("ong4").className-="active";
+    document.getElementsByClassName("firstOnglet")[0].style.display="inline";
+    document.getElementsByClassName("secondOnglet")[0].style.display="none";
+    document.getElementsByClassName("thirdOnglet")[0].style.display="none";
+    document.getElementsByClassName("fourthOnglet")[0].style.display="none";
+  }
+  if(localStorage.onglet==2){
+    document.getElementById("ong2").className="active";
+    document.getElementById("ong1").className-="active";
+    document.getElementById("ong3").className-="active";
+    document.getElementById("ong4").className-="active";
+    document.getElementsByClassName("firstOnglet")[0].style.display="none";
+    document.getElementsByClassName("secondOnglet")[0].style.display="inline";
+    document.getElementsByClassName("thirdOnglet")[0].style.display="none";
+    document.getElementsByClassName("fourthOnglet")[0].style.display="none";
+
+  }
+  if(localStorage.onglet==3){
+    document.getElementById("ong3").className="active";
+    document.getElementById("ong1").className-="active";
+    document.getElementById("ong2").className-="active";
+    document.getElementById("ong4").className-="active";
+
+    document.getElementsByClassName("firstOnglet")[0].style.display="none";
+    document.getElementsByClassName("secondOnglet")[0].style.display="none";
+    document.getElementsByClassName("thirdOnglet")[0].style.display="inline";
+    document.getElementsByClassName("fourthOnglet")[0].style.display="none";
+
+  }
+  if(localStorage.onglet==4){
+    document.getElementById("ong4").className="active";
+    document.getElementById("ong1").className-="active";
+    document.getElementById("ong2").className-="active";
+    document.getElementById("ong3").className-="active";
+
+    document.getElementsByClassName("firstOnglet")[0].style.display="none";
+    document.getElementsByClassName("secondOnglet")[0].style.display="none";
+    document.getElementsByClassName("thirdOnglet")[0].style.display="none";
+    document.getElementsByClassName("fourthOnglet")[0].style.display="inline";
+  }
+}
 /*
 if(localStorage.ageOutput){
 //alert(localStorage.ageOutput);
@@ -211,6 +257,7 @@ function changeOnglet(ongletChosen) {
     document.getElementsByClassName("secondOnglet")[0].style.display="none";
     document.getElementsByClassName("thirdOnglet")[0].style.display="none";
     document.getElementsByClassName("fourthOnglet")[0].style.display="none";
+    localStorage.onglet=ongletChosen;
   }
   if(ongletChosen==2){
     document.getElementById("ong2").className="active";
@@ -221,6 +268,7 @@ function changeOnglet(ongletChosen) {
     document.getElementsByClassName("secondOnglet")[0].style.display="inline";
     document.getElementsByClassName("thirdOnglet")[0].style.display="none";
     document.getElementsByClassName("fourthOnglet")[0].style.display="none";
+    localStorage.onglet=ongletChosen;
 
   }
   if(ongletChosen==3){
@@ -233,7 +281,7 @@ function changeOnglet(ongletChosen) {
     document.getElementsByClassName("secondOnglet")[0].style.display="none";
     document.getElementsByClassName("thirdOnglet")[0].style.display="inline";
     document.getElementsByClassName("fourthOnglet")[0].style.display="none";
-
+    localStorage.onglet=ongletChosen;
   }
   if(ongletChosen==4){
     document.getElementById("ong4").className="active";
@@ -245,5 +293,6 @@ function changeOnglet(ongletChosen) {
     document.getElementsByClassName("secondOnglet")[0].style.display="none";
     document.getElementsByClassName("thirdOnglet")[0].style.display="none";
     document.getElementsByClassName("fourthOnglet")[0].style.display="inline";
+    localStorage.onglet=ongletChosen;
   }
 }

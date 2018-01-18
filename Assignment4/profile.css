@@ -241,3 +241,9 @@ nav.medias li:hover{
   background-color: red;
   border-radius: 2em;
 }
+h2{
+  text-align: center;
+}
+img{
+  width:50%;
+}
