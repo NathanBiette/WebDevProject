@@ -1,10 +1,15 @@
+var map;
+var geocoder;
+var marker;
+var coords;
+
 $(function() {
-  // Retrieve the values in the local storage
-  retrieveAllInfos();
-  // Event listeners in jQuery
-  $("#modifyInfosButton").click(showPersoInfosModif);
-  $("#cancelPersoInfoModif").click(hidePersoInfosModif);
-  $("#validatePersoInfoModif").click(validatePersoInfoModif);
+    // Retrieve the values in the local storage
+    retrieveAllInfos();
+    // Event listeners in jQuery
+    $("#modifyInfosButton").click(showPersoInfosModif);
+    $("#cancelPersoInfoModif").click(hidePersoInfosModif);
+    $("#validatePersoInfoModif").click(validatePersoInfoModif);
 });
 
 // Functions
@@ -69,10 +74,29 @@ function validatePersoInfoModif() {
 }
 
 function initMap() {
-  var map = new google.maps.Map(document.getElementById('locationMap'), {
+
+  if (! map) map = new google.maps.Map(document.getElementById('locationMap'), {
     center: {lat: -34.397, lng: 150.644},
-    zoom: 2
+    zoom: 4
     });
+  if (! geocoder) geocoder = new google.maps.Geocoder();
+
+  geocoder.geocode( { 'address': localStorage.location }, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+      coords = results[0].geometry.location;
+      if (marker) {
+        marker.setPosition({lat: coords.lat(), lng: coords.lng()});
+      } else {
+        marker = new google.maps.Marker({position:coords});
+      }
+      map.setCenter(coords);
+      marker.position = coords;
+      marker.setMap(map);
+    } else {
+      alert("Le geocodage n\'a pu etre effectue pour la raison suivante: " + status);
+    }
+  });
+}
 
   // Try HTML5 geolocation.
   /*
@@ -101,7 +125,29 @@ function initMap() {
     alert('Error: Your browser doesn\'t support geolocation.');
   }
   */
-}
+
+/*
+function findLocation() {
+
+
+
+  var addressToFind = document.getElementById("street").value + ', '
+    + document.getElementById("city").value + ', '
+    + document.getElementById("zipcode").value + ', '
+    + document.getElementById("country").value;
+
+  geocoder.geocode( { 'address': addressToFind }, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+      var coords = results[0].geometry.location
+      map.setCenter(coords);
+      marker.position = coords;
+      marker.setMap(map);
+    } else {
+      alert("Le geocodage n\'a pu etre effectue pour la raison suivante: " + status);
+    }
+  });
+}*/
+
 function changeProfilePic(evt){
   var file =evt.target.files[0];
   var button = evt.target;
