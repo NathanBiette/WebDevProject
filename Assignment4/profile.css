@@ -220,11 +220,11 @@ section{
 video{
   width:100%;
 }
-/*div.trailer{
+div.trailer{
 
-  left:15%;
-  position:relative;
-}*/
+  border : solid;
+  margin : 1%;
+}
 div.secondOnglet{
   display:none;
 }
