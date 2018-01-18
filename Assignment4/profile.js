@@ -202,7 +202,6 @@ for (var i = 0; i < droppersLen; i++) {
 
 /*onglets*/
 function changeOnglet(ongletChosen) {
-  alert("");
   if(ongletChosen==1){
     document.getElementById("ong1").className="active";
     document.getElementById("ong2").className-="active";
@@ -218,7 +217,7 @@ function changeOnglet(ongletChosen) {
     document.getElementById("ong1").className-="active";
     document.getElementById("ong3").className-="active";
     document.getElementById("ong4").className-="active";
-
+    alert(document.getElementsByClassName("firstOnglet")[0].style.display);
     document.getElementsByClassName("firstOnglet")[0].style.display="none";
     document.getElementsByClassName("secondOnglet")[0].style.display="inline";
     document.getElementsByClassName("thirdOnglet")[0].style.display="none";
