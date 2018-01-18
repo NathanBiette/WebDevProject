@@ -214,16 +214,17 @@ article{
 
 section{
   width: 20%;
-  border:solid;
+  /*border:solid;*/
+  float:left;
 }
 video{
   width:100%;
 }
-/*div.trailer{
+div.trailer{
 
-  left:15%;
-  position:relative;
-}*/
+  border : solid;
+  margin : 1%;
+}
 div.secondOnglet{
   display:none;
 }
@@ -246,4 +247,15 @@ h2{
 }
 img{
   width:50%;
+}
+
+div.Suggestions{
+    text-align: center;
+    border:solid;
+    margin:1%;
+}
+div.FollowedPages{
+  text-align : center;
+  border:solid;
+  margin:1%;
 }
