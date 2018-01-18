@@ -38,8 +38,11 @@ div.col{
   margin-top: 0em;
 }
 h3{
-  font-size: 1em;
-  text-shadow: 2px 2px 5px grey;
+  font-size: 2em;
+  font-weight: bold;
+}
+div.asideBlockContainer h2{
+  margin-top: 0px;
 }
 aside p,aside li{
   text-align: left;
@@ -73,6 +76,16 @@ img#mediaImage{
   height:200px;
   box-sizing: content-box;
   display: none;
+}
+
+div.addBlockAside{
+  text-align: left;
+}
+#asideAddBlockContainer p{
+  display: inline;
+}
+div.addBlockButton{
+  display: inline;
 }
 div.smallSlideshow div.mediaContainer{
   background-color: #5b5c5e;
