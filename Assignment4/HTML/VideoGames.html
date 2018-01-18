@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../top.css">
+    <link rel="stylesheet" href="../caroussel.css">
+    <link rel="stylesheet" href="../MediaHomePage.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <title>VideoGames</title>
+    <meta charset="UTF-8">
+  </head>
+
+
+  <body>
+    <div class="row">
+      <header>
+        <nav id="navTopBar">
+          <nav id="navButtonsTop">
+            <a href="HyperHomePage.html" class="navButtonHP"><li >Home</li></a>
+            <a href="MediaHomePage.html" ><li>Movies</li></a>
+            <a href="MediaHomePage.html" ><li>Series</li></a>
+            <a href="MediaHomePage.html" ><li>VideoGames</li></a>
+          </nav>
+          <div class="HyperImageContainer">
+            <a href="HyperHomePage.html">
+              <img id="HyperImage" src="..\images\hyper.png" alt="Hyper">
+            </a>
+          </div>
+          <form id="searchFormTop">
+            <input class="text" type="search" name="research" placeholder="Type here to search..." autofocus>
+            <input class="button" type="button" value="Search">
+          </form>
+        </nav>
+      </header>
+    </div>
+
+    <aside id="logIn">
+      <div id="logInHeader">Log in</div>
+      <div class="logInAllContainer">
+        <div class="logInContainer" id="connexionContainer">
+          <input class="text" type="text" id="username" placeholder="username"><br>
+          <input class="text" type="password" id="password" placeholder="password"><br>
+          <input class="button" type="button" id="connexionButton" value="Connexion">
+          <input class="button" type="button" id="createAccountButton" value="Create a new account">
+        </div>
+        <div class="logInContainer" id="createAccountContainer">
+          <input class="text" type="text" id="usernameToCreate" placeholder="username"><br>
+          <input class="text" type="password" id="password1" placeholder="password"><br>
+          <input class="text" type="password" id="password2" placeholder="password again"><br>
+          <input class="text" type="email" id="email" placeholder="email@example.com"><br>
+          <input class="button" type="button" id="validateAccountButton" value="Validate the account">
+          <input class="button" type="button" id="cancelCreationAccountButton" value="Cancel">
+        </div>
+        <div class="logInContainer" id="userActionsContainer">
+          <a href="profile.html"><input class="button" type="button" id="accessProfile" value="Profile page"></a>
+          <input class="button" type="button" id="disconnectButton" value="Disconnect">
+        </div>
+      </div>
+    </aside>
+
+    <div class = "row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+
+        <div class="row">
+          <div class="slideshow bigSlideshow">
+            <div class="slideshowWindow">
+              <div  id="mainMediaContainer1" class="mediasContainer">
+                <div class="mediaContainer">
+                  <p class="textOverContainer"> Lorem Ipsum STAR WARS</p>
+                  <img class="slideshowMedia" src="..\images\star-wars.jpg" alt="star-wars">
+                </div>
+                <div class="mediaContainer">
+                  <p class="textOverContainer"> Breaking news: John Snows knows nothing!</p>
+                  <img class="slideshowMedia" src="..\images\gameofthrones.jpg" alt="gameofthrones">
+                </div>
+                <div class="mediaContainer">
+                  <p class="textOverContainer"> Lorem Ipsum mario-odyssey</p>
+                  <img class="slideshowMedia" src="..\images\mario-odyssey.jpg" alt="mario-odyssey">
+                </div>
+              </div>
+              <div class="translate left"><span>&#8249;</span></div>
+              <div class="translate right"><span>&#8250;</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+
+
+
+
+          <div class="col-md-1"></div>
+          <div class="col-md-4">
+            <div class="slideshow smallSlideshow">
+              <div class="slideshowWindow">
+                <div  id="mainMediaContainer2" class="mediasContainer">
+                  <div class="mediaContainer">
+                    <p class="textOverContainer"> Big Bunny  Rocks!&#9208;</p>
+                    <video id='video1' class="slideshowMedia"  muted autobuffer poster="http://camendesign.com/code/video_for_everybody/poster.jpg">
+                      <source src="http://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_stereo.ogg" />
+                      <source src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="mediaContainer">
+                    <p class="textOverContainer"> Small Lorem Ipsum mario-odyssey</p>
+                    <img class="slideshowMedia" src="..\images\mario-odyssey.jpg" alt="mario-odyssey">
+                  </div>
+                </div>
+                <div class="translate left"><span>&#8249;</span></div>
+                <div class="translate right"><span>&#8250;</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2"></div>
+
+          <div class="col-md-4">
+            <div class="slideshow smallSlideshow">
+              <div class="slideshowWindow">
+                <div  id="mainMediaContainer2" class="mediasContainer">
+                  <div class="mediaContainer">
+                    <p class="textOverContainer"> Breaking news: Upcomming infinity war: Fan Art</p>
+                    <img class="slideshowMedia" src="..\images\avengers_infinity_war_2018_fan_art_by_tycustoms-dadg9xe.jpg" alt="InfinityWar">
+                  </div>
+                  <div class="mediaContainer">
+                    <p class="textOverContainer"> Small Lorem Ipsum mario-odyssey</p>
+                    <img class="slideshowMedia" src="..\images\mario-odyssey.jpg" alt="mario-odyssey">
+                  </div>
+                  <div class="mediaContainer">
+                    <p class="textOverContainer"> Small  Lorem Ipsum STAR WARS</p>
+                    <img class="slideshowMedia" src="..\images\star-wars.jpg" alt="star-wars">
+                  </div>
+                </div>
+                <div class="translate left"><span>&#8249;</span></div>
+                <div class="translate right"><span>&#8250;</span></div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        </div>
+
+        <div class="slideshow bigSlideshow">
+          <div class="slideshowWindow">
+            <div  id="mainMediaContainer1" class="mediasContainer">
+
+              <div class="mediaContainer">
+                <p class="textOverContainer"> Breaking news: John Snows knows nothing!</p>
+                <img class="slideshowMedia" src="..\images\gameofthrones.jpg" alt="gameofthrones">
+              </div>
+              <div class="mediaContainer">
+                <p class="textOverContainer"> Lorem Ipsum STAR WARS</p>
+                <img class="slideshowMedia" src="..\images\star-wars.jpg" alt="star-wars">
+              </div>
+            </div>
+            <div class="translate left"><span>&#8249;</span></div>
+            <div class="translate right"><span>&#8250;</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <footer>
+      Designed by Hyper Team 2017-2018.
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../connexion.js"></script>
+    <script src="../caroussel.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
+</html>
