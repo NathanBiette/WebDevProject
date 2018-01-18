@@ -2,6 +2,7 @@
 <html>
   <head>
     <!--<link rel="stylesheet" href="../test.css">-->
+    <link rel="stylesheet" href="../caroussel.css">
     <link rel="stylesheet" href="../mediaPage.css">
     <link rel="stylesheet" href="../login.css">
     <link rel="stylesheet" href="../top.css">
@@ -60,26 +61,92 @@
 
 
 
-    <aside id="profileLeftSide">
-      <div class="profilePicContainer">
-        <input type="button" class="niceButtonChangePic" id="niceButtonChangePic" value="&#9998;"></input>
-          <img  id="profilePicture" src="../images/STAR-WARS-8-POSTER.jpg" alt="Profile picture"></img>
-        <input type="file" id="modifyPic" name="test"> </input>
+    <aside id="mediaPageLeftSide">
+      <div class="mediaImageContainer">
+          <img  id="mediaImage" src="../images/STAR-WARS-8-POSTER.jpg" alt="Profile picture"></img>
       </div>
 
-      <div id="persoInfos">
-        <h3>Personnal infos</h3>
-        <div class="persoInfosContent" id="persoInfosContent">
-          <p>Username : <output type="text" id="usernameOutput"/></p>
-          <p>Age : <output type="text" id="ageOutput"/></p>
-          <p>Gender : <span class="genderToShow" id="genderToShow"><output type="text" id="genderOutput"/></span></p>
+      <div id="mediaInfos">
+        <h3>Basic infos</h3>
+        <div class="mediaInfosContent" id="mediaInfosContent">
+          <p>Directed by : 	Rian Johnson</p>
+          <p>Music by : 	John Williams</p>
+          <p>Release Date :  December 15, 2017 (In the US)</p>
+          <p>Running time : 152 minutes </p>
           <p>Location : <output type ="text" id="locationOutput"/></p>
           <div id="locationMap">
             Location map here.
           </div>
         </div>
         <br>
-        <input type="button" value="Modify infos" id="modifyInfosButton">
+        <input type="button" value="Show Shootings Location" id="modifyInfosButton">
+        <li>Skellig Michael,Ireland</li>
+        <li>Dubrovnik, Croatia</li>
+        <li>etc</li>
+      </div>
+
+      <div id="persoInfosModif">
+        <h3>Modify personnal infos</h3>
+        <div class="persoInfosModifContent" id="persoInfosModifContent">
+          <input type="number" name="age" id="age" placeholder="Age"/>
+          <p>Gender :
+            <span>
+              <input type="radio" name="gender" value="male" id="male">
+              <label class="genderToShow" for="male">&#9794;</label>
+              <input type="radio" name="gender" value="female" id="female">
+              <label class="genderToShow" for="female">&#9792;</label>
+            </span>
+          </p>
+          <input type="text" name="location" id="location" placeholder="Location"/>
+          <br>
+          <input type="checkbox" value="showMap" id="showMap"><label for="showMap">Show map</label></input>
+          <br><br>
+          <input type="button" value="Validate" id="validatePersoInfoModif">
+          <input type="button" value="Cancel" id="cancelPersoInfoModif">
+        </div>
+      </div>
+    </aside>
+    <artcle class="mediaPageContent">
+    </article>
+
+    <aside id="mediaPageRightSide">
+      <div id="mediaInfos">
+        <h2>Go To Fan base</h2>
+        <div class="mediaImageContainer">
+          <div class="slideshow smallSlideshow">
+            <div class="slideshowWindow">
+              <div  id="fanArt" class="mediasContainer">
+                <div class="mediaContainer">
+                  <p class="textOverContainer"> Made by Patrick Brown</p>
+                  <img class="slideshowMedia" src="https://pre00.deviantart.net/df56/th/pre/i/2016/039/f/3/star_wars__the_force_awakens_by_patrickbrown-d9r2ifd.jpg" alt="fanArt1">
+                </div>
+                <div class="mediaContainer">
+                  <p class="textOverContainer"> Made by Ry-Spirit</p>
+                  <img class="slideshowMedia" src="https://img00.deviantart.net/1e97/i/2017/361/6/5/porgachu_by_ry_spirit-dbxzf1y.jpg" alt="fanArt2">
+                </div>
+              </div>
+              <div class="translate left"><span>&#8249;</span></div>
+              <div class="translate right"><span>&#8250;</span></div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="mediaInfosContent" id="mediaInfosContent">
+          <p>Directed by : 	Rian Johnson</p>
+          <p>Music by : 	John Williams</p>
+          <p>Release Date :  December 15, 2017 (In the US)</p>
+          <p>Running time : 152 minutes </p>
+          <p>Location : <output type ="text" id="locationOutput"/></p>
+          <div id="locationMap">
+            Location map here.
+          </div>
+        </div>
+        <br>
+        <input type="button" value="Show Shootings Location" id="modifyInfosButton">
+        <li>Skellig Michael,Ireland</li>
+        <li>Dubrovnik, Croatia</li>
+        <li>etc</li>
       </div>
 
       <div id="persoInfosModif">
@@ -109,11 +176,10 @@
 
 
 
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="../connexion.js"></script>
     <script src="../mediaPage.js"></script>
-    <script src="../persoInfosModif.js"></script>
+    <script src="../caroussel.js"></script>
   </body>
 
 </html>

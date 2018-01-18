@@ -32,30 +32,19 @@
           <datalist id="dataListArticles"></datalist>
         </form>
       </nav>
-    </header>
+    </nav>
+  </header>
 
-    <aside id="logIn">
-      <div id="logInHeader">Log in</div>
-      <div class="logInAllContainer">
-        <div class="logInContainer" id="connexionContainer">
-          <input class="text" type="text" id="username" placeholder="username"><br>
-          <input class="text" type="password" id="password" placeholder="password"><br>
-          <input class="button" type="button" id="connexionButton" value="Connexion">
-          <input class="button" type="button" id="createAccountButton" value="Create a new account">
-        </div>
-        <div class="logInContainer" id="createAccountContainer">
-          <input class="text" type="text" id="usernameToCreate" placeholder="username"><br>
-          <input class="text" type="password" id="password1" placeholder="password"><br>
-          <input class="text" type="password" id="password2" placeholder="password again"><br>
-          <input class="text" type="email" id="email" placeholder="email@example.com"><br>
-          <input class="button" type="button" id="validateAccountButton" value="Validate the account">
-          <input class="button" type="button" id="cancelCreationAccountButton" value="Cancel">
-        </div>
-        <div class="logInContainer" id="userActionsContainer">
-          <a href="profile.html"><input class="button" type="button" id="accessProfile" value="Profile page"></a>
-          <input class="button" type="button" id="disconnectButton" value="Disconnect">
-        </div>
+  <aside id="logIn">
+    <div id="logInHeader">Log in</div>
+    <div class="logInAllContainer">
+      <div class="logInContainer" id="connexionContainer">
+        <input class="text" type="text" id="username" placeholder="username"><br>
+        <input class="text" type="password" id="password" placeholder="password"><br>
+        <input class="button" type="button" id="connexionButton" value="Connexion">
+        <input class="button" type="button" id="createAccountButton" value="Create a new account">
       </div>
+<<<<<<< HEAD
     </aside>
 
 
@@ -68,94 +57,106 @@
           </img></span>
         </output>
         <input type="file" id="modifyPic" name="test"> </input>
+=======
+      <div class="logInContainer" id="createAccountContainer">
+        <input class="text" type="text" id="usernameToCreate" placeholder="username"><br>
+        <input class="text" type="password" id="password1" placeholder="password"><br>
+        <input class="text" type="password" id="password2" placeholder="password again"><br>
+        <input class="text" type="email" id="email" placeholder="email@example.com"><br>
+        <input class="button" type="button" id="validateAccountButton" value="Validate the account">
+        <input class="button" type="button" id="cancelCreationAccountButton" value="Cancel">
+>>>>>>> f4a627a281b3c98837f59510c23568a9e2829910
       </div>
+      <div class="logInContainer" id="userActionsContainer">
+        <a href="profile.html"><input class="button" type="button" id="accessProfile" value="Profile page"></a>
+        <input class="button" type="button" id="disconnectButton" value="Disconnect">
+      </div>
+    </div>
+  </aside>
 
-      <div id="persoInfos">
-        <h3>Personnal infos</h3>
-        <div class="persoInfosContent" id="persoInfosContent">
-          <p>Username : <output type="text" id="usernameOutput"/></p>
-          <p>Age : <output type="text" id="ageOutput"/></p>
-          <p>Gender : <span class="genderToShow" id="genderToShow"><output type="text" id="genderOutput"/></span></p>
-          <p>Location : <output type ="text" id="locationOutput"/></p>
-          <div id="locationMap">
-            Location map here.
-          </div>
+
+
+  <aside id="profileLeftSide">
+    <div class="profilePicContainer">
+      <input type="button" class="niceButtonChangePic" id="niceButtonChangePic" value="&#9998;"></input>
+        <img  id="profilePicture" src="" alt="Profile picture"></img>
+      <input type="file" id="modifyPic" name="test"> </input>
+    </div>
+
+    <div id="persoInfos">
+      <h3>Personnal infos</h3>
+      <div class="persoInfosContent" id="persoInfosContent">
+        <p>Username : <output type="text" id="usernameOutput"/></p>
+        <p>Age : <output type="text" id="ageOutput"/></p>
+        <p>Gender : <span class="genderToShow" id="genderToShow"><output type="text" id="genderOutput"/></span></p>
+        <p>Location : <output type ="text" id="locationOutput"/></p>
+        <div id="locationMap">
+          Location map here.
         </div>
+      </div>
+      <br>
+      <input type="button" value="Modify infos" id="modifyInfosButton">
+    </div>
+
+    <div id="persoInfosModif">
+      <h3>Modify personnal infos</h3>
+      <div class="persoInfosModifContent" id="persoInfosModifContent">
+        <input type="number" name="age" id="age" placeholder="Age"/>
+        <p>Gender :
+          <span>
+            <input type="radio" name="gender" value="male" id="male">
+            <label class="genderToShow" for="male">&#9794;</label>
+            <input type="radio" name="gender" value="female" id="female">
+            <label class="genderToShow" for="female">&#9792;</label>
+          </span>
+        </p>
+        <input type="text" name="location" id="location" placeholder="Location"/>
         <br>
-        <input type="button" value="Modify infos" id="modifyInfosButton">
+        <input type="checkbox" value="showMap" id="showMap"><label for="showMap">Show map</label></input>
+        <br><br>
+        <input type="button" value="Validate" id="validatePersoInfoModif">
+        <input type="button" value="Cancel" id="cancelPersoInfoModif">
       </div>
-
-      <div id="persoInfosModif">
-        <h3>Modify personnal infos</h3>
-        <div class="persoInfosModifContent" id="persoInfosModifContent">
-          <input type="number" name="age" id="age" placeholder="Age"/>
-          <p>Gender :
-            <span>
-              <input type="radio" name="gender" value="male" id="male">
-              <label class="genderToShow" for="male">&#9794;</label>
-              <input type="radio" name="gender" value="female" id="female">
-              <label class="genderToShow" for="female">&#9792;</label>
-            </span>
-          </p>
-          <input type="text" name="location" id="location" placeholder="Location"/>
-          <br>
-          <input type="checkbox" value="showMap" id="showMap"><label for="showMap">Show map</label></input>
-          <br><br>
-          <input type="button" value="Validate" id="validatePersoInfoModif">
-          <input type="button" value="Cancel" id="cancelPersoInfoModif">
-        </div>
-      </div>
-    </aside>
+    </div>
+  </aside>
 
 
 
 
 
 
-    <section class="profileRightSide">
-      <div id="menu">
-        <ul id="onglets">
-          <button onclick="changeOnglet(1)" class="active" id="ong1"> My Contributions</button>
-          <button onclick="changeOnglet(2)" id="ong2"> Pages followed and suggested </button>
-          <button onclick="changeOnglet(3)" id="ong3"> News </button>
-          <button onclick="changeOnglet(4)" id="ong4"> News from your relations </button>
-        </ul>
-      </div>
+  <div class="profileRightSide">
+    <div id="menu">
+      <ul id="onglets">
+        <button onclick="changeOnglet(1)" class="active" id="ong1"> My Contributions</button>
+        <button onclick="changeOnglet(2)" id="ong2"> Pages followed and suggested </button>
+        <button onclick="changeOnglet(3)" id="ong3"> News </button>
+        <button onclick="changeOnglet(4)" id="ong4"> News from your relations </button>
+      </ul>
+    </div>
 
-      <article class="dropper">
-        <div class="firstOnglet">
-          <div class="trailer draggable">
-            <section>
-              <h6>Trailer : Star Wars 8 official</h6>
-              <video controls="controls">
-                <source src="../videos/star-wars-the-last-jedi-trailer-official.mp4" type="video/mp4" />
-                <source src="../videos/star-wars-the-last-jedi-trailer-official.webm" type="video/webm" />
-              </video>
+    <article class="dropper">
+      <div class="firstOnglet">
+        <div class="trailer draggable">
+          <section>
+            <h6>Trailer : Star Wars 8 official</h6>
+            <video controls="controls">
+              <source src="../videos/star-wars-the-last-jedi-trailer-official.mp4" type="video/mp4" />
+              <source src="../videos/star-wars-the-last-jedi-trailer-official.webm" type="video/webm" />
+            </video>
 
-            </section>
-          </div>
+          </section>
         </div>
 
-        <div class="secondOnglet">
-          <div class="post1 draggable" >
-            <section>
-              <p> Hey, Have you seen that ? Cute isn't it ?! </p>
-              <video controls="controls">
-                <source src="../videos/star-wars-the-last-jedi-trailer-official.mp4#t=90,94&xywh=percent:0,0,50,50" type="video/mp4" />
-              </video>
-            </section>
+        <div class="post1 draggable" >
+          <section>
+            <p> Hey, Have you seen that ? Cute isn't it ?! </p>
+            <video controls="controls">
+              <source src="../videos/star-wars-the-last-jedi-trailer-official.mp4#t=90,94&xywh=percent:0,0,50,50" type="video/mp4" />
+            </video>
+          </section>
 
-          </div>
         </div>
-      </article>
-
-      <div class="post1 draggable" >
-        <section>
-          <p> Hey, Have you seen that ? Cute isn't it ?! </p>
-          <video controls="controls">
-            <source src="../videos/star-wars-the-last-jedi-trailer-official.mp4#t=90,94&xywh=percent:0,0,50,50" type="video/mp4" />
-          </video>
-        </section>
       </div>
 
       <div class="secondOnglet">
@@ -190,62 +191,63 @@
           <section>
             <li><h2>Movies :</h2></li>
             <p>You may like :
-            <nav>
+              <nav>
                 <li>Fantastic beats <a href=""></a></li>
                 <li>Lord of rings <a href=""></a></li>
-            </nav>
-          </section>
-          <section>
-            <li><h2>Series :</h2></li>
-            <p>You may like </p>
-            <nav>
+              </nav>
+            </section>
+            <section>
+              <li><h2>Series :</h2></li>
+              <p>You may like </p>
+              <nav>
                 <li>Legends of tomorrow <a href=""></a></li>
                 <li>SuperGirl <a href=""></a></li>
-            </nav>
-          </section>
-          <section>
-            <li><h2>Video games :</h2></li>
-            <p>You may like </p>
-            <nav>
+              </nav>
+            </section>
+            <section>
+              <li><h2>Video games :</h2></li>
+              <p>You may like </p>
+              <nav>
                 <li>Nintendo switch <a href=""></a></li>
                 <li>Mario Kart 8 <a href=""></a></li>
-            </nav>
-          </section>
+              </nav>
+            </section>
+          </div>
         </div>
-      </div>
-      <div class="thirdOnglet">
-        <div class="FollowedPages">
-          <h1>What's new ??!</h1>
-          <section>
-            <li><h2>Movies :</h2></li>
-            <nav>
-              <a href="http://www.starwars.com/news/the-last-jedi-speaks"> <li>Have you seen this new article ? Star Wars : the last Jedi speaks</li></a>
-            </nav>
-          </section>
-          <section>
-            <li><h2>Series : </h2></li>
-            <nav>
-              <li>Arrow <a href=""></a></li>
-              <li>Flash <a href=""></a></li>
-            </nav>
-          </section>
-          <section>
-            <li><h2>Video Games : </h2></li>
-            <nav>
-              <li>Zelda : Have you listened to this music ? </li><audio controls> <source src="../videos/zeldaLink'sEpoch.mp3" type="audio/mp3"></audio>
-            </nav>
-          </section>
+        <div class="thirdOnglet">
+          <div class="FollowedPages">
+            <h1>What's new ??!</h1>
+            <section>
+              <li><h2>Movies :</h2></li>
+              <nav>
+                <a href="http://www.starwars.com/news/the-last-jedi-speaks"> <li>Have you seen this new article ? Star Wars : the last Jedi speaks</li></a>
+              </nav>
+            </section>
+            <section>
+              <li><h2>Series : </h2></li>
+              <nav>
+                <li>Arrow <a href=""></a></li>
+                <li>Flash <a href=""></a></li>
+              </nav>
+            </section>
+            <section>
+              <li><h2>Video Games : </h2></li>
+              <nav>
+                <li>Zelda : Have you listened to this music ? </li><audio controls> <source src="../videos/zeldaLink'sEpoch.mp3" type="audio/mp3"></audio>
+              </nav>
+            </section>
+          </div>
         </div>
-      </div>
-      <div class="fourthOnglet">
+        <div class="fourthOnglet">
 
-      </div>
-    </section>
+        </div>
+    </article>
+  </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="../connexion.js"></script>
-    <script src="../profile.js"></script>
-    <script src="../persoInfosModif.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="../connexion.js"></script>
+  <script src="../profile.js"></script>
+  <script src="../persoInfosModif.js"></script>
   </body>
 
 </html>
