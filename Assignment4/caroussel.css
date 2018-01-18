@@ -17,14 +17,16 @@ div.bigSlideshow{
 div.smallSlideshow{
   text-align: center;
   max-width: 250px;
-  height: auto;
+  max-height: 150px;
   margin: auto;
+  position: relative;
 }
 
 .mediasContainer{
   display: inline-flex;
+  height: inherit;
   overflow: hidden;
-  max-width: 2000px;
+  position: relative;
   transition: transform 2s;
   transform: translateX(0px);
 }
@@ -32,6 +34,7 @@ div.smallSlideshow{
 div.bigSlideshow div.mediaContainer{
   height:300px;
   width: 500px;
+
   background-color: rgb(400,400,400);
   border-radius: 30px;
   overflow: hidden;
@@ -40,6 +43,7 @@ div.bigSlideshow div.mediaContainer{
 div.smallSlideshow div.mediaContainer{
   height: 150px;
   width: 250px;
+  position: relative;
   background-color: #afb1b5;
   border-radius: 30px;
   overflow: hidden;
@@ -51,11 +55,10 @@ div.smallSlideshow div.mediaContainer{
   transition: .5s ease;
   max-width: 100%;
   max-height: 100%;
-  height: 100%;
   width: 100%;
+  height: 100%;
   object-fit: contain;
   margin: auto;
-
 
 }
 
