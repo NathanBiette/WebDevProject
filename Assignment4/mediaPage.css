@@ -93,6 +93,10 @@ h4{
   font-size: 1em;
   text-shadow: 2px 2px 5px grey;
   text-align: center;
+  font-weight: bold;
+}
+div.asideBlockContainer h2{
+  margin-top: 0px;
 }
 aside p,aside li{
   text-align: left;
@@ -126,6 +130,17 @@ img#mediaImage{
   height:200px;
   box-sizing: content-box;
   display: none;
+}
+
+div.addBlockAside{
+  text-align: left;
+}
+#asideAddBlockContainer p{
+  display: inline;
+}
+input.addBlockButton{
+  display: inline;
+  background-color: white;
 }
 div.smallSlideshow div.mediaContainer{
   background-color: #5b5c5e;
