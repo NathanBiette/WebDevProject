@@ -191,3 +191,12 @@ nav li:hover{
   background-color: white;
   border-radius: 2em;
 }
+div.secondOnglet{
+  display:none;
+}
+div.thirdOnglet{
+  display:none;
+}
+div.fourthOnglet{
+  display:none;
+}
