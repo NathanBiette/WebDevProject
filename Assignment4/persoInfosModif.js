@@ -1,7 +1,9 @@
+var map;
+var geocoder;
+var marker;
+var coords;
+
 $(function() {
-  var map;
-  var geocoder;
-  var marker;
   // Retrieve the values in the local storage
   retrieveAllInfos();
   // Event listeners in jQuery
@@ -60,14 +62,35 @@ function validatePersoInfoModif() {
   localStorage.showMap = $("#showMap").is(":checked");
 
   retrieveAllInfos();
+
   hidePersoInfosModif();
 }
 
 function initMap() {
-  var map = new google.maps.Map(document.getElementById('locationMap'), {
+
+  if (! map) map = new google.maps.Map(document.getElementById('locationMap'), {
     center: {lat: -34.397, lng: 150.644},
-    zoom: 2
+    zoom: 4
     });
+  if (! geocoder) geocoder = new google.maps.Geocoder();
+
+  alert(localStorage.location)
+  geocoder.geocode( { 'address': localStorage.location }, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+      coords = results[0].geometry.location;
+      if (marker) {
+        marker.setPosition({position:coords});
+      } else {
+        marker = new google.maps.Marker({position:coords});
+      }
+      map.setCenter(coords);
+      marker.position = coords;
+      marker.setMap(map);
+    } else {
+      alert("Le geocodage n\'a pu etre effectue pour la raison suivante: " + status);
+    }
+  });
+}
 
   // Try HTML5 geolocation.
   /*
@@ -96,11 +119,11 @@ function initMap() {
     alert('Error: Your browser doesn\'t support geolocation.');
   }
   */
-}
 
+/*
 function findLocation() {
 
-  if (! geocoder) var geocoder = new google.maps.Geocoder();
+
 
   var addressToFind = document.getElementById("street").value + ', '
     + document.getElementById("city").value + ', '
@@ -118,3 +141,4 @@ function findLocation() {
     }
   });
 }
+*/
