@@ -199,7 +199,7 @@ for (var i = 0; i < droppersLen; i++) {
 })();
 
 
-alert("");
+
 /*onglets*/
 function changeOnglet(ongletChosen) {
   if(ongletChosen==1){
