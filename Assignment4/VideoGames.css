@@ -23,3 +23,32 @@
   padding-top: 15px;
   padding-bottom: 15px;
 }
+
+h1.BigTitle{
+	font-size: 80px;
+}
+
+.TitleImage{
+	opacity: 0.7;
+	max-height: 100%;
+}
+
+.TitleRow{
+	background: black;
+	margin-bottom: 20px;
+}
+
+#searchForm{
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+
+.colSearchBar{
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-bottom:20px;
+}
+
+.SearchRow{
+	padding-bottom: 20px;
+}
