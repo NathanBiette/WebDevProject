@@ -219,11 +219,11 @@ section{
 video{
   width:100%;
 }
-div.trailer{
+/*div.trailer{
 
   left:15%;
   position:relative;
-}
+}*/
 div.secondOnglet{
   display:none;
 }
@@ -232,4 +232,7 @@ div.thirdOnglet{
 }
 div.fourthOnglet{
   display:none;
+}
+div.firstOnglet{
+  display:inline;
 }
