@@ -215,6 +215,7 @@ article{
 section{
   width: 20%;
   border:solid;
+  float:left;
 }
 video{
   width:100%;
@@ -246,4 +247,11 @@ h2{
 }
 img{
   width:50%;
+}
+
+div.suggestions{
+    text-align: center;
+}
+div.FollowedPages{
+  text-align : center;
 }
