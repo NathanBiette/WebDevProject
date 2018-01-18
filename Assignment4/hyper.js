@@ -1,16 +1,11 @@
-var mediasInSlideshow = document.getElementsByClassName('slideshowMedia');
-var numberMediaSlideshow= mediasInSlideshow.length;//3 Images
-var currentImage = 0;
+$(function() {
+  var mediasInSlideshow = document.getElementsByClassName('slideshowMedia');
+  var numberMediaSlideshow= mediasInSlideshow.length;//3 Images
+  var currentImage = 0;
 
-var mediaWidth = parseFloat(window.getComputedStyle( document.getElementsByClassName('slideshowMedia')[0]).getPropertyValue('width'));
-var totalMediasWidth = mediaWidth*numberMediaSlideshow;
-
-function initWebPage() { //all global var declarations and eventListeners...
-
-}
-
-initWebPage(); //init the page when the script is run
-
+  var mediaWidth = parseFloat(window.getComputedStyle( document.getElementsByClassName('slideshowMedia')[0]).getPropertyValue('width'));
+  var totalMediasWidth = mediaWidth*numberMediaSlideshow;
+});
 
 var translateButtons = document.getElementsByClassName('translate');
 for(var iter=0;iter<translateButtons.length;iter++){
