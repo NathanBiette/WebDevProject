@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="../profile.css">
     <link rel="stylesheet" href="../login.css">
     <link rel="stylesheet" href="../top.css">
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARtx_9S3svAqTrqF1Xk01TTAMgSzjZCas"></script>
     <title>Hyper Profile</title>
     <meta charset="UTF-8">
   </head>
@@ -74,7 +75,7 @@
         <div class="persoInfosContent" id="persoInfosContent">
           <p>Username : <output type="text" id="usernameOutput"/></p>
           <p>Age : <output type="text" id="ageOutput"/></p>
-          <p>Gender : <span id="genderToShow"><output type="text" id="genderOutput"/></span></p>
+          <p>Gender : <span class="genderToShow" id="genderToShow"><output type="text" id="genderOutput"/></span></p>
           <p>Location : <output type ="text" id="locationOutput"/></p>
           <div id="locationMap">
             Location map here.
@@ -91,9 +92,9 @@
           <p>Gender :
             <span>
               <input type="radio" name="gender" value="male" id="male">
-              <label for="male">&#9794;</label>
+              <label class="genderToShow" for="male">&#9794;</label>
               <input type="radio" name="gender" value="female" id="female">
-              <label for="female">&#9792;</label>
+              <label class="genderToShow" for="female">&#9792;</label>
             </span>
           </p>
           <input type="text" name="location" id="location" placeholder="Location"/>
@@ -244,7 +245,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="../connexion.js"></script>
     <script src="../profile.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARtx_9S3svAqTrqF1Xk01TTAMgSzjZCas"></script>
     <script src="../persoInfosModif.js"></script>
   </body>
 

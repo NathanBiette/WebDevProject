@@ -74,28 +74,30 @@ function validatePersoInfoModif() {
 }
 
 function initMap() {
+  try{
+    if (! map) map = new google.maps.Map(document.getElementById('locationMap'), {
+      center: {lat: -34.397, lng: 150.644},
+      zoom: 4
+      });
+    if (! geocoder) geocoder = new google.maps.Geocoder();
 
-  if (! map) map = new google.maps.Map(document.getElementById('locationMap'), {
-    center: {lat: -34.397, lng: 150.644},
-    zoom: 4
-    });
-  if (! geocoder) geocoder = new google.maps.Geocoder();
-
-  geocoder.geocode( { 'address': localStorage.location }, function(results, status) {
-    if (status == google.maps.GeocoderStatus.OK) {
-      coords = results[0].geometry.location;
-      if (marker) {
-        marker.setPosition({lat: coords.lat(), lng: coords.lng()});
+    geocoder.geocode( { 'address': localStorage.location }, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        coords = results[0].geometry.location;
+        if (marker) {
+          marker.setPosition({lat: coords.lat(), lng: coords.lng()});
+        } else {
+          marker = new google.maps.Marker({position:coords});
+        }
+        map.setCenter(coords);
+        marker.position = coords;
+        marker.setMap(map);
       } else {
-        marker = new google.maps.Marker({position:coords});
+        alert("Le geocodage n\'a pu etre effectue pour la raison suivante: " + status);
       }
-      map.setCenter(coords);
-      marker.position = coords;
-      marker.setMap(map);
-    } else {
-      alert("Le geocodage n\'a pu etre effectue pour la raison suivante: " + status);
-    }
-  });
+    });
+  } catch(err) {
+  }
 }
 
 function changeProfilePic(evt){

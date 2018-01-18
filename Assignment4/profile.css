@@ -34,9 +34,10 @@
 
 
 /* INFOS PERSOS */
-#profilePicContainer{
+.profilePicContainer{
   position: relative;
   max-width:200px;
+  text-align: center;
 }
 
 #modifyPic{
@@ -92,15 +93,22 @@ img#profilePicture{
   display:none;
 }
 
-#genderToShow{
+.genderToShow{
   font-weight: bold;
   background-color: white;
   border-radius: 50%;
   padding:2px 6px 4px 6px;
   box-shadow: inset 0px 0px 2px 0px grey;
 }
+.genderToShow[for=male]{
+  color:blue;
+}
+.genderToShow[for=female]{
+  color:magenta;
+}
 
 #locationMap {
+  color:white;
   display: none;
   background-color: black;
   width:100%;
@@ -109,38 +117,9 @@ img#profilePicture{
 }
 
 
-/*
-#showHideInfosPerso{
-  width:90%;
-}
 
-#profileLeftSide{
-  left:0;
-  float:left;
-  border-right: solid;
-  top:20%;
-  position:absolute;
-  width:200px;
-}
 
-#profilePicture{
-  border : solid;
-  width:90%;
 
-}
-#infosPerso{
-  display: none;
-  width:90%;
-}
-#MyInfoPerso{
-  width:90%;
-  border : solid;
-  text-align: center;
-}
-h3{
-  text-align: center;
-}
-*/
 
 
 
@@ -156,6 +135,10 @@ section.profileRightSide{
   border-radius: 20px;
   box-shadow: 0px 0px 5px 0px grey;
 }
+
+
+
+
 
 
 
