@@ -1,7 +1,6 @@
 article.mediaPageContent{
   width:50%;
   border: 2px solid black;
-  float:left;
 }
 #test{
   height: 1000px;
@@ -15,10 +14,8 @@ aside#mediaPageRightSide,aside#mediaPageLeftSide{
   box-shadow: 0px 0px 5px 0px grey;
 }
 #mediaPageRightSide{
-  float: right;
 }
 #mediaPageLeftSide{
-  float:left;
 }
 .asideBlockContainer{
   background-color: #f2f2f2;
