@@ -1,28 +1,32 @@
-article.mediaPageContent{
-  border: 2px solid black;
-margin:auto;
-  width: 50%;
-}
+
 
 aside#mediaPageRightSide,aside#mediaPageLeftSide{
   background-color: white;
   text-align: center;
   width:10%;
-  min-width: 300px;
-  margin: 2%;
+  min-width:200px;
   box-shadow: 0px 0px 5px 0px grey;
 }
 aside#mediaPageLeftSide{
   float: left;
+  width: 15%;
+  margin-right:10px;
+  margin-left:10px;
 }
 aside#mediaPageRightSide{
   float: right;
+  width: 15%;
+  margin-left:10px;
+  margin-right:10px;
 }
-div.col{
-  margin: 0;
-  padding: 0px;
-  float: none;
+article.mediaPageContent{
+  border: 2px solid black;
+  height:1000px;
+  overflow:hidden;
 }
+
+
+
 
 .asideBlockContainer{
   background-color: #f2f2f2;
