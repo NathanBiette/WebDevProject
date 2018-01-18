@@ -236,3 +236,8 @@ div.fourthOnglet{
 div.firstOnglet{
   display:inline;
 }
+nav.medias li:hover{
+  cursor: pointer;
+  background-color: red;
+  border-radius: 2em;
+}
