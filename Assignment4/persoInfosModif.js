@@ -1,4 +1,7 @@
 $(function() {
+  var map;
+  var geocoder;
+  var marker;
   // Retrieve the values in the local storage
   retrieveAllInfos();
   // Event listeners in jQuery
@@ -93,4 +96,25 @@ function initMap() {
     alert('Error: Your browser doesn\'t support geolocation.');
   }
   */
+}
+
+function findLocation() {
+
+  if (! geocoder) var geocoder = new google.maps.Geocoder();
+
+  var addressToFind = document.getElementById("street").value + ', '
+    + document.getElementById("city").value + ', '
+    + document.getElementById("zipcode").value + ', '
+    + document.getElementById("country").value;
+
+  geocoder.geocode( { 'address': addressToFind }, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+      var coords = results[0].geometry.location
+      map.setCenter(coords);
+      marker.position = coords;
+      marker.setMap(map);
+    } else {
+      alert("Le geocodage n\'a pu etre effectue pour la raison suivante: " + status);
+    }
+  });
 }
