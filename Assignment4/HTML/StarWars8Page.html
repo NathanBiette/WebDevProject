@@ -62,35 +62,35 @@
 
 
     <aside id="mediaPageLeftSide">
-      <div class="asideBlockContainer">
+      <div class="asideBlockContainer" id="mediaPresenterBlock">
         <div class="mediaImageContainer">
             <img  id="mediaImage" src="../images/STAR-WARS-8-POSTER.jpg" alt="Profile picture"></img>
         </div>
-
-        <div id="mediaInfos">
-          <h3>Basic infos</h3>
-          <div class="mediaInfosContent" id="mediaInfosContent">
-            <p>Directed by : 	Rian Johnson</p>
-            <p>Music by : 	John Williams</p>
-            <p>Release Date :  December 15, 2017 (In the US)</p>
-            <p>Running time : 152 minutes </p>
-            <div id="locationMap">
-              Location map here.
-            </div>
+        <h2>Basic infos</h2>
+        <div class="mediaInfosContent" id="mediaInfosContent">
+          <p>Directed by : 	Rian Johnson</p>
+          <p>Music by : 	John Williams</p>
+          <p>Release Date :  December 15, 2017 (In the US)</p>
+          <p>Running time : 152 minutes </p>
+          <div id="locationMap">
+            Location map here.
           </div>
-          <br>
-          <input type="button" value="Show Shootings Location" id="modifyInfosButton">
+        </div>
+        <br>
+        <input type="button" value="Show Shootings Location" id="modifyInfosButton">
+        <ul>
           <li>Skellig Michael,Ireland</li>
           <li>Dubrovnik, Croatia</li>
           <li>etc</li>
-        </div>
+        </ul>
       </div>
     </aside>
-    <artcle class="mediaPageContent">
+    <article class="mediaPageContent">
+      <div id="test">Test</div>
     </article>
 
     <aside id="mediaPageRightSide">
-      <div class="asideBlockContainer">
+      <div class="asideBlockContainer" id="fanbaseBlack">
         <h2>GO TO FANBASE</h2>
         <div class="mediaImageContainer">
           <div class="slideshow smallSlideshow">
@@ -111,23 +111,15 @@
           </div>
         </div>
       </div>
-
-
-        <div class="mediaInfosContent" id="mediaInfosContent">
-          <p>Directed by : 	Rian Johnson</p>
-          <p>Music by : 	John Williams</p>
-          <p>Release Date :  December 15, 2017 (In the US)</p>
-          <p>Running time : 152 minutes </p>
-          <p>Location : <output type ="text" id="locationOutput"/></p>
-          <div id="locationMap">
-            Location map here.
-          </div>
-        </div>
-        <br>
-        <input type="button" value="Show Shootings Location" id="modifyInfosButton">
-        <li>Skellig Michael,Ireland</li>
-        <li>Dubrovnik, Croatia</li>
-        <li>etc</li>
+      <div class="asideBlockContainer">
+        <h2>Related pieces of media</h2>
+        <ul>
+          <li class = "relatedWorkContainer">
+            <img class="relatedWorkMedia" src="https://www.actugaming.net/wp-content/uploads/2018/01/disney-restores-2005-star-wars-battlefront-2-multiplayer-on_rsw7.jpg" alt="relatedWork">
+          </li>
+          <li>Dubrovnik, Croatia</li>
+          <li>etc</li>
+        </ul>
       </div>
 
     </aside>
