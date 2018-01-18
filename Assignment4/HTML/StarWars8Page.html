@@ -88,15 +88,27 @@
         <h2>ADD SOME BLOCKS</h2>
         <div class="addBlockAside">
           <input type="button" value="&#8853;" class="addBlockButton" id="trailerAdd">
-          <p>Trailes</p>
+          <p>Trailers</p>
         </div>
         <div class="addBlockAside">
           <input type="button" value="&#8853;" class="addBlockButton" id="postersAdd">
           <p>Posters</p>
         </div>
         <div class="addBlockAside">
-          <input type="button" value="&#8853;" class="addBlockButton" id="interviewsAdd">
-          <p>Interviews</p>
+          <input type="button" value="&#8853;" class="addBlockButton" id="trailerAdd">
+          <p>Casting</p>
+        </div>
+        <div class="addBlockAside">
+          <input type="button" value="&#8853;" class="addBlockButton" id="trailerAdd">
+          <p>Tweets</p>
+        </div>
+        <div class="addBlockAside">
+          <input type="button" value="&#8853;" class="addBlockButton" id="trailerAdd">
+          <p>Critics</p>
+        </div>
+        <div class="addBlockAside">
+          <input type="button" value="&#8853;" class="addBlockButton" id="interviexsAdd">
+          <p>Articles</p>
         </div>
         <div class="addBlockAside">
           <input type="button" value="&#8853;" class="addBlockButton" id="castingAdd">
@@ -158,27 +170,39 @@
 
       <section class="contentBlocksContainer">
 
-        <section class="contentBlockContainer">
+        <section class="contentBlockContainer" id="trailers">
           <div class="contentBlock">
             <h4>Trailers</h4>
           </div>
         </section>
 
-        <section class="contentBlockContainer">
+        <section class="contentBlockContainer" id="posters">
           <div class="contentBlock">
-            <h4>Trailers</h4>
+            <h4>Posters</h4>
           </div>
         </section>
 
-        <section class="contentBlockContainer">
+        <section class="contentBlockContainer" id="casting">
           <div class="contentBlock">
-            <h4>Trailers</h4>
+            <h4>Casting</h4>
           </div>
         </section>
+
 
         <section class="contentBlockContainer">
           <div class="contentBlock" id="tweetBlock">
             <a class="twitter-timeline" data-tweet-limit="1" href="https://twitter.com/HamillHimself">Tweets by Mark Hamill</a>
+
+
+        <section class="contentBlockContainer" id="critics">
+          <div class="contentBlock">
+            <h4>Critics</h4>
+          </div>
+        </section>
+
+        <section class="contentBlockContainer" id="articles">
+          <div class="contentBlock">
+            <h4>Articles</h4>
           </div>
         </section>
 
@@ -194,6 +218,7 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script src="../connexion.js"></script>
     <script src="../mediaPage.js"></script>
     <script src="../caroussel.js"></script>
