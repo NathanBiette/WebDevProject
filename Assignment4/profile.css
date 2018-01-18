@@ -128,14 +128,13 @@ img#profilePicture{
 
 
 
-
 div.profileRightSide{
   background-color: #f2f2f2;
   text-align: center;
 
   width: 70%;
   /*margin: 2em;*/
-  padding: 1%;
+  /*padding: 1%;*/
   border-radius: 20px;
   box-shadow: 0px 0px 5px 0px grey;
   left:25%;
@@ -208,9 +207,8 @@ div.profileRightSide{
 }
 
 article{
-  left:20%;
-  top:20%;
-  position: absolute;
+  top:23%;
+  position: relative;
 
 }
 
