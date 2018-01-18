@@ -221,7 +221,7 @@ function changeOnglet(ongletChosen) {
     document.getElementById("ong1").className-="active";
     document.getElementById("ong3").className-="active";
     document.getElementById("ong4").className-="active";
-
+    alert(document.getElementsByClassName("firstOnglet")[0].style.display);
     document.getElementsByClassName("firstOnglet")[0].style.display="none";
     document.getElementsByClassName("secondOnglet")[0].style.display="inline";
     document.getElementsByClassName("thirdOnglet")[0].style.display="none";
