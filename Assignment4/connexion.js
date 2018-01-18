@@ -45,6 +45,11 @@ function disconnect() {
   logInContainer.style.display = 'block';
   userActionsContainer.style.display = 'none';
   document.getElementById('logInHeader').innerHTML = 'Log in';
+
+  if (document.title == "Hyper Profile") {
+    alert('in profile')
+    window.location.href = "HyperHomePage.html";
+  }
 }
 
 function createAccount() {

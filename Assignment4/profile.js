@@ -26,7 +26,7 @@ function showForm(){
   }
 }
 */
-
+/*
 
 function infoPerso(){
   document.getElementById("ageOutput").value=document.getElementById("age").value;
@@ -51,7 +51,7 @@ function infoPerso(){
   document.getElementById("modifyInfosButton").value="Modify my personal information";
 }
 
-
+/*
 
 
 /*
