@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--<link rel="stylesheet" href="../test.css">-->
+    <link rel="stylesheet" href="../mediaPage.css">
+    <link rel="stylesheet" href="../login.css">
+    <link rel="stylesheet" href="../top.css">
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARtx_9S3svAqTrqF1Xk01TTAMgSzjZCas"></script>
+    <title>Hyper Profile</title>
+    <meta charset="UTF-8">
+  </head>
+
+
+  <body>
+
+    <header>
+      <nav id="navTopBar">
+        <nav id="navButtonsTop">
+          <a href="HyperHomePage.html" class="navButtonHP"><li >Home</li></a>
+          <a href="MediaHomePage.html" ><li>Movies</li></a>
+          <a href="MediaHomePage.html" ><li>Series</li></a>
+          <a href="MediaHomePage.html" ><li>VideoGames</li></a>
+        </nav>
+        <div class="HyperImageContainer">
+          <a href="HyperHomePage.html">
+            <img id="HyperImage" src="..\images\hyper.png" alt="Hyper">
+          </a>
+        </div>
+        <form id="searchFormTop">
+          <input id="searchBar" class="text" type="search" name="research" placeholder="Type here to search..." autofocus list="dataListArticles">
+          <input id="searchButton" class="button" type="button" value="Search"><br>
+          <datalist id="dataListArticles"></datalist>
+        </form>
+      </nav>
+    </header>
+
+    <aside id="logIn">
+      <div id="logInHeader">Log in</div>
+      <div class="logInAllContainer">
+        <div class="logInContainer" id="connexionContainer">
+          <input class="text" type="text" id="username" placeholder="username"><br>
+          <input class="text" type="password" id="password" placeholder="password"><br>
+          <input class="button" type="button" id="connexionButton" value="Connexion">
+          <input class="button" type="button" id="createAccountButton" value="Create a new account">
+        </div>
+        <div class="logInContainer" id="createAccountContainer">
+          <input class="text" type="text" id="usernameToCreate" placeholder="username"><br>
+          <input class="text" type="password" id="password1" placeholder="password"><br>
+          <input class="text" type="password" id="password2" placeholder="password again"><br>
+          <input class="text" type="email" id="email" placeholder="email@example.com"><br>
+          <input class="button" type="button" id="validateAccountButton" value="Validate the account">
+          <input class="button" type="button" id="cancelCreationAccountButton" value="Cancel">
+        </div>
+        <div class="logInContainer" id="userActionsContainer">
+          <a href="profile.html"><input class="button" type="button" id="accessProfile" value="Profile page"></a>
+          <input class="button" type="button" id="disconnectButton" value="Disconnect">
+        </div>
+      </div>
+    </aside>
+
+
+
+    <aside id="profileLeftSide">
+      <div class="profilePicContainer">
+        <input type="button" class="niceButtonChangePic" id="niceButtonChangePic" value="&#9998;"></input>
+          <img  id="profilePicture" src="../images/STAR-WARS-8-POSTER.jpg" alt="Profile picture"></img>
+        <input type="file" id="modifyPic" name="test"> </input>
+      </div>
+
+      <div id="persoInfos">
+        <h3>Personnal infos</h3>
+        <div class="persoInfosContent" id="persoInfosContent">
+          <p>Username : <output type="text" id="usernameOutput"/></p>
+          <p>Age : <output type="text" id="ageOutput"/></p>
+          <p>Gender : <span class="genderToShow" id="genderToShow"><output type="text" id="genderOutput"/></span></p>
+          <p>Location : <output type ="text" id="locationOutput"/></p>
+          <div id="locationMap">
+            Location map here.
+          </div>
+        </div>
+        <br>
+        <input type="button" value="Modify infos" id="modifyInfosButton">
+      </div>
+
+      <div id="persoInfosModif">
+        <h3>Modify personnal infos</h3>
+        <div class="persoInfosModifContent" id="persoInfosModifContent">
+          <input type="number" name="age" id="age" placeholder="Age"/>
+          <p>Gender :
+            <span>
+              <input type="radio" name="gender" value="male" id="male">
+              <label class="genderToShow" for="male">&#9794;</label>
+              <input type="radio" name="gender" value="female" id="female">
+              <label class="genderToShow" for="female">&#9792;</label>
+            </span>
+          </p>
+          <input type="text" name="location" id="location" placeholder="Location"/>
+          <br>
+          <input type="checkbox" value="showMap" id="showMap"><label for="showMap">Show map</label></input>
+          <br><br>
+          <input type="button" value="Validate" id="validatePersoInfoModif">
+          <input type="button" value="Cancel" id="cancelPersoInfoModif">
+        </div>
+      </div>
+    </aside>
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../connexion.js"></script>
+    <script src="../mediaPage.js"></script>
+    <script src="../persoInfosModif.js"></script>
+  </body>
+
+</html>
