@@ -55,7 +55,9 @@ p{
 
 }
 .contentBlock{
-  border: 2px solid black;
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px 0px grey;
   -webkit-column-break-inside:avoid; /* Webkit */
   break-inside: avoid-column; /* Opera >= 11.5 */
   break-inside: avoid; /* CSS3 */
