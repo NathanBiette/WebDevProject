@@ -1,16 +1,12 @@
-body{
-  text-align: center;
-}
 div.slideshowsContainer{
-  margin: auto;
   display: inline-block;
-  border: tomato solid 5px;
-}
-div.smallSlideshowsContainer{
-  width: auto;
-  box-sizing: inherit;
+  margin-left: 25%;
 }
 
 div.smallSlideshow{
-  float: left;
+  display: inline-block;
+}
+
+.slideshow{
+  padding: 1em;
 }

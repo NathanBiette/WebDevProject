@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="hyper.css">
+    <title>Hyper</title>
+    <meta charset="UTF-8">
+  </head>
+
+  <body>
+    <header>
+      <a href="HyperHomePage.html">
+        <img src="images\hyper.png" alt="Hyper">
+      </a>
+    </header>
+
+    <nav id="navBar">
+      <a href="HyperHomePage.html"><li class="navButtonHP">Home</li></a>
+      <li class="navButtonHP">Movies</li>
+      <li class="navButtonHP">Series</li>
+      <li class="navButtonHP">VideoGames</li>
+    </nav>
+
+    <aside id="logIn">
+      <header id="logInHeader">Log in</header>
+      <div id="logInContainer">
+        <input class="text" type="text" id="username" placeholder="username"><br>
+        <input class="text" type="password" id="password" placeholder="password"><br>
+        <input class="button" type="button" id="connexionButton" value="Connexion">
+        <input class="button" type="button" id="createAccountButton" value="Create a new account">
+      </div>
+      <div id="createAccountContainer">
+        <input class="text" type="text" id="usernameToCreate" placeholder="username"><br>
+        <input class="text" type="password" id="password1" placeholder="password"><br>
+        <input class="text" type="password" id="password2" placeholder="password again"><br>
+        <input class="text" type="email" id="email" placeholder="email@example.com"><br>
+        <input class="button" type="button" id="validateAccountButton" value="Validate the account">
+        <input class="button" type="button" id="cancelCreationAccountButton" value="Cancel">
+      </div>
+      <div id="userActionsContainer">
+        <a href="profile.html"><input class="button" type="button" id="accessProfile" value="Profile page"></a>
+        <input class="button" type="button" id="disconnectButton" value="Disconnect">
+      </div>
+    </aside>
+
+    <form id="searchForm">
+      <input class="text" type="search" name="research" placeholder="Type here to search..." autofocus>
+      <input class="button" type="button" value="Search"><br>
+    </form>
+
+    <div class="slideshow bigSlideshow">
+      <div class="slideshowWindow">
+        <div  id="mainImageContainer" class="imagesContainer">
+          <div class="imageContainer"><img class="slideshowMedia" src="images\star-wars.jpg" alt="star-wars"> </div>
+          <div class="imageContainer"><img class="slideshowMedia" src="images\gameofthrones.jpg" alt="gameofthrones"></div>
+          <div class="imageContainer"><img class="slideshowMedia" src="images\mario-odyssey.jpg" alt="mario-odyssey"></div>
+        </div>
+        <div class="translate left"><</div>
+        <div class="translate right">></div>
+      </div>
+
+    </div>
+
+    <footer>
+      Designed by Hyper Team 2017-2018.
+    </footer>
+
+    <script src="connexion.js"></script>
+    <script src="hyper.js"></script>
+
+  </body>
+</html>

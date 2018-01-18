@@ -4,7 +4,6 @@ div.slideshowWindow{
   box-sizing: content-box;
   width:100%;
   height:auto;
-  margin:auto;
   border-radius: 30px;
 }
 
@@ -15,59 +14,54 @@ div.bigSlideshow{
   margin: auto;
 }
 
-div.bigSlideshow div.mediasContainer{
-  display: inline-flex;
-  overflow: hidden;
-  max-width: 2000px;
-  transition: transform 2s;
-  transform: translateX(0px);
-}
-div.bigSlideshow div.mediaContainer{
-  max-height:300px;
-  max-width: 500px;
-  background-color: black;
-  border-radius: 30px;
-  overflow: hidden;
-}
-div.bigSlideshow .slideshowMedia{
-  max-width: 500px;
-  position: inherit;
-  display: block;
-  transition: .5s ease;
-}
-
 div.smallSlideshow{
   text-align: center;
   max-width: 250px;
   height: auto;
   margin: auto;
 }
-div.smallSlideshow div.mediasContainer{
+
+.mediasContainer{
   display: inline-flex;
   overflow: hidden;
-  max-width:2000px;
+  max-width: 2000px;
   transition: transform 2s;
   transform: translateX(0px);
 }
-div.smallSlideshow div.mediaContainer{
-  max-height: px;
-  max-width: 250px;
-  background-color: black;
+
+div.bigSlideshow div.mediaContainer{
+  height:300px;
+  width: 500px;
+  background-color: rgb(400,400,400);
   border-radius: 30px;
   overflow: hidden;
+  margin: auto;
 }
-div.smallSlideshow .slideshowMedia{
-  max-width: 250px;
-  position: inherit;
-  display: block;
+div.smallSlideshow div.mediaContainer{
+  height: 150px;
+  width: 250px;
+  background-color: #afb1b5;
+  border-radius: 30px;
+  overflow: hidden;
+  margin: auto;
+}
+
+
+.slideshowMedia{
   transition: .5s ease;
+  max-width: 100%;
+  max-height: 100%;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  margin: auto;
+
+
 }
 
 .textOverContainer{
   border-radius: 30px;
   bottom: 0px;
-  margin-left: auto;
-  margin-right: auto;
   color: black;
   border: 1px black solid;
   background-color: white;
@@ -77,6 +71,7 @@ div.smallSlideshow .slideshowMedia{
   opacity: 0;
   padding-left: 1em;
   padding-right: 1em;
+  word-wrap: break-word;
 }
 .mediaContainer:hover .textOverContainer {
   opacity: 1;

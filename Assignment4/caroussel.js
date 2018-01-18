@@ -10,7 +10,7 @@ $(".translate").click(function(){
   direction = $(this).attr("class").split(' ')[1];
   var remainder = Math.floor(translateX%mediaWidth);
   if(remainder==0){
-    if(direction=='left' && remainder==0){//-500px to transfor
+    if(direction=='left' && remainder==0){//+500px to transform left
       if(translateX<0){
         translateX += mediaWidth;
       }
@@ -18,7 +18,7 @@ $(".translate").click(function(){
         translateX = -mediaWidth*(numberMediaSlideshow-1);
       }
     }
-    if(direction=='right' && remainder==0){//-500px to transforf
+    if(direction=='right' && remainder==0){//-500px to transforfm right
       if(translateX> -mediaWidth*(numberMediaSlideshow-1)){
         translateX -=mediaWidth;
       }
@@ -31,8 +31,11 @@ $(".translate").click(function(){
   }
 });
 
+$('video').click(function(){
+  this.paused ? this.play() : this.pause();
+});
 
-/*---------------JS only one version ----------------------*/
+/*---------------JS only version ----------------------*/
 
 
 /*var mediasInSlideshow = document.getElementsByClassName('slideshowMedia');
