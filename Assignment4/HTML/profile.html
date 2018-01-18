@@ -60,7 +60,15 @@
 
 
     <aside id="profileLeftSide">
-      <img  id="profilePicture" src="..\images\avatar.jpg" alt="Profile picture"></img>
+      <div class="profilePicContainer">
+        <input type="button" class="niceButtonChangePic" id="niceButtonChangePic" value="&#9998;"></input>
+        <output id="NewPic">
+          <span><img  id="profilePicture" src="" alt="Profile picture">
+          </img></span>
+        </output>
+
+        <input type="file" id="modifyPic" name="test"> </input>
+      </div>
 
       <div id="persoInfos">
         <h3>Personnal infos</h3>
@@ -102,7 +110,7 @@
 
 
 
-    
+
 
     <section class="profileRightSide">
       <div id="menu">
