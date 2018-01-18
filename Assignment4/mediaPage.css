@@ -50,17 +50,17 @@ h3{
   text-shadow: 2px 2px 5px grey;
 }
 
-#persoInfosContent{
+#mediaInfosContent{
   text-align: left;
 }
 
-#persoInfosContent p{
+#mediaInfosContent p{
   font-weight: bold;
 }
-#persoInfosContent p output{
+#mediaInfosContent p output{
   font-weight: normal;
 }
-#profilePicContainer{
+#mediaImageContainer{
   position: relative;
   max-width: inherit;
   max-height: inherit;
@@ -71,7 +71,7 @@ h3{
 
 img#mediaImage{
   width: 100%;
-  max-width:200px;
+  max-width:400px;
   border-radius: 10%;
   object-fit: contain;
   margin: auto;
