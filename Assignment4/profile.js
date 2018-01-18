@@ -202,6 +202,7 @@ for (var i = 0; i < droppersLen; i++) {
 
 /*onglets*/
 function changeOnglet(ongletChosen) {
+
   if(ongletChosen==1){
     document.getElementById("ong1").className="active";
     document.getElementById("ong2").className-="active";
