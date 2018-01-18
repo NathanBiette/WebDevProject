@@ -34,26 +34,6 @@
 
 
 /* INFOS PERSOS */
-#profilePicContainer{
-  position: relative;
-  max-width:200px;
-}
-
-#modifyPic{
-  position: absolute;
-  display: none;
-}
-.profilePicContainer:hover #niceButtonChangePic{
-  opacity:0.8;
-}
-#niceButtonChangePic{
-  display: none;
-  position: absolute;
-  background: white;
-  border: none;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
 #profileLeftSide{
   background-color: #f2f2f2;
   text-align: center;
@@ -80,12 +60,35 @@ h3{
 #persoInfosContent p output{
   font-weight: normal;
 }
+#profilePicContainer{
+  position: relative;
+  max-width: inherit;
+  max-height: inherit;
+  margin: auto;
+  text-align: center;
+}
 
+#modifyPic{
+  display: none;
+}
+.profilePicContainer:hover #niceButtonChangePic{
+  opacity:0.8;
+}
+#niceButtonChangePic{
+  display: none;
+  position: absolute;
+  background: white;
+  border: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
 img#profilePicture{
   width: 100%;
   max-width:200px;
   border-radius: 10%;
   display: none;
+  object-fit: contain;
+  margin: auto;
 }
 
 #persoInfosModif{
