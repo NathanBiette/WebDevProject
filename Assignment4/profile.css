@@ -37,12 +37,14 @@
 #profileLeftSide{
   background-color: #f2f2f2;
   text-align: center;
-  float:left;
+
   width: 15%;
-  margin: 2em;
-  padding: 2em;
+
+  padding: 1%;
   border-radius: 20px;
   box-shadow: 0px 0px 5px 0px grey;
+  left:0%;
+  position: absolute;
 }
 
 h3{
@@ -127,15 +129,18 @@ img#profilePicture{
 
 
 
-section.profileRightSide{
+div.profileRightSide{
   background-color: #f2f2f2;
   text-align: center;
-  float:right;
+
   width: 70%;
-  margin: 2em;
-  padding: 2em;
+  /*margin: 2em;*/
+  padding: 1%;
   border-radius: 20px;
   box-shadow: 0px 0px 5px 0px grey;
+  left:25%;
+
+  position:absolute;
 }
 
 
@@ -156,8 +161,9 @@ section.profileRightSide{
   /*border-bottom : 1px solid #9EA0A1;*/
   /*margin-left : 25%;*/
   left : 50%;
-  margin-top : 4%;
+  margin-top : 0%;
   width : 80%;
+  height:2%;
   margin-left : -20%; /* la moitié de width */
   /*border-bottom : 1px solid #9EA0A1;
   padding-bottom : 25px;*/
@@ -191,7 +197,7 @@ section.profileRightSide{
 #menu{
   /*position : relative;*/
   border-bottom : 1px solid #9EA0A1;
-  padding-bottom : 6%;
+  padding-bottom : 3%;
   margin-left: 15%;
   width:80%;
 
