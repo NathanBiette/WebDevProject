@@ -85,8 +85,9 @@ div.addBlockAside{
 #asideAddBlockContainer p{
   display: inline;
 }
-div.addBlockButton{
+input.addBlockButton{
   display: inline;
+  background-color: white;
 }
 div.smallSlideshow div.mediaContainer{
   background-color: #5b5c5e;
