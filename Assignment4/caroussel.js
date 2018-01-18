@@ -40,7 +40,7 @@ $('video').click(function(){
 function intializeTimers(){
   var rightTranslate=$(".right");
   for(var button=0;button<rightTranslate.length;button++){
-    var timer = setTimeout(fakeClick.bind(null,rightTranslate[button]),4000);
+    var timer = setTimeout(fakeClick.bind(null,rightTranslate[button]),5000);
   }
 }
 
