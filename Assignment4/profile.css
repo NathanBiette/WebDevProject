@@ -216,6 +216,7 @@ section{
   width: 20%;
   /*border:solid;*/
   float:left;
+  box-sizing: content-box;
 }
 video{
   width:100%;
@@ -251,6 +252,7 @@ img{
 
 div.Suggestions{
     text-align: center;
+    box-sizing: border-box;
     border:solid;
     margin:1%;
 }
@@ -258,4 +260,7 @@ div.FollowedPages{
   text-align : center;
   border:solid;
   margin:1%;
+}
+div.imageName{
+  box-sizing: content-block;
 }
