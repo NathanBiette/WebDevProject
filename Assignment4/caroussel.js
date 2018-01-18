@@ -1,5 +1,6 @@
 /*--------------------------------------------Jquery versiion--------------------------------------*/
-$(".translate").click(function(){
+$(".translate").click(translateSlideshow);
+function translateSlideshow(){
   var slideshowClass = $(this).parent().parent().attr("class").split(' ')[1];
   var mediasContainer = $(this).siblings(".mediasContainer");
   var mediaContainer = $(this).siblings(".mediasContainer").children(".mediaContainer")
@@ -29,11 +30,24 @@ $(".translate").click(function(){
     matrixString[matrixString.length-2] = ' '+translateX;
     mediasContainer.css("transform",matrixString.join(',')) ;
   }
-});
+  intializeTimers();
+};
 
 $('video').click(function(){
   this.paused ? this.play() : this.pause();
 });
+
+function intializeTimers(){
+  var rightTranslate=$(".right");
+  for(var button=0;button<rightTranslate.length;button++){
+    var timer = setTimeout(fakeClick.bind(null,rightTranslate[button]),4000);
+  }
+}
+
+function fakeClick(element){
+  element.click();
+}
+intializeTimers();
 
 /*---------------JS only version ----------------------*/
 
