@@ -34,30 +34,6 @@
 
 
 /* INFOS PERSOS */
-<<<<<<< HEAD
-=======
-.profilePicContainer{
-  position: relative;
-  max-width:200px;
-  text-align: center;
-}
-
-#modifyPic{
-  position: absolute;
-  display: none;
-}
-.profilePicContainer:hover #niceButtonChangePic{
-  opacity:0.8;
-}
-#niceButtonChangePic{
-  display: none;
-  position: absolute;
-  background: white;
-  border: none;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
->>>>>>> 736743412704f7fb12f823422ce5b6f928aeb3ab
 #profileLeftSide{
   background-color: #f2f2f2;
   text-align: center;
