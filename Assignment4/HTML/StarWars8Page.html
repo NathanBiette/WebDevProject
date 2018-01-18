@@ -61,47 +61,27 @@
 
 
     <aside id="mediaPageLeftSide">
-      <div class="mediaImageContainer">
-          <img  id="mediaImage" src="../images/STAR-WARS-8-POSTER.jpg" alt="Profile picture"></img>
-      </div>
-
-      <div id="mediaInfos">
-        <h3>Basic infos</h3>
-        <div class="mediaInfosContent" id="mediaInfosContent">
-          <p>Directed by : 	Rian Johnson</p>
-          <p>Music by : 	John Williams</p>
-          <p>Release Date :  December 15, 2017 (In the US)</p>
-          <p>Running time : 152 minutes </p>
-          <p>Location : <output type ="text" id="locationOutput"/></p>
-          <div id="locationMap">
-            Location map here.
-          </div>
+      <div class="asideBlockContainer">
+        <div class="mediaImageContainer">
+            <img  id="mediaImage" src="../images/STAR-WARS-8-POSTER.jpg" alt="Profile picture"></img>
         </div>
-        <br>
-        <input type="button" value="Show Shootings Location" id="modifyInfosButton">
-        <li>Skellig Michael,Ireland</li>
-        <li>Dubrovnik, Croatia</li>
-        <li>etc</li>
-      </div>
 
-      <div id="persoInfosModif">
-        <h3>Modify personnal infos</h3>
-        <div class="persoInfosModifContent" id="persoInfosModifContent">
-          <input type="number" name="age" id="age" placeholder="Age"/>
-          <p>Gender :
-            <span>
-              <input type="radio" name="gender" value="male" id="male">
-              <label class="genderToShow" for="male">&#9794;</label>
-              <input type="radio" name="gender" value="female" id="female">
-              <label class="genderToShow" for="female">&#9792;</label>
-            </span>
-          </p>
-          <input type="text" name="location" id="location" placeholder="Location"/>
+        <div id="mediaInfos">
+          <h3>Basic infos</h3>
+          <div class="mediaInfosContent" id="mediaInfosContent">
+            <p>Directed by : 	Rian Johnson</p>
+            <p>Music by : 	John Williams</p>
+            <p>Release Date :  December 15, 2017 (In the US)</p>
+            <p>Running time : 152 minutes </p>
+            <div id="locationMap">
+              Location map here.
+            </div>
+          </div>
           <br>
-          <input type="checkbox" value="showMap" id="showMap"><label for="showMap">Show map</label></input>
-          <br><br>
-          <input type="button" value="Validate" id="validatePersoInfoModif">
-          <input type="button" value="Cancel" id="cancelPersoInfoModif">
+          <input type="button" value="Show Shootings Location" id="modifyInfosButton">
+          <li>Skellig Michael,Ireland</li>
+          <li>Dubrovnik, Croatia</li>
+          <li>etc</li>
         </div>
       </div>
     </aside>
@@ -109,8 +89,8 @@
     </article>
 
     <aside id="mediaPageRightSide">
-      <div id="mediaInfos">
-        <h2>Go To Fan base</h2>
+      <div class="asideBlockContainer">
+        <h2>GO TO FANBASE</h2>
         <div class="mediaImageContainer">
           <div class="slideshow smallSlideshow">
             <div class="slideshowWindow">
@@ -129,6 +109,7 @@
             </div>
           </div>
         </div>
+      </div>
 
 
         <div class="mediaInfosContent" id="mediaInfosContent">
@@ -148,26 +129,6 @@
         <li>etc</li>
       </div>
 
-      <div id="persoInfosModif">
-        <h3>Modify personnal infos</h3>
-        <div class="persoInfosModifContent" id="persoInfosModifContent">
-          <input type="number" name="age" id="age" placeholder="Age"/>
-          <p>Gender :
-            <span>
-              <input type="radio" name="gender" value="male" id="male">
-              <label class="genderToShow" for="male">&#9794;</label>
-              <input type="radio" name="gender" value="female" id="female">
-              <label class="genderToShow" for="female">&#9792;</label>
-            </span>
-          </p>
-          <input type="text" name="location" id="location" placeholder="Location"/>
-          <br>
-          <input type="checkbox" value="showMap" id="showMap"><label for="showMap">Show map</label></input>
-          <br><br>
-          <input type="button" value="Validate" id="validatePersoInfoModif">
-          <input type="button" value="Cancel" id="cancelPersoInfoModif">
-        </div>
-      </div>
     </aside>
 
 
