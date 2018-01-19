@@ -218,6 +218,10 @@ div.trailer{
   border : solid;
   margin : 1%;
 }
+
+div.firstOnglet{
+  display:block;
+}
 div.secondOnglet{
   display:none;
 }
@@ -227,9 +231,7 @@ div.thirdOnglet{
 div.fourthOnglet{
   display:none;
 }
-div.firstOnglet{
-  display:inline;
-}
+
 /*nav.medias li:hover{
   cursor: pointer;
   background-color: red;

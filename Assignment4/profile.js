@@ -1,8 +1,9 @@
-/*
+/* VERSION QUI NE FONCTIONNE PAS
+
 if(localStorage.onglet){
   if(localStorage.onglet==1){
-    document.getElementById("ong1").className+="active";
-    document.getElementById("ong2").className-="active";
+    document.getElementById("ong1").className="active";
+    document.getElementById("ong2").classList-="active";
     document.getElementById("ong3").className-="active";
     document.getElementById("ong4").className-="active";
     document.getElementsByClassName("firstOnglet")[0].style.display="inline";
@@ -11,34 +12,30 @@ if(localStorage.onglet){
     document.getElementsByClassName("fourthOnglet")[0].style.display="none";
   }
   if(localStorage.onglet==2){
-    document.getElementById("ong2").className+="active";
-    document.getElementById("ong1").className-="active";
+    document.getElementById("ong2").className="active";
+    document.getElementById("ong1").classList.remove("active");
     document.getElementById("ong3").className-="active";
     document.getElementById("ong4").className-="active";
     document.getElementsByClassName("firstOnglet")[0].style.display="none";
     document.getElementsByClassName("secondOnglet")[0].style.display="inline";
     document.getElementsByClassName("thirdOnglet")[0].style.display="none";
     document.getElementsByClassName("fourthOnglet")[0].style.display="none";
-
   }
   if(localStorage.onglet==3){
-    document.getElementById("ong3").className+="active";
+    document.getElementById("ong3").className="active";
     document.getElementById("ong1").className-="active";
     document.getElementById("ong2").className-="active";
     document.getElementById("ong4").className-="active";
-
     document.getElementsByClassName("firstOnglet")[0].style.display="none";
     document.getElementsByClassName("secondOnglet")[0].style.display="none";
     document.getElementsByClassName("thirdOnglet")[0].style.display="inline";
     document.getElementsByClassName("fourthOnglet")[0].style.display="none";
-
   }
   if(localStorage.onglet==4){
-    document.getElementById("ong4").className+="active";
+    document.getElementById("ong4").className="active";
     document.getElementById("ong1").className-="active";
     document.getElementById("ong2").className-="active";
     document.getElementById("ong3").className-="active";
-
     document.getElementsByClassName("firstOnglet")[0].style.display="none";
     document.getElementsByClassName("secondOnglet")[0].style.display="none";
     document.getElementsByClassName("thirdOnglet")[0].style.display="none";
@@ -46,6 +43,54 @@ if(localStorage.onglet){
   }
 }
 */
+
+/* VERSION FIXEE DE LA PREMIERE */
+
+/*
+if (localStorage.onglet) {
+  if(localStorage.onglet==1){
+    $("#ong1").addClass("active");
+    $("#ong1").siblings().removeClass("active");
+    $("#firstOnglet").css("display","block");
+    $("#firstOnglet").siblings().css("display","none");
+  }
+  if(localStorage.onglet==2){
+    $("#ong2").addClass("active");
+    $("#ong2").siblings().removeClass("active");
+    $("#secondOnglet").css("display","block");
+    $("#secondOnglet").siblings().css("display","none");
+  }
+  if(localStorage.onglet==3){
+    $("#ong3").addClass("active");
+    $("#ong3").siblings().removeClass("active");
+    $("#thirdOnglet").css("display","block");
+    $("#thirdOnglet").siblings().css("display","none");
+  }
+  if(localStorage.onglet==4){
+    $("#ong4").addClass("active");
+    $("#ong4").siblings().removeClass("active");
+    $("#fourthOnglet").css("display","block");
+    $("#fourthOnglet").siblings().css("display","none");
+  }
+}
+*/
+
+/* VERSION PLUS RAPIDE A ECRIRE */
+
+var onglets = [$("#ong1"),$("#ong2"),$("#ong3"),$("#ong4")];
+var ongletsContent = [$("#firstOnglet"),$("#secondOnglet"),$("#thirdOnglet"),$("#fourthOnglet")];
+if (localStorage.onglet) {
+  onglets[localStorage.onglet - 1].addClass("active");
+  onglets[localStorage.onglet - 1].siblings().removeClass("active");
+  ongletsContent[localStorage.onglet - 1].css("display","block");
+  ongletsContent[localStorage.onglet - 1].siblings().css("display","none");
+}
+
+
+
+
+
+
 
 
 
@@ -253,7 +298,14 @@ for (var i = 0; i < droppersLen; i++) {
 
 
 
+
+
+
+
+
 /*onglets*/
+
+/*
 function changeOnglet(ongletChosen) {
   if(ongletChosen==1){
     document.getElementById("ong1").className+="active";
@@ -283,7 +335,6 @@ function changeOnglet(ongletChosen) {
     document.getElementById("ong1").className-="active";
     document.getElementById("ong2").className-="active";
     document.getElementById("ong4").className-="active";
-
     document.getElementsByClassName("firstOnglet")[0].style.display="none";
     document.getElementsByClassName("secondOnglet")[0].style.display="none";
     document.getElementsByClassName("thirdOnglet")[0].style.display="inline";
@@ -295,11 +346,21 @@ function changeOnglet(ongletChosen) {
     document.getElementById("ong1").className-="active";
     document.getElementById("ong2").className-="active";
     document.getElementById("ong3").className-="active";
-
     document.getElementsByClassName("firstOnglet")[0].style.display="none";
     document.getElementsByClassName("secondOnglet")[0].style.display="none";
     document.getElementsByClassName("thirdOnglet")[0].style.display="none";
     document.getElementsByClassName("fourthOnglet")[0].style.display="inline";
     localStorage.onglet=ongletChosen;
   }
+}
+*/
+
+$(".tab").click(changeOnglet);
+
+function changeOnglet() {
+  $(this).addClass("active");
+  $(this).siblings().removeClass("active");
+  $("#"+$(this).attr("id")+"Content").css("display","block");
+  $("#"+$(this).attr("id")+"Content").siblings().css("display","none");
+  localStorage.onglet = $(this).attr("id")[3];
 }
