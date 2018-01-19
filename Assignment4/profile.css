@@ -225,27 +225,34 @@ div.fourthOnglet{
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.8) inset;
 }
 
-
+h1{
+  text-shadow: 3px 3px 1px lightBlue;
+}
 
 
 section{
-  /*width: 100%;*/
+  width: 100%;
   height : 25%;
   /*border:solid;*/
   box-sizing: border-box;
   display: inline-block;
-  background-color: blue;
+  text-align: center;
+
 }
 video{
   width:100%;
 }
 div.trailer{
   border : solid;
-  margin : 1%;
+  /*margin : 1%;*/
 }
 
-
-
+p.articleExtract{
+  font-style: italic;
+}
+a.articleExtract{
+  text-decoration: none;
+}
 /*nav.medias li:hover{
   cursor: pointer;
   background-color: red;
@@ -258,17 +265,32 @@ h2{
 img{
   width:50%;
 }
+div.news{
+  border:solid;
 
+  display: inline-block;
+}
+
+div.news img{
+  float: left;
+
+}
+div.news p{
+  float: right;
+
+}
 
 div.Suggestions{
     text-align: center;
     box-sizing: content-box;
     border:solid;
+    border-radius:3%;
     margin:1%;
 }
 div.FollowedPages{
   text-align : center;
   border:solid;
+  border-radius: 3%;
   margin:1%;
 }
 /*div.imageName{
@@ -279,4 +301,12 @@ div.contrib{
   width:25%;
   border: solid;
   float:left;
+  margin:1%;
+}
+
+.fanArt{
+  display:none;
+}
+.official{
+  display:"inline";
 }
