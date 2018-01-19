@@ -63,6 +63,7 @@ h1.BigTitle{
 	padding-right:15px;
 	padding-left:15px;
 	margin-bottom: 0px;
+	/*background: #ccfff5;*/
 }
 
 #SmallBox{
@@ -71,4 +72,19 @@ h1.BigTitle{
 	padding-right:5px;
 	padding-left:5px;
 	margin-bottom: 0px;
+	/*background: #ccfff5;*/
+}
+
+h2.Subtitle{
+	padding-top: 20px;
+	margin-bottom: 0px;
+}
+
+h5.Subtitle{
+	padding-top: 10px;
+	margin-bottom: 0px;
+}
+
+.test{
+	pointer-events: none;
 }
