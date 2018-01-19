@@ -130,8 +130,8 @@ img#profilePicture{
 /* RIGHT SIDE */
 
 div.profileRightSide{
-  /*background-color: #f2f2f2;*/
-  background-color: green;
+  background-color: #f2f2f2;
+
   text-align: center;
   border-radius: 20px;
   box-shadow: 0px 0px 5px 0px grey;
@@ -206,22 +206,22 @@ div.profileRightSide{
 }
 
 article{
-  margin:1%;
+  /*margin:1%;*/
   position: relative;
   height:100%;
   width:100%;
-  background-color: red;
+
 
 
 }
 
 section{
-  /*width: 100%;*/
+  width: 100%;
   height : 25%;
   /*border:solid;*/
   box-sizing: border-box;
   display: inline-block;
-  background-color: blue;
+
 }
 video{
   width:100%;
