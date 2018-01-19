@@ -50,6 +50,7 @@ p{
   border-radius: 10px;
   box-shadow: inset 0px 0px 5px 0px grey;
   margin: 10px;
+  box-sizing: border-box;
 }
 #contentBlocksContainer{
   column-count: 2;

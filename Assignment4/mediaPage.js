@@ -1,5 +1,5 @@
 //Add or remve blocks thanks to asides
-
+var stringTwitter = $('#tweetContainer').html();//'<a class="twitter-timeline" data-tweet-limit="1"  data-chrome="noheader" href="https://twitter.com/HamillHimself">Tweets by Mark Hamill</a>';
 $('.addBlockButton').click(addBlock);
 $('.hideBlock').click(hideBlock);
 function addBlock(){
@@ -13,9 +13,10 @@ function addBlock(){
   Blockscontainer.insertBefore(block, (Blockscontainer.childNodes[0]));
 
   if(type=='tweets'){
-    tweetContainer.innerHTML='<a class="twitter-timeline" data-tweet-limit="1"  data-chrome="noheader" href="https://twitter.com/HamillHimself">Tweets by Mark Hamill</a>';
+    tweetContainer.innerHTML=stringTwitter;
     twttr.widgets.load();
   }
+  initCarousels();
 }
 function hideBlock(){
   var thisId = $(this).attr("id");
@@ -55,6 +56,11 @@ function expand() {
   contentBlock.removeClass('contentBlockContainer');
   $(this).css("display","none");
   $(this).siblings('.downsizeButton').css("display","block");
+  if(contentBlock.attr("id")=="tweetsBlock"){
+    contentBlock.html(stringTwitter);
+    twttr.widgets.load();
+    initCarousels();
+  }
 }
 
 function downsize(){
