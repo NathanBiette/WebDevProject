@@ -67,6 +67,11 @@ p{
 .contentBlockHeader input{
  float: right;
  background-color: white;
+
+}
+.contentContainer h4{
+  cursor: pointer;
+  user-select: none;
 }
 #tweetContainer{
   padding: 5px;

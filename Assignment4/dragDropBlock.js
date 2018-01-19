@@ -1,12 +1,12 @@
-$(".contentBlockContainer").on('mousedown.dragdrop',dragBlock)
+$(".contentContainer h4").on('mousedown.dragdrop',dragBlock)
 $("#contentBlocksContainer").mouseup(function(){$(".contentBlockContainer").off('mouseenter.dragdrop')});
 function dragBlock(){
- var blockToDrag = $(this);
+ var blockToDrag = $(this).parent().parent().parent();
  console.log("Dragging");
  console.log($(this).attr("id"))
  unFocus();
  $(".contentBlockContainer").on('mouseenter.dragdrop',function() {
-   console.log(blockToDrag.attr("id"));
+   console.log($(this).attr("id"));
    if(blockToDrag.attr("id") != blockToDrag){
      $(this).insertBefore(blockToDrag);
    };});
