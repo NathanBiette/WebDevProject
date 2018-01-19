@@ -118,18 +118,18 @@
         </div>
         <h3>Basic infos</h3>
         <div class="mediaInfosContent" id="mediaInfosContent">
-          <p>Directed by : Rian Johnson</p>
-          <p>Release Date : December 15, 2017 (In the US)</p>
+          <p>Directed by : 	Rian Johnson</p>
+          <p>Release Date :  December 15, 2017 (In the US)</p>
           <div id="locationMap">
             Location map here.
           </div>
         </div>
         <br>
-        <input type="button" value="Shootings Locations" id="showShootingLocationsButton">
+        <input type="button" value="Show Shootings Location" id="modifyInfosButton">
         <ul>
-          <li>Skellig Michael, Ireland</li>
+          <li>Skellig Michael,Ireland</li>
           <li>Dubrovnik, Croatia</li>
-          <li>etc...</li>
+          <li>etc</li>
         </ul>
       </div>
       <div class="asideBlockContainer" id="asideAddBlockContainer">
@@ -205,12 +205,13 @@
       </section>
 
       <section id="contentBlocksContainer">
-
         <section class="contentBlockContainer" id="postersBlock">
           <div class="contentBlock">
             <div class="contentBlockHeader">
               <input type="button" value="&#10008;" class="hideBlock" id="hidePosters"/>
               <input type="button" value="&#10010;"/>
+              <input type="button" value="&#10529;" class="expandButton" id ="expandPosters"/>
+              <input type="button" value="&#10515;" class="downsizeButton" id ="downsizePosters"/>
             </div>
             <div class="contentContainer">
               <h4>Posters</h4>
@@ -243,6 +244,8 @@
             <div class="contentBlockHeader">
               <input type="button" value="&#10008;"class="hideBlock" id="hideTrailers"/>
               <input type="button" value="&#10010;"/>
+              <input type="button" value="&#10529;" class="expandButton" id="expandTrailers"/>
+              <input type="button" value="&#10515;" class="downsizeButton" id="downsizeTrailers"/>
             </div>
             <div class="contentContainer">
               <h4>Trailers</h4>
@@ -269,6 +272,8 @@
             <div class="contentBlockHeader">
               <input type="button" value="&#10008;"class="hideBlock" id="hideCasting"/>
               <input type="button" value="&#10010;"/>
+              <input type="button" value="&#10529;" class="expandButton" id="expandCasting"/>
+              <input type="button" value="&#10515;" class="downsizeButton" id="downsizeCasting"/>
             </div>
             <div class="contentContainer">
               <h4>Casting</h4>
@@ -277,16 +282,18 @@
         </section>
 
 
-        <section class="contentBlockContainer">
-          <div class="contentBlock" id="tweetsBlock">
+        <section class="contentBlockContainer" id="tweetsBlock">
+          <div class="contentBlock">
             <div class="contentBlockHeader">
               <input type="button" value="&#10008;"class="hideBlock" id="hideTweets"/>
               <input type="button" value="&#10010;"/>
+              <input type="button" value="&#10529;" class="expandButton" id="expandTweets"/>
+              <input type="button" value="&#10515;" class="downsizeButton" id="downsizeTweets"/>
             </div>
             <div class="contentContainer" id="tweetsContent">
               <h4>Tweets</h4>
               <div id="tweetContainer">
-                <a class="twitter-timeline" data-tweet-limit="1"  data-chrome="noheader" href="https://twitter.com/HamillHimself">Tweets by Mark Hamill</a>
+                <a class="twitter-timeline" data-tweet-limit="1"  data-chrome="noheader" href="https://twitter.com/starwars">Officials tweets from StarWars</a>
               </div>
             </div>
         </section>
@@ -296,6 +303,8 @@
             <div class="contentBlockHeader">
               <input type="button" value="&#10008;" class="hideBlock" id="hideCritics"/>
               <input type="button" value="&#10010;"/>
+              <input type="button" value="&#10529;" class="expandButton" id="expandCritics"/>
+              <input type="button" value="&#10515;" class="downsizeButton" id="downsizeCritics"/>
             </div>
             <div class="contentContainer">
               <h4>Critics</h4>
@@ -307,7 +316,9 @@
           <div class="contentBlock">
             <div class="contentBlockHeader">
               <input type="button" value="&#10008;"class="hideBlock" id="hideArticles"/>
-              <input type="button" value="&#10010;"/>
+              <input type="button" class="addContribution" value="&#10010;"/>
+              <input type="button" value="&#10529;" class="expandButton" id="expandArticles"/>
+              <input type="button" value="&#10515;" class="downsizeButton" id="downsizeArticle"/>
             </div>
             <div class="contentContainer">
               <h4>Articles</h4>
@@ -334,6 +345,7 @@
     <script src="../mediaPage.js"></script>
     <script src="../caroussel.js"></script>
     <script src="../research.js"></script>
+    <script src="../dragDropBlock.js"></script>
   </body>
 
 </html>
