@@ -243,8 +243,12 @@ div.trailer{
   margin : 1%;
 }
 
-
-
+p.articleExtract{
+  font-style: italic;
+}
+a.articleExtract{
+  text-decoration: none;
+}
 /*nav.medias li:hover{
   cursor: pointer;
   background-color: red;
