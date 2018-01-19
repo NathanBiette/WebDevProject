@@ -45,13 +45,14 @@ p{
   border-radius: 10px;
   margin: 10px;
 }
-.contentBlocksContainer{
+#contentBlocksContainer{
   column-count: 2;
   column-gap: 0px;
 }
 .contentBlockContainer{
   margin-left: 10px;
   margin-right: 10px;
+  display:block;
 
 }
 .contentBlock{
@@ -66,7 +67,7 @@ p{
   box-sizing: border-box;
 }
 
-#tweetBlock{
+#tweetsBlock{
   padding: 5px;
 }
 
