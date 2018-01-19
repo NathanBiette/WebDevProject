@@ -125,13 +125,22 @@ img#profilePicture{
 
 
 
-
-
 /* RIGHT SIDE */
 
 div.profileRightSide{
   overflow:hidden;
   height: auto;
+
+  /*background-color: #f2f2f2;*/
+  /*
+  background-color: green;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px 0px grey;
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+*/
   margin-right: 20px;
 }
 
@@ -215,12 +224,26 @@ div.fourthOnglet{
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.8) inset;
 }
 
+<<<<<<< HEAD
+=======
+article{
+  margin:1%;
+  position: relative;
+  height:100%;
+  width:100%;
+  background-color: red;
+
+
+}
+
+>>>>>>> de3502d5cd005d1195c093962125e6cbd12acd17
 section{
   /*width: 100%;*/
   height : 25%;
   /*border:solid;*/
   box-sizing: border-box;
   display: inline-block;
+  background-color: blue;
 }
 video{
   width:100%;
@@ -260,3 +283,9 @@ div.FollowedPages{
 /*div.imageName{
   box-sizing: content-block;
 }*/
+
+div.contrib{
+  width:25%;
+  border: solid;
+  float:left;
+}
