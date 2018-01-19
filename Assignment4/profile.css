@@ -225,7 +225,9 @@ div.fourthOnglet{
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.8) inset;
 }
 
-
+h1{
+  text-shadow: 3px 3px 1px lightBlue;
+}
 
 
 section{
@@ -234,6 +236,8 @@ section{
   /*border:solid;*/
   box-sizing: border-box;
   display: inline-block;
+  text-align: center;
+
 }
 video{
   width:100%;
@@ -261,7 +265,20 @@ h2{
 img{
   width:50%;
 }
+div.news{
+  border:solid;
 
+  display: inline-block;
+}
+
+div.news img{
+  float: left;
+
+}
+div.news p{
+  float: right;
+
+}
 
 div.Suggestions{
     text-align: center;
@@ -284,4 +301,5 @@ div.contrib{
   width:25%;
   border: solid;
   float:left;
+  margin:1%;
 }
