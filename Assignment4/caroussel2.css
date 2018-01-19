@@ -1,0 +1,146 @@
+div.slideshowWindow{
+  position: relative;
+  overflow: hidden;
+  box-sizing: content-box;
+  width:100%;
+  height:auto;
+  border-radius: 30px;
+}
+
+div.bigSlideshow{
+  text-align: center;
+  max-width: 500px;
+  height: auto;
+  margin: auto;
+}
+
+div.smallSlideshow{
+  text-align: center;
+  max-height: 2%;
+  /*max-width: 20%;*/
+
+  /*width:100%;*/
+  margin: auto;
+  position: relative;
+}
+
+.mediasContainer{
+  display: inline-flex;
+  height: inherit;
+  overflow: hidden;
+  position: relative;
+  transition: transform 2s;
+  transform: translateX(0px);
+}
+
+div.bigSlideshow div.mediaContainer{
+  height:300px;
+  width: 500px;
+
+  background-color: rgb(400,400,400);
+  border-radius: 30px;
+  overflow: hidden;
+  margin: auto;
+}
+div.smallSlideshow div.mediaContainer{
+  /*height: 150px;
+  width: 250px;*/
+  width: 100%;
+  position: relative;
+  background-color: #afb1b5;
+  border-radius: 30px;
+  overflow: hidden;
+  margin: auto;
+}
+
+
+.slideshowMedia{
+  transition: .5s ease;
+  max-width: 100%;
+  max-height: 100%;
+  /*width: 100%;
+  height: 100%;*/
+  object-fit: contain;
+  margin: auto;
+
+}
+
+.textOverContainer{
+  border-radius: 30px;
+  bottom: 0px;
+  color: black;
+  border: 1px black solid;
+  background-color: white;
+  position: absolute;
+  transition: .5s ease;
+  text-align: center;
+  opacity: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  word-wrap: break-word;
+}
+.mediaContainer:hover .textOverContainer {
+  opacity: 1;
+}
+.mediaContainer:hover .slideshowMedia{
+  opacity: 0.4;
+}
+
+.bigSlideshow div.translate{
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  box-sizing: content-box;
+  border-radius:10px;
+  background-color: white;
+  opacity: 0.5;
+  min-width: 50px;
+  min-height: 50px;
+  height: auto;
+  width: auto;
+  top: 42%;
+  cursor: pointer;
+}
+
+.smallSlideshow div.translate{
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  box-sizing: content-box;
+  border-radius:10px;
+  background-color: white;
+  opacity: 0.5;
+  min-width: 30px;
+  min-height: 30px;
+  height: auto;
+  width: auto;
+  top: 42%;
+  cursor: pointer;
+}
+
+div.right{
+  right: 0px;
+}
+div.left{
+  left: 0px;
+}
+
+.bigSlideshow .translate span{
+  font-size: 3em;
+  text-family: "bold";
+}
+
+.smallSlideshow .translate span{
+  font-size: 2em;
+  text-family: "bold";
+}
+
+.left{
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.right{
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
