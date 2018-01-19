@@ -1,3 +1,5 @@
+//Add or remve blocks thanks to asides
+
 $('.addBlockButton').click(addBlock);
 $('.hideBlock').click(hideBlock);
 function addBlock(){
@@ -22,7 +24,10 @@ function hideBlock(){
   $('#'+blockId).css("display","none");
   $('#'+type+'Add').parent().css("display","block"); /*Make the addd block buttno visible again*/
 }
-$('#navSideButton').click(toggleNav);
+
+//Side navigation Bar
+$('#sideNavButton').click(toggleNav);
+$('.global').click(closeNav);
 document.getElementById("sideNavContent").style.width = "0px";
 function toggleNav() {
     if(document.getElementById("sideNavContent").style.width == "0px"){
@@ -37,6 +42,30 @@ function toggleNav() {
 function closeNav() {
     document.getElementById("sideNavContent").style.width = "0";
 }
+
+
+//expandButton
+$('.expandButton').click(expand)
+$('.downsizeButton').click(downsize)
+
+function expand() {
+  var contentBlock = $(this).parent().parent().parent(); //grandparent of the button (header +)
+  contentBlock.insertBefore($('#contentBlocksContainer'));
+  contentBlock.addClass('expanded');
+  contentBlock.removeClass('contentBlockContainer');
+  $(this).css("display","none");
+  $(this).siblings('.downsizeButton').css("display","block");
+}
+
+function downsize(){
+  var contentBlock = $(this).parent().parent().parent();
+  contentBlock.insertBefore($('.contentBlockContainer').first());
+  contentBlock.removeClass('expanded');
+  contentBlock.addClass('contentBlockContainer');
+  $(this).css("display","none");
+  $(this).siblings('.expandButton').css("display","block");
+}
+
 
 //TWITTER
 window.twttr = (function(d, s, id) {

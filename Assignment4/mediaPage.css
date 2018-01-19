@@ -44,6 +44,13 @@ p{
   border-radius: 10px;
   margin: 10px;
 }
+
+.expanded{
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px 0px grey;
+  margin: 10px;
+}
 #contentBlocksContainer{
   column-count: 2;
   column-gap: 0px;
@@ -67,7 +74,12 @@ p{
 .contentBlockHeader input{
  float: right;
  background-color: white;
-
+}
+.expandButton,.downsizeButton{
+  float: left;
+}
+.downsizeButton{
+  display: none;
 }
 .contentContainer h4{
   cursor: pointer;
@@ -168,14 +180,14 @@ div.smallSlideshow div.mediaContainer{
 @media only screen and (min-width: 768px){
   #mediaPagesideNav{display: none;}
 }
-#mediaPagesideNav{
+.sideNav{
   position: fixed; /* Stay in place */
   top: 0; /* Stay at the top*/
   left: 0;
   z-index: 1;
   max-width: 100%;
 }
-#navSideButton{
+#sideNavButton{
   float:right;
   background-color: white;
 }
@@ -186,26 +198,44 @@ div.smallSlideshow div.mediaContainer{
   background-color: grey;
   height: 100%; /* 100% Full-height */
   width: 0px; /* 0 width - change this with JavaScript */
-  overflow:hidden;
+  overflow:visible;
   transition: 0.5s;
 }
-.navSideBlockContainer{
+.sideNavBlockContainer{
   transition: 0.5s;
-  border: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
   width:  100%;
   overflow: hidden;
   text-align: center;
   position: relative;
 }
+#sideNavMediaImgContainer{
+  max-width:100%;
+}
 #navSideMediaImage{
   width: auto;
   max-height: 150px;
+  width:250px;
   object-fit: contain;
   margin: auto;
   border-radius: 10%;
+  padding-top: 5px;
 }
 #sideNavContent a{
   background-color: inherit;
   text-decoration: none;
   color: white;
+}
+#sideNavAddBlocks{
+  position: relative;
+}
+.sideNavButton input{
+ width:150px;
+}
+.sideNavBlockContainer h3{
+  display: block;
+  width:250px;
+}
+.sideNavBlockContainer h3:hover{
 }
