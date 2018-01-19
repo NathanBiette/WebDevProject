@@ -127,17 +127,17 @@ img#profilePicture{
 
 
 
-
-
 /* RIGHT SIDE */
 
 div.profileRightSide{
-  background-color: #f2f2f2;
+  /*background-color: #f2f2f2;*/
+  background-color: green;
   text-align: center;
   border-radius: 20px;
   box-shadow: 0px 0px 5px 0px grey;
   overflow: hidden;
-  height: auto;
+  height: 100%;
+  position: relative;
   margin-right: 20px;
 }
 
@@ -208,6 +208,10 @@ div.profileRightSide{
 article{
   margin:1%;
   position: relative;
+  height:100%;
+  width:100%;
+  background-color: red;
+
 
 }
 
@@ -217,6 +221,7 @@ section{
   /*border:solid;*/
   box-sizing: border-box;
   display: inline-block;
+  background-color: blue;
 }
 video{
   width:100%;
@@ -266,3 +271,9 @@ div.FollowedPages{
 /*div.imageName{
   box-sizing: content-block;
 }*/
+
+div.contrib{
+  width:25%;
+  border: solid;
+  float:left;
+}
