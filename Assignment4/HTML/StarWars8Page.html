@@ -7,13 +7,70 @@
     <link rel="stylesheet" href="../login.css">
     <link rel="stylesheet" href="../top.css">
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARtx_9S3svAqTrqF1Xk01TTAMgSzjZCas"></script>
-    <title>Hyper StarWars8</title>
+    <title>Hyper Star Wars 8</title>
     <meta charset="UTF-8">
   </head>
 
 
   <body>
 
+    <header>
+      <nav id="navTopBar">
+        <a href="HyperHomePage.html">
+          <div class="HyperImageContainer">
+            <img id="HyperImage" src="..\images\hyperSmall.png" alt="Hyper">
+          </div>
+        </a>
+
+        <a href="MediaHomePage.html">
+          <div class="navButtonTop">
+            Movies
+          </div>
+        </a>
+        <a href="MediaHomePage.html">
+          <div class="navButtonTop">
+            Series
+          </div>
+        </a>
+        <a href="MediaHomePage.html">
+          <div class="navButtonTop">
+            VideoGames
+          </div>
+        </a>
+
+        <form id="searchFormTop">
+          <input id="searchBar" class="text" type="search" name="research" placeholder="Type here to search..." autofocus list="dataListArticles">
+          <input id="searchButton" class="button" type="button" value="Search"><br>
+          <datalist id="dataListArticles"></datalist>
+        </form>
+
+        <div id="logInHeader">Log in</div>
+
+      </nav>
+
+      <div class="logInAllContainer">
+        <div class="logInContainer" id="connexionContainer">
+          <input class="text" type="text" id="username" placeholder="username"><br>
+          <input class="text" type="password" id="password" placeholder="password"><br>
+          <input class="button" type="button" id="connexionButton" value="Connexion">
+          <input class="button" type="button" id="createAccountButton" value="Create a new account">
+        </div>
+        <div class="logInContainer" id="createAccountContainer">
+          <input class="text" type="text" id="usernameToCreate" placeholder="username"><br>
+          <input class="text" type="password" id="password1" placeholder="password"><br>
+          <input class="text" type="password" id="password2" placeholder="password again"><br>
+          <input class="text" type="email" id="email" placeholder="email@example.com"><br>
+          <input class="button" type="button" id="validateAccountButton" value="Validate the account">
+          <input class="button" type="button" id="cancelCreationAccountButton" value="Cancel">
+        </div>
+        <div class="logInContainer" id="userActionsContainer">
+          <a href="profile.html"><input class="button" type="button" id="accessProfile" value="Profile page"></a>
+          <input class="button" type="button" id="disconnectButton" value="Disconnect">
+        </div>
+      </div>
+
+    </header>
+<!--
     <header>
       <nav id="navTopBar">
         <nav id="navButtonsTop">
@@ -24,7 +81,7 @@
         </nav>
         <div class="HyperImageContainer">
           <a href="HyperHomePage.html">
-            <img id="HyperImage" src="..\images\hyper.png" alt="Hyper">
+            <img id="HyperImage" src="..\images\hyperSmall.png" alt="Hyper">
           </a>
         </div>
         <form id="searchFormTop">
@@ -34,7 +91,8 @@
         </form>
       </nav>
     </header>
-
+-->
+<!--
     <aside id="logIn">
       <div id="logInHeader">Log in</div>
       <div class="logInAllContainer">
@@ -58,7 +116,7 @@
         </div>
       </div>
     </aside>
-
+-->
 
 
     <aside id="mediaPageLeftSide">
