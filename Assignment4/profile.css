@@ -214,8 +214,8 @@ article{
 section{
   width: 20%;
   /*border:solid;*/
-  float:left;
-  box-sizing: content-box;
+  box-sizing: border-box;
+  display: inline-block;
 }
 video{
   width:100%;
@@ -253,7 +253,7 @@ img{
 
 div.Suggestions{
     text-align: center;
-    box-sizing: border-box;
+    box-sizing: content-box;
     border:solid;
     margin:1%;
 }
