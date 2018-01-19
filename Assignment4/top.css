@@ -74,6 +74,65 @@ nav a{
 
 
 
+
+/* LOG IN */
+
+#logInHeader{
+  display: inline-block;
+  float: right;
+  padding: 16px;
+  border-left: 1px solid grey;
+}
+
+.logInAllContainer{
+  position: fixed;
+  right: 0px;
+  float: right;
+  box-sizing: content-box;
+  margin:auto;
+  background-color: inherit;
+  display: none;
+  text-align:center;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  top: 51px;
+  box-shadow: inset 0px 3px 5px -2px grey, 0px 3px 5px 0px grey;
+}
+
+#logInHeader:hover .logInAllContainer{
+  display: block;
+  background-color: inherit;
+}
+
+#logInHeader:hover{
+  background-color: white;
+}
+
+#connexionContainer{
+  display: block;
+}
+
+#createAccountContainer{
+  display: none;
+}
+
+#userActionsContainer{
+  display: none;
+}
+
+#HyperImage{
+  width: auto;
+}
+
+
+
+
+
+
+
+
+
+
 input{
   font-size: 1em;
   padding: 5px;
@@ -113,50 +172,7 @@ input[type=button]{
 
 
 
-/* LOG IN */
 
-#logInHeader{
-  display: inline-block;
-  float: right;
-  padding: 16px;
-  border-left: 1px solid grey;
-  /*
-  box-sizing: content-box;
-  font-size: 1em;
-  padding: 10px 10px 10px 10px;
-  */
-}
-
-.logInAllContainer{
-  position: fixed;
-  right: 0px;
-  float: right;
-  box-sizing: content-box;
-  margin:auto;
-  overflow:hidden;
-  background-color: inherit;
-  display: none;
-}
-
-#logInHeader:hover .logInAllContainer{
-  display: block;
-}
-
-#logInHeader:hover{
-  background-color: red;
-}
-
-#connexionContainer{
-  display: block;
-}
-
-#createAccountContainer{
-  display: none;
-}
-
-#userActionsContainer{
-  display: none;
-}
 
 
 
