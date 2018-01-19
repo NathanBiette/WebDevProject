@@ -22,10 +22,15 @@ function hideBlock(){
   $('#'+blockId).css("display","none");
   $('#'+type+'Add').parent().css("display","block"); /*Make the addd block buttno visible again*/
 }
-$('#navSideButton').click(openNav);
-function openNav() {
-    document.getElementById("sideNavContent").style.display="block";
-    document.getElementById("sideNavContent").style.width = "250px";
+$('#navSideButton').click(toggleNav);
+function toggleNav() {
+    if(document.getElementById("sideNavContent").style.display=="block"){
+      document.getElementById("sideNavContent").style.width = "0px";
+    }
+    else{
+      document.getElementById("sideNavContent").style.display="block";
+      document.getElementById("sideNavContent").style.width = "250px";
+    }
 }
 
 /* Set the width of the side navigation to 0 */

@@ -169,11 +169,14 @@ div.smallSlideshow div.mediaContainer{
   display: block;
   top: 0; /* Stay at the top */
   left: 0;
+  z-index: 2;
 }
 #mediaPagesideNav{
   height: 100%;
+  background-color: grey;
 }
 #sideNavContent{
+  background-color: inherit;
   display:none;
   height: 100%; /* 100% Full-height */
   width: 0px; /* 0 width - change this with JavaScript */
