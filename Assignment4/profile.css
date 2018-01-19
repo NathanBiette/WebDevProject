@@ -237,11 +237,11 @@ div.fourthOnglet{
 div.firstOnglet{
   display:inline;
 }
-nav.medias li:hover{
+/*nav.medias li:hover{
   cursor: pointer;
   background-color: red;
   border-radius: 2em;
-}
+}*/
 h2{
   text-align: center;
 }
@@ -262,6 +262,6 @@ div.FollowedPages{
   border:solid;
   margin:1%;
 }
-div.imageName{
+/*div.imageName{
   box-sizing: content-block;
-}
+}*/
