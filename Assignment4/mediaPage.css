@@ -153,3 +153,38 @@ input.addBlockButton{
 div.smallSlideshow div.mediaContainer{
   background-color: inherit;
 }
+/*Side bar*/
+@media only screen and (max-width: 768px){
+  #mediaPageLeftSide {display: none;}
+  #mediaPageRightSide {display: none;}
+  #mediaPagesideNav{display: block;}
+  header{display: none;}
+  #contentBlocksContainer{column-count: 1;}
+}
+@media only screen and (min-width: 768px){
+  #mediaPagesideNav{display: none;}
+}
+#navSideButton{
+  position: fixed;
+  display: block;
+  top: 0; /* Stay at the top */
+  left: 0;
+}
+#mediaPagesideNav{
+  height: 100%;
+}
+#sideNavContent{
+  display:none;
+  height: 100%; /* 100% Full-height */
+  width: 0px; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  transition: 0.5s;
+}
+.sideMediaImageContainer{
+}
+#sideNavContent a{
+  text-decoration: none;
+}

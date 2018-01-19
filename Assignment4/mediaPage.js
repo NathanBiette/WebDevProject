@@ -22,6 +22,17 @@ function hideBlock(){
   $('#'+blockId).css("display","none");
   $('#'+type+'Add').parent().css("display","block"); /*Make the addd block buttno visible again*/
 }
+$('#navSideButton').click(openNav);
+function openNav() {
+    document.getElementById("sideNavContent").style.display="block";
+    document.getElementById("sideNavContent").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    document.getElementById("sideNavContent").style.width = "0";
+}
+
 //TWITTER
 window.twttr = (function(d, s, id) {
 
