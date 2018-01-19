@@ -88,12 +88,14 @@ if(localStorage.officialChecked){
   }
   else{
     document.getElementsByClassName("official")[0].style.display="none";
+    document.getElementById("seeOfficial").checked=false;
   }
 }
 
 if(localStorage.fanChecked){
   if(localStorage.fanChecked==1){
     document.getElementsByClassName("fanArt")[0].style.display="inline";
+    document.getElementById("seeFan").checked="true";
 
   }
   else{
@@ -383,11 +385,11 @@ checkboxOfficial.addEventListener( 'change', function() {
 var checkboxFan = document.querySelector("input[id=seeFan]");
 
 checkboxFan.addEventListener( 'change', function() {
-  alert("in");
     if(this.checked) {
         // Checkbox is checked..
         document.getElementsByClassName("fanArt")[0].style.display="inline";
         localStorage.fanChecked=1;
+        alert(localStorage.fanChecked);
     } else {
 
         // Checkbox is not checked..
