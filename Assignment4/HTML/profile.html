@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="../profile.css">
     <link rel="stylesheet" href="../login.css">
     <link rel="stylesheet" href="../top.css">
+    <link rel="stylesheet" href="../caroussel.css">
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARtx_9S3svAqTrqF1Xk01TTAMgSzjZCas"></script>
     <title>Hyper Profile</title>
     <meta charset="UTF-8">
@@ -165,16 +166,26 @@
             <p>You are following these pages :</p>
             <section>
               <li><h2>Movies :</h2></li>
-              <nav class="medias">
-                <div class="imageName">
-                  <img src="../images/STAR-WARS-8-POSTER.jpg" alt="star wars poster">
-                  <a href="StarWars8Page.html"><li>Star Wars 8</li></a>
+
+
+              <div class="slideshow smallSlideshow">
+                <div class="slideshowWindow">
+                  <div class="mediasContainer">
+                    <div class="mediaContainer">
+
+                          <a href="StarWars8Page.html"><img class="slideshowMedia small" src="../images/STAR-WARS-8-POSTER.jpg" alt="star wars poster"></a>
+                          <p class="textOverContainer"> Star Wars 8</p>
+                    </div>
+                    <div class="mediaContainer">
+
+                      <img class="slideshowMedia small" src="../images/potter.jpg" alt"HarryPotterPoster">
+                      <p class="textOverContainer"> Harry Potter</p>
+                    </div>
+                  </div>
+                  <div class="translate left"><span>&#8249;</span></div>
+                  <div class="translate right"><span>&#8250;</span></div>
                 </div>
-                <div class="imageName">
-                  <img src="../images/potter.jpg" alt"HarryPotterPoster">
-                  <li>Harry Potter </li>
-                </div>
-              </nav>
+              </div>
             </section>
             <section>
               <li><h2>Series : </h2></li>
@@ -293,6 +304,7 @@
     <script src="../profile.js"></script>
     <script src="../persoInfosModif.js"></script>
     <script src="../research.js"></script>
+    <script src="../caroussel.js"></script>
   </body>
 
 </html>

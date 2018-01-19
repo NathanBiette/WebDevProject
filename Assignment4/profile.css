@@ -208,8 +208,8 @@ article.tabContent{
 section{
   width: 20%;
   /*border:solid;*/
-  float:left;
-  box-sizing: content-box;
+  box-sizing: border-box;
+  display: inline-block;
 }
 video{
   width:100%;
@@ -230,11 +230,11 @@ div.fourthOnglet{
 div.firstOnglet{
   display:inline;
 }
-nav.medias li:hover{
+/*nav.medias li:hover{
   cursor: pointer;
   background-color: red;
   border-radius: 2em;
-}
+}*/
 h2{
   text-align: center;
 }
@@ -246,7 +246,7 @@ img{
 
 div.Suggestions{
     text-align: center;
-    box-sizing: border-box;
+    box-sizing: content-box;
     border:solid;
     margin:1%;
 }
@@ -255,6 +255,6 @@ div.FollowedPages{
   border:solid;
   margin:1%;
 }
-div.imageName{
+/*div.imageName{
   box-sizing: content-block;
-}
+}*/
