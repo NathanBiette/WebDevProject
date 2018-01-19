@@ -261,11 +261,13 @@ div.Suggestions{
     text-align: center;
     box-sizing: content-box;
     border:solid;
+    border-radius: 3%;
     margin:1%;
 }
 div.FollowedPages{
   text-align : center;
   border:solid;
+  border-radius: 3%;
   margin:1%;
 }
 /*div.imageName{
