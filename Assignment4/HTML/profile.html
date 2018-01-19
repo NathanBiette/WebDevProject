@@ -119,14 +119,21 @@
 
 
     <div class="profileRightSide">
+
       <div id="menu">
-        <ul id="onglets">
-          <button class="active" onclick="changeOnglet(1)" id="ong1"> My Contributions</button>
-          <button id="ong2" onclick="changeOnglet(2)"> Pages followed and suggested </button>
-          <button id="ong3" onclick="changeOnglet(3)"> News </button>
-          <button id="ong4" onclick="changeOnglet(4)"> News from your relations </button>
-        </ul>
+        <div class="tab active" id="ong1">My Contributions</div>
+        <div class="tab" id="ong2">My Pages</div>
+        <div class="tab" id="ong3">News</div>
+        <div class="tab" id="ong4">Relations News</div>
       </div>
+
+      <article class="tabContent">
+        Test
+      </article>
+
+
+
+
 
       <article class="dropper">
         <div class="firstOnglet">
@@ -276,6 +283,9 @@
 
           </div>
       </article>
+
+
+
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

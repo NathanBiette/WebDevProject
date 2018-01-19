@@ -37,17 +37,15 @@
 #profileLeftSide{
   background-color: #f2f2f2;
   text-align: center;
-
   width: 15%;
-
   padding: 1%;
   border-radius: 20px;
   box-shadow: 0px 0px 5px 0px grey;
   left:1%;
   float: left;
-
   margin-left : 20px;
   margin-right : 20px;
+  margin-top: 4px;
 }
 
 h3{
@@ -132,11 +130,7 @@ img#profilePicture{
 /* RIGHT SIDE */
 
 div.profileRightSide{
-  background-color: #f2f2f2;
-  text-align: center;
-  border-radius: 20px;
-  box-shadow: 0px 0px 5px 0px grey;
-  overflow: hidden;
+  overflow:hidden;
   height: auto;
   margin-right: 20px;
 }
@@ -145,70 +139,70 @@ div.profileRightSide{
 
 
 
-
-
-
-
-#onglets{
-  position : absolute;
-  border : 1px solid transparent;
-  padding : 0;
-  font : bold 1em Batang, arial;
-  list-style-type : none;
-  /*padding-bottom : 24px; /* à modifier suivant la taille de la police ET de la hauteur de l'onglet dans #onglets li */
-  /*border-bottom : 1px solid #9EA0A1;*/
-  /*margin-left : 25%;*/
-  left : 50%;
-  margin-top : 0%;
-  width : auto;
-  height:2%;
-  margin-left : -20%; /* la moitié de width */
-  /*border-bottom : 1px solid #9EA0A1;
-  padding-bottom : 25px;*/
-}
-
-
-#onglets button{
-  float : left;
-  height : 21px; /* à modifier suivant la taille de la police pour centrer le texte dans l'onglet */
-  background-color: #F4F9FD;
-  margin : 2px 2px 0 2px !important;  /* Pour les navigateurs autre que IE */
-  margin : 1px 2px 0 2px;  /* Pour IE  */
-  border : 1px solid #9EA0A1;
-  display : block;
-  color : #666;
-  text-decoration : none;
-  /*padding : 4px;*/
-}
-
-#onglets button.active{
-  border-bottom: 1px solid #fff;
-  background-color: #fff;
-}
-
-
-
-#onglets button:hover{
-  background : #fff;
-}
-
 #menu{
-  /*position : relative;*/
-  border-bottom : 1px solid #9EA0A1;
-  padding-bottom : 3%;
-  margin-left: 15%;
-  width:80%;
-
+  height: 40px;
+  display: table;
+  margin-top: 4px;
+  margin-left: 5px;
+  margin-right:5px;
 }
+
+
+
+
+.tab{
+  display: inline-block;
+  height: 100%;
+  padding:9px 15px;
+  border-radius: 20px 20px 0px 0px;
+  background-color: #c1c1c1;
+  box-shadow: 0px -2px 2px grey, inset 0px -4px 10px grey;
+  margin-right: 5px;
+  transition: box-shadow 1s;
+  cursor: pointer;
+}
+
+.tab:hover{
+  background-color: white;
+  box-shadow: 0px -2px 2px grey, inset 0px 0px 20px black;
+}
+
+.tab.active{
+  display: inline-block;
+  height: 100%;
+  padding:9px 15px;
+  border-radius: 20px 20px 0px 0px;
+  background-color: #f2f2f2;
+  box-shadow: 0px -2px 2px grey;
+  margin-right: 5px;
+}
+
+/* CONTENT IN TABS (ONGLETS) */
+
+article.tabContent{
+  background-color: #f2f2f2;
+  z-index: 1;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  box-shadow: 0px 0px 5px grey;
+  border-radius: 0px 10px 10px 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .drop_hover {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.8) inset;
-}
-
-article{
-  margin:1%;
-  position: relative;
-
 }
 
 section{
@@ -221,7 +215,6 @@ video{
   width:100%;
 }
 div.trailer{
-
   border : solid;
   margin : 1%;
 }

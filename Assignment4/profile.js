@@ -1,8 +1,7 @@
-
+/*
 if(localStorage.onglet){
   if(localStorage.onglet==1){
-
-    document.getElementById("ong1").className="active";
+    document.getElementById("ong1").className+="active";
     document.getElementById("ong2").className-="active";
     document.getElementById("ong3").className-="active";
     document.getElementById("ong4").className-="active";
@@ -12,7 +11,7 @@ if(localStorage.onglet){
     document.getElementsByClassName("fourthOnglet")[0].style.display="none";
   }
   if(localStorage.onglet==2){
-    document.getElementById("ong2").className="active";
+    document.getElementById("ong2").className+="active";
     document.getElementById("ong1").className-="active";
     document.getElementById("ong3").className-="active";
     document.getElementById("ong4").className-="active";
@@ -23,7 +22,7 @@ if(localStorage.onglet){
 
   }
   if(localStorage.onglet==3){
-    document.getElementById("ong3").className="active";
+    document.getElementById("ong3").className+="active";
     document.getElementById("ong1").className-="active";
     document.getElementById("ong2").className-="active";
     document.getElementById("ong4").className-="active";
@@ -35,7 +34,7 @@ if(localStorage.onglet){
 
   }
   if(localStorage.onglet==4){
-    document.getElementById("ong4").className="active";
+    document.getElementById("ong4").className+="active";
     document.getElementById("ong1").className-="active";
     document.getElementById("ong2").className-="active";
     document.getElementById("ong3").className-="active";
@@ -46,6 +45,12 @@ if(localStorage.onglet){
     document.getElementsByClassName("fourthOnglet")[0].style.display="inline";
   }
 }
+*/
+
+
+
+
+
 
 
 /*
@@ -251,7 +256,7 @@ for (var i = 0; i < droppersLen; i++) {
 /*onglets*/
 function changeOnglet(ongletChosen) {
   if(ongletChosen==1){
-    document.getElementById("ong1").className="active";
+    document.getElementById("ong1").className+="active";
     document.getElementById("ong2").className-="active";
     document.getElementById("ong3").className-="active";
     document.getElementById("ong4").className-="active";
@@ -262,7 +267,7 @@ function changeOnglet(ongletChosen) {
     localStorage.onglet=ongletChosen;
   }
   if(ongletChosen==2){
-    document.getElementById("ong2").className="active";
+    document.getElementById("ong2").className+="active";
     document.getElementById("ong1").className-="active";
     document.getElementById("ong3").className-="active";
     document.getElementById("ong4").className-="active";
@@ -274,7 +279,7 @@ function changeOnglet(ongletChosen) {
 
   }
   if(ongletChosen==3){
-    document.getElementById("ong3").className="active";
+    document.getElementById("ong3").className+="active";
     document.getElementById("ong1").className-="active";
     document.getElementById("ong2").className-="active";
     document.getElementById("ong4").className-="active";
@@ -286,7 +291,7 @@ function changeOnglet(ongletChosen) {
     localStorage.onglet=ongletChosen;
   }
   if(ongletChosen==4){
-    document.getElementById("ong4").className="active";
+    document.getElementById("ong4").className+="active";
     document.getElementById("ong1").className-="active";
     document.getElementById("ong2").className-="active";
     document.getElementById("ong3").className-="active";
