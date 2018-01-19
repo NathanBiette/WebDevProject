@@ -88,9 +88,25 @@ if (localStorage.onglet) {
 
 
 
+if(localStorage.officialChecked){
+  if(localStorage.officialChecked==1){
+    document.getElementsByClassName("official").style.display="inline";
 
+  }
+  else{
+    document.getElementsByClassName("official").style.display="none";
+  }
+}
 
+if(localStorage.fanChecked){
+  if(localStorage.fanChecked==1){
+    document.getElementsByClassName("fanArt").style.display="inline";
 
+  }
+  else{
+    document.getElementsByClassName()"fanArt").style.display="none";
+  }
+}
 
 
 
@@ -364,3 +380,33 @@ function changeOnglet() {
   $("#"+$(this).attr("id")+"Content").siblings().css("display","none");
   localStorage.onglet = $(this).attr("id")[3];
 }
+
+var checkboxOfficial = document.querySelector("input[id=seeOfficial]");
+
+checkbox.addEventListener( 'change', function() {
+    if(this.checked) {
+        // Checkbox is checked..
+        document.getElementsByClassName("official").style.display="inline";
+        localStorage.officialChecked=1;
+    } else {
+
+        // Checkbox is not checked..
+        document.getElementsByClassName("official").style.display="none";
+        localStorage.officialChecked=0;
+    }
+});
+
+var checkboxFan = document.querySelector("input[id=seeFan]");
+
+checkbox.addEventListener( 'change', function() {
+    if(this.checked) {
+        // Checkbox is checked..
+        document.getElementsByClassName("fanArt").style.display="inline";
+        localStorage.fanChecked=1;
+    } else {
+
+        // Checkbox is not checked..
+        document.getElementsByClassName("fanArt").style.display="none";
+        localStorage.fanChecked=0;
+    }
+});

@@ -303,3 +303,10 @@ div.contrib{
   float:left;
   margin:1%;
 }
+
+.fanArt{
+  display:none;
+}
+.official{
+  display:"inline";
+}
