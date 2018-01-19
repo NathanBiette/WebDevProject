@@ -240,7 +240,7 @@ video{
 }
 div.trailer{
   border : solid;
-  margin : 1%;
+  /*margin : 1%;*/
 }
 
 p.articleExtract{
