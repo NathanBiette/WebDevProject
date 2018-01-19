@@ -128,11 +128,14 @@ input[type=button]{
 }
 
 .logInAllContainer{
+  position: fixed;
+  right: 0px;
   float: right;
-  display: block;
   box-sizing: content-box;
   margin:auto;
   overflow:hidden;
+  background-color: inherit;
+  display: none;
 }
 
 #logInHeader:hover .logInAllContainer{
