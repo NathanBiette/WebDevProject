@@ -75,36 +75,31 @@ if (localStorage.onglet) {
 }
 */
 
-/* VERSION PLUS RAPIDE A ECRIRE */
-
-var onglets = [$("#ong1"),$("#ong2"),$("#ong3"),$("#ong4")];
-var ongletsContent = [$("#ong1Content"),$("#ong2Content"),$("#ong3Content"),$("#ong4Content")];
-if (localStorage.onglet) {
-  onglets[localStorage.onglet - 1].addClass("active");
-  onglets[localStorage.onglet - 1].siblings().removeClass("active");
-  ongletsContent[localStorage.onglet - 1].css("display","block");
-  ongletsContent[localStorage.onglet - 1].siblings().css("display","none");
-}
 
 
+
+/*
+*/
 
 if(localStorage.officialChecked){
   if(localStorage.officialChecked==1){
-    document.getElementsByClassName("official").style.display="inline";
+    document.getElementsByClassName("official")[0].style.display="inline";
 
   }
   else{
-    document.getElementsByClassName("official").style.display="none";
+    document.getElementsByClassName("official")[0].style.display="none";
+    document.getElementById("seeOfficial").checked=false;
   }
 }
 
 if(localStorage.fanChecked){
   if(localStorage.fanChecked==1){
-    document.getElementsByClassName("fanArt").style.display="inline";
+    document.getElementsByClassName("fanArt")[0].style.display="inline";
+    document.getElementById("seeFan").checked="true";
 
   }
   else{
-    document.getElementsByClassName()"fanArt").style.display="none";
+    document.getElementsByClassName("fanArt")[0].style.display="none";
   }
 }
 
@@ -371,42 +366,34 @@ function changeOnglet(ongletChosen) {
 }
 */
 
-$(".tab").click(changeOnglet);
-
-function changeOnglet() {
-  $(this).addClass("active");
-  $(this).siblings().removeClass("active");
-  $("#"+$(this).attr("id")+"Content").css("display","block");
-  $("#"+$(this).attr("id")+"Content").siblings().css("display","none");
-  localStorage.onglet = $(this).attr("id")[3];
-}
 
 var checkboxOfficial = document.querySelector("input[id=seeOfficial]");
 
-checkbox.addEventListener( 'change', function() {
+checkboxOfficial.addEventListener( 'change', function() {
     if(this.checked) {
         // Checkbox is checked..
-        document.getElementsByClassName("official").style.display="inline";
+        document.getElementsByClassName("official")[0].style.display="inline";
         localStorage.officialChecked=1;
     } else {
 
         // Checkbox is not checked..
-        document.getElementsByClassName("official").style.display="none";
+        document.getElementsByClassName("official")[0].style.display="none";
         localStorage.officialChecked=0;
     }
 });
 
 var checkboxFan = document.querySelector("input[id=seeFan]");
 
-checkbox.addEventListener( 'change', function() {
+checkboxFan.addEventListener( 'change', function() {
     if(this.checked) {
         // Checkbox is checked..
-        document.getElementsByClassName("fanArt").style.display="inline";
+        document.getElementsByClassName("fanArt")[0].style.display="inline";
         localStorage.fanChecked=1;
+        alert(localStorage.fanChecked);
     } else {
 
         // Checkbox is not checked..
-        document.getElementsByClassName("fanArt").style.display="none";
+        document.getElementsByClassName("fanArt")[0].style.display="none";
         localStorage.fanChecked=0;
     }
 });

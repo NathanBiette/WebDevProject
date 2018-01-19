@@ -1,59 +1,61 @@
-/*--------------------------------------------Jquery versiion--------------------------------------*/
-$(".translate").click(translateSlideshow);
-function translateSlideshow(){
-  var slideshowClass = $(this).parent().parent().attr("class").split(' ')[1];
-  var mediasContainer = $(this).siblings(".mediasContainer");
-  var mediaContainer = $(this).siblings(".mediasContainer").children(".mediaContainer")
-  var mediaWidth =parseFloat(mediaContainer.css("width"));
-  var numberMediaSlideshow = mediaContainer.length;
-  var matrixString = mediasContainer.css("transform").split(',');
-  var translateX = parseFloat(matrixString[matrixString.length-2]); //TranslationX
-  direction = $(this).attr("class").split(' ')[1];
-  var remainder = Math.floor(translateX%mediaWidth);
-  if(remainder==0){
-    if(direction=='left' && remainder==0){//+500px to transform left
-      if(translateX<0){
-        translateX += mediaWidth;
+/*--------------------------------------------Jquery version--------------------------------------*/
+function initCarousels(){
+  $(".translate").click(translateSlideshow);
+  function translateSlideshow(){
+    var slideshowClass = $(this).parent().parent().attr("class").split(' ')[1];
+    var mediasContainer = $(this).siblings(".mediasContainer");
+    var mediaContainer = $(this).siblings(".mediasContainer").children(".mediaContainer")
+    var mediaWidth =parseFloat(mediaContainer.css("width"));
+    var numberMediaSlideshow = mediaContainer.length;
+    var matrixString = mediasContainer.css("transform").split(',');
+    var translateX = parseFloat(matrixString[matrixString.length-2]); //TranslationX
+    direction = $(this).attr("class").split(' ')[1];
+    var remainder = Math.floor(translateX%mediaWidth);
+    if(remainder==0){
+      if(direction=='left' && remainder==0){//+500px to transform left
+        if(translateX<0){
+          translateX += mediaWidth;
+        }
+        else{
+          translateX = -mediaWidth*(numberMediaSlideshow-1);
+        }
       }
-      else{
-        translateX = -mediaWidth*(numberMediaSlideshow-1);
+      if(direction=='right' && remainder==0){//-500px to transforfm right
+        if(translateX> -mediaWidth*(numberMediaSlideshow-1)){
+          translateX -=mediaWidth;
+        }
+        else{
+          translateX = 0;
+        }
       }
+      matrixString[matrixString.length-2] = ' '+translateX;
+      mediasContainer.css("transform",matrixString.join(',')) ;
     }
-    if(direction=='right' && remainder==0){//-500px to transforfm right
-      if(translateX> -mediaWidth*(numberMediaSlideshow-1)){
-        translateX -=mediaWidth;
-      }
-      else{
-        translateX = 0;
-      }
+  };
+
+  $('video').click(function(){
+    this.paused ? this.play() : this.pause();
+  });
+
+  function intializeTimers(){
+    var rightTranslate=$(".right");
+    var timers = [];
+    for(var button=0;button<rightTranslate.length;button++){
+      var element = rightTranslate[button];
+      timers.concat(setInterval(fakeClick.bind(null,element),5000));
     }
-    matrixString[matrixString.length-2] = ' '+translateX;
-    mediasContainer.css("transform",matrixString.join(',')) ;
+    for(var button=0;button<rightTranslate.length;button++){
+      var element = rightTranslate[button];
+      element.addEventListener('change',function(){clearInterval(timers[button])});
+    }
   }
-};
 
-$('video').click(function(){
-  this.paused ? this.play() : this.pause();
-});
-
-function intializeTimers(){
-  var rightTranslate=$(".right");
-  var timers = [];
-  for(var button=0;button<rightTranslate.length;button++){
-    var element = rightTranslate[button];
-    timers.concat(setInterval(fakeClick.bind(null,element),5000));
+  function fakeClick(element){
+    element.click();
   }
-  for(var button=0;button<rightTranslate.length;button++){
-    var element = rightTranslate[button];
-    element.addEventListener('change',function(){clearInterval(timers[button])});
-  }
+  intializeTimers();
 }
-
-function fakeClick(element){
-  element.click();
-}
-intializeTimers();
-
+initCarousels();
 /*---------------JS only version ----------------------*/
 
 
