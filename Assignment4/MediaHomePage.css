@@ -1,6 +1,14 @@
+body{
+  text-align: center;
+}
+
+body header{
+  text-align: left;
+}
+
 div.slideshowsContainer{
   display: inline-block;
-  margin-left: 25%;
+  margin: auto;
 }
 
 div.smallSlideshow{
