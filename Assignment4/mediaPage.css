@@ -75,7 +75,7 @@ p{
 .contentContainer{
   padding:5px;
 }
-#postersBlock{
+#trailersBlock{
   display:none;
 }
 .asideBlockContainer{
@@ -151,5 +151,5 @@ input.addBlockButton{
   background-color: white;
 }
 div.smallSlideshow div.mediaContainer{
-  background-color: #5b5c5e;
+  background-color: inherit;
 }
