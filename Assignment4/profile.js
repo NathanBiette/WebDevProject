@@ -46,6 +46,8 @@ if(localStorage.onglet){
     document.getElementsByClassName("fourthOnglet")[0].style.display="inline";
   }
 }
+
+
 /*
 if(localStorage.ageOutput){
 //alert(localStorage.ageOutput);
