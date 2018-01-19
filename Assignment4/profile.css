@@ -126,15 +126,13 @@ img#profilePicture{
 
 
 
-
+/* RIGHT SIDE */
 
 div.profileRightSide{
   background-color: #f2f2f2;
   text-align: center;
 
   width: 70%;
-  /*margin: 2em;*/
-  /*padding: 1%;*/
   border-radius: 20px;
   box-shadow: 0px 0px 5px 0px grey;
   left:25%;
@@ -246,9 +244,11 @@ nav.medias li:hover{
 h2{
   text-align: center;
 }
+
 img{
   width:50%;
 }
+
 
 div.Suggestions{
     text-align: center;

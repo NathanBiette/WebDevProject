@@ -22,62 +22,121 @@ footer{
 }
 
 
+
+
 header{
+  position: sticky;
   top:0px;
   width: 100%;
-  position:relative;
-  height: 6em;
-  padding-bottom: 1%;
+  height: auto;
+  box-shadow: 0px 0px 5px 0px grey, inset 0px 5px 40px -10px grey ;
+  margin-bottom: 20px;
+  background-color: #f2f2f2;
+  z-index: 1;
 }
 header#navTopBar{
-  width:100%;
-  margin: 0 auto;
   border: 1px black solid;
-  text-align: center;
-}
-
-.HyperImageContainer{
-  float: left;
-  width: 33%;
-  box-sizing: content-box;
-  margin-top: 1em;
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-  height: 100%;
-  max-width: 200px;
-  overflow: hidden;
-  margin-right: 2em;
-}
-#HyperImage{
-  display: block;
-  width: 100%;
-
-}
-
-#searchFormTop{
-  float: left;
-  width: 33%;
-  box-sizing: content-box;
-  margin-top: 2.5em;
   display: inline;
 }
-#navButtonsTop{
+.HyperImageContainer{
   float: left;
-  width: 33%;
+  padding: 8px 10px 9px 10px;
+}
+#HyperImage{
+  height: 30px;
+}
+nav a{
   box-sizing: content-box;
-  margin-top: 3em;
-  position: relative;
-  display:inline;
-  max-width: 50%;
-  background-color: inherit;
-  text-align: center;
-  box-shadow: 0px 5px 80px 0px white;
-  font-size : 80%;
 }
 .navButtonTop{
-  width: 5em;
+  display: inline-block;
+  height: auto;
+  text-align: center;
+  padding: 16px 8px;
+  transition: box-shadow 1s;
 }
+.navButtonTop:hover{
+  background-color: white;
+  box-shadow: inset 0px 5px 40px -10px #000000;
+}
+#searchFormTop{
+  display: inline-block;
+  margin-left: 20px;
+}
+#searchBar{
+  margin: 0px;
+  padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+/* LOG IN */
+
+#logInHeader{
+  display: inline-block;
+  float: right;
+  padding: 16px;
+  border-left: 1px solid grey;
+  transition: box-shadow 1s;
+}
+
+.logInAllContainer{
+  position: fixed;
+  right: 0px;
+  float: right;
+  box-sizing: content-box;
+  margin:auto;
+  background-color: inherit;
+  display: none;
+  text-align:center;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  top: 51px;
+  box-shadow: inset 0px 3px 5px -2px grey, 0px 3px 5px 0px grey;
+}
+
+#logInHeader:hover .logInAllContainer{
+  display: block;
+  background-color: inherit;
+}
+
+#logInHeader:hover{
+  background-color: white;
+  box-shadow: inset 0px 5px 40px -10px #000000;
+}
+
+#connexionContainer{
+  display: block;
+}
+
+#createAccountContainer{
+  display: none;
+}
+
+#userActionsContainer{
+  display: none;
+}
+
+#HyperImage{
+  width: auto;
+}
+
+
+
+
+
+
+
+
+
+
 input{
   font-size: 1em;
   padding: 5px;
@@ -114,48 +173,10 @@ input[type=button]{
 
 
 
-/* LOG IN */
 
-#logIn{
-  position:fixed;
-  width: 220px;
-  right: 0%;
-  top: 0%;
-  text-align: center;
-  box-shadow: 0px 0px 5px 0px grey;
-  border-radius: 0px 0px 0px 10px;
-  background-color: #f2f2f2;
-  overflow: hidden;
-}
 
-#logInHeader{
-  box-sizing: content-box;
-  font-size: 1em;
-  padding: 10px 10px 10px 10px;
-}
 
-.logInAllContainer{
-  display: none;
-  box-sizing: content-box;
-  margin:auto;
-  overflow:hidden;
-}
 
-#logIn:hover .logInAllContainer{
-  display: block;
-}
-
-#connexionContainer{
-  display: block;
-}
-
-#createAccountContainer{
-  display: none;
-}
-
-#userActionsContainer{
-  display: none;
-}
 
 
 

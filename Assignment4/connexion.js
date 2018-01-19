@@ -9,15 +9,16 @@ disconnectButton.addEventListener('click',disconnect);
 
 var logInContainer = document.getElementById('connexionContainer');
 var userActionsContainer = document.getElementById('userActionsContainer');
-var logInHeader = document.getElementById('logInHeader')
 var createAccountContainer = document.getElementById('createAccountContainer');
+
+var logInHeader = document.getElementById('logInHeader')
 
 
 if (localStorage.connected == "true") { //if connected, display the rights content
   logInContainer.style.display = 'none';
   createAccountContainer.style.display = 'none';
   userActionsContainer.style.display = 'block';
-  logInHeader.innerHTML = localStorage.username;
+  $("#logInOrUsername").html(localStorage.username);
 }
 
 
@@ -30,7 +31,7 @@ function connect(){
     return;
   }
   if (localStorage.username == usernameValue && localStorage.password == passwordValue) {
-    logInHeader.innerHTML = usernameValue;
+    $("#logInOrUsername").html(localStorage.username);
     localStorage.connected = "true";
     /* print access profile, disconnect*/
     logInContainer.style.display = 'none';
@@ -44,7 +45,7 @@ function disconnect() {
   localStorage.connected = "false";
   logInContainer.style.display = 'block';
   userActionsContainer.style.display = 'none';
-  document.getElementById('logInHeader').innerHTML = 'Log in';
+  $("#logInOrUsername").html("Log in");
 
   if (document.title == "Hyper Profile") {
     window.location.href = "HyperHomePage.html";
