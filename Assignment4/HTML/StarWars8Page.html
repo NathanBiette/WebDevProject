@@ -16,13 +16,20 @@
     <div id="mediaPagesideNav" class="sideNav">
       <input type="button" value="&#9776;"id="navSideButton">
       <div id="sideNavContent">
-        <div class="sideMediaImageContainer">
-            <img  id="mediaImage" src="../images/STAR-WARS-8-POSTER.jpg" alt="Profile picture"></img>
+        <a href="HyperHomePage.html">
+          <div class="navSideBlockContainer" id="navSideHomeLogo">
+            <img id="HyperImage" src="..\images\hyperSmall.png" alt="Hyper">
+          </div>
+        </a>
+        <div class="navSideBlockContainer" >
+            <img id="navSideMediaImage" src="../images/STAR-WARS-8-POSTER.jpg" alt="Profile picture"></img>
         </div>
-        <a href=""> GO TO FB</a>
+        <div class="navSideBlockContainer">
+          <input type="button"href=""value="GO TO FB"></input>
+        </div>
       </div>
     </div>
-    
+
     <div class="global">
     <header>
       <nav id="navTopBar">
@@ -248,8 +255,8 @@
         </section>
 
 
-        <section class="contentBlockContainer">
-          <div class="contentBlock" id="tweetsBlock">
+        <section class="contentBlockContainer" id="tweetsBlock">
+          <div class="contentBlock">
             <div class="contentBlockHeader">
               <input type="button" value="&#10008;"class="hideBlock" id="hideTweets"/>
               <input type="button" value="&#10010;"/>
@@ -305,6 +312,7 @@
     <script src="../mediaPage.js"></script>
     <script src="../caroussel.js"></script>
     <script src="../research.js"></script>
+    <script src="../dragDropBlock.js"></script>
   </body>
 
 </html>

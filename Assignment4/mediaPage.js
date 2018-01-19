@@ -23,13 +23,13 @@ function hideBlock(){
   $('#'+type+'Add').parent().css("display","block"); /*Make the addd block buttno visible again*/
 }
 $('#navSideButton').click(toggleNav);
+document.getElementById("sideNavContent").style.width = "0px";
 function toggleNav() {
-    if(document.getElementById("sideNavContent").style.display=="block"){
-      document.getElementById("sideNavContent").style.width = "0px";
+    if(document.getElementById("sideNavContent").style.width == "0px"){
+      document.getElementById("sideNavContent").style.width = "250px";
     }
     else{
-      document.getElementById("sideNavContent").style.display="block";
-      document.getElementById("sideNavContent").style.width = "250px";
+      document.getElementById("sideNavContent").style.width = "0px";
     }
 }
 

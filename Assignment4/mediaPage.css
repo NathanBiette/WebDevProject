@@ -164,30 +164,44 @@ div.smallSlideshow div.mediaContainer{
 @media only screen and (min-width: 768px){
   #mediaPagesideNav{display: none;}
 }
-#navSideButton{
-  position: fixed;
-  display: block;
-  top: 0; /* Stay at the top */
+#mediaPagesideNav{
+  position: fixed; /* Stay in place */
+  top: 0; /* Stay at the top*/
   left: 0;
-  z-index: 2;
+  z-index: 1;
+  max-width: 100%;
+}
+#navSideButton{
+  float:right;
+  background-color: white;
 }
 #mediaPagesideNav{
   height: 100%;
-  background-color: grey;
 }
 #sideNavContent{
-  background-color: inherit;
-  display:none;
+  background-color: grey;
   height: 100%; /* 100% Full-height */
   width: 0px; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
+  overflow:hidden;
   transition: 0.5s;
 }
-.sideMediaImageContainer{
+.navSideBlockContainer{
+  transition: 0.5s;
+  border: 1px solid black;
+  width:  100%;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+#navSideMediaImage{
+  width: auto;
+  max-height: 150px;
+  object-fit: contain;
+  margin: auto;
+  border-radius: 10%;
 }
 #sideNavContent a{
+  background-color: inherit;
   text-decoration: none;
+  color: white;
 }
