@@ -57,9 +57,8 @@ function expand() {
   $(this).css("display","none");
   $(this).siblings('.downsizeButton').css("display","block");
   if(contentBlock.attr("id")=="tweetsBlock"){
-    contentBlock.html(stringTwitter);
+    contentBlock.find("#tweetContainer").html(stringTwitter);
     twttr.widgets.load();
-    initCarousels();
   }
 }
 
@@ -70,6 +69,10 @@ function downsize(){
   contentBlock.addClass('contentBlockContainer');
   $(this).css("display","none");
   $(this).siblings('.expandButton').css("display","block");
+  if(contentBlock.attr("id")=="tweetsBlock"){
+    contentBlock.find("#tweetContainer").html(stringTwitter);
+    twttr.widgets.load();
+  }
 }
 
 
