@@ -145,7 +145,7 @@ aside ul{
 img#mediaImage{
   width: 100%;
   max-width:300px;
-  border-radius: 10%;
+  border-radius: 20px;
   object-fit: contain;
   margin: auto;
 }
@@ -222,7 +222,7 @@ div.smallSlideshow div.mediaContainer{
   width:250px;
   object-fit: contain;
   margin: auto;
-  border-radius: 10%;
+  border-radius: 20px;
   padding-top: 5px;
 }
 #sideNavContent a{
