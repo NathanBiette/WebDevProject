@@ -304,9 +304,9 @@ div.contrib{
   margin:1%;
 }
 
-.fanArt{
+.firstOnglet .fanArt{
   display:none;
 }
-.official{
+.firstOnglet .official{
   display:"inline";
 }

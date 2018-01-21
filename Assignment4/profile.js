@@ -372,12 +372,12 @@ var checkboxOfficial = document.querySelector("input[id=seeOfficial]");
 checkboxOfficial.addEventListener( 'change', function() {
     if(this.checked) {
         // Checkbox is checked..
-        document.getElementsByClassName("official")[0].style.display="inline";
+        document.getElementsByClassName("official firstOnglet")[0].style.display="inline";
         localStorage.officialChecked=1;
     } else {
 
         // Checkbox is not checked..
-        document.getElementsByClassName("official")[0].style.display="none";
+        document.getElementsByClassName("official firstOnglet")[0].style.display="none";
         localStorage.officialChecked=0;
     }
 });
@@ -387,13 +387,13 @@ var checkboxFan = document.querySelector("input[id=seeFan]");
 checkboxFan.addEventListener( 'change', function() {
     if(this.checked) {
         // Checkbox is checked..
-        document.getElementsByClassName("fanArt")[0].style.display="inline";
+        document.getElementsByClassName("fanArt firstOnglet")[0].style.display="inline";
         localStorage.fanChecked=1;
         alert(localStorage.fanChecked);
     } else {
 
         // Checkbox is not checked..
-        document.getElementsByClassName("fanArt")[0].style.display="none";
+        document.getElementsByClassName("fanArt firstOnglet")[0].style.display="none";
         localStorage.fanChecked=0;
     }
 });
