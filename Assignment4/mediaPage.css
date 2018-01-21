@@ -49,14 +49,13 @@ p{
 #contentBlocksContainer{
   column-count: 2;
   column-gap: 0px;
+  position:relative;
 }
 .contentBlockContainer{
   margin-left: 10px;
   margin-right: 10px;
-  display:block;
 }
 .contentBlock{
-  border: 1px solid white;
   border-radius: 10px;
   box-shadow: inset 0px 0px 5px 0px grey;
   -webkit-column-break-inside:avoid; /* Webkit */
@@ -77,8 +76,11 @@ p{
   display: none;
 }
 .contentContainer h4{
-  cursor: pointer;
+  cursor: move;
   user-select: none;
+  margin:0px;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 #tweetContainer{
   padding: 5px;
@@ -168,6 +170,29 @@ input.addBlockButton{
 div.smallSlideshow div.mediaContainer{
   background-color: inherit;
 }
+/* Style for blocks being dragged */
+.contentBlockFixedDragged{
+  opacity: 0;
+}
+.contentBlockFixedContainerDragged{
+  border: 2px dashed grey;
+  pointer-events:none;
+}
+
+.contentBlockContainerDragged{
+  position: absolute;
+  z-index: 9;
+  pointer-events:none;
+  opacity:0.5;
+}
+.contentBlockDragged{
+  background-color: white;
+}
+#lastBlock{
+  opacity: 0;
+  height: 15px;
+}
+
 /*Side bar*/
 @media only screen and (max-width: 768px){
   #mediaPageLeftSide {display: none;}
@@ -179,9 +204,10 @@ div.smallSlideshow div.mediaContainer{
 @media only screen and (min-width: 768px){
   #mediaPagesideNav{display: none;}
 }
+/* SIDE NAVIGATION BAR WHEN ON MOBILE*/
 .sideNav{
-  position: fixed; /* Stay in place */
-  top: 0; /* Stay at the top*/
+  position: fixed; /* Stays in place */
+  top: 0; /* Stays at the top*/
   left: 0;
   z-index: 1;
   max-width: 100%;

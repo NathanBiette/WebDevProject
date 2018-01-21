@@ -33,9 +33,7 @@ function initCarousels(){
     }
   };
 
-  $('video').click(function(){
-    this.paused ? this.play() : this.pause();
-  });
+
 
   function intializeTimers(){
     var rightTranslate=$(".right");
@@ -56,6 +54,9 @@ function initCarousels(){
   intializeTimers();
 }
 initCarousels();
+$('video').click(function(){
+  this.paused ? this.play() : this.pause();
+});
 /*---------------JS only version ----------------------*/
 
 
