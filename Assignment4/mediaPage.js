@@ -17,6 +17,7 @@ function addBlock(){
     twttr.widgets.load();
   }
   initCarousels();
+  resizeCaroussels();
 }
 function hideBlock(){
   var thisId = $(this).attr("id");
@@ -74,6 +75,7 @@ function downsize(){
     contentBlock.find("#tweetContainer").html(stringTwitter);
     twttr.widgets.load();
   }
+  resizeCaroussels();
 }
 
 
