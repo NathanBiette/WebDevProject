@@ -64,6 +64,7 @@ p{
   width:100%;
   margin-bottom: 10px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 .contentBlockHeader input{
  float: right;
@@ -85,8 +86,15 @@ p{
 #tweetContainer{
   padding: 5px;
 }
+#postersContainer{
+  height: 500px;
+  width: auto;
+}
 .contentContainer{
   padding:5px;
+  max-height: 600px;
+  min-width: 100px;
+  min-height:200px;
 }
 #trailersBlock{
   display:none;

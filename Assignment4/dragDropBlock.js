@@ -15,7 +15,6 @@ function dragBlock(){
  mouseClone.css("left",initPos.left);
  mouseClone.attr("id",mouseClone.attr("id")+"Dragged");
  mouseClone.css("width",widthInit);
- console.log( mouseClone.attr("width"));
  dragClone(mouseClone);
 
 

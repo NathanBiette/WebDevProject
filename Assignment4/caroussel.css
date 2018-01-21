@@ -10,8 +10,11 @@ div.slideshowWindow{
 div.bigSlideshow{
   text-align: center;
   max-width: 500px;
+  max-height: 300px;
   height: auto;
   margin: auto;
+  margin: auto;
+  position: relative;
 }
 
 div.smallSlideshow{
@@ -31,23 +34,23 @@ div.smallSlideshow{
   transform: translateX(0px);
 }
 
-div.bigSlideshow div.mediaContainer{
-  height:300px;
-  width: 500px;
-
-  background-color: rgb(400,400,400);
+.mediaContainer{
+  position: relative;
+  background-color: grey;
   border-radius: 30px;
   overflow: hidden;
   margin: auto;
 }
+div.bigSlideshow div.mediaContainer{
+  height:300px;
+  width: 500px;
+  overflow: hidden;
+
+}
 div.smallSlideshow div.mediaContainer{
   height: 150px;
   width: 250px;
-  position: relative;
-  background-color: #afb1b5;
-  border-radius: 30px;
-  overflow: hidden;
-  margin: auto;
+
 }
 
 

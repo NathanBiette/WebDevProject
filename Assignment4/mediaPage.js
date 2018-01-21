@@ -28,7 +28,7 @@ function hideBlock(){
 
 //Side navigation Bar
 $('#sideNavButton').click(toggleNav);
-//$('.global').click(closeNav);
+$('.global').click(closeNav);
 document.getElementById("sideNavContent").style.width = "0px";
 function toggleNav() {
     if(document.getElementById("sideNavContent").style.width == "0px"){
@@ -60,6 +60,7 @@ function expand() {
     contentBlock.find("#tweetContainer").html(stringTwitter);
     twttr.widgets.load();
   }
+  resizeCaroussels();
 }
 
 function downsize(){
@@ -94,3 +95,12 @@ window.twttr = (function(d, s, id) {
 
   return t;
 }(document, "script", "twitter-wjs"));
+$(".slideshow").each(function(){
+  resizeInnerCaroussel($(this).parent());
+});
+$(window).on('resize',resizeCaroussels);
+function resizeCaroussels(){
+  $(".slideshow").each(function(){
+    resizeInnerCaroussel($(this).parent());
+  });
+}
