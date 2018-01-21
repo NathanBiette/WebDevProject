@@ -397,3 +397,33 @@ checkboxFan.addEventListener( 'change', function() {
         localStorage.fanChecked=0;
     }
 });
+var boolFanOff2=0;
+function switchO2(){
+  if(boolFanOff2==0){
+    document.getElementsByClassName("onglet2Fan")[0].style.display="inline";
+    document.getElementsByClassName("onglet2Official")[0].style.display="none";
+    document.getElementById("switchOnglet2").value="switch to official";
+    boolFanOff2=1;
+  }
+  else if(boolFanOff2==1){
+    document.getElementsByClassName("onglet2Fan")[0].style.display="none";
+    document.getElementsByClassName("onglet2Official")[0].style.display="inline";
+    document.getElementById("switchOnglet2").value="switch to fan art";
+    boolFanOff2=0;
+  }
+}
+var boolFanOff3=0;
+function switchO3(){
+  if(boolFanOff3==0){
+    document.getElementsByClassName("onglet3Fan")[0].style.display="inline";
+    document.getElementsByClassName("onglet3Official")[0].style.display="none";
+    document.getElementById("switchOnglet3").value="switch to official";
+    boolFanOff3=1;
+  }
+  else if(boolFanOff3==1){
+    document.getElementsByClassName("onglet3Fan")[0].style.display="none";
+    document.getElementsByClassName("onglet3Official")[0].style.display="inline";
+    document.getElementById("switchOnglet3").value="switch to fan art";
+    boolFanOff2=0;
+  }
+}
