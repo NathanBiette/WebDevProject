@@ -78,6 +78,9 @@ p{
 .contentContainer h4{
   cursor: move;
   user-select: none;
+  margin:0px;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 #tweetContainer{
   padding: 5px;
