@@ -372,12 +372,12 @@ var checkboxOfficial = document.querySelector("input[id=seeOfficial]");
 checkboxOfficial.addEventListener( 'change', function() {
     if(this.checked) {
         // Checkbox is checked..
-        document.getElementsByClassName("official")[0].style.display="inline";
+        document.getElementsByClassName("official firstOnglet")[0].style.display="inline";
         localStorage.officialChecked=1;
     } else {
 
         // Checkbox is not checked..
-        document.getElementsByClassName("official")[0].style.display="none";
+        document.getElementsByClassName("official firstOnglet")[0].style.display="none";
         localStorage.officialChecked=0;
     }
 });
@@ -387,13 +387,43 @@ var checkboxFan = document.querySelector("input[id=seeFan]");
 checkboxFan.addEventListener( 'change', function() {
     if(this.checked) {
         // Checkbox is checked..
-        document.getElementsByClassName("fanArt")[0].style.display="inline";
+        document.getElementsByClassName("fanArt firstOnglet")[0].style.display="inline";
         localStorage.fanChecked=1;
         alert(localStorage.fanChecked);
     } else {
 
         // Checkbox is not checked..
-        document.getElementsByClassName("fanArt")[0].style.display="none";
+        document.getElementsByClassName("fanArt firstOnglet")[0].style.display="none";
         localStorage.fanChecked=0;
     }
 });
+var boolFanOff2=0;
+function switchO2(){
+  if(boolFanOff2==0){
+    document.getElementsByClassName("onglet2Fan")[0].style.display="inline";
+    document.getElementsByClassName("onglet2Official")[0].style.display="none";
+    document.getElementById("switchOnglet2").value="switch to official";
+    boolFanOff2=1;
+  }
+  else if(boolFanOff2==1){
+    document.getElementsByClassName("onglet2Fan")[0].style.display="none";
+    document.getElementsByClassName("onglet2Official")[0].style.display="inline";
+    document.getElementById("switchOnglet2").value="switch to fan art";
+    boolFanOff2=0;
+  }
+}
+var boolFanOff3=0;
+function switchO3(){
+  if(boolFanOff3==0){
+    document.getElementsByClassName("onglet3Fan")[0].style.display="inline";
+    document.getElementsByClassName("onglet3Official")[0].style.display="none";
+    document.getElementById("switchOnglet3").value="switch to official";
+    boolFanOff3=1;
+  }
+  else if(boolFanOff3==1){
+    document.getElementsByClassName("onglet3Fan")[0].style.display="none";
+    document.getElementsByClassName("onglet3Official")[0].style.display="inline";
+    document.getElementById("switchOnglet3").value="switch to fan art";
+    boolFanOff2=0;
+  }
+}

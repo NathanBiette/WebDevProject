@@ -304,9 +304,22 @@ div.contrib{
   margin:1%;
 }
 
-.fanArt{
+.firstOnglet .fanArt{
   display:none;
 }
-.official{
+.firstOnglet .official{
   display:"inline";
+}
+
+.onglet2Fan{
+  display:none;
+}
+.onglet3Fan{
+  display:none;
+}
+.onglet3Official{
+  display:inline;
+}
+.onglet2Official{
+  display:inline;
 }

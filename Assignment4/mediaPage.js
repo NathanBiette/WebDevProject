@@ -17,6 +17,7 @@ function addBlock(){
     twttr.widgets.load();
   }
   initCarousels();
+  resizeCaroussels();
 }
 function hideBlock(){
   var thisId = $(this).attr("id");
@@ -60,6 +61,7 @@ function expand() {
     contentBlock.find("#tweetContainer").html(stringTwitter);
     twttr.widgets.load();
   }
+  resizeCaroussels();
 }
 
 function downsize(){
@@ -73,6 +75,7 @@ function downsize(){
     contentBlock.find("#tweetContainer").html(stringTwitter);
     twttr.widgets.load();
   }
+  resizeCaroussels();
 }
 
 
@@ -94,3 +97,12 @@ window.twttr = (function(d, s, id) {
 
   return t;
 }(document, "script", "twitter-wjs"));
+$(".slideshow").each(function(){
+  resizeInnerCaroussel($(this).parent());
+});
+$(window).on('resize',resizeCaroussels);
+function resizeCaroussels(){
+  $(".slideshow").each(function(){
+    resizeInnerCaroussel($(this).parent());
+  });
+}
