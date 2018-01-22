@@ -13,16 +13,45 @@
 
 
   <body>
-    <div id="mediaPagesideNav" class="sideNav">
-      <input type="button" value="&#9776;"id="navSideButton">
+    <aside id="mediaPagesideNav" class="sideNav">
+      <input type="button" value="&#9776;"id="sideNavButton">
       <div id="sideNavContent">
-        <div class="sideMediaImageContainer">
-            <img  id="mediaImage" src="../images/STAR-WARS-8-POSTER.jpg" alt="Profile picture"></img>
+        <a href="HyperHomePage.html">
+          <div class="sideNavBlockContainer" id="sideNavHomeLogo">
+            <img id="HyperImage" src="..\images\hyperSmall.png" alt="Hyper">
+          </div>
+        </a>
+        <div class="sideNavBlockContainer" id="sideNavMediaImgContainer" >
+            <img id="navSideMediaImage" src="http://www.lepoint.fr/images/2017/12/11/11729355lpw-11730000-article-jpg_4831922.jpg" alt="Profile picture"></img>
+            <h3>Star Wars The Last Jedi<h3>
         </div>
-        <a href=""> GO TO FB</a>
+        <div class="sideNavBlockContainer">
+          <input type="button"href=""value="GO TO FB"></input>
+        </div>
+        <div class="sideNavBlockContainer" id="sideNavAddBlocks">
+          <h3>ADD SOME BLOCKS</h3>
+          <div class="sideNavButton">
+            <input type="button" value="&#8853; Trailers" class="addBlockButton" id="trailersAddSidenav">
+          </div>
+          <div class="sideNavButton">
+            <input type="button" value="&#8853; Posters" class="addBlockButton" id="postersAddSidenav">
+          </div>
+          <div class="sideNavButton">
+            <input type="button" value="&#8853; Casting" class="addBlockButton" id="castingAddSidenav">
+          </div>
+          <div class="sideNavButton">
+            <input type="button" value="&#8853; Tweets" class="addBlockButton" id="tweetsAddSidenav">
+          </div>
+          <div class="sideNavButton">
+            <input type="button" value="&#8853; Critics" class="addBlockButton" id="criticsAddSidenav">
+          </div>
+          <div class="sideNavButton">
+            <input type="button" value="&#8853; Articles" class="addBlockButton" id="articlesAddSidenav">
+          </div>
+        </div>
       </div>
-    </div>
-    
+    </aside>
+
     <div class="global">
     <header>
       <nav id="navTopBar">
@@ -176,16 +205,17 @@
       </section>
 
       <section id="contentBlocksContainer">
-
         <section class="contentBlockContainer" id="postersBlock">
           <div class="contentBlock">
             <div class="contentBlockHeader">
               <input type="button" value="&#10008;" class="hideBlock" id="hidePosters"/>
               <input type="button" value="&#10010;"/>
+              <input type="button" value="&#10529;" class="expandButton" id ="expandPosters"/>
+              <input type="button" value="&#10515;" class="downsizeButton" id ="downsizePosters"/>
             </div>
             <div class="contentContainer">
               <h4>Posters</h4>
-              <div class="slideshow bigSlideshow">
+              <div class="slideshow bigSlideshow" id="postersSlideshow">
                 <div class="slideshowWindow">
                   <div  id="poster" class="mediasContainer">
                     <div class="mediaContainer">
@@ -214,12 +244,14 @@
             <div class="contentBlockHeader">
               <input type="button" value="&#10008;"class="hideBlock" id="hideTrailers"/>
               <input type="button" value="&#10010;"/>
+              <input type="button" value="&#10529;" class="expandButton" id="expandTrailers"/>
+              <input type="button" value="&#10515;" class="downsizeButton" id="downsizeTrailers"/>
             </div>
             <div class="contentContainer">
               <h4>Trailers</h4>
-              <div class="slideshow bigSlideshow">
+              <div class="slideshow bigSlideshow" id="OFFICIAL_Trailer">
                 <div class="slideshowWindow">
-                  <div  id="fanArt" class="mediasContainer">
+                  <div   class="mediasContainer">
                     <div class="mediaContainer">
                       <p class="textOverContainer"> OFFICIAL Trailer!!!!!!!</p>
                       <video id='video1' controls class="slideshowMedia"  muted autobuffer >
@@ -240,6 +272,8 @@
             <div class="contentBlockHeader">
               <input type="button" value="&#10008;"class="hideBlock" id="hideCasting"/>
               <input type="button" value="&#10010;"/>
+              <input type="button" value="&#10529;" class="expandButton" id="expandCasting"/>
+              <input type="button" value="&#10515;" class="downsizeButton" id="downsizeCasting"/>
             </div>
             <div class="contentContainer">
               <h4>Casting</h4>
@@ -248,16 +282,18 @@
         </section>
 
 
-        <section class="contentBlockContainer">
-          <div class="contentBlock" id="tweetsBlock">
+        <section class="contentBlockContainer" id="tweetsBlock">
+          <div class="contentBlock">
             <div class="contentBlockHeader">
               <input type="button" value="&#10008;"class="hideBlock" id="hideTweets"/>
               <input type="button" value="&#10010;"/>
+              <input type="button" value="&#10529;" class="expandButton" id="expandTweets"/>
+              <input type="button" value="&#10515;" class="downsizeButton" id="downsizeTweets"/>
             </div>
             <div class="contentContainer" id="tweetsContent">
               <h4>Tweets</h4>
               <div id="tweetContainer">
-                <a class="twitter-timeline" data-tweet-limit="1"  data-chrome="noheader" href="https://twitter.com/HamillHimself">Tweets by Mark Hamill</a>
+                <a class="twitter-timeline" data-tweet-limit="1"  data-chrome="noheader" href="https://twitter.com/starwars">Officials tweets from StarWars</a>
               </div>
             </div>
         </section>
@@ -267,6 +303,8 @@
             <div class="contentBlockHeader">
               <input type="button" value="&#10008;" class="hideBlock" id="hideCritics"/>
               <input type="button" value="&#10010;"/>
+              <input type="button" value="&#10529;" class="expandButton" id="expandCritics"/>
+              <input type="button" value="&#10515;" class="downsizeButton" id="downsizeCritics"/>
             </div>
             <div class="contentContainer">
               <h4>Critics</h4>
@@ -278,14 +316,19 @@
           <div class="contentBlock">
             <div class="contentBlockHeader">
               <input type="button" value="&#10008;"class="hideBlock" id="hideArticles"/>
-              <input type="button" value="&#10010;"/>
+              <input type="button" class="addContribution" value="&#10010;"/>
+              <input type="button" value="&#10529;" class="expandButton" id="expandArticles"/>
+              <input type="button" value="&#10515;" class="downsizeButton" id="downsizeArticle"/>
             </div>
             <div class="contentContainer">
               <h4>Articles</h4>
             </div>
           </div>
         </section>
-
+        <section class="contentBlockContainer" id="lastBlock">
+          <div class="contentBlock">
+          </div>
+        <section>
       </section>
     </article>
 
@@ -302,9 +345,10 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="../connexion.js"></script>
-    <script src="../mediaPage.js"></script>
     <script src="../caroussel.js"></script>
+    <script src="../mediaPage.js"></script>
     <script src="../research.js"></script>
+    <script src="../dragDropBlock.js"></script>
   </body>
 
 </html>

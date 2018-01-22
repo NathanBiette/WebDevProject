@@ -1,9 +1,9 @@
+/* VERSION QUI NE FONCTIONNE PAS
 
 if(localStorage.onglet){
   if(localStorage.onglet==1){
-
     document.getElementById("ong1").className="active";
-    document.getElementById("ong2").className-="active";
+    document.getElementById("ong2").classList-="active";
     document.getElementById("ong3").className-="active";
     document.getElementById("ong4").className-="active";
     document.getElementsByClassName("firstOnglet")[0].style.display="inline";
@@ -13,39 +13,102 @@ if(localStorage.onglet){
   }
   if(localStorage.onglet==2){
     document.getElementById("ong2").className="active";
-    document.getElementById("ong1").className-="active";
+    document.getElementById("ong1").classList.remove("active");
     document.getElementById("ong3").className-="active";
     document.getElementById("ong4").className-="active";
     document.getElementsByClassName("firstOnglet")[0].style.display="none";
     document.getElementsByClassName("secondOnglet")[0].style.display="inline";
     document.getElementsByClassName("thirdOnglet")[0].style.display="none";
     document.getElementsByClassName("fourthOnglet")[0].style.display="none";
-
   }
   if(localStorage.onglet==3){
     document.getElementById("ong3").className="active";
     document.getElementById("ong1").className-="active";
     document.getElementById("ong2").className-="active";
     document.getElementById("ong4").className-="active";
-
     document.getElementsByClassName("firstOnglet")[0].style.display="none";
     document.getElementsByClassName("secondOnglet")[0].style.display="none";
     document.getElementsByClassName("thirdOnglet")[0].style.display="inline";
     document.getElementsByClassName("fourthOnglet")[0].style.display="none";
-
   }
   if(localStorage.onglet==4){
     document.getElementById("ong4").className="active";
     document.getElementById("ong1").className-="active";
     document.getElementById("ong2").className-="active";
     document.getElementById("ong3").className-="active";
-
     document.getElementsByClassName("firstOnglet")[0].style.display="none";
     document.getElementsByClassName("secondOnglet")[0].style.display="none";
     document.getElementsByClassName("thirdOnglet")[0].style.display="none";
     document.getElementsByClassName("fourthOnglet")[0].style.display="inline";
   }
 }
+*/
+
+/* VERSION FIXEE DE LA PREMIERE */
+
+/*
+if (localStorage.onglet) {
+  if(localStorage.onglet==1){
+    $("#ong1").addClass("active");
+    $("#ong1").siblings().removeClass("active");
+    $("#firstOnglet").css("display","block");
+    $("#firstOnglet").siblings().css("display","none");
+  }
+  if(localStorage.onglet==2){
+    $("#ong2").addClass("active");
+    $("#ong2").siblings().removeClass("active");
+    $("#secondOnglet").css("display","block");
+    $("#secondOnglet").siblings().css("display","none");
+  }
+  if(localStorage.onglet==3){
+    $("#ong3").addClass("active");
+    $("#ong3").siblings().removeClass("active");
+    $("#thirdOnglet").css("display","block");
+    $("#thirdOnglet").siblings().css("display","none");
+  }
+  if(localStorage.onglet==4){
+    $("#ong4").addClass("active");
+    $("#ong4").siblings().removeClass("active");
+    $("#fourthOnglet").css("display","block");
+    $("#fourthOnglet").siblings().css("display","none");
+  }
+}
+*/
+
+
+
+
+/*
+*/
+
+if(localStorage.officialChecked){
+  if(localStorage.officialChecked==1){
+    document.getElementsByClassName("official")[0].style.display="inline";
+
+  }
+  else{
+    document.getElementsByClassName("official")[0].style.display="none";
+    document.getElementById("seeOfficial").checked=false;
+  }
+}
+
+if(localStorage.fanChecked){
+  if(localStorage.fanChecked==1){
+    document.getElementsByClassName("fanArt")[0].style.display="inline";
+    document.getElementById("seeFan").checked="true";
+
+  }
+  else{
+    document.getElementsByClassName("fanArt")[0].style.display="none";
+  }
+}
+
+
+
+
+
+
+
 /*
 if(localStorage.ageOutput){
 //alert(localStorage.ageOutput);
@@ -246,10 +309,17 @@ for (var i = 0; i < droppersLen; i++) {
 
 
 
+
+
+
+
+
 /*onglets*/
+
+/*
 function changeOnglet(ongletChosen) {
   if(ongletChosen==1){
-    document.getElementById("ong1").className="active";
+    document.getElementById("ong1").className+="active";
     document.getElementById("ong2").className-="active";
     document.getElementById("ong3").className-="active";
     document.getElementById("ong4").className-="active";
@@ -260,7 +330,7 @@ function changeOnglet(ongletChosen) {
     localStorage.onglet=ongletChosen;
   }
   if(ongletChosen==2){
-    document.getElementById("ong2").className="active";
+    document.getElementById("ong2").className+="active";
     document.getElementById("ong1").className-="active";
     document.getElementById("ong3").className-="active";
     document.getElementById("ong4").className-="active";
@@ -272,11 +342,10 @@ function changeOnglet(ongletChosen) {
 
   }
   if(ongletChosen==3){
-    document.getElementById("ong3").className="active";
+    document.getElementById("ong3").className+="active";
     document.getElementById("ong1").className-="active";
     document.getElementById("ong2").className-="active";
     document.getElementById("ong4").className-="active";
-
     document.getElementsByClassName("firstOnglet")[0].style.display="none";
     document.getElementsByClassName("secondOnglet")[0].style.display="none";
     document.getElementsByClassName("thirdOnglet")[0].style.display="inline";
@@ -284,15 +353,77 @@ function changeOnglet(ongletChosen) {
     localStorage.onglet=ongletChosen;
   }
   if(ongletChosen==4){
-    document.getElementById("ong4").className="active";
+    document.getElementById("ong4").className+="active";
     document.getElementById("ong1").className-="active";
     document.getElementById("ong2").className-="active";
     document.getElementById("ong3").className-="active";
-
     document.getElementsByClassName("firstOnglet")[0].style.display="none";
     document.getElementsByClassName("secondOnglet")[0].style.display="none";
     document.getElementsByClassName("thirdOnglet")[0].style.display="none";
     document.getElementsByClassName("fourthOnglet")[0].style.display="inline";
     localStorage.onglet=ongletChosen;
+  }
+}
+*/
+
+
+var checkboxOfficial = document.querySelector("input[id=seeOfficial]");
+
+checkboxOfficial.addEventListener( 'change', function() {
+    if(this.checked) {
+        // Checkbox is checked..
+        document.getElementsByClassName("official firstOnglet")[0].style.display="inline";
+        localStorage.officialChecked=1;
+    } else {
+
+        // Checkbox is not checked..
+        document.getElementsByClassName("official firstOnglet")[0].style.display="none";
+        localStorage.officialChecked=0;
+    }
+});
+
+var checkboxFan = document.querySelector("input[id=seeFan]");
+
+checkboxFan.addEventListener( 'change', function() {
+    if(this.checked) {
+        // Checkbox is checked..
+        document.getElementsByClassName("fanArt firstOnglet")[0].style.display="inline";
+        localStorage.fanChecked=1;
+        alert(localStorage.fanChecked);
+    } else {
+
+        // Checkbox is not checked..
+        document.getElementsByClassName("fanArt firstOnglet")[0].style.display="none";
+        localStorage.fanChecked=0;
+    }
+});
+var boolFanOff2=0;
+function switchO2(){
+  if(boolFanOff2==0){
+    document.getElementsByClassName("onglet2Fan")[0].style.display="inline";
+    document.getElementsByClassName("onglet2Official")[0].style.display="none";
+    document.getElementById("switchOnglet2").value="switch to official";
+    boolFanOff2=1;
+  }
+  else if(boolFanOff2==1){
+    document.getElementsByClassName("onglet2Fan")[0].style.display="none";
+    document.getElementsByClassName("onglet2Official")[0].style.display="inline";
+    document.getElementById("switchOnglet2").value="switch to fan art";
+    boolFanOff2=0;
+  }
+}
+var boolFanOff3=0;
+function switchO3(){
+  if(boolFanOff3==0){
+    document.getElementsByClassName("onglet3Fan")[0].style.display="inline";
+    document.getElementsByClassName("onglet3Official")[0].style.display="none";
+    document.getElementById("switchOnglet3").value="switch to official";
+    boolFanOff3=1;
+  }
+  else if(boolFanOff3==1){
+    document.getElementsByClassName("onglet3Fan")[0].style.display="none";
+    document.getElementsByClassName("onglet3Official")[0].style.display="inline";
+    document.getElementById("switchOnglet3").value="switch to fan art";
+    boolFanOff2=0;
   }
 }

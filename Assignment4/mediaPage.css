@@ -1,11 +1,9 @@
 /* PAGE PRESENTATION */
 
 aside#mediaPageRightSide,aside#mediaPageLeftSide{
-  background-color: white;
   text-align: center;
   width:10%;
   min-width:200px;
-  box-shadow: 0px 0px 5px 0px grey;
 }
 aside#mediaPageLeftSide{
   float: left;
@@ -24,7 +22,6 @@ article.mediaPageContent{
   border: 1px solid #f2f2f2;
   height:auto;
   overflow:hidden;
-
 }
 
 
@@ -45,17 +42,20 @@ p{
   border-radius: 10px;
   margin: 10px;
 }
+
+.expanded{
+  margin: 10px;
+}
 #contentBlocksContainer{
   column-count: 2;
   column-gap: 0px;
+  position:relative;
 }
 .contentBlockContainer{
   margin-left: 10px;
   margin-right: 10px;
-  display:block;
 }
 .contentBlock{
-  border: 1px solid white;
   border-radius: 10px;
   box-shadow: inset 0px 0px 5px 0px grey;
   -webkit-column-break-inside:avoid; /* Webkit */
@@ -64,27 +64,48 @@ p{
   width:100%;
   margin-bottom: 10px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 .contentBlockHeader input{
  float: right;
  background-color: white;
 }
+.expandButton,.downsizeButton{
+  float: left;
+}
+.downsizeButton{
+  display: none;
+}
+.contentContainer h4{
+  cursor: move;
+  user-select: none;
+  margin:0px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
 #tweetContainer{
   padding: 5px;
 }
+#postersContainer{
+  height: 500px;
+  width: auto;
+}
 .contentContainer{
   padding:5px;
+  max-height: 600px;
+  min-width: 100px;
+  min-height:200px;
 }
 #trailersBlock{
   display:none;
 }
 .asideBlockContainer{
   background-color: #f2f2f2;
-  border: 5px  black;
   padding: 1em;
-  border-style: groove;
   margin-top: 1em;
   margin-bottom:1em;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px grey;
 }
 #mediaPresenterBlock{
   margin-top: 0em;
@@ -123,10 +144,14 @@ aside ul{
   font-weight: bold;
 }
 
+#showShootingLocationsButton{
+  box-sizing: border-box;
+}
+
 img#mediaImage{
   width: 100%;
   max-width:300px;
-  border-radius: 10%;
+  border-radius: 20px;
   object-fit: contain;
   margin: auto;
 }
@@ -153,6 +178,29 @@ input.addBlockButton{
 div.smallSlideshow div.mediaContainer{
   background-color: inherit;
 }
+/* Style for blocks being dragged */
+.contentBlockFixedDragged{
+  opacity: 0;
+}
+.contentBlockFixedContainerDragged{
+  border: 2px dashed grey;
+  pointer-events:none;
+}
+
+.contentBlockContainerDragged{
+  position: absolute;
+  z-index: 9;
+  pointer-events:none;
+  opacity:0.5;
+}
+.contentBlockDragged{
+  background-color: white;
+}
+#lastBlock{
+  opacity: 0;
+  height: 15px;
+}
+
 /*Side bar*/
 @media only screen and (max-width: 768px){
   #mediaPageLeftSide {display: none;}
@@ -164,30 +212,63 @@ div.smallSlideshow div.mediaContainer{
 @media only screen and (min-width: 768px){
   #mediaPagesideNav{display: none;}
 }
-#navSideButton{
-  position: fixed;
-  display: block;
-  top: 0; /* Stay at the top */
+/* SIDE NAVIGATION BAR WHEN ON MOBILE*/
+.sideNav{
+  position: fixed; /* Stays in place */
+  top: 0; /* Stays at the top*/
   left: 0;
-  z-index: 2;
+  z-index: 1;
+  max-width: 100%;
+}
+#sideNavButton{
+  float:right;
+  background-color: white;
 }
 #mediaPagesideNav{
   height: 100%;
-  background-color: grey;
 }
 #sideNavContent{
-  background-color: inherit;
-  display:none;
+  background-color: grey;
   height: 100%; /* 100% Full-height */
   width: 0px; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
+  overflow:visible;
   transition: 0.5s;
 }
-.sideMediaImageContainer{
+.sideNavBlockContainer{
+  transition: 0.5s;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  width:  100%;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+#sideNavMediaImgContainer{
+  max-width:100%;
+}
+#navSideMediaImage{
+  width: auto;
+  max-height: 150px;
+  width:250px;
+  object-fit: contain;
+  margin: auto;
+  border-radius: 20px;
+  padding-top: 5px;
 }
 #sideNavContent a{
+  background-color: inherit;
   text-decoration: none;
+  color: white;
+}
+#sideNavAddBlocks{
+  position: relative;
+}
+.sideNavButton input{
+ width:150px;
+}
+.sideNavBlockContainer h3{
+  display: block;
+  width:250px;
+}
+.sideNavBlockContainer h3:hover{
 }

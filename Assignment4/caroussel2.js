@@ -1,17 +1,20 @@
 /*--------------------------------------------Jquery version--------------------------------------*/
 function initCarousels(){
-  $(".translate").click(function(event){
-    event.stopPropagation();
-    translateSlideshow($(this));});
-  function translateSlideshow(translateButton){
-    var slideshowClass = translateButton.parent().parent().attr("class").split(' ')[1];
-    var mediasContainer = translateButton.siblings(".mediasContainer");
-    var mediaContainer = translateButton.siblings(".mediasContainer").children(".mediaContainer")
+  $(".translate").click(translateSlideshow);
+  function translateSlideshow(){
+    var slideshowClass = $(this).parent().parent().attr("class").split(' ')[1];
+    var mediasContainer = $(this).siblings(".mediasContainer");
+    var mediaContainer = $(this).siblings(".mediasContainer").children(".mediaContainer")
     var mediaWidth =parseFloat(mediaContainer.css("width"));
-    var numberMediaSlideshow = mediaContainer.length;
+    if(mediaContainer.length >=3){
+      var numberMediaSlideshow = mediaContainer.length - 1;
+    }
+    else{
+      var numberMediaSlideshow=0;
+    }
     var matrixString = mediasContainer.css("transform").split(',');
     var translateX = parseFloat(matrixString[matrixString.length-2]); //TranslationX
-    direction = translateButton.attr("class").split(' ')[1];
+    direction = $(this).attr("class").split(' ')[1];
     var remainder = Math.floor(translateX%mediaWidth);
     if(remainder==0){
       if(direction=='left' && remainder==0){//+500px to transform left
@@ -35,7 +38,9 @@ function initCarousels(){
     }
   };
 
-
+  $('video').click(function(){
+    this.paused ? this.play() : this.pause();
+  });
 
   function intializeTimers(){
     var rightTranslate=$(".right");
@@ -56,24 +61,6 @@ function initCarousels(){
   intializeTimers();
 }
 initCarousels();
-$('video').click(function(){
-  this.paused ? this.play() : this.pause();
-});
-
-function resizeCaroussel(caroussel,width,height){
-  //We assume the caroussel structure as in carousel.css
-  caroussel.css("max-width",width); //ex width = "500px"
-  caroussel.css("max-height",height);
-  var mediaContainer = caroussel.find(".mediaContainer");
-  mediaContainer.css("height",height);
-  mediaContainer.css("width",width);
-}
-function resizeInnerCaroussel(carousselParent){
-  console.log(carousselParent.attr("class"));
-  resizeCaroussel(carousselParent.children($(".slideshow")),carousselParent.css("width"),carousselParent.css("height"));
-}
-
-
 /*---------------JS only version ----------------------*/
 
 
