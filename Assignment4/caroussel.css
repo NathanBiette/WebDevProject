@@ -62,9 +62,11 @@ div.smallSlideshow div.mediaContainer{
   height: 100%;
   object-fit: contain;
   margin: auto;
-
 }
-
+.twoMedias .media{
+  float:left;
+  width: 50%;
+}
 .textOverContainer{
   border-radius: 30px;
   bottom: 0px;
