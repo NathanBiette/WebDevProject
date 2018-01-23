@@ -43,6 +43,9 @@
             <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterDrawings"><label for="FilterDrawings">Drawings</label></input>
           </div>
           <div class="filterBlockAside">
+            <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterScreenshots"><label for="FilterScreenshots">Screenshots</label></input>
+          </div>
+          <div class="filterBlockAside">
             <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterVideos"><label for="FilterVideos">Videos</label></input>
           </div>
           <div class="filterBlockAside">
@@ -137,6 +140,9 @@
           <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterDrawings"><label for="FilterDrawings">Drawings</label></input>
         </div>
         <div class="filterBlockAside">
+          <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterScreenshots"><label for="FilterScreenshots">Screenshots</label></input>
+        </div>
+        <div class="filterBlockAside">
           <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterVideos"><label for="FilterVideos">Videos</label></input>
         </div>
         <div class="filterBlockAside">
@@ -188,7 +194,23 @@
       <h3>Fan Base</h3>
 
       <section id="addNewPost">
-        
+        <img class="avatar" src="../images/Avatar.jpg" alt="avatar"/>
+        <form class="addNewPostRightSide">
+          <input class="addMediaNewPost" type="button" value="Add Media"/>
+          <output id="urlOutputMediaNewPost"></output>
+          <br>
+          <textarea class="textPost"></textarea>
+          <br>
+          <select class="chooseCategory">
+            <option value="drawing">Drawing</option>
+            <option value="screenshot">Screenshot</option>
+            <option value="video">Video</option>
+            <option value="audio">Audio</option>
+            <option value="fanfic">Fanfic</option>
+            <option value="other">Other</option>
+          </select>
+          <input type="button" id="sendNewPost" value="Send post"/>
+        </form>
       </section>
 
       <section id="contentBlocksContainer">
