@@ -1,8 +1,38 @@
 //Add or remve blocks thanks to asides
 var stringTwitter = $('#tweetContainer').html();//'<a class="twitter-timeline" data-tweet-limit="1"  data-chrome="noheader" href="https://twitter.com/HamillHimself">Tweets by Mark Hamill</a>';
+var map;
+var geocoder;
+var markers;
 $('.addBlockButton').click(addBlock);
 $('.hideBlock').click(hideBlock);
 $('.showShootingLocationsButton').click(toggleMap);
+
+function initMap(){
+  try{
+    if (! map) map = new google.maps.Map(document.getElementById('locationMap'), {
+      center: {lat: -34.397, lng: 150.644},
+      zoom: 4
+      });
+    if (! geocoder) geocoder = new google.maps.Geocoder();
+
+    geocoder.geocode( { 'address': localStorage.location }, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        coords = results[0].geometry.location;
+        if (marker) {
+          marker.setPosition({lat: coords.lat(), lng: coords.lng()});
+        } else {
+          marker = new google.maps.Marker({position:coords});
+        }
+        map.setCenter(coords);
+        marker.position = coords;
+        marker.setMap(map);
+      } else {
+        alert("Le geocodage n\'a pu etre effectue pour la raison suivante: " + status);
+      }
+    });
+  } catch(err) {
+  }
+}
 
 function toggleMap(){
   if ($(".shootingLocationMap").css("display")=="none"){
