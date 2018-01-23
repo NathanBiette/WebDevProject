@@ -99,6 +99,27 @@ p{
   padding:5px;
   min-height:100px;
 }
+.contentBlockArticle{
+  padding: 20px;
+}
+
+.faceContainer{
+  width: 50%;
+  height: auto;
+  text-align: center;
+  margin: auto;
+}
+.faceContainer img{
+  width: 200px;
+  height: auto;
+  border-radius: 100px;
+}
+.faceContainer p{
+  overflow: hidden;
+  margin:auto;
+  text-align: center;
+}
+
 #trailersBlock{
   display:none;
 }
@@ -127,6 +148,9 @@ h4{
   text-align: center;
   font-weight: bold;
 }
+h5{
+  font-size: 1em;
+}
 div.asideBlockContainer h2{
   margin-top: 0px;
 }
@@ -147,10 +171,6 @@ aside ul{
   font-weight: bold;
 }
 
-#showShootingLocationsButton{
-  box-sizing: border-box;
-}
-
 img#mediaImage{
   width: 100%;
   max-width:300px;
@@ -159,7 +179,8 @@ img#mediaImage{
   margin: auto;
 }
 
-#locationMap {
+
+.shootingLocationMap {
   color:white;
   background-color: black;
   width:100%;
@@ -167,6 +188,8 @@ img#mediaImage{
   box-sizing: content-box;
   display: none;
 }
+
+
 
 div.addBlockAside{
   text-align: left;
@@ -178,7 +201,7 @@ input.addBlockButton{
   display: inline;
   background-color: white;
 }
-div.smallSlideshow div.mediaContainer{
+div.slideshow div.mediaContainer{
   background-color: inherit;
 }
 /* Style for blocks being dragged */
@@ -232,7 +255,7 @@ div.smallSlideshow div.mediaContainer{
   height: 100%;
 }
 #sideNavContent{
-  background-color: grey;
+  background-color: #303030;
   height: 100%; /* 100% Full-height */
   width: 0px; /* 0 width - change this with JavaScript */
   overflow:visible;
@@ -240,12 +263,16 @@ div.smallSlideshow div.mediaContainer{
 }
 .sideNavBlockContainer{
   transition: 0.5s;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  background-color: #444444;
+  box-shadow: inset 0px 0px 20px 10px #303030;
   width:  100%;
   overflow: hidden;
   text-align: center;
   position: relative;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 #sideNavMediaImgContainer{
   max-width:100%;
