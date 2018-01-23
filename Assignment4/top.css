@@ -176,54 +176,7 @@ input[type=button]{
   background: #f8f8f8;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 nav a{
   text-decoration: none;
   color: black;
-}
-nav li{
-  font-size: 1em;
-  display: inline;
-  box-shadow: 0px 0px 5px 0px grey;
-  list-style: none;
-  padding:0.5em;
-  background-color: #f2f2f2;
-  transition: border-radius 0.5s,background-color 0.5s;
-  margin:0.5em;
-}
-
-nav li.navButtonHP{
-  font-size: 1.5em;
-  display: inline;
-  box-shadow: 0px 0px 5px 0px grey;
-  list-style: none;
-  padding:0.5em;
-  background-color: #f2f2f2;
-  transition: border-radius 0.5s,background-color 0.5s;
-}
-nav li:hover{
-  cursor: pointer;
-  background-color: white;
-  border-radius: 2em;
-}
-div.secondOnglet{
-  display:none;
-}
-div.thirdOnglet{
-  display:none;
-}
-div.fourthOnglet{
-  display:none;
 }
