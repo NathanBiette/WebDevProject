@@ -232,7 +232,7 @@ input.filterPostsButton{
   background-color: white;
 }
 
-input.checkAllButton{
+input.checkAllButton, input.uncheckAllButton{
   display: inline;
   background-color: white;
 }

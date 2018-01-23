@@ -24,7 +24,7 @@
         </a>
         <div class="sideNavBlockContainer" id="sideNavMediaImgContainer" >
             <img id="navSideMediaImage" src="http://www.lepoint.fr/images/2017/12/11/11729355lpw-11730000-article-jpg_4831922.jpg" alt="Profile picture"></img>
-            <h3>Star Wars 8 : The Last Jedi<h3>
+            <h3>Star Wars 8: The Last Jedi<h3>
         </div>
         <div class="sideNavBlockContainer">
           <a href="StarWars8Page.html">
@@ -32,22 +32,27 @@
           </a>
         </div>
         <div class="sideNavBlockContainer" id="sideNavFilterBlocks">
-            <h2>Filter the contributions</h2>
-            <div class="filterBlockAside">
-              <input type="button" value="Check ALL"  class="checkAllButton"/>
-            </div>
-            <div class="filterBlockAside">
-              <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterDrawings"><label for="FilterDrawings">Drawings</label></input>
-            </div>
-            <div class="filterBlockAside">
-              <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterVideos"><label for="FilterVideos">Drawings</label></input>
-            </div>
-            <div class="filterBlockAside">
-              <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterAudios"><label for="FilterAudios">Audios</label></input>
-            </div>
-            <div class="filterBlockAside">
-              <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterOther"><label for="FilterOther">Fanfics</label></input>
-            </div>
+          <h2>Filter the contributions</h2>
+          <div class="filterBlockAside">
+            <input type="button" value="Check ALL"  class="checkAllButton"/>
+          </div>
+          <div class="filterBlockAside">
+            <input type="button" value="Uncheck ALL"  class="uncheckAllButton"/>
+          </div>
+          <div class="filterBlockAside">
+            <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterDrawings"><label for="FilterDrawings">Drawings</label></input>
+          </div>
+          <div class="filterBlockAside">
+            <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterVideos"><label for="FilterVideos">Videos</label></input>
+          </div>
+          <div class="filterBlockAside">
+            <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterAudios"><label for="FilterAudios">Audios</label></input>
+          </div>
+          <div class="filterBlockAside">
+            <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterFanfics"><label for="FilterFanfics">Fanfics</label></input>
+          </div>
+          <div class="filterBlockAside">
+            <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterOthers"><label for="FilterOthers">Others</label></input>
           </div>
         </div>
       </div>
@@ -123,19 +128,25 @@
       <div class="asideBlockContainer" id="asideAddBlockContainer">
         <h2>Filter the contributions</h2>
         <div class="filterBlockAside">
-          <input type="button" value="Check ALL"  class="checkAllButton"/>
+          <input type="button" value="Check ALL" class="checkAllButton"/>
+        </div>
+        <div class="filterBlockAside">
+          <input type="button" value="Uncheck ALL" class="uncheckAllButton"/>
         </div>
         <div class="filterBlockAside">
           <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterDrawings"><label for="FilterDrawings">Drawings</label></input>
         </div>
         <div class="filterBlockAside">
-          <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterVideos"><label for="FilterVideos">Drawings</label></input>
+          <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterVideos"><label for="FilterVideos">Videos</label></input>
         </div>
         <div class="filterBlockAside">
           <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterAudios"><label for="FilterAudios">Audios</label></input>
         </div>
         <div class="filterBlockAside">
-          <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterOther"><label for="FilterOther">Fanfics</label></input>
+          <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterFanfics"><label for="FilterFanfics">Fanfics</label></input>
+        </div>
+        <div class="filterBlockAside">
+          <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterOthers"><label for="FilterOthers">Others</label></input>
         </div>
       </div>
     </aside>
@@ -171,8 +182,15 @@
     </aside>
 
 
+
+
     <article class="mediaPageContent">
       <h3>Fan Base</h3>
+
+      <section id="addNewPost">
+        
+      </section>
+
       <section id="contentBlocksContainer">
         <section class="contentBlockContainer" id="postersBlock">
           <div class="contentBlock">
