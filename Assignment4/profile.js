@@ -1,15 +1,10 @@
-//json file for Contributions
-var obj = {
-   table: []
-};
-
-var myData=JSON.parse(data);
-console.log(myData);
 
 
 
-obj.table.push; //add some data
-var new_json = JSON.stringify(myData.push({"category": "poster","img":"test.jpg", "page":"lamienne.html"}));
+
+/*var blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
+FileSaver.saveAs(blob, "hello world.txt");*/
+
 /* VERSION QUI NE FONCTIONNE PAS
 
 if(localStorage.onglet){
