@@ -1,0 +1,108 @@
+.carousel-item:hover .slideshowMedia{
+  opacity: 0.1;
+}
+
+.carousel-item:hover .carousel-caption{
+  opacity: 1;
+}
+
+.carousel-caption {
+  opacity: 0;
+}
+
+.carousel-caption p{
+  color: black;
+/*  font-size: 25px;*/
+}
+
+.carousel-caption h2{
+  color: black;
+}
+
+.carouselSlider{
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+h1.BigTitle{
+	font-size: 80px;
+}
+
+.TitleImage{
+	opacity: 0.7;
+	max-height: 100%;
+}
+
+.TitleRow{
+	background: black;
+}
+
+#searchForm{
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+
+.colSearchBar{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.SearchRow{
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+.MainPage{
+	padding-top: 20px;
+	background: lightgrey;
+}
+
+#BigBox{
+	padding-top:25px;
+	padding-bottom:25px;
+	padding-right:15px;
+	padding-left:15px;
+	margin-bottom: 0px;
+	/*background: #ccfff5;*/
+}
+
+#SmallBox{
+	padding-top:20px;
+	padding-bottom:10px;
+	padding-right:5px;
+	padding-left:5px;
+	margin-bottom: 0px;
+	/*background: #ccfff5;*/
+}
+
+h2.Subtitle{
+	padding-top: 20px;
+	margin-bottom: 0px;
+}
+
+h5.Subtitle{
+	padding-top: 10px;
+	margin-bottom: 0px;
+}
+
+.test{
+	pointer-events: none;
+}
+
+.carousel-inner{
+	border-radius: 35px;
+	cursor:pointer;
+}
+
+#searchButton{
+	cursor:pointer;
+}
+
+.RankingTitle{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.TopBarVideoGames{
+	margin-bottom: 0px;
+}
