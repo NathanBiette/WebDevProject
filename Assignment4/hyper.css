@@ -50,7 +50,8 @@ input{
 }
 
 input.searchBarMainPage{
-    width: 60%;
+  width: 500px;
+  max-width: 100%;
 }
 
 input.button{

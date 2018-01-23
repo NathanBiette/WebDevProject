@@ -1,19 +1,31 @@
 //Add or remve blocks thanks to asides
-var stringTwitter = $('#tweetContainer').html();//'<a class="twitter-timeline" data-tweet-limit="1"  data-chrome="noheader" href="https://twitter.com/HamillHimself">Tweets by Mark Hamill</a>';
-var map;
-var geocoder;
-var markers;
-$('.addBlockButton').click(addBlock);
-$('.hideBlock').click(hideBlock);
-$('.showShootingLocationsButton').click(toggleMap);
+$(function() {
+  var stringTwitter = $('#tweetContainer').html();//'<a class="twitter-timeline" data-tweet-limit="1"  data-chrome="noheader" href="https://twitter.com/HamillHimself">Tweets by Mark Hamill</a>';
+  var map;
+  var geocoder;
+  var markers;
+  $('.addBlockButton').click(addBlock);
+  $('.hideBlock').click(hideBlock);
+  $('.showShootingLocationsButton').click(toggleMap);
+  //initMap();
+
+});
 
 function initMap(){
+
   try{
-    if (! map) map = new google.maps.Map(document.getElementById('locationMap'), {
+    var locationPlaces = $("#locationPlaces").children().html();
+    console.log("in the try");
+    if (! map) map = new google.maps.Map(document.getElementById('shootingLocationMap'), {
       center: {lat: -34.397, lng: 150.644},
       zoom: 4
       });
+
     if (! geocoder) geocoder = new google.maps.Geocoder();
+    alert('')
+
+    console.log(locationPlaces);
+
 
     geocoder.geocode( { 'address': localStorage.location }, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
@@ -31,6 +43,7 @@ function initMap(){
       }
     });
   } catch(err) {
+    alert('google not defined');
   }
 }
 
