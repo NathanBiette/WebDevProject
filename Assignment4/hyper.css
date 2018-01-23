@@ -49,6 +49,10 @@ input{
   margin: 5px 5px 5px 5px;
 }
 
+input.searchBarMainPage{
+    width: 60%;
+}
+
 input.button{
   cursor:pointer;
 }
