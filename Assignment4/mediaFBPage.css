@@ -340,3 +340,43 @@ div.slideshow div.mediaContainer{
 #mediaPagesideNav{
   color: #f2f2f2;
 }
+
+
+
+#addNewPost{
+  box-shadow: inset 0px 0px 5px grey;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+.avatar{
+  width: 60px;
+  border-radius: 80px;
+  float: left;
+  margin-right: 10px;
+}
+.addNewPostRightSide{
+  overflow: hidden;
+  margin-right: 0px;
+
+}
+.addMediaNewPost{
+  margin-left: 0px;
+}
+.textPost{
+  width: 100%;
+  font-family: inherit;
+  font-size: 1em;
+  padding: 5px;
+  border-radius: 5px;
+  box-sizing: border-box;
+
+}
+.chooseCategory{
+  font-family: inherit;
+  font-size: 1em;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
