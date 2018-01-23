@@ -13,8 +13,10 @@ $(function() {
     }
   }
   $("#searchButton").click(goToPage);
+  $("#searchBar").keypress(function(e){if (e.which == 13) goToPage()});
   if(document.title == "Hyper VideoGames"){
     $("#searchButton2").click(goToPage);
+    $("#bigSearchBar").keypress(function(e){if (e.which == 13) goToPage()});
   }
 });
 
@@ -29,4 +31,3 @@ function goToPage() {
 
   }
 }
-
