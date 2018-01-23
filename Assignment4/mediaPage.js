@@ -2,6 +2,16 @@
 var stringTwitter = $('#tweetContainer').html();//'<a class="twitter-timeline" data-tweet-limit="1"  data-chrome="noheader" href="https://twitter.com/HamillHimself">Tweets by Mark Hamill</a>';
 $('.addBlockButton').click(addBlock);
 $('.hideBlock').click(hideBlock);
+$('.showShootingLocationsButton').click(toggleMap);
+
+function toggleMap(){
+  if ($(".shootingLocationMap").css("display")=="none"){
+    $(".shootingLocationMap").css("display","block");
+  } else {
+    $(".shootingLocationMap").css("display","none");
+  }
+}
+
 function addBlock(){
   var thisId = $(this).attr("id");
   $(this).parent().css("display","none");
