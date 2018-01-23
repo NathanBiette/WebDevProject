@@ -147,6 +147,7 @@ function addMediaInCaroussel(event){
         console.log(elmt.attr("class"));
         console.log(elmt.parent().parent().parent().attr("class"))
         var userImSrc = e.target.result;
+        
         var newContainer = elmt.parent().parent().parent().parent().find('.mediaContainer').first().clone();
         newContainer.children("img").attr("src",userImSrc);
         elmt.parent().parent().parent().parent().find(".mediasContainer").prepend(newContainer);
