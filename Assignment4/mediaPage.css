@@ -78,8 +78,38 @@ p{
   display: none;
 }
 
+.addMediasContainer{
+  position: relative;
+  display: inline-block;
+  float: left;
 
-.addFileButton{
+}
+.dropDownContainer{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  margin-top: 40px;
+  margin-left: 5px;
+  display: none;
+  opacity: 0.8;
+}
+.dropDownContent{
+  min-width: 100%;
+  min-height: 50px;
+  display: inline-block;
+  background-color: white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.dropDownContent input{
+  float: left;
+}
+.addURLBox{
+}
+.addMediasContainer:hover .dropDownContainer{
+  display:block;
+}
+.addLocalMediaButton{
   display: none;
 }
 .contentContainer h4{
