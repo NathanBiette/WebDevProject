@@ -79,10 +79,10 @@ function downsize(){
 }
 
 //Add media buttons
-$('.addMediaButton').click(function() {$(this).siblings(".addFileButton").click()})
-
+$('.addMediaButton').click(function() {$(this).parent().parent().siblings(".addLocalMediaButton").click()})
+$('.addLocalMediaButton').on('change',addMediaInCaroussel);
 function addMediaInCaroussel(event){
-
+  console.log($(this).attr("id"));
   var file =event.target.files[0];
   if(!file.type.match('image.*')){
     return;
@@ -92,17 +92,28 @@ function addMediaInCaroussel(event){
     reader.onload = (function(theFile,elmt){
       return function(e){
         console.log(elmt.attr("class"));
-        console.log(elmt.parent().attr("class"))
+        console.log(elmt.parent().parent().parent().attr("class"))
         var userImSrc = e.target.result;
-        var newContainer = elmt.parent().parent().find('.mediaContainer').first().clone();
+        var newContainer = elmt.parent().parent().parent().parent().find('.mediaContainer').first().clone();
         newContainer.children("img").attr("src",userImSrc);
-        elmt.parent().parent().find(".mediasContainer").prepend(newContainer);
+        elmt.parent().parent().parent().parent().find(".mediasContainer").prepend(newContainer);
         }
       }) (file,$(this));
     reader.readAsDataURL(file);
   }
 }
-$('.addFileButton').on('change',addMediaInCaroussel);
+
+$('.submitMediaUrl').on('click',addMediaURL);
+
+function addMediaURL() {
+  var newMedSrc = $(this).siblings(".addURLBox").val();
+  console.log(newMedSrc);
+  var newContainer = $(this).parent().parent().parent().parent().parent().find('.mediaContainer').first().clone();
+  newContainer.children("img").attr("src",newMedSrc);
+  $(this).parent().parent().parent().parent().parent().find(".mediasContainer").prepend(newContainer);
+
+}
+
 //TWITTER
 window.twttr = (function(d, s, id) {
 

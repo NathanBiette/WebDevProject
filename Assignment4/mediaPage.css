@@ -78,8 +78,31 @@ p{
   display: none;
 }
 
-
-.addFileButton{
+.addMediasContainer{
+  position: relative;
+  display: inline-block;
+  float: left;
+}
+.dropDownContainer{
+  position: absolute;
+  z-index: 1;
+  margin-top: 35px;
+  display: none;
+}
+.dropDownContent{
+  min-width: 450px;
+  min-height: 50px;
+  display: inline-block;
+}
+.dropDownContent input{
+  float: left;
+}
+.addURLBox{
+}
+.addMediasContainer:hover .dropDownContainer{
+  display:block;
+}
+.addLocalMediaButton{
   display: none;
 }
 .contentContainer h4{
