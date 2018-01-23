@@ -135,7 +135,6 @@ function downsize(){
 $('.addMediaButton').click(function() {$(this).parent().parent().siblings(".addLocalMediaButton").click()})
 $('.addLocalMediaButton').on('change',addMediaInCaroussel);
 function addMediaInCaroussel(event){
-  console.log($(this).attr("id"));
   var file =event.target.files[0];
   if(!file.type.match('image.*')){
     return;
@@ -144,13 +143,13 @@ function addMediaInCaroussel(event){
     var reader = new FileReader();
     reader.onload = (function(theFile,elmt){
       return function(e){
-        console.log(elmt.attr("class"));
-        console.log(elmt.parent().parent().parent().attr("class"))
+        var contentBlock =elmt.parent().parent().parent();
         var userImSrc = e.target.result;
+        //console.log(contentBlock.attr("class"));
+        var newContainer = contentBlock.find('.mediaContainer').first().clone();
 
-        var newContainer = elmt.parent().parent().parent().parent().find('.mediaContainer').first().clone();
-        newContainer.children("img").attr("src",userImSrc);
-        elmt.parent().parent().parent().parent().find(".mediasContainer").prepend(newContainer);
+        newContainer.find(".media").attr("src",userImSrc);
+        contentBlock.find(".mediasContainer").prepend(newContainer);
         }
       }) (file,$(this));
     reader.readAsDataURL(file);
@@ -162,9 +161,11 @@ $('.submitMediaUrl').on('click',addMediaURL);
 function addMediaURL() {
   var newMedSrc = $(this).siblings(".addURLBox").val();
   console.log(newMedSrc);
-  var newContainer = $(this).parent().parent().parent().parent().parent().find('.mediaContainer').first().clone();
-  newContainer.children("img").attr("src",newMedSrc);
-  $(this).parent().parent().parent().parent().parent().find(".mediasContainer").prepend(newContainer);
+  var contentBlock =$(this).parent().parent().parent().parent().parent();
+  console.log(contentBlock.attr("class"));
+  var newContainer = contentBlock.find('.mediaContainer').first().clone();
+  newContainer.find(".media").attr("src",newMedSrc);
+  contentBlock.find(".mediasContainer").prepend(newContainer);
 
 }
 
