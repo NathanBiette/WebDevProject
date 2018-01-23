@@ -29,7 +29,7 @@ function hideBlock(){
 
 //Side navigation Bar
 $('#sideNavButton').click(toggleNav);
-$('.global').click(closeNav);
+//$('.global').click(closeNav);
 document.getElementById("sideNavContent").style.width = "0px";
 function toggleNav() {
     if(document.getElementById("sideNavContent").style.width == "0px"){
