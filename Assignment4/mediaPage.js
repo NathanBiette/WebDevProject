@@ -147,6 +147,7 @@ function addMediaInCaroussel(event){
         console.log(elmt.attr("class"));
         console.log(elmt.parent().parent().parent().attr("class"))
         var userImSrc = e.target.result;
+
         var newContainer = elmt.parent().parent().parent().parent().find('.mediaContainer').first().clone();
         newContainer.children("img").attr("src",userImSrc);
         elmt.parent().parent().parent().parent().find(".mediasContainer").prepend(newContainer);
@@ -196,3 +197,45 @@ function resizeCaroussels(){
   });
 }
 */
+
+/*for Contributions*/
+//json file for Contributions
+
+var obj = {
+   table: []
+};
+var contribut;
+if(localStorage.testObject){
+  contribut=JSON.parse(localStorage.testObject);
+}
+else{
+  contribut=JSON.parse(contrib);
+  console.log(contribut);
+}
+
+
+document.getElementById("buttonAddLocalFile").addEventListener("click", function(){
+
+  contribut.push({"category": "poster","img":"images/flash.jpg", "page":"./HTML/StarWars8Page.html"});
+
+  var new_json = JSON.stringify(contribut);
+  localStorage.setItem('testObject', new_json);
+
+  // Retrieve the object from storage
+  var retrievedObject = localStorage.getItem('testObject');
+
+  console.log('retrievedObject: ', JSON.parse(retrievedObject));
+});
+
+document.getElementById("submitAddMediaUrl").addEventListener("click", function(){
+
+  contribut.push({"category": "poster","img":document.getElementById("boxUrl").value, "page":"./HTML/StarWars8Page.html"});
+
+  var new_json = JSON.stringify(contribut);
+  localStorage.setItem('testObject', new_json);
+
+  // Retrieve the object from storage
+  var retrievedObject = localStorage.getItem('testObject');
+
+  console.log('retrievedObject: ', JSON.parse(retrievedObject));
+});
