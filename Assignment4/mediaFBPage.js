@@ -12,5 +12,3 @@ $(function() {
   });
 
 });
-
-alert(localStorage.username)
