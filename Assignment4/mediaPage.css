@@ -218,7 +218,9 @@ img#mediaImage{
   box-sizing: content-box;
   display: none;
 }
-
+#locationPlaces{
+  display: none;
+}
 
 
 div.addBlockAside{
