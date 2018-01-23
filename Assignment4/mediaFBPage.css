@@ -47,7 +47,7 @@ p{
   margin: 10px;
 }
 #contentBlocksContainer{
-  column-count: 2;
+  column-count: 1;
   column-gap: 0px;
   position:relative;
 }
@@ -218,22 +218,24 @@ img#mediaImage{
   box-sizing: content-box;
   display: none;
 }
-#locationPlaces{
-  display: none;
-}
 
 
-div.addBlockAside{
-  text-align: left;
+
+div.filterBlockAside{
 }
-#asideAddBlockContainer p{
-  display: inline;
+.filterBlockAside input{
+  display: block;
 }
-input.addBlockButton{
+
+input.filterPostsButton{
   display: inline;
   background-color: white;
 }
 
+input.checkAllButton{
+  display: inline;
+  background-color: white;
+}
 
 div.slideshow div.mediaContainer{
   background-color: inherit;
@@ -325,11 +327,9 @@ div.slideshow div.mediaContainer{
   text-decoration: none;
   color: white;
 }
-#sideNavAddBlocks{
+#sideNavFilterBlocks{
   position: relative;
-}
-.sideNavButton input{
- width:150px;
+  text-align: left;
 }
 .sideNavBlockContainer h3{
   display: block;
