@@ -4,9 +4,9 @@
 
 
 
-ajouteElement(1);
+ajouteElement(1,0);
 
-function ajouteElement(official) {
+function ajouteElement(official, indexStorage) {
   // crée un nouvel élément div
   // et lui donne un peu de contenu
   const nouveauDiv = document.createElement("div");
@@ -21,7 +21,10 @@ function ajouteElement(official) {
 
 
   alert(nouveauDiv.className);
-
+  if(localStorage.contribDone){
+  var contentToAdd=JSON.parse(localStorage.contribDone);
+  alert(contentToAdd);}
+  else{alert("does not exist");}
   const nouveauContenu = document.createTextNode("Salutations !");
   nouveauDiv.appendChild(nouveauContenu); //ajoute le contenu au div
 

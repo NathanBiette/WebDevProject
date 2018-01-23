@@ -205,8 +205,8 @@ var obj = {
    table: []
 };
 var contribut;
-if(localStorage.testObject){
-  contribut=JSON.parse(localStorage.testObject);
+if(localStorage.contribDone){
+  contribut=JSON.parse(localStorage.contribDone);
 }
 else{
   contribut=JSON.parse(contrib);
@@ -219,10 +219,10 @@ document.getElementById("buttonAddLocalFile").addEventListener("click", function
   contribut.push({"category": "poster","img":"images/flash.jpg", "page":"./HTML/StarWars8Page.html"});
 
   var new_json = JSON.stringify(contribut);
-  localStorage.setItem('testObject', new_json);
+  localStorage.setItem('contribDone', new_json);
 
   // Retrieve the object from storage
-  var retrievedObject = localStorage.getItem('testObject');
+  var retrievedObject = localStorage.getItem('contribDone');
 
   console.log('retrievedObject: ', JSON.parse(retrievedObject));
 });
@@ -232,10 +232,10 @@ document.getElementById("submitAddMediaUrl").addEventListener("click", function(
   contribut.push({"category": "poster","img":document.getElementById("boxUrl").value, "page":"./HTML/StarWars8Page.html"});
 
   var new_json = JSON.stringify(contribut);
-  localStorage.setItem('testObject', new_json);
+  localStorage.setItem('contribDone', new_json);
 
   // Retrieve the object from storage
-  var retrievedObject = localStorage.getItem('testObject');
+  var retrievedObject = localStorage.getItem('contribDone');
 
   console.log('retrievedObject: ', JSON.parse(retrievedObject));
 });
