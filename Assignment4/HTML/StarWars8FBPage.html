@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../mediaPage.css">
     <link rel="stylesheet" href="../login.css">
     <link rel="stylesheet" href="../top.css">
+    <link rel="stylesheet" href="../mediaFBPage.css">
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARtx_9S3svAqTrqF1Xk01TTAMgSzjZCas"></script>
     <title>Hyper Star Wars 8</title>
     <meta charset="UTF-8">
@@ -26,29 +27,27 @@
             <h3>Star Wars 8 : The Last Jedi<h3>
         </div>
         <div class="sideNavBlockContainer">
-          <a href="StarWars8FBPage.html">
-            <input type="button" href="StarWars8FBPage.html" value="Go to FanBase"></input>
+          <a href="StarWars8Page.html">
+            <input type="button" value="Go to Official page"></input>
           </a>
         </div>
-        <div class="sideNavBlockContainer" id="sideNavAddBlocks">
-          <h3>Add some blocks</h3>
-          <div class="sideNavButton">
-            <input type="button" value="&#10010; Trailers" class="addBlockButton" id="trailersAddSidenav">
-          </div>
-          <div class="sideNavButton">
-            <input type="button" value="&#10010; Posters" class="addBlockButton" id="postersAddSidenav">
-          </div>
-          <div class="sideNavButton">
-            <input type="button" value="&#10010; Casting" class="addBlockButton" id="castingAddSidenav">
-          </div>
-          <div class="sideNavButton">
-            <input type="button" value="&#10010; Tweets" class="addBlockButton" id="tweetsAddSidenav">
-          </div>
-          <div class="sideNavButton">
-            <input type="button" value="&#10010; Critics" class="addBlockButton" id="criticsAddSidenav">
-          </div>
-          <div class="sideNavButton">
-            <input type="button" value="&#10010; Articles" class="addBlockButton" id="articlesAddSidenav">
+        <div class="sideNavBlockContainer" id="sideNavFilterBlocks">
+            <h2>Filter the contributions</h2>
+            <div class="filterBlockAside">
+              <input type="button" value="Check ALL"  class="checkAllButton"/>
+            </div>
+            <div class="filterBlockAside">
+              <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterDrawings"><label for="FilterDrawings">Drawings</label></input>
+            </div>
+            <div class="filterBlockAside">
+              <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterVideos"><label for="FilterVideos">Drawings</label></input>
+            </div>
+            <div class="filterBlockAside">
+              <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterAudios"><label for="FilterAudios">Audios</label></input>
+            </div>
+            <div class="filterBlockAside">
+              <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterOther"><label for="FilterOther">Fanfics</label></input>
+            </div>
           </div>
         </div>
       </div>
@@ -115,71 +114,52 @@
 
     <aside id="mediaPageLeftSide">
       <div class="asideBlockContainer" id="mediaPresenterBlock">
+        <h2> Star Wars 8: The Last Jedi</h2>
         <div class="mediaImageContainer">
             <img  id="mediaImage" src="../images/STAR-WARS-8-POSTER.jpg" alt="Profile picture"></img>
         </div>
-        <h3>Basic infos</h3>
-        <div class="mediaInfosContent" id="mediaInfosContent">
-          <p>Directed by: Rian Johnson</p><br>
-          <p>Release Date: December 15, 2017 (US)</p>
 
-        </div>
-        <br>
-        <input class="showShootingLocationsButton" type="button" value="Shootings Location">
-        <div class="shootingLocationMap">
-          Location map here.
-        </div>
-        <ul>
-          <li>Skellig Michael, Ireland</li>
-          <li>Dubrovnik, Croatia</li>
-          <li>etc</li>
-        </ul>
       </div>
       <div class="asideBlockContainer" id="asideAddBlockContainer">
-        <h2>Add some blocks</h2>
-        <div class="addBlockAside">
-          <input type="button" value="&#10010;" class="addBlockButton" id="trailersAdd">
-          <p>Trailers</p>
+        <h2>Filter the contributions</h2>
+        <div class="filterBlockAside">
+          <input type="button" value="Check ALL"  class="checkAllButton"/>
         </div>
-        <div class="addBlockAside">
-          <input type="button" value="&#10010;" class="addBlockButton" id="postersAdd">
-          <p>Posters</p>
+        <div class="filterBlockAside">
+          <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterDrawings"><label for="FilterDrawings">Drawings</label></input>
         </div>
-        <div class="addBlockAside">
-          <input type="button" value="&#10010;" class="addBlockButton" id="castingAdd">
-          <p>Casting</p>
+        <div class="filterBlockAside">
+          <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterVideos"><label for="FilterVideos">Drawings</label></input>
         </div>
-        <div class="addBlockAside">
-          <input type="button" value="&#10010;" class="addBlockButton" id="tweetsAdd">
-          <p>Tweets</p>
+        <div class="filterBlockAside">
+          <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterAudios"><label for="FilterAudios">Audios</label></input>
         </div>
-        <div class="addBlockAside">
-          <input type="button" value="&#10010;" class="addBlockButton" id="criticsAdd">
-          <p>Critics</p>
-        </div>
-        <div class="addBlockAside">
-          <input type="button" value="&#10010;" class="addBlockButton" id="articlesAdd">
-          <p>Articles</p>
+        <div class="filterBlockAside">
+          <input type="checkbox" value="&#10010;" checked class="filterPostsButton" id="FilterOther"><label for="FilterOther">Fanfics</label></input>
         </div>
       </div>
     </aside>
 
     <aside id="mediaPageRightSide">
       <div class="asideBlockContainer" id="fanbaseBlock">
-        <a href="StarWars8FBPage.html">
-          <input type="button" value="Go to Fan Base page"></input>
+        <a href="StarWars8Page.html">
+          <input type="button" value="Go to Official page"></input>
         </a>
         <div class="mediaImageContainer">
           <div class="slideshow smallSlideshow">
             <div class="slideshowWindow">
-              <div  id="fanArt" class="mediasContainer">
+              <div  id="poster" class="mediasContainer">
                 <div class="mediaContainer">
-                  <p class="textOverContainer">Made by Patrick Brown</p>
-                  <img class="slideshowMedia small" src="https://pre00.deviantart.net/df56/th/pre/i/2016/039/f/3/star_wars__the_force_awakens_by_patrickbrown-d9r2ifd.jpg" alt="fanArt1">
+                  <img class="slideshowMedia" src="http://media.rtl.fr/online/image/2017/0717/7789376509_meme-destin-pour-la-cape-de-rey-sera-t-elle-sensible-au-cote-obscure-de-la-force.jpg" alt="Rey">
                 </div>
                 <div class="mediaContainer">
-                  <p class="textOverContainer">Made by Ry-Spirit</p>
-                  <img class="slideshowMedia" src="https://img00.deviantart.net/1e97/i/2017/361/6/5/porgachu_by_ry_spirit-dbxzf1y.jpg" alt="fanArt2">
+                  <img class="slideshowMedia" src="https://pbs.twimg.com/media/DEz1W4dVwAAT6y3.jpg:large" alt="Kylo Ren">
+                </div>
+                <div class="mediaContainer">
+                  <img class="slideshowMedia" src="https://pbs.twimg.com/media/DEzlm6dUMAQggAd.jpg" alt="Luke">
+                </div>
+                <div class="mediaContainer">
+                  <img class="slideshowMedia" src="https://pbs.twimg.com/media/DEz1dqDV0AA_Bmp.jpg" alt="Leia">
                 </div>
               </div>
               <div class="translate left"><span>&#8249;</span></div>
@@ -188,27 +168,11 @@
           </div>
         </div>
       </div>
-      <div class="asideBlockContainer">
-        <h2>Related pieces of media</h2>
-        <ul>
-          <li class = "relatedWorkContainer">
-            <img class="relatedWorkMedia" src="https://www.actugaming.net/wp-content/uploads/2018/01/disney-restores-2005-star-wars-battlefront-2-multiplayer-on_rsw7.jpg" alt="relatedWork">
-          </li>
-          <li>Dubrovnik, Croatia</li>
-          <li>etc.</li>
-        </ul>
-      </div>
     </aside>
 
 
     <article class="mediaPageContent">
-      <h3>Star Wars 8: The Last Jedi</h3>
-      <section class="synopsisContainer">
-        <p>
-          Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares for battle with the First Order.
-        </p>
-      </section>
-
+      <h3>Fan Base</h3>
       <section id="contentBlocksContainer">
         <section class="contentBlockContainer" id="postersBlock">
           <div class="contentBlock">
@@ -410,6 +374,7 @@
     <script src="../connexion.js"></script>
     <script src="../caroussel.js"></script>
     <script src="../mediaPage.js"></script>
+    <script src="../mediaFBPage.js"></script>
     <script src="../research.js"></script>
     <script src="../dragDropBlock.js"></script>
   </body>
