@@ -209,11 +209,12 @@
           <div class="contentBlock">
             <div class="contentBlockHeader">
               <input type="button" value="&#10008;" class="hideBlock" id="hidePosters"/>
-              <input type="button" value="&#10010;"/>
+              <input type="button" value="&#10010;" class="addMediaButton" id="addPoster"/>
+              <input type="file" class="addFileButton" name="test"> </input>
               <input type="button" value="&#10529;" class="expandButton" id ="expandPosters"/>
               <input type="button" value="&#10515;" class="downsizeButton" id ="downsizePosters"/>
             </div>
-            <div class="contentContainer">
+            <div class="contentContainer" id="postersContainer">
               <h4>Posters</h4>
               <div class="slideshow bigSlideshow" id="postersSlideshow">
                 <div class="slideshowWindow">
@@ -271,7 +272,8 @@
           <div class="contentBlock">
             <div class="contentBlockHeader">
               <input type="button" value="&#10008;"class="hideBlock" id="hideCasting"/>
-              <input type="button" value="&#10010;"/>
+              <input type="button" value="&#10010;" class="addMedia" id="addCastingInfo"/>
+              <input type="file" class="addFileButton" name="test"> </input>
               <input type="button" value="&#10529;" class="expandButton" id="expandCasting"/>
               <input type="button" value="&#10515;" class="downsizeButton" id="downsizeCasting"/>
             </div>

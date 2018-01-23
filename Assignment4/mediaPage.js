@@ -78,7 +78,31 @@ function downsize(){
   resizeCaroussels();
 }
 
+//Add media buttons
+$('.addMediaButton').click(function() {$(this).siblings(".addFileButton").click()})
 
+function addMediaInCaroussel(event){
+
+  var file =event.target.files[0];
+  if(!file.type.match('image.*')){
+    return;
+  }
+  else{
+    var reader = new FileReader();
+    reader.onload = (function(theFile,elmt){
+      return function(e){
+        console.log(elmt.attr("class"));
+        console.log(elmt.parent().attr("class"))
+        var userImSrc = e.target.result;
+        var newContainer = elmt.parent().parent().find('.mediaContainer').first().clone();
+        newContainer.children("img").attr("src",userImSrc);
+        elmt.parent().parent().find(".mediasContainer").prepend(newContainer);
+        }
+      }) (file,$(this));
+    reader.readAsDataURL(file);
+  }
+}
+$('.addFileButton').on('change',addMediaInCaroussel);
 //TWITTER
 window.twttr = (function(d, s, id) {
 
@@ -97,12 +121,14 @@ window.twttr = (function(d, s, id) {
 
   return t;
 }(document, "script", "twitter-wjs"));
-$(".slideshow").each(function(){
+/*$(".slideshow").each(function(){
   resizeInnerCaroussel($(this).parent());
 });
+
 $(window).on('resize',resizeCaroussels);
 function resizeCaroussels(){
   $(".slideshow").each(function(){
     resizeInnerCaroussel($(this).parent());
   });
 }
+*/
