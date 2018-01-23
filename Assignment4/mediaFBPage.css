@@ -101,9 +101,7 @@ p{
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-.dropDownContent input{
-  float: left;
-}
+
 .addURLBox{
 }
 .addMediasContainer:hover .dropDownContainer{
@@ -119,40 +117,13 @@ p{
   padding-top: 1em;
   padding-bottom: 1em;
 }
-#tweetContainer{
-  padding: 5px;
-}
-#postersContainer{
-  width: auto;
-}
+
 .contentContainer{
   padding:5px;
   min-height:100px;
 }
-.contentBlockArticle{
-  padding: 20px;
-}
 
-.faceContainer{
-  width: 50%;
-  height: auto;
-  text-align: center;
-  margin: auto;
-}
-.faceContainer img{
-  width: 200px;
-  height: auto;
-  border-radius: 100px;
-}
-.faceContainer p{
-  overflow: hidden;
-  margin:auto;
-  text-align: center;
-}
 
-#trailersBlock{
-  display:none;
-}
 .asideBlockContainer{
   background-color: #f2f2f2;
   padding: 1em;
