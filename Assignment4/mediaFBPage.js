@@ -234,7 +234,7 @@ function intializeAvatar(){
 
 //type should be equal to drawing, video ou audio, urlcontent l'url de l'image/video/audio, comments le texte posté
 function addContrib(type,urlContent, comments){
-
+  alert(type);
   contribut.push({"category": "post", "type" : type, "img":urlContent, "page":"./HTML/StarWars8Page.html", "offOrFan":"fanArt", "from" : "star wars 8 page", "text" : comments});
 
   var new_json = JSON.stringify(contribut);
