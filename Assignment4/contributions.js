@@ -21,6 +21,7 @@ function ajouteElement(official, indexStorage) {
 
 
   alert(nouveauDiv.className);
+  
   if(localStorage.contribDone){
   var contentToAdd=JSON.parse(localStorage.contribDone);
   alert(contentToAdd);}
