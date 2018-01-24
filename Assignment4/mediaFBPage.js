@@ -140,7 +140,7 @@ function addMediaURL() {
   } else if (isVideo(newMediaURL)){
     addressMediaOutput.html("<video class='outputMediaNewPost' autoplay><source src='"+newMediaURL+"'></source></video>");
   } else if (isAudio(newMediaURL)){
-
+    addressMediaOutput.html("<audio class='outputMediaNewPost' src='"+newMediaURL+"' alt='localMedia'></audio>");
   }
 }
 
@@ -164,9 +164,17 @@ function sendNewPost() {
 
   emptyPost.find('.subTextPostMedia').html($('.textPost').val());
 
+  emptyPost.find('.postMedia').html($('#outputMediaNewPost').html());
+  $('.postMedia').children().removeClass("outputMediaNewPost");
+  $('.postMedia').children().addClass("postMedia");
+
   emptyPost.find('.inputCommentButton').on("click",addComment);
   emptyPost.find('.upvote').on("click",upVote)
   emptyPost.find('.downvote').on("click",downVote)
+
+  $('#outputMediaNewPost').html("");
+  $('.mediaURL').val('');
+  $('.textPost').val('');
 }
 
 
