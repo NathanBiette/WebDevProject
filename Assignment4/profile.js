@@ -1,6 +1,35 @@
 
 
+var checkboxOfficial = document.querySelector("input[id=seeOfficial]");
 
+checkboxOfficial.addEventListener( 'change', function() {
+    if(this.checked) {
+        // Checkbox is checked..
+        document.getElementsByClassName("official firstOnglet")[0].style.display="inline";
+        localStorage.officialChecked=1;
+    } else {
+
+        // Checkbox is not checked..
+        document.getElementsByClassName("official firstOnglet")[0].style.display="none";
+        localStorage.officialChecked=0;
+    }
+});
+
+var checkboxFan = document.getElementById("seeFan");
+
+checkboxFan.addEventListener( 'change', function() {
+    if(this.checked) {
+        // Checkbox is checked..
+        document.getElementsByClassName("fanArt firstOnglet")[0].style.display="inline";
+        localStorage.fanChecked=1;
+        alert(localStorage.fanChecked);
+    } else {
+
+        // Checkbox is not checked..
+        document.getElementsByClassName("fanArt firstOnglet")[0].style.display="none";
+        localStorage.fanChecked=0;
+    }
+});
 
 /*var blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
 FileSaver.saveAs(blob, "hello world.txt");*/
@@ -373,37 +402,6 @@ function changeOnglet(ongletChosen) {
 }
 */
 
-
-var checkboxOfficial = document.querySelector("input[id=seeOfficial]");
-
-checkboxOfficial.addEventListener( 'change', function() {
-    if(this.checked) {
-        // Checkbox is checked..
-        document.getElementsByClassName("official firstOnglet")[0].style.display="inline";
-        localStorage.officialChecked=1;
-    } else {
-
-        // Checkbox is not checked..
-        document.getElementsByClassName("official firstOnglet")[0].style.display="none";
-        localStorage.officialChecked=0;
-    }
-});
-
-var checkboxFan = document.querySelector("input[id=seeFan]");
-
-checkboxFan.addEventListener( 'change', function() {
-    if(this.checked) {
-        // Checkbox is checked..
-        document.getElementsByClassName("fanArt firstOnglet")[0].style.display="inline";
-        localStorage.fanChecked=1;
-        alert(localStorage.fanChecked);
-    } else {
-
-        // Checkbox is not checked..
-        document.getElementsByClassName("fanArt firstOnglet")[0].style.display="none";
-        localStorage.fanChecked=0;
-    }
-});
 var boolFanOff2=0;
 function switchO2(){
   if(boolFanOff2==0){
@@ -434,3 +432,6 @@ function switchO3(){
     boolFanOff2=0;
   }
 }
+
+
+
