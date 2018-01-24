@@ -41,11 +41,10 @@ function ajouteElement(indexStorage) {
   }
 
 
-
-  const nouveauContenu = document.createTextNode("Salutations !");
-  nouveauDiv.appendChild(nouveauContenu); //ajoute le contenu au div
-
   if(contentToAdd[index]["category"]=="poster"){
+    var nouveauText = document.createElement("p");
+    nouveauText.value="Contribution from "+contentToAdd[index]["from"];
+    nouveauDiv.appendChild(nouveauText); //ajoute le contenu au div
     var newLink=document.createElement('a');
     newLink.href=contentToAdd[index]["page"];
     var newImage=document.createElement("img");
@@ -53,7 +52,7 @@ function ajouteElement(indexStorage) {
     nouveauDiv.appendChild(newLink);
     newLink.appendChild(newImage);
 
-  }
+    }
 
 
   // ajoute l'élément qui vient d'être créé et son contenu au DOM
