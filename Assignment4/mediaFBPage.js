@@ -1,12 +1,69 @@
 $(function() {
 
   $(".checkAllButton").click(function() {
-    $(".filterPostsButton").prop("checked",true);
+    $(".filterPostsButton").each(
+      function(){
+        if(!$(this).prop("checked")){
+          $(this).prop("checked",true).change();
+        }
+      }
+    );
+    $(".filterPostsSideButton").each(
+      function(){
+        if(!$(this).prop("checked")){
+          $(this).prop("checked",true);
+        }
+      }
+    );
+  });
+  $(".checkAllSideButton").click(function() {
+    $(".filterPostsButton").each(
+      function(){
+        if(!$(this).prop("checked")){
+          $(this).prop("checked",true);
+        }
+      }
+    );
+    $(".filterPostsSideButton").each(
+      function(){
+        if(!$(this).prop("checked")){
+          $(this).prop("checked",true).change();
+        }
+      }
+    );
   });
   $(".uncheckAllButton").click(function() {
-    $(".filterPostsButton").prop("checked",false);
+    $(".filterPostsButton").each(
+      function(){
+        if($(this).prop("checked")){
+          $(this).prop("checked",false).change();
+        }
+      }
+    );
+    $(".filterPostsSideButton").each(
+      function(){
+        if($(this).prop("checked")){
+          $(this).prop("checked",false);
+        }
+      }
+    );
   });
-
+  $(".uncheckAllSideButton").click(function() {
+    $(".filterPostsButton").each(
+      function(){
+        if($(this).prop("checked")){
+          $(this).prop("checked",false);
+        }
+      }
+    );
+    $(".filterPostsSideButton").each(
+      function(){
+        if($(this).prop("checked")){
+          $(this).prop("checked",false).change();
+        }
+      }
+    );
+  });
   $("#addMediaNewPost").click(function(){
     if ($(".addMediaNewPostContainer").css("display") == "none") {
       $(".addMediaNewPostContainer").css("display", "block");
@@ -27,8 +84,13 @@ $(function() {
 });
 $(".filterPostsButton").on("change",function() {
   console.log($(this).attr("class"));
+  $('.'+$(this).attr("id")).toggle();
 });
 
+$(".filterPostsSideButton").on("change",function() {
+  console.log($(this).attr("id"));
+  $('.'+$(this).attr("id")).toggle();
+});
 
 function retrieveFile(event){
   var file = event.target.files[0];
