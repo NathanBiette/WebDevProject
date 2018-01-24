@@ -190,22 +190,8 @@ window.twttr = (function(d, s, id) {
 }(document, "script", "twitter-wjs"));
 
 
-/*for Contributions*/
-//json file for Contributions
 
-var obj = {
-   table: []
-};
-var contribut;
-if(localStorage.contribDone){
-  contribut=JSON.parse(localStorage.contribDone);
-}
-else{
-  contribut=JSON.parse(contrib);
-  console.log(contribut);
-}
-
-
+/*for contributions*/
 document.getElementById("buttonAddLocalFile").addEventListener("click", function(){
 
   contribut.push({"category": "poster","img":"images/flash.jpg", "page":"./HTML/StarWars8Page.html"});
