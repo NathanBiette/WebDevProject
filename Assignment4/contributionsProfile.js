@@ -41,11 +41,12 @@ function ajouteElement(indexStorage) {
   }
 
 
-
-  const nouveauContenu = document.createTextNode("Salutations !");
-  nouveauDiv.appendChild(nouveauContenu); //ajoute le contenu au div
-
   if(contentToAdd[index]["category"]=="poster"){
+    var nouveauText = document.createElement("p");
+    var text = "Contribution from "+contentToAdd[index]["from"];
+    var node = document.createTextNode(text);
+    nouveauText.appendChild(node);
+    nouveauDiv.appendChild(nouveauText); //ajoute le contenu au div
     var newLink=document.createElement('a');
     newLink.href=contentToAdd[index]["page"];
     var newImage=document.createElement("img");
@@ -53,7 +54,40 @@ function ajouteElement(indexStorage) {
     nouveauDiv.appendChild(newLink);
     newLink.appendChild(newImage);
 
-  }
+    }
+    else if (contentToAdd[index]["category"] == "post"){
+      var nouveauText = document.createElement("p");
+      var text = "Contribution from "+contentToAdd[index]["from"];
+      var node = document.createTextNode(text);
+      nouveauText.appendChild(node);
+      nouveauDiv.appendChild(nouveauText); //ajoute le contenu au div
+      var newLink=document.createElement('a');
+      newLink.href=contentToAdd[index]["page"];
+      if(contentToAdd[index]["type"]=="drawing"){
+        var newImage=document.createElement("img");
+        newImage.src=contentToAdd[index]["img"];
+        nouveauDiv.appendChild(newLink);
+        newLink.appendChild(newImage);
+      }
+      else if (contentToAdd[index]["type"]=="video"){
+        var newVideo=document.createElement("video");
+        newVideo.src=contentToAdd[index]["img"];
+        nouveauDiv.appendChild(newLink);
+        newLink.appendChild(newVideo);
+      }
+      else if(contentToAdd[index]["type"] == "audio"){
+        var newSound=document.createElement("audio");
+        newSound.src=contentToAdd[index]["img"];
+        nouveauDiv.appendChild(newLink);
+        newLink.appendChild(newSound);
+      }
+      var postComment = document.createElement("p");
+      var comm = contentToAdd[index]["text"];
+      var node = document.createTextNode(comm);
+      postComment.appendChild(node);
+      nouveauDiv.appendChild(postComment);
+
+    }
 
 
   // ajoute l'élément qui vient d'être créé et son contenu au DOM
