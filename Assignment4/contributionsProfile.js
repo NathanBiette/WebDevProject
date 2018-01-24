@@ -3,16 +3,16 @@
 function ajouteAllElements(){
   if(localStorage.contribDone){
   var contentToAdd=JSON.parse(localStorage.contribDone);
-  }
+}
   else{alert("does not exist");}
   for(var index=0; index<contentToAdd.length;index++){
-    console.log(contribut[index]);
-    alert(contribut[index]["category"]);
+    console.log(contentToAdd[index]);
+    alert(contentToAdd[index]["category"]);
     ajouteElement(index);
 
   }
 }
-ajouteElement(-1);
+ajouteAllElements();
 
 function ajouteElement(indexStorage) {
   // crée un nouvel élément div
@@ -45,11 +45,11 @@ function ajouteElement(indexStorage) {
   const nouveauContenu = document.createTextNode("Salutations !");
   nouveauDiv.appendChild(nouveauContenu); //ajoute le contenu au div
 
-  if(contribut[index]["category"]=="poster"){
+  if(contentToAdd[index]["category"]=="poster"){
     var newLink=document.createElement('a');
-    newLink.href=contribut[index]["page"];
+    newLink.href=contentToAdd[index]["page"];
     var newImage=document.createElement("img");
-    newImage.src=contribut[index]["img"];
+    newImage.src=contentToAdd[index]["img"];
     nouveauDiv.appendChild(newLink);
     newLink.appendChild(newImage);
 
@@ -61,4 +61,18 @@ function ajouteElement(indexStorage) {
 
   document.getElementById("ong1Content").insertBefore(nouveauDiv, divActuel);
 
+}
+
+window.addEventListener('storage', storageEventHandler, false);
+/*function(e) {
+  document.querySelector('.my-key').textContent = e.key;
+  document.querySelector('.my-old').textContent = e.oldValue;
+  document.querySelector('.my-new').textContent = e.newValue;
+  document.querySelector('.my-url').textContent = e.url;
+  document.querySelector('.my-storage').textContent = e.storageArea;
+});*/
+
+function storageEventHandler(evt){
+  alert("");
+  console.log(evt.key);
 }

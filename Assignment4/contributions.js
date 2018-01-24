@@ -15,7 +15,7 @@ else{
   contribut=JSON.parse(contrib);
   console.log(contribut);
 
-  localStorage.contribDone=JSON.stringify(contribut);
+  localStorage.setItem("contribDone",JSON.stringify(contribut));
 }
 
 alert(localStorage.contribDone);
