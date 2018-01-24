@@ -17,5 +17,3 @@ else{
 
   localStorage.setItem("contribDone",JSON.stringify(contribut));
 }
-
-alert(localStorage.contribDone);

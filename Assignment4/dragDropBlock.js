@@ -1,7 +1,6 @@
 var stringTwitter = $('#tweetContainer').html();
 $(".contentContainer h4").on('mousedown.dragdrop',dragBlock)
 $("#contentBlocksContainer").mouseup(drop);
-console.log("ijwne");
 
 function dragBlock(){
  var blockToDrag = $(this).parent().parent().parent();
@@ -36,7 +35,7 @@ function dragClone(elmnt){
   pos3 = window.event.clientX;
   pos4 = window.event.clientY;
   console.log("mouse Dragged");
-  $('.global').on('mousemove.dragging',draggingClone);
+  $('body').on('mousemove.dragging',draggingClone);
   function draggingClone() {
     var initPos = elmnt.position()
     pos1 = pos3 - window.event.clientX;
@@ -58,7 +57,7 @@ function drop(){
   //document.onmousemove = null;
   $('#tweetContainer').css("pointer-events",'auto');
   $('.contentBlockContainerDragged').remove();
-  $('.global').off('mousemove.dragging');
+  $('body').off('mousemove.dragging');
   $(".contentBlockContainer").off('mouseenter.dragdrop');
   $(".contentBlockFixedDragged").removeClass("contentBlockFixedDragged");
   $(".contentBlockFixedContainerDragged").removeClass("contentBlockFixedContainerDragged");
