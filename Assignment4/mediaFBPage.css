@@ -390,6 +390,7 @@ div.slideshow div.mediaContainer{
   min-height: 60px;
   border-top: solid grey 1px;
 }
+
 .addComment{
   border: 0px;
   transition: width 1s;
@@ -476,4 +477,7 @@ div.slideshow div.mediaContainer{
   padding: 5px;
   border-radius: 5px;
   cursor: pointer;
+}
+#emptyPost{
+  display: none;
 }
