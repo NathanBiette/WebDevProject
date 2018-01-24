@@ -1,5 +1,5 @@
 $(function() {
-  //Un/Check all buttons handling must also do the change on side bar 
+  //Un/Check all buttons handling must also do the change on side bar
   $(".checkAllButton").click(function() {
     $(".filterPostsButton").each(
       function(){
@@ -165,6 +165,8 @@ function sendNewPost() {
   emptyPost.find('.subTextPostMedia').html($('.textPost').val());
 
   emptyPost.find('.inputCommentButton').on("click",addComment);
+  emptyPost.find('.upvote').on("click",upVote)
+  emptyPost.find('.downvote').on("click",downVote)
 }
 
 
