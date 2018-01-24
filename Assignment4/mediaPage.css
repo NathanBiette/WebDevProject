@@ -331,12 +331,11 @@ div.slideshow div.mediaContainer{
 .sideNavButton input{
  width:150px;
 }
-.sideNavBlockContainer h3{
-  display: block;
-  width:250px;
-}
-.sideNavBlockContainer h3:hover{
-}
+
 #mediaPagesideNav{
   color: #f2f2f2;
+}
+
+.followed {
+  background-color: #99ccff;
 }
