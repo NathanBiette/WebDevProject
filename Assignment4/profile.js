@@ -42,10 +42,6 @@ checkboxFan.addEventListener( 'change', function() {
     }
 });
 
-$( "li" ).each(function( index ) {
-  console.log( index + ": " + $( this ).text() );
-});
-
 
 /*var blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
 FileSaver.saveAs(blob, "hello world.txt");*/
