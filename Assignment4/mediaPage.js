@@ -14,13 +14,9 @@ $(function() {
 });
 
 function followThePage(){
-  if (!localStorage.SW8){
+  if (!localStorage.SW8 || localStorage.SW8 == "not followed"){
     $(this).addClass("followed");
     $('.followPageButton').val("Followed");
-    localStorage.SW8 = "followed";
-  } else if (localStorage.SW8 == "not followed"){
-    $(this).addClass("followed");
-    $('.followPageButton').val("Page followed");
     localStorage.SW8 = "followed";
   } else if (localStorage.SW8 == "followed"){
     $(this).removeClass("followed");
