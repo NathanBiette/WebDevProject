@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../login.css">
     <link rel="stylesheet" href="../top.css">
     <link rel="stylesheet" href="../caroussel2.css">
+    <link rel="stylesheet" href="../contributions.css">
 
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARtx_9S3svAqTrqF1Xk01TTAMgSzjZCas"></script>
     <title>Hyper Profile</title>
@@ -135,13 +136,101 @@
 
       <article class="tabContent dropper">
           <div class="onglet Content firstOnglet" id="ong1Content">
-
             <form>
               <input type="checkbox" id="seeOfficial" name="fanOrOfficial" checked>
               <label for "seeOfficial"> See official contents</label>
               <input type="checkbox" id="seeFan" name="fanOrOfficial">
               <label for="seeFan">See fan art contents</label>
             </form>
+
+
+
+            <section id="contentBlocksContainer">
+
+              <!--First draggable block-->
+
+              <section class="contentBlockContainer" id="postersBlock">
+                <div class="contentBlock">
+                  <div class="contentBlockHeader">
+                    <input type="button" value="&#10008;" class="hideBlock" id="hidePosters"/>
+                    <div class="addMediasContainer" id="addPosterContainer">
+                      <input type="button" value="Add Media" class="" id="addPoster"/>
+                      <input type="file" class="addLocalMediaButton" name="test"> </input>
+                      <div class="dropDownContainer">
+                        <div class="dropDownContent">
+                          <input type="button" value="Local file" class="addMediaButton" id=""/>
+                          <input type="text" class="addURLBox" placeholder="type media url here..."/>
+                          <input type="button" class="submitMediaUrl" value="Submit"/>
+                        </div>
+                      </div>
+                    </div>
+                    <input type="button" value="&#10529;" class="expandButton" id ="expandPosters"/>
+                    <input type="button" value="&#10515;" class="downsizeButton" id ="downsizePosters"/>
+                  </div>
+                  <div class="contentContainer" id="postersContainer">
+                    <h4>Posters</h4>
+                    <div class="slideshow bigSlideshow" id="postersSlideshow">
+                      <div class="slideshowWindow">
+                        <div  id="poster" class="mediasContainer">
+                          <div class="mediaContainer">
+                            <img class="slideshowMedia" src="http://media.rtl.fr/online/image/2017/0717/7789376509_meme-destin-pour-la-cape-de-rey-sera-t-elle-sensible-au-cote-obscure-de-la-force.jpg" alt="Rey">
+                          </div>
+                          <div class="mediaContainer">
+                            <img class="slideshowMedia" src="https://pbs.twimg.com/media/DEz1W4dVwAAT6y3.jpg:large" alt="Kylo Ren">
+                          </div>
+                          <div class="mediaContainer">
+                            <img class="slideshowMedia" src="https://pbs.twimg.com/media/DEzlm6dUMAQggAd.jpg" alt="Luke">
+                          </div>
+                          <div class="mediaContainer">
+                            <img class="slideshowMedia" src="https://pbs.twimg.com/media/DEz1dqDV0AA_Bmp.jpg" alt="Leia">
+                          </div>
+                        </div>
+                        <div class="translate left"><span>&#8249;</span></div>
+                        <div class="translate right"><span>&#8250;</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!--Second block draggable-->
+
+              <section class="contentBlockContainer" id="trailersBlock">
+                <div class="contentBlock">
+                  <div class="contentBlockHeader">
+                    <input type="button" value="&#10008;"class="hideBlock" id="hideTrailers"/>
+                    <input type="button" value="&#10010;"/>
+                    <input type="button" value="&#10529;" class="expandButton" id="expandTrailers"/>
+                    <input type="button" value="&#10515;" class="downsizeButton" id="downsizeTrailers"/>
+                  </div>
+                  <div class="contentContainer">
+                    <h4>Trailers</h4>
+                    <div class="slideshow bigSlideshow" id="OFFICIAL_Trailer">
+                      <div class="slideshowWindow">
+                        <div   class="mediasContainer">
+                          <div class="mediaContainer">
+                            <p class="textOverContainer">OFFICIAL Trailer !!!!!!!</p>
+                            <video id='video1' controls class="slideshowMedia"  muted autobuffer >
+                              <source src="../videos/star-wars-the-last-jedi-trailer-official.mp4" type="video/mp4" />
+                              <source src="../videos/star-wars-the-last-jedi-trailer-official.webm" type="video/webm" />
+                            </video>
+                          </div>
+                        </div>
+                        <div class="translate left"><span>&#8249;</span></div>
+                        <div class="translate right"><span>&#8250;</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                
+
+
+
+
+
+
+            </section>
+
 
             <div class="trailer draggable contrib official firstOnglet">
               <section>
@@ -646,6 +735,7 @@
     <script src="../persoInfosModif.js"></script>
     <script src="../research.js"></script>
     <script src="../caroussel2.js"></script>
+    <script src="../dragDropBlock.js"></script>
     <script src="../profileJquery.js"></script>
   </body>
 

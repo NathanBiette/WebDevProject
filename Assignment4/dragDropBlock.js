@@ -1,10 +1,12 @@
 var stringTwitter = $('#tweetContainer').html();
 $(".contentContainer h4").on('mousedown.dragdrop',dragBlock)
 $("#contentBlocksContainer").mouseup(drop);
+console.log("ijwne");
+
 function dragBlock(){
  var blockToDrag = $(this).parent().parent().parent();
 
- $('#tweetContainer').css("pointer-events",'none'); //The twitter widgets withdraw hover event disable while hdragging
+ $('#tweetContainer').css("pointer-events",'none'); //The twitter widgets withdraw hover event disable while dragging
  var mouseClone = blockToDrag.clone(); //Creating block that stays with mouse
  var initPos = blockToDrag.position();
  var widthInit = blockToDrag.css("width");
@@ -16,7 +18,6 @@ function dragBlock(){
  mouseClone.attr("id",mouseClone.attr("id")+"Dragged");
  mouseClone.css("width",widthInit);
  dragClone(mouseClone);
-
 
 //Dealing with inplace block
  blockToDrag.addClass("contentBlockFixedContainerDragged");
@@ -34,6 +35,7 @@ function dragClone(elmnt){
   var pos4 = 0;
   pos3 = window.event.clientX;
   pos4 = window.event.clientY;
+  console.log("mouse Dragged");
   $('.global').on('mousemove.dragging',draggingClone);
   function draggingClone() {
     var initPos = elmnt.position()
@@ -46,6 +48,7 @@ function dragClone(elmnt){
 
   }
 }
+
 function drop(){
   var tweetContainer = $('#tweetContainer');
   if(tweetContainer.parent().parent().hasClass("contentBlockFixedDragged")){
