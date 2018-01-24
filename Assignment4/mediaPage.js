@@ -6,54 +6,24 @@ $(function() {
   var markers;
   $('.addBlockButton').click(addBlock);
   $('.hideBlock').click(hideBlock);
-  $('.showShootingLocationsButton').click(toggleMap);
-  //initMap();
-
+  $('.followPageButton').click(followThePage);
+  if (localStorage.SW8 && localStorage.SW8 == "followed"){
+    $('.followPageButton').addClass("followed");
+    $('.followPageButton').val("Followed");
+  }
 });
 
-/*
-function initMap(){
-
-  try{
-    var locationPlaces = $("#locationPlaces").children().html();
-    console.log("in the try");
-    if (! map) map = new google.maps.Map(document.getElementById('shootingLocationMap'), {
-      center: {lat: -34.397, lng: 150.644},
-      zoom: 4
-      });
-
-    if (! geocoder) geocoder = new google.maps.Geocoder();
-    alert('')
-
-    console.log(locationPlaces);
-
-
-    geocoder.geocode( { 'address': localStorage.location }, function(results, status) {
-      if (status == google.maps.GeocoderStatus.OK) {
-        coords = results[0].geometry.location;
-        if (marker) {
-          marker.setPosition({lat: coords.lat(), lng: coords.lng()});
-        } else {
-          marker = new google.maps.Marker({position:coords});
-        }
-        map.setCenter(coords);
-        marker.position = coords;
-        marker.setMap(map);
-      } else {
-        alert("Le geocodage n\'a pu etre effectue pour la raison suivante: " + status);
-      }
-    });
-  } catch(err) {
-    alert('google not defined');
+function followThePage(){
+  if (!localStorage.SW8 || localStorage.SW8 == "not followed"){
+    $(this).addClass("followed");
+    $('.followPageButton').val("Followed");
+    localStorage.SW8 = "followed";
+  } else if (localStorage.SW8 == "followed"){
+    $(this).removeClass("followed");
+    $('.followPageButton').val("Follow the page");
+    localStorage.SW8 = "not followed";
   }
-}
-*/
-function toggleMap(){
-  if ($(".shootingLocationMap").css("display")=="none"){
-    $(".shootingLocationMap").css("display","block");
-  } else {
-    $(".shootingLocationMap").css("display","none");
-  }
+
 }
 
 function addBlock(){
@@ -147,7 +117,6 @@ function addMediaInCaroussel(event){
         var contentBlock =elmt.parent().parent().parent();
         var userImSrc = e.target.result;
         addContrib(userImSrc);
-        //console.log(contentBlock.attr("class"));
         var newContainer = contentBlock.find('.mediaContainer').first().clone();
 
         newContainer.find(".media").attr("src",userImSrc);
@@ -162,9 +131,7 @@ $('.submitMediaUrl').on('click',addMediaURL);
 
 function addMediaURL() {
   var newMedSrc = $(this).siblings(".addURLBox").val();
-  console.log(newMedSrc);
   var contentBlock =$(this).parent().parent().parent().parent().parent();
-  console.log(contentBlock.attr("class"));
   var newContainer = contentBlock.find('.mediaContainer').first().clone();
   newContainer.find(".media").attr("src",newMedSrc);
   contentBlock.find(".mediasContainer").prepend(newContainer);
