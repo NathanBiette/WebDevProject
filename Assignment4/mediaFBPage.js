@@ -20,6 +20,10 @@ $(function() {
   })
 
   $('.searchForFile').on('change',retrieveFile);
+
+  $('.submitMediaUrl').on('click',addMediaURL);
+
+  $('#sendNewPost').click(sendNewPost);
 });
 $(".filterPostsButton").on("change",function() {
   console.log($(this).attr("class"));
@@ -43,10 +47,9 @@ function retrieveFile(event){
         if (file.type.match('image.*')) {
           type = "img";
           addressMediaOutput.html("<img class='outputMediaNewPost' src='"+localMediaAddress+"' alt='localMedia'/>");
-          console.log(addressMediaOutput.attr("id"))
         } else if (file.type.match('video.*')) {
           type = "video";
-          addressMediaOutput.html("<video class='outputMediaNewPost'><source='"+localMediaAddress+"'></source></video>");
+          addressMediaOutput.html("<video class='outputMediaNewPost' autoplay><source src='"+localMediaAddress+"'></source></video>");
         } else if (file.type.match('audio.*')) {
           type = "audio";
         }
@@ -55,8 +58,35 @@ function retrieveFile(event){
     }) (file,$(this));
     reader.readAsDataURL(file);
   }
+}
+
+function isImage(url) {
+  return(url.match(/\.(jpeg|jpg|gif|png)$/) != null);
+}
+function isVideo(url) {
+  return(url.match(/\.(ogg|mp4)$/) != null);
+}
+function isAudio(url) {
+  return(url.match(/\.(mp3|mpeg)$/) != null);
+}
+
+function addMediaURL() {
+  var newMediaURL = $(".mediaURL").val();
+  var addressMediaOutput = $("#outputMediaNewPost");
+  if (isImage(newMediaURL)) {
+    addressMediaOutput.html("<img class='outputMediaNewPost' src='"+newMediaURL+"' alt='localMedia'/>");
+  } else if (isVideo(newMediaURL)){
+    addressMediaOutput.html("<video class='outputMediaNewPost' autoplay><source src='"+newMediaURL+"'></source></video>");
+  } else if (isAudio(newMediaURL)){
+
+  }
+
 
 }
+
+
+
+
 $('.upvote').on("click",upVote)
 $('.downvote').on("click",downVote)
 function upVote(){
