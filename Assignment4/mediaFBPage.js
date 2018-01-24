@@ -104,7 +104,7 @@ function retrieveFile(event){
       return function(e){
         var localMediaAddress = e.target.result;
         var addressMediaOutput = $("#outputMediaNewPost");
-
+        addContrib(localMediaAddress);
         var fileType;
         if (file.type.match('image.*')) {
           type = "img";
