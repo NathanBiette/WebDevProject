@@ -363,12 +363,16 @@ div.slideshow div.mediaContainer{
   margin-right: 5px;
   width: 20%;
   color: green;
+  cursor: pointer;
+  user-select: none;
 }
 .downvote{
   margin-left: 5px;
   margin-right: 5px;
   width: 20%;
   display: inline;
+  cursor: pointer;
+  user-select: none;
   color: red;
 }
 .commentsContainer{

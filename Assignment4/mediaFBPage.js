@@ -12,7 +12,18 @@ $(function() {
   });
 
 });
-
+$('.upvote').on("click",upVote)
+$('.downvote').on("click",downVote)
+function upVote(){
+  var numberOfVotes = parseFloat($(this).html().split(' ')[1]);
+  numberOfVotes++;
+  $(this).html("✚ "+numberOfVotes)
+}
+function downVote(){
+  var numberOfVotes = parseFloat($(this).html().split(' ')[1]);
+  numberOfVotes++;
+  $(this).html("&#8210; "+numberOfVotes)
+}
 $('#inputCommentButton').on("click",addComment);
 
 function addComment(){
@@ -28,6 +39,10 @@ function addComment(){
   commentsContainer.css("height","auto");
   if(localStorage.profilePicSrc){
     newComment.find(".avatarComment").attr("src",localStorage.profilePicSrc)
+  }
+  if(localStorage.username){
+    newComment.find(".username").html(localStorage.username+' - ')
+
   }
 
 }
