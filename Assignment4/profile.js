@@ -5,12 +5,18 @@ var checkboxOfficial = document.querySelector("input[id=seeOfficial]");
 checkboxOfficial.addEventListener( 'change', function() {
     if(this.checked) {
         // Checkbox is checked..
-        document.getElementsByClassName("official firstOnglet")[0].style.display="inline";
+         var officials = document.querySelectorAll('.official');
+        Array.prototype.forEach.call(officials, function(elements, index) {
+          elements.style.display="inline";
+        });
         localStorage.officialChecked=1;
     } else {
 
         // Checkbox is not checked..
-        document.getElementsByClassName("official firstOnglet")[0].style.display="none";
+        var officials = document.querySelectorAll('.official');
+        Array.prototype.forEach.call(officials, function(elements, index) {
+          elements.style.display="none";
+        });
         localStorage.officialChecked=0;
     }
 });
@@ -20,16 +26,29 @@ var checkboxFan = document.getElementById("seeFan");
 checkboxFan.addEventListener( 'change', function() {
     if(this.checked) {
         // Checkbox is checked..
-        document.getElementsByClassName("fanArt firstOnglet")[0].style.display="inline";
+        var fanArts = document.querySelectorAll('.fanArt');
+        Array.prototype.forEach.call(fanArts, function(elements, index) {
+          elements.style.display="inline";
+        });
         localStorage.fanChecked=1;
-      
+
     } else {
 
         // Checkbox is not checked..
-        document.getElementsByClassName("fanArt firstOnglet")[0].style.display="none";
+        var fanArts = document.querySelectorAll('.fanArt');
+        Array.prototype.forEach.call(fanArts, function(elements, index) {
+          elements.style.display="none";
+        });
         localStorage.fanChecked=0;
     }
 });
+
+$( "li" ).each(function( index ) {
+  console.log( index + ": " + $( this ).text() );
+});
+
+
+
 
 
 
