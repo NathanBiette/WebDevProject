@@ -11,6 +11,7 @@ $(function() {
 
 });
 
+/*
 function initMap(){
 
   try{
@@ -46,7 +47,7 @@ function initMap(){
     alert('google not defined');
   }
 }
-
+*/
 function toggleMap(){
   if ($(".shootingLocationMap").css("display")=="none"){
     $(".shootingLocationMap").css("display","block");
@@ -135,7 +136,7 @@ function downsize(){
 $('.addMediaButton').click(function() {$(this).parent().parent().siblings(".addLocalMediaButton").click()})
 $('.addLocalMediaButton').on('change',addMediaInCaroussel);
 function addMediaInCaroussel(event){
-  var file =event.target.files[0];
+  var file = event.target.files[0];
   if(!file.type.match('image.*')){
     return;
   }

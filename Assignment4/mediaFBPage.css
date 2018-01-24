@@ -345,11 +345,21 @@ div.slideshow div.mediaContainer{
 #addMediaNewPost{
   margin-left: 0px;
 }
+#outputMediaNewPost{
+  height: 40px;
+}
+.outputMediaNewPost{
+  max-height:40px;
+  width: auto;
+}
 .addMediaNewPostContainer{
-  display: block;
+  display: none;
   background-color: white;
   border: 1px dashed lightgrey;
   border-radius: 10px;
+}
+.searchForFile{
+  display: none;
 }
 .textPost{
   width: 100%;
