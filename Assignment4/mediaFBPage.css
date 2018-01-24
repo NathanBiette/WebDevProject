@@ -82,7 +82,6 @@ p{
   position: relative;
   display: inline-block;
   float: left;
-
 }
 .dropDownContainer{
   position: absolute;
@@ -101,7 +100,9 @@ p{
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-
+.dropDownContent input{
+  float: left;
+}
 .addURLBox{
 }
 .addMediasContainer:hover .dropDownContainer{
@@ -117,13 +118,27 @@ p{
   padding-top: 1em;
   padding-bottom: 1em;
 }
-
+#tweetContainer{
+  padding: 5px;
+}
+#postersContainer{
+  width: auto;
+}
 .contentContainer{
   padding:5px;
   min-height:100px;
 }
+.contentBlockArticle{
+  padding: 20px;
+}
 
 
+
+
+
+#trailersBlock{
+  display:none;
+}
 .asideBlockContainer{
   background-color: #f2f2f2;
   padding: 1em;
@@ -320,6 +335,7 @@ div.slideshow div.mediaContainer{
   border-radius: 10px;
   background-color: #f2f2f2;
   padding: 10px;
+  overflow: hidden;
 }
 .avatar{
   width: 60px;
@@ -332,8 +348,14 @@ div.slideshow div.mediaContainer{
   margin-right: 0px;
 
 }
-.addMediaNewPost{
+#addMediaNewPost{
   margin-left: 0px;
+}
+.addMediaNewPostContainer{
+  display: block;
+  background-color: white;
+  border: 1px dashed lightgrey;
+  border-radius: 10px;
 }
 .textPost{
   width: 100%;
