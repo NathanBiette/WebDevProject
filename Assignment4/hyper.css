@@ -20,11 +20,17 @@ header{
 header.HyperHeader img{ /*responsive*/
   box-sizing: content-box;
   width: 100%;
+  max-width: 500px;
   margin-top:50px;
   margin-bottom:50px;
   height:auto; /*scale conserve*/
 }
 
+.slideShowHomePageContainer{
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
 
 footer{
   position:relative;

@@ -11,6 +11,7 @@ $(function() {
 
 });
 
+/*
 function initMap(){
 
   try{
@@ -46,7 +47,7 @@ function initMap(){
     alert('google not defined');
   }
 }
-
+*/
 function toggleMap(){
   if ($(".shootingLocationMap").css("display")=="none"){
     $(".shootingLocationMap").css("display","block");
@@ -135,7 +136,7 @@ function downsize(){
 $('.addMediaButton').click(function() {$(this).parent().parent().siblings(".addLocalMediaButton").click()})
 $('.addLocalMediaButton').on('change',addMediaInCaroussel);
 function addMediaInCaroussel(event){
-  var file =event.target.files[0];
+  var file = event.target.files[0];
   if(!file.type.match('image.*')){
     return;
   }
@@ -189,22 +190,8 @@ window.twttr = (function(d, s, id) {
 }(document, "script", "twitter-wjs"));
 
 
-/*for Contributions*/
-//json file for Contributions
 
-var obj = {
-   table: []
-};
-var contribut;
-if(localStorage.contribDone){
-  contribut=JSON.parse(localStorage.contribDone);
-}
-else{
-  contribut=JSON.parse(contrib);
-  console.log(contribut);
-}
-
-
+/*for contributions*/
 document.getElementById("buttonAddLocalFile").addEventListener("click", function(){
 
   contribut.push({"category": "poster","img":"images/flash.jpg", "page":"./HTML/StarWars8Page.html"});
@@ -220,7 +207,7 @@ document.getElementById("buttonAddLocalFile").addEventListener("click", function
 
 document.getElementById("submitAddMediaUrl").addEventListener("click", function(){
 
-  contribut.push({"category": "poster","img":document.getElementById("boxUrl").value, "page":"./HTML/StarWars8Page.html"});
+  contribut.push({"category": "poster","img":document.getElementById("boxUrl").value, "page":"./StarWars8Page.html", "offOrFan":"official"});
 
   var new_json = JSON.stringify(contribut);
   localStorage.setItem('contribDone', new_json);
