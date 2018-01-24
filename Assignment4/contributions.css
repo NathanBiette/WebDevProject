@@ -18,6 +18,7 @@
 }
 
 .contentBlockContainer{
+  width: auto;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -35,7 +36,7 @@
   -webkit-column-break-inside:avoid; /* Webkit */
   break-inside: avoid-column; /* Opera >= 11.5 */
   break-inside: avoid; /* CSS3 */
-  width:100%;
+  /*width:100%;*/
   height: auto;
   margin-bottom: 10px;
   box-sizing: border-box;
@@ -122,4 +123,27 @@
 #lastBlock{
   opacity: 0;
   height: 15px;
+}
+
+.badge1 {
+   position:relative;
+}
+.badge1[data-badge]:before {
+   content:attr(data-badge);
+   position:absolute;
+   top:1px;
+   right:0px;
+   font-size:1.5em;
+   font-family: Verdana;
+   background:green;
+   color:white;
+   width:35px;height:35px;
+   text-align:center;
+   line-height:35px;
+	border-bottom-left-radius: 50%;
+   box-shadow:0 0 1px #333;
+}
+
+.ContributionContainer{
+	margin-bottom: 20px;
 }
