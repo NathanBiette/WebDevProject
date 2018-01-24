@@ -1,5 +1,5 @@
 $(function() {
-
+  //Un/Check all buttons handling must also do the change on side bar 
   $(".checkAllButton").click(function() {
     $(".filterPostsButton").each(
       function(){
