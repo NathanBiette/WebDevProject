@@ -227,7 +227,7 @@ function intializeAvatar(){
 
 
 
-/*document.getElementById("buttonAddLocalFile").addEventListener("click", function(){*/
+
 //type should be equal to drawing, video ou audio, urlcontent l'url de l'image/video/audio, comments le texte posté
 function addContrib(type,urlContent, comments){
 
@@ -240,4 +240,4 @@ function addContrib(type,urlContent, comments){
   var retrievedObject = localStorage.getItem('contribDone');
 
   console.log('retrievedObject: ', JSON.parse(retrievedObject));
-}/*);*/
+}
