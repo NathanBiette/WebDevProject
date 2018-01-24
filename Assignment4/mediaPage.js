@@ -192,9 +192,10 @@ window.twttr = (function(d, s, id) {
 
 
 /*for contributions*/
-document.getElementById("buttonAddLocalFile").addEventListener("click", function(){
+/*document.getElementById("buttonAddLocalFile").addEventListener("click", function(){*/
+  function(urlImage){
 
-  contribut.push({"category": "poster","img":"images/flash.jpg", "page":"./HTML/StarWars8Page.html", "ofOrFan":"official"});
+  contribut.push({"category": "poster","img":urlImage, "page":"./HTML/StarWars8Page.html", "ofOrFan":"official"});
 
   var new_json = JSON.stringify(contribut);
   localStorage.setItem('contribDone', new_json);
@@ -203,7 +204,7 @@ document.getElementById("buttonAddLocalFile").addEventListener("click", function
   var retrievedObject = localStorage.getItem('contribDone');
 
   console.log('retrievedObject: ', JSON.parse(retrievedObject));
-});
+}/*);*/
 
 document.getElementById("submitAddMediaUrl").addEventListener("click", function(){
 
