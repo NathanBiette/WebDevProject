@@ -104,17 +104,21 @@ function retrieveFile(event){
       return function(e){
         var localMediaAddress = e.target.result;
         var addressMediaOutput = $("#outputMediaNewPost");
-        addContrib(localMediaAddress);
+        var typeContrib;
         var fileType;
         if (file.type.match('image.*')) {
           type = "img";
+          typeContrib="drawing"
           addressMediaOutput.html("<img class='outputMediaNewPost' src='"+localMediaAddress+"' alt='localMedia'/>");
         } else if (file.type.match('video.*')) {
           type = "video";
+          typeContrib = type
           addressMediaOutput.html("<video class='outputMediaNewPost' autoplay><source src='"+localMediaAddress+"'></source></video>");
         } else if (file.type.match('audio.*')) {
           type = "audio";
+          typeContrib = type;
         }
+        addContrib(typeContrib,localMediaAddress);
 
       }
     }) (file,$(this));
@@ -227,7 +231,7 @@ function intializeAvatar(){
 
 
 
-/*document.getElementById("buttonAddLocalFile").addEventListener("click", function(){*/
+
 //type should be equal to drawing, video ou audio, urlcontent l'url de l'image/video/audio, comments le texte posté
 function addContrib(type,urlContent, comments){
 
@@ -240,4 +244,4 @@ function addContrib(type,urlContent, comments){
   var retrievedObject = localStorage.getItem('contribDone');
 
   console.log('retrievedObject: ', JSON.parse(retrievedObject));
-}/*);*/
+}
