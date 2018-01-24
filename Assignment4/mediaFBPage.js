@@ -118,7 +118,7 @@ function retrieveFile(event){
           type = "audio";
           typeContrib = type;
         }
-        addContrib(typeContrib,localMediaAddress);
+        addContrib(typeContrib,localMediaAddress,"");
 
       }
     }) (file,$(this));

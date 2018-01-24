@@ -51,23 +51,35 @@ checkboxFan.addEventListener( 'change', function() {
 
 if(localStorage.officialChecked){
   if(localStorage.officialChecked==1){
-    document.getElementsByClassName("official")[0].style.display="inline";
+    var officials = document.querySelectorAll('.official');
+        Array.prototype.forEach.call(officials, function(elements, index) {
+          elements.style.display="inline";
+        });
 
   }
   else{
-    document.getElementsByClassName("official")[0].style.display="none";
+    var officials = document.querySelectorAll('.official');
+        Array.prototype.forEach.call(officials, function(elements, index) {
+          elements.style.display="none";
+        });
     document.getElementById("seeOfficial").checked=false;
   }
 }
 
 if(localStorage.fanChecked){
   if(localStorage.fanChecked==1){
-    document.getElementsByClassName("fanArt")[0].style.display="inline";
+    var fanArts = document.querySelectorAll('.fanArt');
+        Array.prototype.forEach.call(fanArts, function(elements, index) {
+          elements.style.display="inline";
+        });
     document.getElementById("seeFan").checked="true";
 
   }
   else{
-    document.getElementsByClassName("fanArt")[0].style.display="none";
+    var fanArts = document.querySelectorAll('.fanArt');
+        Array.prototype.forEach.call(fanArts, function(elements, index) {
+          elements.style.display="none";
+        });
   }
 }
 
