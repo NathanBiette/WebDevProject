@@ -7,7 +7,7 @@ function ajouteAllElements(){
   else{alert("does not exist");}
   for(var index=0; index<contentToAdd.length;index++){
     console.log(contentToAdd[index]);
-    alert(contentToAdd[index]["category"]);
+
     ajouteElement(index);
 
   }
