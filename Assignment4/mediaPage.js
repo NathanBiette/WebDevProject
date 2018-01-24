@@ -193,6 +193,7 @@ window.twttr = (function(d, s, id) {
 
 
 /*for contributions*/
+
 var myEvent=new Event("test");
 /*document.getElementById("buttonAddLocalFile").addEventListener("click", function(){*/
 function addContrib(urlImage){
