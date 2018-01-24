@@ -167,16 +167,32 @@
             <div class="slideshowWindow">
               <div  id="poster" class="mediasContainer">
                 <div class="mediaContainer">
-                  <img class="slideshowMedia" src="http://media.rtl.fr/online/image/2017/0717/7789376509_meme-destin-pour-la-cape-de-rey-sera-t-elle-sensible-au-cote-obscure-de-la-force.jpg" alt="Rey">
+                  <div class="slideshowMedia">
+                    <div class="pieceMediaContainer">
+                      <img class="media" src="http://media.rtl.fr/online/image/2017/0717/7789376509_meme-destin-pour-la-cape-de-rey-sera-t-elle-sensible-au-cote-obscure-de-la-force.jpg" alt="Rey">
+                    </div>
+                  </div>
                 </div>
                 <div class="mediaContainer">
-                  <img class="slideshowMedia" src="https://pbs.twimg.com/media/DEz1W4dVwAAT6y3.jpg:large" alt="Kylo Ren">
+                  <div class="slideshowMedia">
+                    <div class="pieceMediaContainer">
+                      <img class="media" src="https://pbs.twimg.com/media/DEz1W4dVwAAT6y3.jpg:large" alt="Kylo Ren">
+                    </div>
+                  </div>
                 </div>
                 <div class="mediaContainer">
-                  <img class="slideshowMedia" src="https://pbs.twimg.com/media/DEzlm6dUMAQggAd.jpg" alt="Luke">
+                  <div class="slideshowMedia">
+                    <div class="pieceMediaContainer">
+                      <img class="media" src="https://pbs.twimg.com/media/DEzlm6dUMAQggAd.jpg" alt="Luke">
+                    </div>
+                  </div>
                 </div>
                 <div class="mediaContainer">
-                  <img class="slideshowMedia" src="https://pbs.twimg.com/media/DEz1dqDV0AA_Bmp.jpg" alt="Leia">
+                  <div class="slideshowMedia">
+                    <div class="pieceMediaContainer">
+                      <img class="media" src="https://pbs.twimg.com/media/DEz1dqDV0AA_Bmp.jpg" alt="Leia">
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="translate left"><span>&#8249;</span></div>
@@ -221,189 +237,16 @@
         </form>
       </section>
 
-      <section id="contentBlocksContainer">
-        <section class="contentBlockContainer" id="postersBlock">
-          <div class="contentBlock">
-            <div class="contentBlockHeader">
-              <input type="button" value="&#10008;" class="hideBlock" id="hidePosters"/>
-              <div class="addMediasContainer" id="addPosterContainer">
-                <input type="button" value="Add Media" class="" id="addPoster"/>
-                <input type="file" class="addLocalMediaButton" name="test"/>
-                <div class="dropDownContainer">
-                  <div class="dropDownContent">
-                    <input type="button" value="Local file" class="addMediaButton" id=""/>
-                    <input type="text" class="addURLBox" placeholder="type media url here..."/>
-                    <input type="button" class="submitMediaUrl" value="Submit"/>
-                  </div>
-                </div>
-              </div>
-              <input type="button" value="&#10529;" class="expandButton" id ="expandPosters"/>
-              <input type="button" value="&#10515;" class="downsizeButton" id ="downsizePosters"/>
-            </div>
-            <div class="contentContainer" id="postersContainer">
-              <h4>Posters</h4>
-              <div class="slideshow bigSlideshow" id="postersSlideshow">
-                <div class="slideshowWindow">
-                  <div  id="poster" class="mediasContainer">
-                    <div class="mediaContainer">
-                      <img class="slideshowMedia" src="http://media.rtl.fr/online/image/2017/0717/7789376509_meme-destin-pour-la-cape-de-rey-sera-t-elle-sensible-au-cote-obscure-de-la-force.jpg" alt="Rey">
-                    </div>
-                    <div class="mediaContainer">
-                      <img class="slideshowMedia" src="https://pbs.twimg.com/media/DEz1W4dVwAAT6y3.jpg:large" alt="Kylo Ren">
-                    </div>
-                    <div class="mediaContainer">
-                      <img class="slideshowMedia" src="https://pbs.twimg.com/media/DEzlm6dUMAQggAd.jpg" alt="Luke">
-                    </div>
-                    <div class="mediaContainer">
-                      <img class="slideshowMedia" src="https://pbs.twimg.com/media/DEz1dqDV0AA_Bmp.jpg" alt="Leia">
-                    </div>
-                  </div>
-                  <div class="translate left"><span>&#8249;</span></div>
-                  <div class="translate right"><span>&#8250;</span></div>
-                </div>
-              </div>
-            </div>
+      <section class="postBlock">
+        <div class="postHeader">
+          <img class="avatar" src="../images/Avatar.jpg" alt="avatar"/>
+        </div>
+        <div class="postContent">
+          <div class="mediaPostContainer">
           </div>
-        </section>
-
-        <section class="contentBlockContainer" id="trailersBlock">
-          <div class="contentBlock">
-            <div class="contentBlockHeader">
-              <input type="button" value="&#10008;"class="hideBlock" id="hideTrailers"/>
-              <input type="button" value="&#10010;"/>
-              <input type="button" value="&#10529;" class="expandButton" id="expandTrailers"/>
-              <input type="button" value="&#10515;" class="downsizeButton" id="downsizeTrailers"/>
-            </div>
-            <div class="contentContainer">
-              <h4>Trailers</h4>
-              <div class="slideshow bigSlideshow" id="OFFICIAL_Trailer">
-                <div class="slideshowWindow">
-                  <div   class="mediasContainer">
-                    <div class="mediaContainer">
-                      <p class="textOverContainer">OFFICIAL Trailer !!!!!!!</p>
-                      <video id='video1' controls class="slideshowMedia"  muted autobuffer >
-                        <source src="../videos/star-wars-the-last-jedi-trailer-official.mp4" type="video/mp4" />
-                        <source src="../videos/star-wars-the-last-jedi-trailer-official.webm" type="video/webm" />
-        				      </video>
-                    </div>
-                  </div>
-                  <div class="translate left"><span>&#8249;</span></div>
-                  <div class="translate right"><span>&#8250;</span></div>
-                </div>
-              </div>
-          </div>
-        </section>
-
-        <section class="contentBlockContainer" id="castingBlock">
-          <div class="contentBlock">
-            <div class="contentBlockHeader">
-              <input type="button" value="&#10008;"class="hideBlock" id="hideCasting"/>
-              <input type="button" value="&#10010;" class="addMedia" id="addCastingInfo"/>
-              <input type="button" value="&#10529;" class="expandButton" id="expandCasting"/>
-              <input type="button" value="&#10515;" class="downsizeButton" id="downsizeCasting"/>
-            </div>
-            <div class="contentContainer">
-              <h4>Casting</h4>
-              <div class="slideshow bigSlideshow" id="castingSlideshow">
-                <div class="slideshowWindow">
-                  <div  id="poster" class="mediasContainer">
-                    <div class="mediaContainer">
-                      <img class="slideshowMedia" src="https://24smi.org/public/media/celebrity/2017/02/01/dGQqdEjxG0Uv_carrie-fisher.jpg" alt="Carrie">
-                      <p class="textOverContainer">Carrie Fisher</p>
-                    </div>
-                    <div class="mediaContainer">
-                      <img class="slideshowMedia" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Mark_Hamill_%282017%29.jpg/1200px-Mark_Hamill_%282017%29.jpg" alt="Mark">
-                      <p class="textOverContainer">Mark Hamill</p>
-                    </div>
-                    <div class="mediaContainer">
-                      <img class="slideshowMedia" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Daisy_Ridley_by_Gage_Skidmore.jpg/1200px-Daisy_Ridley_by_Gage_Skidmore.jpg" alt="Daisy">
-                      <p class="textOverContainer">Daisy Ridley</p>
-                    </div>
-                    <div class="mediaContainer">
-                      <img class="slideshowMedia" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/John_Boyega_by_Gage_Skidmore.jpg/1200px-John_Boyega_by_Gage_Skidmore.jpg" alt="John Boyega">
-                      <p class="textOverContainer">John Boyega</p>
-                    </div>
-                    <div class="mediaContainer">
-                      <img class="slideshowMedia" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Star_Wars-_The_Last_Jedi_Japan_Premiere_Red_Carpet-_Adam_Driver_%2827163437599%29_%28cropped%29.jpg/1200px-Star_Wars-_The_Last_Jedi_Japan_Premiere_Red_Carpet-_Adam_Driver_%2827163437599%29_%28cropped%29.jpg" alt="Adam Driver">
-                      <p class="textOverContainer">Adam Driver</p>
-                    </div>
-                    <div class="mediaContainer">
-                      <img class="slideshowMedia" src="https://nerdist.com/wp-content/uploads/2017/12/rose-tico.jpg" alt="Kelly Marie Tran">
-                      <p class="textOverContainer">Kelly Marie Tran</p>
-                    </div>
-                    <div class="mediaContainer">
-                      <img class="slideshowMedia" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Oscar_Isaac_by_Gage_Skidmore.jpg/1200px-Oscar_Isaac_by_Gage_Skidmore.jpg" alt="Oscar Isaac">
-                      <p class="textOverContainer">Oscar Isaac</p>
-                    </div>
-                    <div class="mediaContainer">
-                      <img class="slideshowMedia" src="http://fr.web.img3.acsta.net/c_215_290/pictures/17/09/13/17/30/0919496.jpg" alt="Laura Dern">
-                      <p class="textOverContainer">Laura Dern</p>
-                    </div>
-                  </div>
-                  <div class="translate left"><span>&#8249;</span></div>
-                  <div class="translate right"><span>&#8250;</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-
-        <section class="contentBlockContainer" id="tweetsBlock">
-          <div class="contentBlock">
-            <div class="contentBlockHeader">
-              <input type="button" value="&#10008;"class="hideBlock" id="hideTweets"/>
-              <input type="button" value="&#10010;"/>
-              <input type="button" value="&#10529;" class="expandButton" id="expandTweets"/>
-              <input type="button" value="&#10515;" class="downsizeButton" id="downsizeTweets"/>
-            </div>
-            <div class="contentContainer" id="tweetsContent">
-              <h4>Tweets</h4>
-              <div id="tweetContainer">
-                <a class="twitter-timeline" data-tweet-limit="1"  data-chrome="noheader" href="https://twitter.com/starwars">Officials tweets from StarWars</a>
-              </div>
-            </div>
-        </section>
-
-        <section class="contentBlockContainer" id="criticsBlock">
-          <div class="contentBlock">
-            <div class="contentBlockHeader">
-              <input type="button" value="&#10008;" class="hideBlock" id="hideCritics"/>
-              <input type="button" value="&#10010;"/>
-              <input type="button" value="&#10529;" class="expandButton" id="expandCritics"/>
-              <input type="button" value="&#10515;" class="downsizeButton" id="downsizeCritics"/>
-            </div>
-            <div class="contentContainer">
-              <h4>Critics</h4>
-              <article class="contentBlockArticle">
-                <h5>A new critic (from Blablabla.com)</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pellentesque pretium magna et convallis. Aenean vel gravida elit. Proin scelerisque placerat egestas. Etiam accumsan id lorem eu dignissim. Mauris a lacus sem. In cursus mollis augue non tincidunt. Praesent tempor massa eu massa pretium facilisis. Phasellus eu suscipit ex. Donec fringilla, lacus et efficitur accumsan, sapien enim rutrum odio, at lacinia dolor purus malesuada urna. Suspendisse id maximus justo, vel tempor dolor. Praesent consequat mauris sit amet eleifend sodales. Mauris sem leo, finibus eget lorem quis, pharetra interdum augue.</p>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section class="contentBlockContainer" id="articlesBlock">
-          <div class="contentBlock">
-            <div class="contentBlockHeader">
-              <input type="button" value="&#10008;"class="hideBlock" id="hideArticles"/>
-              <input type="button" class="addContribution" value="&#10010;"/>
-              <input type="button" value="&#10529;" class="expandButton" id="expandArticles"/>
-              <input type="button" value="&#10515;" class="downsizeButton" id="downsizeArticle"/>
-            </div>
-            <div class="contentContainer">
-              <h4>Articles</h4>
-              <article class="contentBlockArticle">
-                <h5>Article Jedi (from AlloJedi.com)</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pellentesque pretium magna et convallis. Aenean vel gravida elit. Proin scelerisque placerat egestas. Etiam accumsan id lorem eu dignissim. Mauris a lacus sem. In cursus mollis augue non tincidunt. Praesent tempor massa eu massa pretium facilisis. Phasellus eu suscipit ex. Donec fringilla, lacus et efficitur accumsan, sapien enim rutrum odio, at lacinia dolor purus malesuada urna. Suspendisse id maximus justo, vel tempor dolor. Praesent consequat mauris sit amet eleifend sodales. Mauris sem leo, finibus eget lorem quis, pharetra interdum augue.</p>
-              </article>
-            </div>
-          </div>
-        </section>
-        <section class="contentBlockContainer" id="lastBlock">
-          <div class="contentBlock">
-          </div>
-        <section>
+        </div>
+        <div class="commentsContainer">
+        </div>
       </section>
     </article>
 
