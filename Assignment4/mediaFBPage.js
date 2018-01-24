@@ -162,7 +162,7 @@ function sendNewPost() {
   var category = $('.chooseCategory').val();
   emptyPost.attr("class",emptyPost.attr("class")+" "+category);
 
-  emptyPost.find('.subTextPostMedia').html($('.textPost').val());
+  var textPosst = emptyPost.find('.subTextPostMedia').html($('.textPost').val());
 
   emptyPost.find('.postMedia').html($('#outputMediaNewPost').html());
   $('.postMedia').children().removeClass("outputMediaNewPost");
@@ -226,11 +226,12 @@ function intializeAvatar(){
 }
 
 
-var myEvent=new Event("test");
-/*document.getElementById("buttonAddLocalFile").addEventListener("click", function(){*/
-function addContrib(urlImage){
 
-  contribut.push({"category": "poster","img":urlImage, "page":"./HTML/StarWars8Page.html", "ofOrFan":"official", "from" : "star wars 8 page"});
+/*document.getElementById("buttonAddLocalFile").addEventListener("click", function(){*/
+//type should be equal to drawing, video ou audio, urlcontent l'url de l'image/video/audio, comments le texte posté
+function addContrib(type,urlContent, comments){
+
+  contribut.push({"category": "post", "type" : type, "img":urlContent, "page":"./HTML/StarWars8Page.html", "offOrFan":"fanArt", "from" : "star wars 8 page", "text" : comments});
 
   var new_json = JSON.stringify(contribut);
   localStorage.setItem('contribDone', new_json);
@@ -240,17 +241,3 @@ function addContrib(urlImage){
 
   console.log('retrievedObject: ', JSON.parse(retrievedObject));
 }/*);*/
-
-document.getElementById("submitAddMediaUrl").addEventListener("click", function(){
-
-  contribut.push({"category": "poster","img":document.getElementById("boxUrl").value, "page":"./StarWars8Page.html", "offOrFan":"official", "from":"star wars 8 page"});
-
-  var new_json = JSON.stringify(contribut);
-  localStorage.setItem('contribDone', new_json);
-
-  // Retrieve the object from storage
-  var retrievedObject = localStorage.getItem('contribDone');
-
-  console.log('retrievedObject: ', JSON.parse(retrievedObject));
-  window.dispatchEvent(myEvent);
-});

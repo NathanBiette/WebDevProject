@@ -165,7 +165,7 @@ window.twttr = (function(d, s, id) {
 /*document.getElementById("buttonAddLocalFile").addEventListener("click", function(){*/
 function addContrib(urlImage){
 
-  contribut.push({"category": "poster","img":urlImage, "page":"./HTML/StarWars8Page.html", "ofOrFan":"official", "from" : "star wars 8 page"});
+  contribut.push({"category": "poster","img":urlImage, "page":"./HTML/StarWars8Page.html", "offOrFan":"official", "from" : "star wars 8 page"});
   var new_json = JSON.stringify(contribut);
   localStorage.setItem('contribDone', new_json);
 
