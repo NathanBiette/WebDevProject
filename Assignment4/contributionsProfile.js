@@ -63,7 +63,7 @@ function ajouteElement(indexStorage) {
 
 }
 
-elem.addEventListener('test', function(e){
+window.addEventListener('test', function(e){
 
   alert("");
   /*console.log(evt.key);*/

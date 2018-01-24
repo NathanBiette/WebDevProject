@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="../profile.css">
     <link rel="stylesheet" href="../login.css">
     <link rel="stylesheet" href="../top.css">
+    <link rel="stylesheet" href="../contributions.css">
     <link rel="stylesheet" href="../caroussel.css">
 
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARtx_9S3svAqTrqF1Xk01TTAMgSzjZCas"></script>
@@ -135,7 +136,6 @@
 
       <article class="tabContent dropper">
           <div class="onglet Content firstOnglet" id="ong1Content">
-
             <form>
               <input type="checkbox" id="seeOfficial" name="fanOrOfficial" checked>
               <label for "seeOfficial"> See official contents</label>
@@ -143,14 +143,108 @@
               <label for="seeFan">See fan art contents</label>
             </form>
 
-            <div class="trailer draggable contrib official firstOnglet" id="beginning">
+
+
+            <section id="contentBlocksContainer">
+
+              <!--First draggable block-->
+
+              <section class="contentBlockContainer" id="zeldaBlock">
+                <div class="contentBlock">
+                  <div class="contentContainer badge1" data-badge="6" id="postersContainer">
+                    <h4>Zelda Fanart</h4>
+                    <div class="ContributionContainer">
+                      <img src="https://drive.google.com/uc?export=download&id=1A2q0g8UwM3MRrYg0hsN02ieuLQzT5VsA">
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!--Second block draggable-->
+
+              <section class="contentBlockContainer" id="loneTravelerBlock">
+                <div class="contentBlock">
+                  <div class="contentContainer badge1" data-badge="27" id="postersContainer">
+                    <h4>Lone Traveler</h4>
+                    <div class="ContributionContainer">
+                      <img src="https://drive.google.com/uc?export=download&id=1lTkvAlPsoreKvTBsHQzJHVIFEcYnyJJr">
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+
+              <!--Third block draggable-->
+
+              <section class="contentBlockContainer" id="gengiBlock">
+                <div class="contentBlock">
+                  <div class="contentContainer badge1" data-badge="15" id="postersContainer">
+                    <h4>Gengi Compilation</h4>
+                    <div class="ContributionContainer">
+                      <img src="https://drive.google.com/uc?export=download&id=1w9nomPbOccEK19HHsY4R4HQVeN3aTGdf">
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+
+              <section class="contentBlockContainer" id="trailerBlock">
+                <div class="contentBlock">
+                  <div class="contentContainer badge1" data-badge="36" id="postersContainer">
+                    <h4>Hey Have you seen ? Cute isn't it ?</h4>
+                    <div class="ContributionContainer">
+                      <video controls="controls">
+                        <source src="../videos/star-wars-the-last-jedi-trailer-official.mp4#t=90,94&xywh=percent:0,0,50,50" type="video/mp4" />
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="contentBlockContainer" id="trailerBlock">
+                <div class="contentBlock">
+                  <div class="contentContainer" id="postersContainer">
+                    <span class="badge2" data-badge="158030">158030</span>
+                    <h4>Hey Have you seen ? Cute isn't it ?</h4>
+                    
+                      <p> Wouah there are so many moons to find in Mario Odyssey. I have not finished yet ! Did you know how many there were ?! Let's see this useful article if you were wondering about it.</p>
+                      <a class="articleExtract" href="http://www.jeuxvideo.com/news/736085/super-mario-odyssey-combien-y-a-t-il-de-lunes-de-puissance-a-recuperer.htm"><p class="articleExtract">"Super Mario Odyssey bluffe les joueurs depuis sa sortie par son inventivité et surtout, par le nombre immense de Lunes de Puissance à récupérer aux quatre coins de ses vastes niveaux. Mais combien y a-t-il précisément de Lunes à dénicher dans Super Mario Odyssey ? La réponse est simple... et vertigineuse." <br>Click to see more</p></a>
+                   
+                  </div>
+                </div>
+              </section>
+
+              <section class="contentBlockContainer" id="trailerBlock">
+                <div class="contentBlock">
+                  <div class="contentContainer badge1" data-badge="158030" id="postersContainer">
+                    <h6>Trailer : Star Wars 8 official</h6>
+                    <video controls="controls">
+                  <source src="../videos/star-wars-the-last-jedi-trailer-official.mp4" type="video/mp4" />
+                  <source src="../videos/star-wars-the-last-jedi-trailer-official.webm" type="video/webm" />
+                </video>
+                  </div>
+                </div>
+              </section>
+
+
+              
+
+
+
+
+
+
+
+            </section>
+
+<!--
+            <div class="trailer draggable contrib official firstOnglet">
               <section>
                 <h6>Trailer : Star Wars 8 official</h6>
                 <video controls="controls">
                   <source src="../videos/star-wars-the-last-jedi-trailer-official.mp4" type="video/mp4" />
                   <source src="../videos/star-wars-the-last-jedi-trailer-official.webm" type="video/webm" />
                 </video>
-
               </section>
             </div>
 
@@ -161,15 +255,19 @@
                   <source src="../videos/star-wars-the-last-jedi-trailer-official.mp4#t=90,94&xywh=percent:0,0,50,50" type="video/mp4" />
                 </video>
               </section>
-
             </div>
+
             <div class="post2 draggable firstOnglet contrib" >
               <section>
                 <p> Wouah there are so many moons to find in Mario Odyssey. I have not finished yet ! Did you know how many there were ?! Let's see this useful article if you were wondering about it. </p>
                   <a class="articleExtract" href="http://www.jeuxvideo.com/news/736085/super-mario-odyssey-combien-y-a-t-il-de-lunes-de-puissance-a-recuperer.htm"><p class="articleExtract">"Super Mario Odyssey bluffe les joueurs depuis sa sortie par son inventivité et surtout, par le nombre immense de Lunes de Puissance à récupérer aux quatre coins de ses vastes niveaux. Mais combien y a-t-il précisément de Lunes à dénicher dans Super Mario Odyssey ? La réponse est simple... et vertigineuse." <br>Click to see more</p></a>
               </section>
-
             </div>
+-->
+
+
+
+
           </div>
 
           <div class="ongletContent secondOnglet" id="ong2Content">
@@ -678,6 +776,7 @@
     <script src="../profile.js"></script>
     <script src="../persoInfosModif.js"></script>
     <script src="../research.js"></script>
+    <script src="../dragDropBlock.js"></script>
     <script src="../caroussel.js"></script>
     <script src="../profileJquery.js"></script>
 

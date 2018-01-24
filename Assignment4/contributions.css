@@ -1,0 +1,166 @@
+.contentContainer h4{
+  cursor: move;
+  user-select: none;
+  margin:0px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.contentContainer{
+  padding:5px;
+  min-height:100px;
+}
+
+#contentBlocksContainer{
+  column-count: 2;
+  column-gap: 0px;
+  position:relative;
+}
+
+.contentBlockContainer{
+  width: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.contentBlockContainerDragged{
+  position: absolute;
+  z-index: 9;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+.contentBlock{
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px 0px grey;
+  -webkit-column-break-inside:avoid; /* Webkit */
+  break-inside: avoid-column; /* Opera >= 11.5 */
+  break-inside: avoid; /* CSS3 */
+  /*width:100%;*/
+  height: auto;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.contentBlockDragged{
+  background-color: white;
+}
+
+.contentBlockHeader input{
+ float: right;
+ background-color: white;
+}
+
+.dropDownContainer{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  margin-top: 40px;
+  margin-left: 5px;
+  display: none;
+  opacity: 0.8;
+}
+.dropDownContent{
+  min-width: 100%;
+  min-height: 50px;
+  display: inline-block;
+  background-color: white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.dropDownContent input{
+  float: left;
+}
+
+@media only screen and (max-width: 768px){
+  input.expandButton{display: none;}
+  #contentBlocksContainer{column-count: 1;}
+}
+
+.expandButton,.downsizeButton{
+  float: left;
+}
+.downsizeButton{
+  display: none;
+}
+
+.addMediasContainer:hover .dropDownContainer{
+  display:block;
+
+}
+
+.addMediasContainer{
+  position: relative;
+  display: inline-block;
+  float: left;
+
+}
+
+.addLocalMediaButton{
+  display: none;
+}
+
+/* Style for blocks being dragged */
+.contentBlockFixedDragged{
+  opacity: 0;
+}
+.contentBlockFixedContainerDragged{
+  border: 2px dashed grey;
+  pointer-events:none;
+}
+
+.contentBlockContainerDragged{
+  position: absolute;
+  z-index: 9;
+  pointer-events:none;
+  opacity:0.5;
+}
+.contentBlockDragged{
+  background-color: white;
+}
+#lastBlock{
+  opacity: 0;
+  height: 15px;
+}
+
+.badge1 {
+	position: relative;
+}
+.badge1[data-badge]:before {
+
+   content:attr(data-badge);
+   position:absolute;
+   top:1px;
+   right:0px;
+   font-size:1.5em;
+   font-family: Verdana;
+   background:green;
+   color:white;
+   width:35px;height:35px;
+   text-align:center;
+   line-height:35px;
+	border-bottom-left-radius: 50%;
+   box-shadow:0 0 1px #333;
+}
+
+.badge2{
+    position: absolute;
+    right: 15px;
+    font-size: 1.5em;
+    font-family: Verdana;
+    background: green;
+    color: white;
+    width: auto;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-bottom-left-radius: 50%;
+    box-shadow: 0 0 1px #333;
+
+}
+
+.ContributionContainer{
+	margin-bottom: 20px;
+}
