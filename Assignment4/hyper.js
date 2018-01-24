@@ -23,7 +23,6 @@ function translateSlideshow(slideshow,direction) {
   currentTranslation= parseFloat(currentTranslation.slice(0,currentTranslation.length-3))
 
   if(direction == 'left') {
-    //new_angle = currentTranslation+mediaWidth;
     currentImage--;
     if(currentImage==-1) currentImage=numberMediaSlideshow-1;
   }

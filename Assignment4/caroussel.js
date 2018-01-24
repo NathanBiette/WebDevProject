@@ -13,7 +13,6 @@ function translateSlideshow(translateButton){
 
   var mediaContainer = translateButton.siblings(".mediasContainer").children().eq(showingContainerIndex)
   var numberMediaInContainer = mediaContainer.find(".media").length;
-  //console.log(numberMediaInContainer);
   var showingMediaIndex = mediasContainer.data("showingMediaIndexInSLideshow");
 
   //Current translation
@@ -22,14 +21,9 @@ function translateSlideshow(translateButton){
 
   var direction = translateButton.attr("class").split(' ')[1];
 
-  //Caluclating the transition value to next media
-  //console.log("Translation");
-  //console.log(showingContainerIndex);
 
   if(direction=='right'){// && remainder==0){//+500px to transform left
-    //console.log("Test1");
-    //console.log(showingMediaIndex);
-    //console.log(numberMediaInContainer);
+
     if(showingMediaIndex==(numberMediaInContainer-1)){ //To the right of the slideshow
       if(showingContainerIndex==(numberOfMediaContainer-1)){
         showingContainerIndex=0;// to the full begining of the slideshow
@@ -66,11 +60,9 @@ function translateSlideshow(translateButton){
   //In the case left to several media -> last media to be shown
   if(showingMediaIndex==-1){
     numberMediaInContainer = showingContainer.find(".media").length;
-    //console.log(numberMediaInContainer);
     showingMediaIndex=numberMediaInContainer-1;
   }
-  //console.log(showingContainerIndex);
-  //console.log(showingMediaIndex);
+
   //html objects to be shown
 
   showingMedia = showingContainer.find(".media").eq(showingMediaIndex);
@@ -131,60 +123,9 @@ function resizeInnerCaroussel(carousselParent){
 }
 $(window).on('load',resizeCaroussels);
 
-/*$(".slideshow").each(function(){
-  resizeInnerCaroussel($(this).parent());
-});
-*/
+
 function resizeCaroussels(){
   $(".slideshow").each(function(){
     resizeInnerCaroussel($(this).parent());
   });
 }
-
-/*---------------JS only version ----------------------*/
-
-
-/*var mediasInSlideshow = document.getElementsByClassName('slideshowMedia');
-var numberMediaSlideshow=0;// mediasInSlideshow.length;//3 Images
-var currentImage = 0;
-
-var mediaWidth = parseFloat(window.getComputedStyle( document.getElementsByClassName('slideshowMedia')[0]).getPropertyValue('width'));
-var totalMediasWidth = mediaWidth*numberMediaSlideshow;
-
-function initWebPage() { //all global var declarations and eventListeners...
-
-}
-
-initWebPage(); //init the page when the script is run
-
-
-var translateButtons = document.getElementsByClassName('translate');
-for(var iter=0;iter<translateButtons.length;iter++){
-  var slideshow = document.getElementById('mainMediaContainer1');
-  slideshow.style.transform='translateX(0px)';
-  if(translateButtons[iter].className.split(' ')[1] == 'right') translateButtons[iter].addEventListener('click',function() {translateSlideshow(slideshow,'right')});
-  else translateButtons[iter].addEventListener('click',function() {translateSlideshow(slideshow,'left')});
-};
-
-function translateSlideshow(slideshow,direction) {
-  mediaWidth = parseFloat(window.getComputedStyle( document.getElementsByClassName('slideshowMedia')[0]).getPropertyValue('width'));
-  totalMediasWidth = mediaWidth*numberMediaSlideshow;
-  var new_angle;
-  var currentTranslation= (slideshow.style.transform.split('(')[1]);
-  currentTranslation= parseFloat(currentTranslation.slice(0,currentTranslation.length-3))
-
-  if(direction == 'left') {
-    //new_angle = currentTranslation+mediaWidth;
-    currentImage--;
-    if(currentImage==-1) currentImage=numberMediaSlideshow-1;
-  }
-  else if(direction == 'right') {
-    //new_angle = currentTranslation-mediaWidth;
-    currentImage++;
-    if(currentImage>=numberMediaSlideshow) currentImage=0;
-  }
-  //else new_angle= parseFloat(currentTranslation);
-  new_angle = -currentImage*mediaWidth;
-  slideshow.style.transform = 'translateX('+new_angle+'px)';
-};
-*/
