@@ -192,8 +192,9 @@ window.twttr = (function(d, s, id) {
 
 
 /*for contributions*/
+var myEvent=new Event("test");
 /*document.getElementById("buttonAddLocalFile").addEventListener("click", function(){*/
-  function(urlImage){
+function addContrib(urlImage){
 
   contribut.push({"category": "poster","img":urlImage, "page":"./HTML/StarWars8Page.html", "ofOrFan":"official"});
 
@@ -217,4 +218,5 @@ document.getElementById("submitAddMediaUrl").addEventListener("click", function(
   var retrievedObject = localStorage.getItem('contribDone');
 
   console.log('retrievedObject: ', JSON.parse(retrievedObject));
+  window.dispatchEvent(myEvent);
 });

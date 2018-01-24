@@ -63,10 +63,10 @@ function ajouteElement(indexStorage) {
 
 }
 
-window.addEventListener('storage', function(e){
+elem.addEventListener('test', function(e){
 
   alert("");
-  console.log(evt.key);
+  /*console.log(evt.key);*/
 });
 /*function(e) {
   document.querySelector('.my-key').textContent = e.key;
