@@ -81,8 +81,10 @@ div.smallSlideshow div.mediaContainer{
 .twoMedias .pieceMediaContainer{
   width: 50%;
 }
+.threeMedias .pieceMediaContainer{
+  width: 33.33%;
+}
 .media{
-
   transition: .5s ease;
   max-width: 100%;
   max-height: 100%;
