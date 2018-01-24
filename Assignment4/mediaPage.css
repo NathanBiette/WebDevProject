@@ -262,7 +262,7 @@ div.slideshow div.mediaContainer{
 }
 
 /*Side bar*/
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 900px){
   #mediaPageLeftSide {display: none;}
   #mediaPageRightSide {display: none;}
   #mediaPagesideNav{display: block;}
@@ -270,7 +270,7 @@ div.slideshow div.mediaContainer{
   input.expandButton{display: none;}
   #contentBlocksContainer{column-count: 1;}
 }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 900px){
   #mediaPagesideNav{display: none;}
 }
 /* SIDE NAVIGATION BAR WHEN ON MOBILE*/

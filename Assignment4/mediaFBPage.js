@@ -7,10 +7,6 @@ $(function() {
     $(".filterPostsButton").prop("checked",false);
   });
 
-  $(".filterPostsButton").on("change",function() {
-    console.log($(this).attr("class"));
-  });
-
   $("#addMediaNewPost").click(function(){
     if ($(".addMediaNewPostContainer").css("display") == "none") {
       $(".addMediaNewPostContainer").css("display", "block");
@@ -24,6 +20,9 @@ $(function() {
   })
 
   $('.searchForFile').on('change',retrieveFile);
+});
+$(".filterPostsButton").on("change",function() {
+  console.log($(this).attr("class"));
 });
 
 
@@ -70,7 +69,7 @@ function downVote(){
   numberOfVotes++;
   $(this).html("&#8210; "+numberOfVotes)
 }
-$('#inputCommentButton').on("click",addComment);
+$('.inputCommentButton').on("click",addComment);
 
 function addComment(){
   var commentText = $(this).siblings('.textPost').val()
@@ -88,9 +87,7 @@ function addComment(){
   }
   if(localStorage.username){
     newComment.find(".username").html(localStorage.username+' - ')
-
   }
-
 }
 
 $(window).on("load",intializeAvatar)

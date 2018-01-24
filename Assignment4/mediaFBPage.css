@@ -343,6 +343,9 @@ div.slideshow div.mediaContainer{
 .postMediaContainer{
   position: relative;
   width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px;
 }
 .postMedia{
   object-fit: contain;
@@ -396,14 +399,14 @@ div.slideshow div.mediaContainer{
 
 .avatarComment{
   width: 50px;
-  border-radius: 80px;
+  border-radius:50%;
   float: left;
   margin-right: 10px;
 }
 
 .avatarPost{
   width: 80px;
-  border-radius: 80px;
+  border-radius:50%;
   float: left;
   margin-right: 10px;
 }
