@@ -161,8 +161,8 @@ window.twttr = (function(d, s, id) {
 
 /*for contributions*/
 
-/*var myEvent=new Event("test");*/
-/*document.getElementById("buttonAddLocalFile").addEventListener("click", function(){*/
+
+
 function addContrib(urlImage){
 
   contribut.push({"category": "poster","img":urlImage, "page":"./HTML/StarWars8Page.html", "offOrFan":"official", "from" : "star wars 8 page"});
@@ -174,7 +174,7 @@ function addContrib(urlImage){
 
   console.log('retrievedObject: ', JSON.parse(retrievedObject));
 
-}/*);*/
+}
 
 document.getElementById("submitAddMediaUrl").addEventListener("click", function(){
 
@@ -187,5 +187,5 @@ document.getElementById("submitAddMediaUrl").addEventListener("click", function(
   var retrievedObject = localStorage.getItem('contribDone');
 
   console.log('retrievedObject: ', JSON.parse(retrievedObject));
-  /*window.dispatchEvent(myEvent);*/
+
 });
