@@ -125,30 +125,11 @@
   height: 15px;
 }
 
-.badge1 {
-	position: relative;
-}
-.badge1[data-badge]:before {
-
-   content:attr(data-badge);
-   position:absolute;
-   top:1px;
-   right:0px;
-   font-size:1.5em;
-   font-family: Verdana;
-   background:green;
-   color:white;
-   width:35px;height:35px;
-   text-align:center;
-   line-height:35px;
-	border-bottom-left-radius: 50%;
-   box-shadow:0 0 1px #333;
-}
-
 .badge2{
-    position: absolute;
-    right: 15px;
+	position: relative;
     font-size: 1.5em;
+    top: -8px;
+    right: 4px;
     font-family: Verdana;
     background: green;
     color: white;
@@ -156,7 +137,8 @@
     height: 35px;
     text-align: center;
     line-height: 35px;
-    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 30%;
     box-shadow: 0 0 1px #333;
 
 }
@@ -164,3 +146,9 @@
 .ContributionContainer{
 	margin-bottom: 20px;
 }
+
+.badgeContainer2{
+	position:absolute;
+	height: 100%;
+}
+
