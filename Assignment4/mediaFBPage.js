@@ -55,6 +55,9 @@ function retrieveFile(event){
       }
     }) (file,$(this));
     reader.readAsDataURL(file);
+  }
+
+}
 $('.upvote').on("click",upVote)
 $('.downvote').on("click",downVote)
 function upVote(){
