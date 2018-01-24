@@ -378,19 +378,31 @@ div.slideshow div.mediaContainer{
 }
 
 .comment{
-  transition: width 1s;
+  transition: .5s ease;
   padding: 10px;
   min-height: 60px;
   border-top: solid grey 1px;
 }
 .addComment{
   border: 0px;
+  transition: width 1s;
+  padding: 10px;
+  min-height: 60px;
 }
 
 .avatarComment{
-  width:50px;
+  width: 50px;
+  border-radius: 80px;
+  float: left;
+  margin-right: 10px;
 }
 
+.avatarPost{
+  width: 80px;
+  border-radius: 80px;
+  float: left;
+  margin-right: 10px;
+}
 .inputCommentContainer{
   overflow: hidden;
 }
