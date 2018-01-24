@@ -187,17 +187,7 @@ window.twttr = (function(d, s, id) {
 
   return t;
 }(document, "script", "twitter-wjs"));
-$(window).on('load',resizeCaroussels);
 
-/*$(".slideshow").each(function(){
-  resizeInnerCaroussel($(this).parent());
-});
-*/
-function resizeCaroussels(){
-  $(".slideshow").each(function(){
-    resizeInnerCaroussel($(this).parent());
-  });
-}
 
 /*for Contributions*/
 //json file for Contributions

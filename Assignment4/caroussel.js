@@ -129,7 +129,17 @@ function resizeInnerCaroussel(carousselParent){
   console.log(carousselParent.attr("class"));
   resizeCaroussel(carousselParent.children($(".slideshow")),carousselParent.css("width"),carousselParent.css("height"));
 }
+$(window).on('load',resizeCaroussels);
 
+/*$(".slideshow").each(function(){
+  resizeInnerCaroussel($(this).parent());
+});
+*/
+function resizeCaroussels(){
+  $(".slideshow").each(function(){
+    resizeInnerCaroussel($(this).parent());
+  });
+}
 
 /*---------------JS only version ----------------------*/
 
