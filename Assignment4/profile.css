@@ -323,3 +323,8 @@ div.contrib{
 .onglet2Official{
   display:inline;
 }
+
+.slideshowContainer{
+  max-width: 700px;
+  margin:auto;
+}
