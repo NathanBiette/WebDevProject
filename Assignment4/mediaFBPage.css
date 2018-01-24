@@ -481,3 +481,6 @@ div.slideshow div.mediaContainer{
 #emptyPost{
   display: none;
 }
+#emptyComment{
+  display: none;
+}

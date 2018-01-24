@@ -80,9 +80,32 @@ function addMediaURL() {
   } else if (isAudio(newMediaURL)){
 
   }
-
-
 }
+
+
+
+
+
+function sendNewPost() {
+  var emptyPost = $('#emptyPost').clone();
+  emptyPost.attr("id","");
+  emptyPost.insertAfter($('#emptyPost'));
+
+  if (localStorage.profilePicSrc){
+    emptyPost.find('.avatarPost').attr("src",localStorage.profilePicSrc);
+  }
+  if (localStorage.username){
+    emptyPost.find('.postHeader .username').html(localStorage.username);
+  }
+  var category = $('.chooseCategory').val();
+  emptyPost.attr("class",emptyPost.attr("class")+" "+category);
+
+  emptyPost.find('.subTextPostMedia').html($('.textPost').val());
+
+  emptyPost.find('.inputCommentButton').on("click",addComment);
+}
+
+
 
 
 
@@ -102,10 +125,11 @@ function downVote(){
 $('.inputCommentButton').on("click",addComment);
 
 function addComment(){
-  var commentText = $(this).siblings('.textPost').val()
+  var commentText = $(this).siblings('.textPost').val();
   var commentsContainer = $(this).parent().parent().parent();
   var firstComment = commentsContainer.children(".comment").first()
   var newComment = firstComment.clone();
+  newComment.attr("id","");
   newComment.find(".commentText").html(commentText);
   var commentsContainer = $(this).parent().parent().parent();
   console.log(commentsContainer.attr("class"));
@@ -118,6 +142,7 @@ function addComment(){
   if(localStorage.username){
     newComment.find(".username").html(localStorage.username+' - ')
   }
+  $(this).siblings('.textPost').val('');
 }
 
 $(window).on("load",intializeAvatar)
