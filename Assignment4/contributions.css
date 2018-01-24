@@ -126,9 +126,10 @@
 }
 
 .badge1 {
-   position:relative;
+	position: relative;
 }
 .badge1[data-badge]:before {
+
    content:attr(data-badge);
    position:absolute;
    top:1px;
@@ -142,6 +143,22 @@
    line-height:35px;
 	border-bottom-left-radius: 50%;
    box-shadow:0 0 1px #333;
+}
+
+.badge2{
+    position: absolute;
+    right: 15px;
+    font-size: 1.5em;
+    font-family: Verdana;
+    background: green;
+    color: white;
+    width: auto;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-bottom-left-radius: 50%;
+    box-shadow: 0 0 1px #333;
+
 }
 
 .ContributionContainer{
