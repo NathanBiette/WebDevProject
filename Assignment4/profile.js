@@ -1,3 +1,10 @@
+
+
+
+
+/*var blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
+FileSaver.saveAs(blob, "hello world.txt");*/
+
 /* VERSION QUI NE FONCTIONNE PAS
 
 if(localStorage.onglet){

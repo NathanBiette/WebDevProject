@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../mediaPage.css">
     <link rel="stylesheet" href="../login.css">
     <link rel="stylesheet" href="../top.css">
-    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARtx_9S3svAqTrqF1Xk01TTAMgSzjZCas&callback=initMap"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARtx_9S3svAqTrqF1Xk01TTAMgSzjZCas"></script>
     <title>Hyper Star Wars 8</title>
     <meta charset="UTF-8">
   </head>
@@ -129,10 +129,9 @@
         <div class="shootingLocationMap">
           Location map here.
         </div>
-        <ul>
+        <ul id="locationPlaces">
           <li>Skellig Michael, Ireland</li>
           <li>Dubrovnik, Croatia</li>
-          <li>etc</li>
         </ul>
       </div>
       <div class="asideBlockContainer" id="asideAddBlockContainer">
@@ -174,13 +173,22 @@
             <div class="slideshowWindow">
               <div  id="fanArt" class="mediasContainer">
                 <div class="mediaContainer">
-                  <p class="textOverContainer">Made by Patrick Brown</p>
-                  <img class="slideshowMedia small" src="https://pre00.deviantart.net/df56/th/pre/i/2016/039/f/3/star_wars__the_force_awakens_by_patrickbrown-d9r2ifd.jpg" alt="fanArt1">
+                  <div class="slideshowMedia">
+                    <div class="pieceMediaContainer">
+                      <p class="textOverContainer">Carrie Fisher</p>
+                      <img class="media" src="https://pre00.deviantart.net/df56/th/pre/i/2016/039/f/3/star_wars__the_force_awakens_by_patrickbrown-d9r2ifd.jpg" alt="fanArt1">
+                    </div>
+                  </div>
                 </div>
                 <div class="mediaContainer">
-                  <p class="textOverContainer">Made by Ry-Spirit</p>
-                  <img class="slideshowMedia" src="https://img00.deviantart.net/1e97/i/2017/361/6/5/porgachu_by_ry_spirit-dbxzf1y.jpg" alt="fanArt2">
+                  <div class="slideshowMedia">
+                    <div class="pieceMediaContainer">
+                      <p class="textOverContainer">Carrie Fisher</p>
+                      <img class="media" src="https://img00.deviantart.net/1e97/i/2017/361/6/5/porgachu_by_ry_spirit-dbxzf1y.jpg" alt="fanArt2">
+                    </div>
+                  </div>
                 </div>
+
               </div>
               <div class="translate left"><span>&#8249;</span></div>
               <div class="translate right"><span>&#8250;</span></div>
@@ -194,8 +202,6 @@
           <li class = "relatedWorkContainer">
             <img class="relatedWorkMedia" src="https://www.actugaming.net/wp-content/uploads/2018/01/disney-restores-2005-star-wars-battlefront-2-multiplayer-on_rsw7.jpg" alt="relatedWork">
           </li>
-          <li>Dubrovnik, Croatia</li>
-          <li>etc.</li>
         </ul>
       </div>
     </aside>
@@ -219,9 +225,9 @@
                 <input type="file" class="addLocalMediaButton" name="test"> </input>
                 <div class="dropDownContainer">
                   <div class="dropDownContent">
-                    <input type="button" value="Local file" class="addMediaButton" id=""/>
-                    <input type="text" class="addURLBox" placeholder="type media url here..."/>
-                    <input type="button" class="submitMediaUrl" value="Submit"/>
+                    <input type="button" value="Local file" class="addMediaButton" id="buttonAddLocalFile"/>
+                    <input type="text" class="addURLBox" placeholder="type media url here..." id="boxUrl"/>
+                    <input type="button" class="submitMediaUrl" value="Submit" id="submitAddMediaUrl"/>
                   </div>
                 </div>
               </div>
@@ -234,16 +240,32 @@
                 <div class="slideshowWindow">
                   <div  id="poster" class="mediasContainer">
                     <div class="mediaContainer">
-                      <img class="slideshowMedia" src="http://media.rtl.fr/online/image/2017/0717/7789376509_meme-destin-pour-la-cape-de-rey-sera-t-elle-sensible-au-cote-obscure-de-la-force.jpg" alt="Rey">
+                      <div class="slideshowMedia">
+                        <div class="pieceMediaContainer">
+                          <img class="media" src="http://media.rtl.fr/online/image/2017/0717/7789376509_meme-destin-pour-la-cape-de-rey-sera-t-elle-sensible-au-cote-obscure-de-la-force.jpg" alt="Rey">
+                        </div>
+                      </div>
                     </div>
                     <div class="mediaContainer">
-                      <img class="slideshowMedia" src="https://pbs.twimg.com/media/DEz1W4dVwAAT6y3.jpg:large" alt="Kylo Ren">
+                      <div class="slideshowMedia">
+                        <div class="pieceMediaContainer">
+                          <img class="media" src="https://pbs.twimg.com/media/DEz1W4dVwAAT6y3.jpg:large" alt="Kylo Ren">
+                        </div>
+                      </div>
                     </div>
                     <div class="mediaContainer">
-                      <img class="slideshowMedia" src="https://pbs.twimg.com/media/DEzlm6dUMAQggAd.jpg" alt="Luke">
+                      <div class="slideshowMedia">
+                        <div class="pieceMediaContainer">
+                          <img class="media" src="https://pbs.twimg.com/media/DEzlm6dUMAQggAd.jpg" alt="Luke">
+                        </div>
+                      </div>
                     </div>
                     <div class="mediaContainer">
-                      <img class="slideshowMedia" src="https://pbs.twimg.com/media/DEz1dqDV0AA_Bmp.jpg" alt="Leia">
+                      <div class="slideshowMedia">
+                        <div class="pieceMediaContainer">
+                          <img class="media" src="https://pbs.twimg.com/media/DEz1dqDV0AA_Bmp.jpg" alt="Leia">
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="translate left"><span>&#8249;</span></div>
@@ -296,36 +318,70 @@
                 <div class="slideshowWindow">
                   <div  id="poster" class="mediasContainer">
                     <div class="mediaContainer">
-                      <img class="slideshowMedia" src="https://24smi.org/public/media/celebrity/2017/02/01/dGQqdEjxG0Uv_carrie-fisher.jpg" alt="Carrie">
-                      <p class="textOverContainer">Carrie Fisher</p>
+                      <div class="slideshowMedia">
+                        <div class="pieceMediaContainer">
+                          <p class="textOverContainer">Carrie Fisher</p>
+                          <img class="media" src="https://24smi.org/public/media/celebrity/2017/02/01/dGQqdEjxG0Uv_carrie-fisher.jpg" alt="Carrie">
+                        </div>
+                      </div>
                     </div>
                     <div class="mediaContainer">
-                      <img class="slideshowMedia" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Mark_Hamill_%282017%29.jpg/1200px-Mark_Hamill_%282017%29.jpg" alt="Mark">
-                      <p class="textOverContainer">Mark Hamill</p>
+                      <div class="slideshowMedia">
+                        <div class="pieceMediaContainer">
+                          <p class="textOverContainer">Mark Hamill</p>
+                          <img class="media" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Mark_Hamill_%282017%29.jpg/1200px-Mark_Hamill_%282017%29.jpg" alt="Mark">
+                        </div>
+                      </div>
                     </div>
                     <div class="mediaContainer">
-                      <img class="slideshowMedia" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Daisy_Ridley_by_Gage_Skidmore.jpg/1200px-Daisy_Ridley_by_Gage_Skidmore.jpg" alt="Daisy">
-                      <p class="textOverContainer">Daisy Ridley</p>
+                      <div class="slideshowMedia">
+                        <div class="pieceMediaContainer">
+                          <p class="textOverContainer">Daisy Ridley</p>
+                          <img class="media" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Daisy_Ridley_by_Gage_Skidmore.jpg/1200px-Daisy_Ridley_by_Gage_Skidmore.jpg" alt="Daisy">
+
+                        </div>
+                      </div>
                     </div>
                     <div class="mediaContainer">
-                      <img class="slideshowMedia" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/John_Boyega_by_Gage_Skidmore.jpg/1200px-John_Boyega_by_Gage_Skidmore.jpg" alt="John Boyega">
-                      <p class="textOverContainer">John Boyega</p>
+                      <div class="slideshowMedia">
+                        <div class="pieceMediaContainer">
+                          <p class="textOverContainer">John Boyega</p>
+                          <img class="media" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/John_Boyega_by_Gage_Skidmore.jpg/1200px-John_Boyega_by_Gage_Skidmore.jpg" alt="John Boyega">
+
+                        </div>
+                      </div>
                     </div>
                     <div class="mediaContainer">
-                      <img class="slideshowMedia" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Star_Wars-_The_Last_Jedi_Japan_Premiere_Red_Carpet-_Adam_Driver_%2827163437599%29_%28cropped%29.jpg/1200px-Star_Wars-_The_Last_Jedi_Japan_Premiere_Red_Carpet-_Adam_Driver_%2827163437599%29_%28cropped%29.jpg" alt="Adam Driver">
-                      <p class="textOverContainer">Adam Driver</p>
+                      <div class="slideshowMedia">
+                        <div class="pieceMediaContainer">
+                          <p class="textOverContainer">Adam Driver</p>
+                          <img class="media" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Star_Wars-_The_Last_Jedi_Japan_Premiere_Red_Carpet-_Adam_Driver_%2827163437599%29_%28cropped%29.jpg/1200px-Star_Wars-_The_Last_Jedi_Japan_Premiere_Red_Carpet-_Adam_Driver_%2827163437599%29_%28cropped%29.jpg" alt="Kelly Marie Tran">
+                        </div>
+                      </div>
                     </div>
                     <div class="mediaContainer">
-                      <img class="slideshowMedia" src="https://nerdist.com/wp-content/uploads/2017/12/rose-tico.jpg" alt="Kelly Marie Tran">
-                      <p class="textOverContainer">Kelly Marie Tran</p>
+                      <div class="slideshowMedia">
+                        <div class="pieceMediaContainer">
+                          <p class="textOverContainer">Kelly Marie Tran</p>
+                          <img class="media" src="https://nerdist.com/wp-content/uploads/2017/12/rose-tico.jpg" alt="Kelly Marie Tran">
+                        </div>
+                      </div>
                     </div>
                     <div class="mediaContainer">
-                      <img class="slideshowMedia" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Oscar_Isaac_by_Gage_Skidmore.jpg/1200px-Oscar_Isaac_by_Gage_Skidmore.jpg" alt="Oscar Isaac">
-                      <p class="textOverContainer">Oscar Isaac</p>
+                      <div class="slideshowMedia">
+                        <div class="pieceMediaContainer">
+                          <p class="textOverContainer">Oscar Isaac</p>
+                          <img class="media" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Oscar_Isaac_by_Gage_Skidmore.jpg/1200px-Oscar_Isaac_by_Gage_Skidmore.jpg" alt="Oscar Isaac">
+                        </div>
+                      </div>
                     </div>
                     <div class="mediaContainer">
-                      <img class="slideshowMedia" src="http://fr.web.img3.acsta.net/c_215_290/pictures/17/09/13/17/30/0919496.jpg" alt="Laura Dern">
-                      <p class="textOverContainer">Laura Dern</p>
+                      <div class="slideshowMedia">
+                        <div class="pieceMediaContainer">
+                          <p class="textOverContainer">Laura Dern</p>
+                          <img class="media" src="http://fr.web.img3.acsta.net/c_215_290/pictures/17/09/13/17/30/0919496.jpg" alt="Laura Dern">
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="translate left"><span>&#8249;</span></div>
@@ -407,11 +463,14 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../Contributions.json"></script>
+
     <script src="../connexion.js"></script>
     <script src="../caroussel.js"></script>
     <script src="../mediaPage.js"></script>
     <script src="../research.js"></script>
     <script src="../dragDropBlock.js"></script>
+
   </body>
 
 </html>

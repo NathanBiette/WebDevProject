@@ -1,19 +1,31 @@
 //Add or remve blocks thanks to asides
-var stringTwitter = $('#tweetContainer').html();//'<a class="twitter-timeline" data-tweet-limit="1"  data-chrome="noheader" href="https://twitter.com/HamillHimself">Tweets by Mark Hamill</a>';
-var map;
-var geocoder;
-var markers;
-$('.addBlockButton').click(addBlock);
-$('.hideBlock').click(hideBlock);
-$('.showShootingLocationsButton').click(toggleMap);
+$(function() {
+  var stringTwitter = $('#tweetContainer').html();//'<a class="twitter-timeline" data-tweet-limit="1"  data-chrome="noheader" href="https://twitter.com/HamillHimself">Tweets by Mark Hamill</a>';
+  var map;
+  var geocoder;
+  var markers;
+  $('.addBlockButton').click(addBlock);
+  $('.hideBlock').click(hideBlock);
+  $('.showShootingLocationsButton').click(toggleMap);
+  //initMap();
+
+});
 
 function initMap(){
+
   try{
-    if (! map) map = new google.maps.Map(document.getElementById('locationMap'), {
+    var locationPlaces = $("#locationPlaces").children().html();
+    console.log("in the try");
+    if (! map) map = new google.maps.Map(document.getElementById('shootingLocationMap'), {
       center: {lat: -34.397, lng: 150.644},
       zoom: 4
       });
+
     if (! geocoder) geocoder = new google.maps.Geocoder();
+    alert('')
+
+    console.log(locationPlaces);
+
 
     geocoder.geocode( { 'address': localStorage.location }, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
@@ -31,6 +43,7 @@ function initMap(){
       }
     });
   } catch(err) {
+    alert('google not defined');
   }
 }
 
@@ -122,7 +135,6 @@ function downsize(){
 $('.addMediaButton').click(function() {$(this).parent().parent().siblings(".addLocalMediaButton").click()})
 $('.addLocalMediaButton').on('change',addMediaInCaroussel);
 function addMediaInCaroussel(event){
-  console.log($(this).attr("id"));
   var file =event.target.files[0];
   if(!file.type.match('image.*')){
     return;
@@ -131,12 +143,13 @@ function addMediaInCaroussel(event){
     var reader = new FileReader();
     reader.onload = (function(theFile,elmt){
       return function(e){
-        console.log(elmt.attr("class"));
-        console.log(elmt.parent().parent().parent().attr("class"))
+        var contentBlock =elmt.parent().parent().parent();
         var userImSrc = e.target.result;
-        var newContainer = elmt.parent().parent().parent().parent().find('.mediaContainer').first().clone();
-        newContainer.children("img").attr("src",userImSrc);
-        elmt.parent().parent().parent().parent().find(".mediasContainer").prepend(newContainer);
+        //console.log(contentBlock.attr("class"));
+        var newContainer = contentBlock.find('.mediaContainer').first().clone();
+
+        newContainer.find(".media").attr("src",userImSrc);
+        contentBlock.find(".mediasContainer").prepend(newContainer);
         }
       }) (file,$(this));
     reader.readAsDataURL(file);
@@ -148,9 +161,11 @@ $('.submitMediaUrl').on('click',addMediaURL);
 function addMediaURL() {
   var newMedSrc = $(this).siblings(".addURLBox").val();
   console.log(newMedSrc);
-  var newContainer = $(this).parent().parent().parent().parent().parent().find('.mediaContainer').first().clone();
-  newContainer.children("img").attr("src",newMedSrc);
-  $(this).parent().parent().parent().parent().parent().find(".mediasContainer").prepend(newContainer);
+  var contentBlock =$(this).parent().parent().parent().parent().parent();
+  console.log(contentBlock.attr("class"));
+  var newContainer = contentBlock.find('.mediaContainer').first().clone();
+  newContainer.find(".media").attr("src",newMedSrc);
+  contentBlock.find(".mediasContainer").prepend(newContainer);
 
 }
 
@@ -172,14 +187,46 @@ window.twttr = (function(d, s, id) {
 
   return t;
 }(document, "script", "twitter-wjs"));
-/*$(".slideshow").each(function(){
-  resizeInnerCaroussel($(this).parent());
+
+
+/*for Contributions*/
+//json file for Contributions
+
+var obj = {
+   table: []
+};
+var contribut;
+if(localStorage.contribDone){
+  contribut=JSON.parse(localStorage.contribDone);
+}
+else{
+  contribut=JSON.parse(contrib);
+  console.log(contribut);
+}
+
+
+document.getElementById("buttonAddLocalFile").addEventListener("click", function(){
+
+  contribut.push({"category": "poster","img":"images/flash.jpg", "page":"./HTML/StarWars8Page.html"});
+
+  var new_json = JSON.stringify(contribut);
+  localStorage.setItem('contribDone', new_json);
+
+  // Retrieve the object from storage
+  var retrievedObject = localStorage.getItem('contribDone');
+
+  console.log('retrievedObject: ', JSON.parse(retrievedObject));
 });
 
-$(window).on('resize',resizeCaroussels);
-function resizeCaroussels(){
-  $(".slideshow").each(function(){
-    resizeInnerCaroussel($(this).parent());
-  });
-}
-*/
+document.getElementById("submitAddMediaUrl").addEventListener("click", function(){
+
+  contribut.push({"category": "poster","img":document.getElementById("boxUrl").value, "page":"./HTML/StarWars8Page.html"});
+
+  var new_json = JSON.stringify(contribut);
+  localStorage.setItem('contribDone', new_json);
+
+  // Retrieve the object from storage
+  var retrievedObject = localStorage.getItem('contribDone');
+
+  console.log('retrievedObject: ', JSON.parse(retrievedObject));
+});
