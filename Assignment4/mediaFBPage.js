@@ -224,3 +224,33 @@ function intializeAvatar(){
     $(".avatar").attr("src",localStorage.profilePicSrc)
   }
 }
+
+
+var myEvent=new Event("test");
+/*document.getElementById("buttonAddLocalFile").addEventListener("click", function(){*/
+function addContrib(urlImage){
+
+  contribut.push({"category": "poster","img":urlImage, "page":"./HTML/StarWars8Page.html", "ofOrFan":"official", "from" : "star wars 8 page"});
+
+  var new_json = JSON.stringify(contribut);
+  localStorage.setItem('contribDone', new_json);
+
+  // Retrieve the object from storage
+  var retrievedObject = localStorage.getItem('contribDone');
+
+  console.log('retrievedObject: ', JSON.parse(retrievedObject));
+}/*);*/
+
+document.getElementById("submitAddMediaUrl").addEventListener("click", function(){
+
+  contribut.push({"category": "poster","img":document.getElementById("boxUrl").value, "page":"./StarWars8Page.html", "offOrFan":"official", "from":"star wars 8 page"});
+
+  var new_json = JSON.stringify(contribut);
+  localStorage.setItem('contribDone', new_json);
+
+  // Retrieve the object from storage
+  var retrievedObject = localStorage.getItem('contribDone');
+
+  console.log('retrievedObject: ', JSON.parse(retrievedObject));
+  window.dispatchEvent(myEvent);
+});
