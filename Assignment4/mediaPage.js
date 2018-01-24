@@ -207,7 +207,7 @@ document.getElementById("buttonAddLocalFile").addEventListener("click", function
 
 document.getElementById("submitAddMediaUrl").addEventListener("click", function(){
 
-  contribut.push({"category": "poster","img":document.getElementById("boxUrl").value, "page":"./HTML/StarWars8Page.html"});
+  contribut.push({"category": "poster","img":document.getElementById("boxUrl").value, "page":"./StarWars8Page.html", "offOrFan":"official"});
 
   var new_json = JSON.stringify(contribut);
   localStorage.setItem('contribDone', new_json);

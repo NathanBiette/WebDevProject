@@ -14,9 +14,7 @@ if(localStorage.contribDone){
 else{
   contribut=JSON.parse(contrib);
   console.log(contribut);
-  for(var index=0; index<contribut.length;index++){
-    console.log(contribut[index]);
-  }
+
   localStorage.contribDone=JSON.stringify(contribut);
 }
 
