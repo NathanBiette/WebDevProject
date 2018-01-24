@@ -96,7 +96,6 @@ function addComment(){
 $(window).on("load",intializeAvatar)
 
 function intializeAvatar(){
-  console.log(localStorage.profilePicSrc);
   if(localStorage.profilePicSrc){
     $(".avatar").attr("src",localStorage.profilePicSrc)
   }
